@@ -32,11 +32,11 @@
         <div class="tab_kolcon">
             <div class="tab_kol_left">
                 <div>
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_kol1.jpg"/>
-                    <p><a href="#" class="btn_gz"></a></p>
+                    <a href="http://weibo.com/shilinzi" target="_blank"><img src="http://tp3.sinaimg.cn/1644634390/180/5708581230/0"/></a>
+                    <p><a href="http://weibo.com/shilinzi" target="_blank" class="btn_gz"></a></p>
                 </div>
                 <div>
-                    <h2>顾爷</h2>
+                    <h2>慢行6大洲、奢享31国的环球旅行家，专栏作家，自由撰稿人。</h2>
                     <h3>平面设计师，漫画家顾孟劼	</h3>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="clear20"></div>
             <div class="jianjie">
-                美食类星导游简介，比如xxx尝遍世界美食，跟随ta的分享，进入一次美味绝伦的品味之旅。
+                旅游卫视当家主持，现主持《有多远走多远》《网聚来了》等节目；重度旅行爱好者。
             </div>
             <div class="clear20"></div>
             <div class="imglist">

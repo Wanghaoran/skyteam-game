@@ -32,12 +32,12 @@
         <div class="tab_kolcon">
             <div class="tab_kol_left">
                 <div>
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_kol1.jpg"/>
-                    <p><a href="#" class="btn_gz"></a></p>
+                    <a href="http://weibo.com/222020" target="_blank" ><img src="http://tp2.sinaimg.cn/1684322821/180/5703294246/1"/></a>
+                    <p><a href="http://weibo.com/222020" target="_blank"  class="btn_gz"></a></p>
                 </div>
                 <div>
-                    <h2>顾爷</h2>
-                    <h3>平面设计师，漫画家顾孟劼	</h3>
+                    <h2>王子强WANGZIQIANG</h2>
+                    <h3>平面设计师，漫画家顾孟劼</h3>
                 </div>
             </div>
             <div class="tab_kol_right">
@@ -64,7 +64,7 @@
             </div>
             <div class="clear20"></div>
             <div class="jianjie">
-                美食类星导游简介，比如xxx尝遍世界美食，跟随ta的分享，进入一次美味绝伦的品味之旅。
+                著名美食旅游家、摄影师，新锐主持人，王子强工作室创始人。
             </div>
             <div class="clear20"></div>
             <div class="imglist">

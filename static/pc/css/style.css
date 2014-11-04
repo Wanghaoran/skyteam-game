@@ -182,7 +182,7 @@ body{ background:#fff;}
 			
 				.tab_kol_left div{ float:left}
 				.tab_kol_left div img{ border:#cacaca 1px solid; width:152px; height:152px; margin:0 10px 10px 0;}
-				.tab_kol_left div h2{color:#575757; font-size:20px; font-weight:400; text-align:left; margin:100px 0 0 0;}
+				.tab_kol_left div h2{color:#575757; font-size:16px; font-weight:400; text-align:left; margin:100px 0 0 0;}
 				.tab_kol_left div h3{color:#919191; font-size:14px; font-weight:400; text-align:left;}
 				.tab_kol_left div p{ margin:0 0 0 28px;}
 				.tab_kol_left div a.btn_gz{ width:95px; height:40px; background:url(../images/btn_gz.png) no-repeat; display:inline-block;}
