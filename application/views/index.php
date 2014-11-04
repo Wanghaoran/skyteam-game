@@ -103,7 +103,7 @@
                     $("#popDiv3").hide();
                     $("#popDiv4").show();
                     $(window.parent.document).find("#sinaweibo").attr("src",'http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=');
-                    
+
 //                    $("#popDiv3").hide();$("#popDiv4").show(); shareWeibo();
 
 

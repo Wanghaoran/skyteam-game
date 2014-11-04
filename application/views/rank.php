@@ -12,7 +12,7 @@
             <li class="li1"><a href="<?=$this->config->base_url()?>"></a></li>
             <li class="li2"><a href="#"></a></li>
             <li class="li3"><a class="cur" href="#"></a></li>
-            <li class="li4"><a href="<?=$this->config->base_url()?>welcome/wizard"></a></li>
+            <li class="li4"><a href="<?=$this->config->base_url()?>welcome/wizard_food"></a></li>
         </ul>
     </div>
     <div class="ny_logo"></div>

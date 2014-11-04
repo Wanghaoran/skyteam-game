@@ -13,10 +13,19 @@ class Welcome extends CI_Controller {
         $this->load->view('rank');
     }
 
-    //PC 端 天巡星导游
-    public function wizard(){
-        $this->load->view('wizard');
+    //PC 端 天巡星导游 - 美食团
+    public function wizard_food(){
+        $this->load->view('wizard_food');
+    }
 
+    //PC 端 天巡星导游 - 购物团
+    public function wizard_buy(){
+        $this->load->view('wizard_buy');
+    }
+
+    //PC 端 天巡星导游 - 休闲团
+    public function wizard_show(){
+        $this->load->view('wizard_show');
     }
 
     public function tests(){
