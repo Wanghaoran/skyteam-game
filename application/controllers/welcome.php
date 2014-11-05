@@ -8,6 +8,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 	}
 
+    //weibo 登陆
+    public function weibologin(){
+        echo 'Waitting Weibo Login';
+    }
+
     //PC 端 天团排行版
     public function rank(){
         $this->load->view('rank');

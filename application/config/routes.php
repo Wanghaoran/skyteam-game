@@ -42,5 +42,11 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
 
+$route['wizard_show'] = 'welcome/wizard_show';
+$route['wizard_buy'] = 'welcome/wizard_buy';
+$route['wizard_food'] = 'welcome/wizard_food';
+$route['rank'] = 'welcome/rank';
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

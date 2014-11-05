@@ -174,6 +174,85 @@
 </head>
 <body>
 
+<!--pop start-->
+<div id="popDiv1" class="mydiv" style="display:none;">
+    <div class="popdiv1">
+        <img src="<?=$this->config->base_url()?>static/pc/images/pop1.png"/>
+        <input type="text" class="inputclass3"/>
+        <div id="radiolist2" class="radioimg2">
+            <input name='xh' type="radio" value='1' /><label><div>&nbsp;</div></label>
+            <input name='xh' type="radio" value='2' /><label><div>&nbsp;</div></label>
+            <input name='xh' type="radio" value='3' /><label><div>&nbsp;</div></label>
+        </div>
+        <div class="chk">
+            <div class="chkimg"><img src="<?=$this->config->base_url()?>static/pc/images/checkbox.png"/></div>
+            <div class="chkbox" id="chklist">
+                <ul>
+                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn_next"><a  href="javascript:showNext();"><img src="<?=$this->config->base_url()?>static/pc/images/btn_next.png"/></a></div>
+    </div>
+</div>
+<div id="hidebg" class="hidebg" style="display:none"></div>
+<!--pop end-->
+<!--pop 下一步 start-->
+<div id="popDiv2" class="mydiv" style="display:none;">
+    <div class="popdiv1">
+        <img src="<?=$this->config->base_url()?>static/pc/images/pop2.png"/>
+        <div id="radiolist" class="radioimg">
+            <input name='r' type="radio" value='1' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address1.png"/></label>
+            <input name='r' type="radio" value='2' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address2.png"/></label>
+            <input name='r' type="radio" value='3' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address3.png"/></label>
+            <input name='r' type="radio" value='4' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address4.png"/></label>
+            <input name='r' type="radio" value='5' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address5.png"/></label>
+            <input name='r' type="radio" value='6' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address6.png"/></label>
+            <input name='r' type="radio" value='7' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address7.png"/></label>
+            <input name='r' type="radio" value='8' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address8.png"/></label>
+            <input name='r' type="radio" value='9' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address9.png"/></label>
+            <input name='r' type="radio" value='10' /><label><img src="<?=$this->config->base_url()?>static/pc/images/img_address10.png"/></label>
+        </div>
+        <div class="btn_next"><a  href="javascript:void(0);" class="xinlang"><img src="<?=$this->config->base_url()?>static/pc/images/btn_zskt.png"/></a></div>
+    </div>
+</div>
+<!--pop 下一步 end-->
+<!--pop flash start-->
+<div id="popDiv3" class="mydiv3" style="display:none;">
+    <div class="popdiv3">
+        <div class="div_iframe2">
+
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/
+swflash.cab#version=9,0,28,0" width="100%" height="100%">
+                <param name="movie" value="plane.swf" />
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <embed src="<?=$this->config->base_url()?>static/pc/plane.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="100%" height="100%" wmode="Transparent"></embed>
+            </object>
+        </div>
+
+
+    </div>
+</div>
+<!--pop flash end-->
+<!--pop 分享 start-->
+<div id="popDiv4" class="mydiv2" style="display:none;">
+    <div class="popdiv2">
+        <img src="<?=$this->config->base_url()?>static/pc/images/pop3.png"/>
+        <div class="div_iframe"><iframe width="100%" height="100%" class="share_self"  frameborder="0" scrolling="no" id="sinaweibo"></iframe></div>
+        <div class="fx_foot">
+            <a href="#" class="icon_dd"></a><a href="#" class="icon_rr"></a><a href="#" class="icon_qq"></a>
+        </div>
+    </div>
+</div>
+<!--pop 分享 end-->
 <div class="contain">
     <div class="home">
         <div class="divbg"><img src="<?=$this->config->base_url()?>static/pc/images/home.jpg"/></div>
@@ -227,12 +306,12 @@
             </div>
             <div class="bottom_left">
                 <img src="<?=$this->config->base_url()?>static/pc/images/bottom_left.png"/>
-                <div class="app"><img src="<?=$this->config->base_url()?>static/pc/images/app.png"/></div>
-                <div class="weixin"><img src="<?=$this->config->base_url()?>static/pc/images/weixin.png"/></div>
+                <div class="app"><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/app.png"/></a></div>
+                <div class="weixin"><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/weixin.png"/></a></div>
             </div>
             <div class="bottom_right">
                 <div class="start">
-                    <a href="<?=$this->config->base_url()?>welcome/weibologin" title="开始"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
+                    <a href="javascript:showBg();" title="开始"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
                 </div>
                 <div class="bottom_bot">
                     <img src="<?=$this->config->base_url()?>static/pc/images/bottom_mid.png"/>

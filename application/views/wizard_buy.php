@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>天巡</title>
+    <title>天巡星导游之购物团－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -11,20 +11,20 @@
         <ul>
             <li class="li1"><a href="<?=$this->config->base_url()?>"></a></li>
             <li class="li2"><a href="#"></a></li>
-            <li class="li3"><a href="<?=$this->config->base_url()?>welcome/rank"></a></li>
+            <li class="li3"><a href="<?=$this->config->base_url()?>rank"></a></li>
             <li class="li4"><a class="cur" href="#"></a></li>
         </ul>
     </div>
-    <div class="ny_logo"></div>
+    <a href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
 </div>
 <div class="clear"></div>
 <div class="ny_content2">
     <div class="tab_kol">
         <div class="tab_koltitle">
             <ul>
-                <li><a href="<?=$this->config->base_url()?>welcome/wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text1.png"/></a></li>
-                <li class="on"><a href="<?=$this->config->base_url()?>welcome/wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text2.png"/></a></li>
-                <li><a href="<?=$this->config->base_url()?>welcome/wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text3.png"/></a></li>
+                <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text1.png"/></a></li>
+                <li class="on"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text2.png"/></a></li>
+                <li><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/tab_text3.png"/></a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -37,7 +37,7 @@
                 </div>
                 <div>
                     <h2>手边巴黎urruolan</h2>
-                    <h3>平面设计师，漫画家顾孟劼	</h3>
+                    <h3>慢行6大洲、奢享31国的环球旅行家，专栏作家，自由撰稿人。</h3>
                 </div>
             </div>
             <div class="tab_kol_right">
@@ -63,9 +63,7 @@
                 </div>
             </div>
             <div class="clear20"></div>
-            <div class="jianjie">
-                慢行6大洲、奢享31国的环球旅行家，专栏作家，自由撰稿人。
-            </div>
+
             <div class="clear20"></div>
             <div class="imglist">
                 <!--话题列表 开始-->
