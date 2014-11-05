@@ -4,6 +4,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>天巡</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://api.skyscanner.net/api.ashx?key=7d737666-889f-45ff-abf6-76be8d9547e7"></script>
+    <script type="text/javascript">
+        skyscanner.load("snippets", "2");
+        function main(){
+            var snippet = new skyscanner.snippets.SearchPanelControl();
+            snippet.setShape("leaderboard");
+            snippet.setCulture("zh-CN");
+            snippet.setCurrency("CNY");
+            snippet.setMarket("CN");
+            snippet.setProduct("flights","1");
+            snippet.setProduct("hotels","2");
+            snippet.setProduct("carhire","3");
+
+            snippet.draw(document.getElementById("snippet_searchpanel"));
+        }
+        skyscanner.setOnLoadCallback(main);
+
+
+    </script>
 </head>
 <body>
 <div class="ny_head">
@@ -43,22 +62,11 @@
             <div class="tab_kol_right">
                 <h2>自己选择城市，看看什么时间的机票适合你,天巡为您呈现整月含税价格走势，寻找最划算机票，一目了然。</h2>
                 <div class="tab_kol_time">
-                    <div class="time_left">
-                        <h3>从</h3>
-                        <div><input type="text" class="inputclass1" /></div>
-                        <h4><div><input type="radio" name="qc" checked="checked" />往返<input type="radio" name="qc"/>单程</div>起程</h4>
-                        <div>
-                            <input class="jcDate" style="margin:0 15px 0 0"/><input class="jcDate"/>
-                        </div>
 
-                    </div>
-                    <div class="time_mid"></div>
-                    <div class="time_right">
-                        <h3>到</h3>
-                        <div><input type="text" class="inputclass2" /></div>
-                        <div class="divcheck"><input type="checkbox" />首选直达</div>
-                        <a href="#" class="btn_search"></a>
-                    </div>
+
+                    <div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
+
+
                     <div class="clear10"></div>
                 </div>
             </div>
