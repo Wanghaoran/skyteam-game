@@ -69,7 +69,7 @@
             snippet.setMarket("CN");
             snippet.setDepartureEmpty();
             snippet.setDestinationEmpty();
-            snippet.setDayviewModeEnabled(true);
+//            snippet.setDayviewModeEnabled(true);
 
             snippet.draw(document.getElementById("snippet_searchpanel"));
         }
