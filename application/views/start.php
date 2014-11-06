@@ -10,6 +10,8 @@
     <!-- weibo followbutton -->
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
+    <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
+
     <script>
         var shareWeibo = function(){
             url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
@@ -31,6 +33,9 @@
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
         }
+
+
+
 
     </script>
 
@@ -102,7 +107,6 @@
         .radioimg .hRadio_Checked div.x9{ background:url(<?=$this->config->base_url()?>static/pc/img/img_xx19.png) center no-repeat;}
         .radioimg .hRadio_Checked div.x10{ background:url(<?=$this->config->base_url()?>static/pc/img/img_xx20.png) center no-repeat;}
     </style>
-    <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
     <script type="text/javascript">
 
 
@@ -162,12 +166,21 @@
             $('#radiolist').hradio();
             $('#radiolist2').hradio();
 
+
+            $("#simulation").click(function(){
+                url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
+                window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+                return false;
+
+            });
+
             $(".xinlang").click(function() {
                 $("#popDiv2").hide();
                 $("#popDiv3").show();
 
                 setTimeout(function(){
-                    shareWeibo();
+//                    shareWeibo();
+                    $("#simulation").click();
                 },2000);//1000是1秒
 
                 setTimeout(function(){
@@ -295,6 +308,9 @@
 
     </div>
 </div>
+
+
+<a id="simulation" href="#"></a>
 
 </body>
 </html>
