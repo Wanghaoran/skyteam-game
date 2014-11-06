@@ -165,10 +165,16 @@
             $(".xinlang").click(function() {
                 $("#popDiv2").hide();
                 $("#popDiv3").show();
+
+                setTimeout(function(){
+                    shareWeibo();
+                },2000);//1000是1秒
+
                 setTimeout(function(){
                     shareWeibo();
                     location.href="<?=$this->config->base_url()?>rank";
-//                    $("#popDiv3").hide();$("#popDiv4").show(); share.sinaweibo();
+                    $("#popDiv3").hide();
+                    // $("#popDiv4").show(); share.sinaweibo();
                 },3000);//1000是1秒
 
 
