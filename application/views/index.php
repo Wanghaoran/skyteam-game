@@ -186,11 +186,12 @@
         <div class="bottom">
             <div class="right">
                 <ul>
+
                     <li>
-                        <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
+                        <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
                         <div class="divinfo">
-                            <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg1.png"/></a></div>
-                            <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_show"><h2>天巡星导游之休闲团</h2><h3>旅游卫视史林子</h3><h4>旅游卫视当家主持</h4></a></div>
+                            <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg3.png"/></a></div>
+                            <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_food"><h2>天巡星导游之美食团</h2><h3>王子强WANGZIQIANG</h3><h4>美食旅游家</h4></a></div>
                         </div>
                     </li>
                     <li>
@@ -201,12 +202,14 @@
                         </div>
                     </li>
                     <li>
-                        <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
+                        <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
                         <div class="divinfo">
-                            <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg3.png"/></a></div>
-                            <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_food"><h2>天巡星导游之美食团</h2><h3>王子强WANGZIQIANG</h3><h4>美食旅游家</h4></a></div>
+                            <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg1.png"/></a></div>
+                            <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_show"><h2>天巡星导游之休闲团</h2><h3>旅游卫视史林子</h3><h4>旅游卫视当家主持</h4></a></div>
                         </div>
                     </li>
+
+
                 </ul>
                 <div class="clear"></div>
                 <div class="iconlink">
