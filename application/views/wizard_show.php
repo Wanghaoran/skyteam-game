@@ -4,18 +4,65 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>天巡星导游之休闲团－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
+
+
+    <style type="text/css">
+
+        .ss_searchpanel.ss_skyscraper
+        {
+            width:100%!important;
+            height:auto!important;
+        }
+        .ss_deals
+        {
+            display:none!important;
+        }
+        .ss_tabs
+        {
+            display:none!important;
+        }
+        .ss_footer_getwidget .ss_cf
+        {
+            display:none!important;
+        }
+        .ss_searchpanel.ss_skyscraper .ss_form
+        {
+            height:auto!important;
+            padding:10px 5px!important;
+        }
+        .ss_searchpanel .ss_form_wrapper
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel .ss_form
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel
+        {
+            background-color:transparent!important;
+            -webkit-box-shadow: none!important;
+            -moz-box-shadow: none!important;
+            box-shadow: none!important;
+        }
+
+    </style>
+
     <script type="text/javascript" src="http://api.skyscanner.net/api.ashx?key=7d737666-889f-45ff-abf6-76be8d9547e7"></script>
     <script type="text/javascript">
-        skyscanner.load("snippets", "2");
+
+
+        skyscanner.load('snippets', '2', { overridecss: "<?=$this->config->base_url()?>static/pc/css/skyscanner-widget.css" });
+
         function main(){
             var snippet = new skyscanner.snippets.SearchPanelControl();
-            snippet.setShape("leaderboard");
-            snippet.setCulture("zh-CN");
+            snippet.setShape('skyscraper');
+            snippet.setCulture('zh-CN');
             snippet.setCurrency("CNY");
             snippet.setMarket("CN");
-            snippet.setProduct("flights","1");
-            snippet.setProduct("hotels","2");
-            snippet.setProduct("carhire","3");
+            snippet.setDepartureEmpty();
+            snippet.setDestinationEmpty();
+            snippet.setDayviewModeEnabled(true);
 
             snippet.draw(document.getElementById("snippet_searchpanel"));
         }
