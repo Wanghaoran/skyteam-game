@@ -10,7 +10,31 @@ class Welcome extends CI_Controller {
 
     //weibo 登陆
     public function weibologin(){
-        echo 'Waitting Weibo Login';
+        include_once('./Weibo.php');
+        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck');
+        $this->load->helper('url');
+        redirect($code_url);
+    }
+
+    //weibo 登陆回调验证
+    public function weibocheck(){
+
+        include_once('./Weibo.php');
+
+        $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $_SESSION['token']['access_token']);
+        $uid_get = $c->get_uid();
+        $uid = $uid_get['uid'];
+        $user_message = $c->show_user_by_id($uid);//根据ID获取用户等基本信息
+        
+        var_dump($_GET);
+        var_dump($uid);
+        var_dump($user_message);
+    }
+
+    //创建天团
+    public function start(){
+
     }
 
     //PC 端 天团排行版
