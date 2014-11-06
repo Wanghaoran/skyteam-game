@@ -22,14 +22,50 @@ class Welcome extends CI_Controller {
 
         include_once('./Weibo.php');
 
-        $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $_SESSION['token']['access_token']);
-        $uid_get = $c->get_uid();
-        $uid = $uid_get['uid'];
-        $user_message = $c->show_user_by_id($uid);//根据ID获取用户等基本信息
-        
+        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+
+        if (isset($_REQUEST['code'])) {
+            $keys = array();
+            $keys['code'] = $_REQUEST['code'];
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            try {
+                $token = $o->getAccessToken('code', $keys ) ;
+            } catch (OAuthException $e) {
+            }
+        }
+
+        if ($token) {
+
+            $_SESSION['token'] = $token;
+
+            setcookie('weibojs_'.$o->client_id, http_build_query($token));
+
+            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $_SESSION['token']['access_token']);
+
+            $uid_get = $c->get_uid();
+
+            if($uid_get['error'] && $uid_get['error_code'] == 21321){
+
+                die('新浪微博登录功能正在等待微博方面审核，请稍后再试试');
+
+            }else if($uid_get['error'] && $uid_get['error_code'] != 21321){
+
+                die($uid_get['error']);
+
+            }else{
+
+                $uid = $uid_get['uid'];
+            }
+        }else{
+            die('授权失败');
+        }
+
+
+
+
         var_dump($_GET);
+        var_dump($uid_get);
         var_dump($uid);
-        var_dump($user_message);
     }
 
     //创建天团
