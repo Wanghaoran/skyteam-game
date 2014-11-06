@@ -46,12 +46,14 @@ class Welcome extends CI_Controller {
 
             if(isset($uid_get['error']) && $uid_get['error_code'] == 21321){
 
-                $this->output->set_content_type('application/html;charset=utf-8') -> set_output('新浪微博登录功能正在等待微博方面审核，请稍后再试试');
+                header("Content-type:text/html;charset=utf-8");
+                echo '新浪微博登录功能正在等待微博方面审核，请稍后再试试';
                 return;
 
             }else if(isset($uid_get['error']) && $uid_get['error_code'] != 21321){
 
-                $this->output->set_content_type('application/html;charset=utf-8') -> set_output($uid_get['error']);
+                header("Content-type:text/html;charset=utf-8");
+                echo $uid_get['error'];
                 return;
 
             }else{
@@ -59,7 +61,8 @@ class Welcome extends CI_Controller {
                 $uid = $uid_get['uid'];
             }
         }else{
-            $this->output->set_content_type('application/html;charset=utf-8') -> set_output('授权验证失败！');
+            header("Content-type:text/html;charset=utf-8");
+            echo '授权验证失败！';
             return;
         }
 
