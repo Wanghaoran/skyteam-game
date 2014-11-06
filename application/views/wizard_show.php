@@ -46,6 +46,13 @@
             box-shadow: none!important;
         }
 
+        .ss_searchpanel.ss_skyscraper .ss_row {
+            padding-top: 15px;
+            width: 40%;
+            float: left;
+            margin: 0 5%;
+        }
+
     </style>
 
     <script type="text/javascript" src="http://api.skyscanner.net/api.ashx?key=7d737666-889f-45ff-abf6-76be8d9547e7"></script>
@@ -118,6 +125,10 @@
                 </div>
             </div>
             <div class="clear20"></div>
+
+            <div class="jianjie">
+
+            </div>
 
             <div class="clear20"></div>
             <div class="imglist">

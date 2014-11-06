@@ -4,6 +4,79 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>天巡星导游之美食团－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+
+        .ss_searchpanel.ss_skyscraper
+        {
+            width:100%!important;
+            height:auto!important;
+        }
+        .ss_deals
+        {
+            display:none!important;
+        }
+        .ss_tabs
+        {
+            display:none!important;
+        }
+        .ss_footer_getwidget .ss_cf
+        {
+            display:none!important;
+        }
+        .ss_searchpanel.ss_skyscraper .ss_form
+        {
+            height:auto!important;
+            padding:10px 5px!important;
+        }
+        .ss_searchpanel .ss_form_wrapper
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel .ss_form
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel
+        {
+            background-color:transparent!important;
+            -webkit-box-shadow: none!important;
+            -moz-box-shadow: none!important;
+            box-shadow: none!important;
+        }
+
+        .ss_searchpanel.ss_skyscraper .ss_row {
+            padding-top: 15px;
+            width: 40%;
+            float: left;
+            margin: 0 5%;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="http://api.skyscanner.net/api.ashx?key=7d737666-889f-45ff-abf6-76be8d9547e7"></script>
+    <script type="text/javascript">
+
+
+        skyscanner.load('snippets', '2', { overridecss: "<?=$this->config->base_url()?>static/pc/css/skyscanner-widget.css" });
+
+        function main(){
+            var snippet = new skyscanner.snippets.SearchPanelControl();
+            snippet.setShape('skyscraper');
+            snippet.setCulture('zh-CN');
+            snippet.setCurrency("CNY");
+            snippet.setMarket("CN");
+            snippet.setDepartureEmpty();
+            snippet.setDestinationEmpty();
+            snippet.setDayviewModeEnabled(true);
+
+            snippet.draw(document.getElementById("snippet_searchpanel"));
+        }
+        skyscanner.setOnLoadCallback(main);
+
+
+    </script>
+
 </head>
 <body>
 <div class="ny_head">
@@ -46,26 +119,16 @@
             <div class="tab_kol_right">
                 <h2>自己选择城市，看看什么时间的机票适合你,天巡为您呈现整月含税价格走势，寻找最划算机票，一目了然。</h2>
                 <div class="tab_kol_time">
-                    <div class="time_left">
-                        <h3>从</h3>
-                        <div><input type="text" class="inputclass1" /></div>
-                        <h4><div><input type="radio" name="qc" checked="checked" />往返<input type="radio" name="qc"/>单程</div>起程</h4>
-                        <div>
-                            <input class="jcDate" style="margin:0 15px 0 0"/><input class="jcDate"/>
-                        </div>
 
-                    </div>
-                    <div class="time_mid"></div>
-                    <div class="time_right">
-                        <h3>到</h3>
-                        <div><input type="text" class="inputclass2" /></div>
-                        <div class="divcheck"><input type="checkbox" />首选直达</div>
-                        <a href="#" class="btn_search"></a>
-                    </div>
-                    <div class="clear10"></div>
+                    <div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
+
                 </div>
             </div>
             <div class="clear20"></div>
+
+            <div class="jianjie">
+
+            </div>
 
             <div class="clear20"></div>
             <div class="imglist">
