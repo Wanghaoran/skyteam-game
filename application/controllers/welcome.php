@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
             }
         }
 
-        if ($token) {
+        if (isset($token)) {
 
             $_SESSION['token'] = $token;
 
