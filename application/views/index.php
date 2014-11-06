@@ -7,6 +7,9 @@
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 
+
+    <meta property="wb:webmaster" content="9a7f3a72c7123521" />
+
     <!-- weibo followbutton -->
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 
