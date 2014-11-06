@@ -171,7 +171,6 @@
                 },2000);//1000是1秒
 
                 setTimeout(function(){
-                    shareWeibo();
                     location.href="<?=$this->config->base_url()?>rank";
                     $("#popDiv3").hide();
                     // $("#popDiv4").show(); share.sinaweibo();
