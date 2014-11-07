@@ -72,10 +72,11 @@ body{ background:#fff;}
 	.home .bottom .bottom_right .sina a{ display:inline-block; width:100%; height:100%;}
 	.home .bottom .bottom_right .sina a img{ width:100%; border:0;}
 	.home .bottom .bottom_right .sina a:hover{opacity:0.7;filter:alpha(opacity=70);}
-	.home .bottom .bottom_right .linktext{ width:43.74%; margin:4% 0 0 0; position:absolute; left:45%; top:0;}
-	.home .bottom .bottom_right .linktext a.phb{ float:left; width:34.86%;}
-	.home .bottom .bottom_right .linktext a.txxdy{ float:left; width:37.92%;}
-	.home .bottom .bottom_right .linktext a.hdgz{ float:left; width:27.21%;}
+	.home .bottom .bottom_right .linktext{ width:57.52%; margin:4% 0 0 0; position:absolute; left:31%; top:0;}
+	.home .bottom .bottom_right .linktext a.fanhui{ float:left; width:23.6%;}
+	.home .bottom .bottom_right .linktext a.phb{ float:left; width:26.63%;}
+	.home .bottom .bottom_right .linktext a.txxdy{ float:left; width:28.97%;}
+	.home .bottom .bottom_right .linktext a.hdgz{ float:left; width:20.79%;}
 	.home .bottom .bottom_right .linktext a img{ width:100%; border:0;}
 	.home .bottom .bottom_right .linktext a:hover{opacity:0.7;filter:alpha(opacity=70);}
 	.home .bottom .iconlink{ width:15.66%; position:absolute; right:2%; top:65%;}

@@ -227,7 +227,6 @@
         <div class="btn_next"><a href="javascript:showNext();"></a></div>
     </div>
 </div>
-<div id="hidebg" class="hidebg"></div>
 <!--pop end-->
 <!--pop 下一步 start-->
 <div id="popDiv2" class="mydiv" style="display:none;">
@@ -291,6 +290,7 @@
                     <wb:follow-button uid="3353187630" type="red_3" >关注按钮</wb:follow-button>
                 </div>
                 <div class="linktext">
+                    <a href="<?=$this->config->base_url()?>" class="fanhui" title="返回首页"><img src="<?=$this->config->base_url()?>static/pc/images/fanhui.png"/></a>
                     <a href="<?=$this->config->base_url()?>rank" class="phb" title="天团排行榜"><img src="<?=$this->config->base_url()?>static/pc/images/textphb.png"/></a>
                     <a href="<?=$this->config->base_url()?>wizard_food" class="txxdy" title="天巡星导游"><img src="<?=$this->config->base_url()?>static/pc/images/texttxdy.png"/></a>
                     <a href="#" class="hdgz" title="活动规则"><img src="<?=$this->config->base_url()?>static/pc/images/texthdgz.png"/></a>
