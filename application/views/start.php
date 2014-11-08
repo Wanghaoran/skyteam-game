@@ -169,7 +169,7 @@
 
             $(".xinlang").click(function() {
 
-                var w = window.open();
+                var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
                 $("#popDiv2").hide();
                 $("#popDiv3").show();
