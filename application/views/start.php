@@ -167,20 +167,16 @@
             $('#radiolist2').hradio();
 
 
-            $("#simulation").click(function(){
-                url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
-                window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
-                return false;
-
-            });
-
             $(".xinlang").click(function() {
+
+                var w = window.open();
+
                 $("#popDiv2").hide();
                 $("#popDiv3").show();
 
                 setTimeout(function(){
-//                    shareWeibo();
-                    $("#simulation").click();
+
+                    w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
                 },2000);//1000是1秒
 
                 setTimeout(function(){
@@ -310,7 +306,6 @@
 </div>
 
 
-<a id="simulation" href="#"></a>
 
 </body>
 </html>
