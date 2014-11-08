@@ -36,6 +36,13 @@
 
     </script>
 
+    <script>
+
+        var a = window.open();
+        console.log(a);
+
+    </script>
+
 
 </head>
 <body>
