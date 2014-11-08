@@ -42,14 +42,14 @@ body{ background:#fff;}
 	.home .right ul li{ width:100%; margin:0 0 5% 0; position:relative;}
 	.home .right ul li .divliimg img{ width:100%;}
 	.home .right ul li .divliimg a img{ border:0; width:100%;}
-	.home .right ul li .divinfo{position:absolute;width:80%;left:5%; top:10%;}
+	.home .right ul li .divinfo{position:absolute;width:95%;left:5%; top:10%; font-family:'Microsoft Yahei'}
 	.home .right ul li .divinfo img,.home .right ul li .divinfo a img{ width:100%; border:0;}
-	.home .right ul li .divinfo .adminimg{ float:left; width:35.09%;}
-	.home .right ul li .divinfo .textimg{ float:left; width:59%; margin:5% 0 0 0;}
+	.home .right ul li .divinfo .adminimg{ float:left; width:30.09%;}
+	.home .right ul li .divinfo .textimg{ float:left; width:69%; margin:2% 0 0 0;}
 	.home .right ul li .divinfo .textimg a{ text-decoration:none;}
-	.home .right ul li .divinfo .textimg h2{ font-size:14px; color:#fff; font-weight:800;}
-	.home .right ul li .divinfo .textimg h3{ font-size:12px; color:#fff; font-weight:400;}
-	.home .right ul li .divinfo .textimg h4{ font-size:12px; color:#fff; font-weight:400;}
+	.home .right ul li .divinfo .textimg h2{ font-size:20px; color:#fff; font-weight:800;}
+	.home .right ul li .divinfo .textimg h3{ font-size:16px; color:#fff; font-weight:400;}
+	.home .right ul li .divinfo .textimg h4{ font-size:16px; color:#fff; font-weight:400;}
 	
 	.home .start{ width:10.88%; position:absolute; top:69%; left:53.75%; z-index:999;}
 	.home .start a img{ width:100%; border:0;}
@@ -72,7 +72,8 @@ body{ background:#fff;}
 	.home .bottom .bottom_right .sina a{ display:inline-block; width:100%; height:100%;}
 	.home .bottom .bottom_right .sina a img{ width:100%; border:0;}
 	.home .bottom .bottom_right .sina a:hover{opacity:0.7;filter:alpha(opacity=70);}
-	.home .bottom .bottom_right .linktext{ width:57.52%; margin:4% 0 0 0; position:absolute; left:31%; top:0;}
+	.home .bottom .bottom_right .linktext{ width:57.52%; margin:4% 0 0 0; position:absolute; left:40%; top:0;}
+	.home .bottom .bottom_right .lt{ left:45%}
 	.home .bottom .bottom_right .linktext a.fanhui{ float:left; width:23.6%;}
 	.home .bottom .bottom_right .linktext a.phb{ float:left; width:26.63%;}
 	.home .bottom .bottom_right .linktext a.txxdy{ float:left; width:28.97%;}
