@@ -443,7 +443,7 @@ var GameOver2Layer  = cc.Layer.extend({
         var bgdImg = cc.Sprite.create(res.gameoverBgd);
         bgdImg.setPosition(winSize.width/2, winSize.height/2);
         this.addChild(bgdImg);
-        this.desc1 = cc.LabelTTF.create("已成功帮朋友累积", 'Times New Roman', 34, cc.size(280, 40), cc.TEXT_ALIGNMENT_LEFT,cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
+        this.desc1 = cc.LabelTTF.create("已成功累积", 'Times New Roman', 34, cc.size(280, 40), cc.TEXT_ALIGNMENT_LEFT,cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
         this.scoreNum = cc.LabelTTF.create("0   公里", 'Times New Roman', 60, cc.size(540, 64), cc.TEXT_ALIGNMENT_RIGHT,cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
         this.scoreNum.setColor(cc.color(240,217,28));
         //this.desc1.setAnchorPoint(0,0);

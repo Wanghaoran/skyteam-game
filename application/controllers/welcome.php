@@ -92,20 +92,16 @@ class Welcome extends CI_Controller {
 
 
         if(false){
-            //如果存在则直接跳转至个人中心页面
+            //根据$UID查询，如果存在则直接跳转至个人中心页面
+            var_dump($client);
+
+
+            var_dump($uid);
+            var_dump($_SESSION);
         }else{
             //开始游戏
             redirect(base_url("game_start"));
         }
-
-        var_dump($client);
-
-
-        var_dump($uid);
-        var_dump($_SESSION);
-
-//        $this->load->helper('url');
-//        redirect(base_url("start"));
 
     }
 
