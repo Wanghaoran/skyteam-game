@@ -113,11 +113,14 @@ class Welcome extends CI_Controller {
         }
 
         //分值写入session
-        $this -> session -> set_userdata('start_num', $start_num);
+        $this -> session -> set_userdata('start_arr', array('start_num' => $start_num));
 
+
+        //读取微博好友
+        $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
 
         echo '<pre>';
-        var_dump($this->session->all_userdata());
+        var_dum($friend_result);
         echo '</pre>';
         $this->load->view('start');
     }
@@ -180,6 +183,15 @@ class Welcome extends CI_Controller {
 
     }
 
+
+
+    //微博API － 互粉列表
+    public function _bilateral($asstoken, $uid){
+        $url = 'https://api.weibo.com/2/friendships/friends/bilateral.json?access_token=' . $asstoken . '&uid=' . $uid;
+        $json_result = file_get_contents($url);
+        $result = json_decode($json_result, true);
+        return $result;
+    }
 
 
 }
