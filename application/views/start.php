@@ -209,7 +209,7 @@
             <div class="chkbox" id="chklist">
                 <ul>
                     <?php foreach($friend_result['users'] as $key => $value):?>
-                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$value['profile_image_url']?>"/></div><div class="divtext"><?=$value['name']?></div></label></li>
+                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img width="100" src="<?=$value['avatar_large']?>"/></div><div class="divtext"><?=$value['name']?></div></label></li>
                     <?php endforeach;?>
                 </ul>
             </div>
