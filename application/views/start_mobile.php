@@ -230,34 +230,30 @@
                         </div>
                     </div>
                     <div class="img_yqhy">
-                        <img src="images/img_yqhy.png"/>
+                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_yqhy.png"/>
                         <div class="chk">
                             <div class="chkbox" id="chklist">
                                 <ul>
-                                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                                    <?php foreach($friend_result['users'] as $key => $value):?>
+                                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img width="144" src="<?=$value['avatar_large']?>"/></div><div class="divtext"><?=$value['name']?></div></label></li>
+                                    <?php endforeach;?>
+
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="img_tishi"><img src="images/img_tishi.png"/></div>
+                    <div class="img_tishi"><img src="<?=$this->config->base_url()?>static/mobile/images/img_tishi.png"/></div>
                 </div>
-                <div class="btn_next"><a  href="javascript:showNext();"><img src="images/btn_next.png"/></a></div>
+                <div class="btn_next"><a  href="javascript:showNext();"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_next.png"/></a></div>
             </div>
         </div>
         <!--创建信息 结束-->
         <!--选择目的地 start-->
         <div id="popDiv2" class="mydiv" style="display:none;">
             <div class="popdiv1">
-                <img src="images/popbg.png"/>
+                <img src="<?=$this->config->base_url()?>static/mobile/images/popbg.png"/>
                 <div class="mst">
-                    <img src="images/text_mst.png"/>
+                    <img src="<?=$this->config->base_url()?>static/mobile/images/text_mst.png"/>
                 </div>
                 <div id="radiolist" class="radioimg">
                     <input name='r' type="radio" value='1' /><label><div class="l1"></div></label>
