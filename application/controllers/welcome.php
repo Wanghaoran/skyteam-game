@@ -99,19 +99,21 @@ class Welcome extends CI_Controller {
         $this -> load -> library('user_agent');
 
         if(!$this -> agent -> is_mobile()){
-
             $this->load->view('wizard_food');
-
         }else{
-
             $this->load->view('wizard_food_mobile');
-
         }
     }
 
     //PC 端 天巡星导游 - 购物团
     public function wizard_buy(){
-        $this->load->view('wizard_buy');
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+            $this->load->view('wizard_buy');
+        }else{
+            $this->load->view('wizard_buy_mobile');
+        }
     }
 
     //PC 端 天巡星导游 - 休闲团
@@ -120,7 +122,7 @@ class Welcome extends CI_Controller {
     }
 
     public function tests(){
-        $this->load->view('wizard_food_mobile');
+        $this->load->view('wizard_buy_mobile');
 
     }
 

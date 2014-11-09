@@ -33,10 +33,10 @@
                 </li>
                 <div class="clear"></div>
                 <li class="li2">
-                    <div class="divliimg"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/bg_nav2.png"/></a></div>
+                    <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/bg_nav2.png"/></a></div>
                     <div class="divinfo">
-                        <div class="adminimg"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_nav2.png"/></a></div>
-                        <div class="textimg"><a href="#">手边巴黎urruolan<div>专栏作家，环球旅行家</div></a></div>
+                        <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/img_nav2.png"/></a></div>
+                        <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_buy">手边巴黎urruolan<div>专栏作家，环球旅行家</div></a></div>
                     </div>
                 </li>
                 <div class="clear"></div>
