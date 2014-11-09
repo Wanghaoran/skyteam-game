@@ -11,6 +11,81 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
+
+    <style type="text/css">
+
+        .ss_searchpanel.ss_skyscraper
+        {
+            width:100%!important;
+            height:auto!important;
+        }
+        .ss_deals
+        {
+            display:none!important;
+        }
+        .ss_tabs
+        {
+            display:none!important;
+        }
+        .ss_footer_getwidget .ss_cf
+        {
+            display:none!important;
+        }
+        .ss_searchpanel.ss_skyscraper .ss_form
+        {
+            height:auto!important;
+            padding:10px 5px!important;
+        }
+        .ss_searchpanel .ss_form_wrapper
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel .ss_form
+        {
+            background-color:transparent!important;
+        }
+        .ss_searchpanel
+        {
+            background-color:transparent!important;
+            -webkit-box-shadow: none!important;
+            -moz-box-shadow: none!important;
+            box-shadow: none!important;
+        }
+
+        .ss_searchpanel.ss_skyscraper .ss_row {
+            padding-top: 15px;
+            width: 40%;
+            float: left;
+            margin: 0 5%;
+        }
+
+    </style>
+
+
+    <script type="text/javascript" src="http://api.skyscanner.net/api.ashx?key=7d737666-889f-45ff-abf6-76be8d9547e7"></script>
+    <script type="text/javascript">
+
+
+        skyscanner.load('snippets', '2', { overridecss: "<?=$this->config->base_url()?>static/pc/css/skyscanner-widget.css" });
+
+        function main(){
+            var snippet = new skyscanner.snippets.SearchPanelControl();
+            snippet.setShape('skyscraper');
+            snippet.setCulture('zh-CN');
+            snippet.setCurrency("CNY");
+            snippet.setMarket("CN");
+            snippet.setDepartureEmpty();
+            snippet.setDestinationEmpty();
+//            snippet.setDayviewModeEnabled(true);
+
+            snippet.draw(document.getElementById("snippet_searchpanel"));
+        }
+        skyscanner.setOnLoadCallback(main);
+
+
+    </script>
+
+
 </head>
 <body>
 <div class="contain">
@@ -167,63 +242,6 @@
 
                         <div class="clear"></div>
 
-
-
-                        <!--
-                        <dl>
-
-                            <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_info1.jpg" /></a>
-                            <div class="left_title">意大利 米兰</div>
-                            </dt>
-                            <dd>
-                                <h2>米兰：时尚就是这样</h2>
-                                <P>这是全球最时尚的地方，国际大牌可都在这里发源的，所以只要在时尚四边形区转转！</P>
-                            </dd>
-                            <div class="clear10"></div>
-                        </dl>
-
-
-                        <dl>
-                            <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_info2.jpg" /></a>
-                            <div class="left_title">荷兰 阿姆斯特丹</div>
-                            </dt>
-                            <dd>
-                                <h2>阿姆斯特丹：钻石任你选</h2>
-                                <P>拥有一颗璀璨的钻石，是购物的终极梦想，那么来阿姆斯特丹就对了！这里有闻名世界的</P>
-                            </dd>
-                            <div class="clear10"></div>
-                        </dl>
-                        <div class="clear"></div>
-
-                        <dl>
-                            <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_info3.jpg" /></a>
-                            <div class="left_title">德国 法兰克福 </div>
-                            </dt>
-                            <dd>
-                                <h2>法兰克福：不想买名牌都难</h2>
-                                <P>德国品质尽可放心，在法兰克福可以一站购齐，只要在蔡尔街和歌德街逛上一天，你要考虑的问题就只剩下</P>
-                            </dd>
-                            <div class="clear10"></div>
-                        </dl>
-                        <div class="clear"></div>
-                        <dl class="dl_margin">
-                            <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_info4.jpg" /></a>
-                            <div class="left_title">法国 巴黎</div>
-                            </dt>
-                            <dd>
-                                <h2>巴黎：我们卖的是生活方式</h2>
-                                <P>既然来到了巴黎，就像巴黎人一样地过日子吧，喝一杯咖啡，不慌不忙地逛逛，体验舒适的服务，</P>
-                            </dd>
-                            <div class="clear10"></div>
-                        </dl>
-
-
-                        <div class="clear"></div>
-                        -->
                     </div>
                     <!--话题列表 结束-->
                 </div>
@@ -234,19 +252,8 @@
             <div class="clear10"></div>
             <div class="tab_kol_time">
 
-                <h3>从</h3>
-                <div class="divinput"><input type="text" class="inputclass1"/></div>
-                <h3>到</h3>
-                <div class="divinput"><input type="text" class="inputclass2" /></div>
-                <h4><input type="radio" name="qc" checked="checked" />往返&nbsp;&nbsp;<input type="radio" name="qc"/>单程</h4>
-                <div class="clear10"></div>
-                <h3>起程</h3>
-                <div class="divinput">
-                    <input class="jcDate"/><h4>2014年11月4日（周二）</h4>
-                </div>
-                <div class="divinput"><input class="jcDate"/><h4>2014年11月4日（周二）</h4></div>
-                <div class="divinput"><a href="#" class="btn_search"></a></div>
-                <div class="clear10"></div>
+                <div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
+
             </div>
             <div class="clear10"></div>
         </div>
@@ -255,7 +262,7 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_foot5.jpg"/>
         <div class="bot_nav">
             <ul>
-                <li class="short"><a href="#" title="返回首页"></a></li>
+                <li class="short"><a href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
                 <li><a href="#" title="天团排行榜"></a></li>
                 <li><a href="#" title="天巡星导游"></a></li>
                 <li class="short"><a href="#" title="活动规则"></a></li>
