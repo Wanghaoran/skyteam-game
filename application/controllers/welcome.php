@@ -5,7 +5,17 @@ class Welcome extends CI_Controller {
 	//PC 端首页
 	public function index()
 	{
-		$this->load->view('index');
+
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+
+            $this->load->view('index');
+
+        }else{
+
+            $this -> load -> view('index_mobile');
+        }
 	}
 
     //weibo 登陆
