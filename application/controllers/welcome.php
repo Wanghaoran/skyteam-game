@@ -88,6 +88,16 @@ class Welcome extends CI_Controller {
 
         //TODO:根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
 
+        $this->load->helper('url');
+
+
+        if(false){
+            //如果存在则直接跳转至个人中心页面
+        }else{
+            //开始游戏
+            redirect(base_url("game_start"));
+        }
+
         var_dump($client);
 
 
@@ -154,8 +164,8 @@ class Welcome extends CI_Controller {
         }
     }
 
-    public function tests(){
-        $this->load->view('rules_mobile');
+    public function game_start(){
+        $this->load->view('game_start');
 
     }
 

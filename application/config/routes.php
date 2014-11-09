@@ -48,6 +48,7 @@ $route['wizard_food'] = 'welcome/wizard_food';
 $route['rank'] = 'welcome/rank';
 $route['start'] = 'welcome/start';
 $route['rules'] = 'welcome/rules';
+$route['game_start'] = 'welcome/game_start';
 
 
 /* End of file routes.php */
