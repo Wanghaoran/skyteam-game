@@ -109,7 +109,7 @@ class Welcome extends CI_Controller {
         if(isset($_COOKIE['start_num'])){
             $start_num = $_COOKIE['start_num'];
             //删除
-            setcookie("start_num", "", time()-3600);
+//            setcookie("start_num", "", time()-3600);
         }else{
             $start_num = 0;
         }
