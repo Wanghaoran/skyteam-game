@@ -78,8 +78,12 @@ class Welcome extends CI_Controller {
 
 
         //TODO:根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
-        $this->load->helper('url');
-        redirect(base_url("start"));
+
+        var_dump($uid);
+        var_dump($_SESSION);
+
+//        $this->load->helper('url');
+//        redirect(base_url("start"));
 
     }
 
