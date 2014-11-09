@@ -95,7 +95,18 @@ class Welcome extends CI_Controller {
 
     //PC 端 天巡星导游 - 美食团
     public function wizard_food(){
-        $this->load->view('wizard_food');
+
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+
+            $this->load->view('wizard_food');
+
+        }else{
+
+            $this->load->view('wizard_food_mobile');
+
+        }
     }
 
     //PC 端 天巡星导游 - 购物团
@@ -109,9 +120,10 @@ class Welcome extends CI_Controller {
     }
 
     public function tests(){
-        $this->load->view('test');
+        $this->load->view('wizard_food_mobile');
 
     }
+
 
 }
 
