@@ -22,13 +22,13 @@ class Welcome extends CI_Controller {
     public function weibologin(){
         include_once('./Weibo.php');
         $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
-        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck');
+        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck/1234');
         $this->load->helper('url');
         redirect($code_url);
     }
 
     //weibo 登陆回调验证
-    public function weibocheck(){
+    public function weibocheck($a){
 
         include_once('./Weibo.php');
 
@@ -78,6 +78,9 @@ class Welcome extends CI_Controller {
 
 
         //TODO:根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
+
+        var_dump($a);
+
 
         var_dump($uid);
         var_dump($_SESSION);
