@@ -285,11 +285,12 @@
         <div class="home_foot">
             <img src="<?=$this->config->base_url()?>static/mobile/images/ny_foot.jpg"/>
             <div class="bot_nav">
+
                 <ul>
-                    <li class="short"><a href="javascript:closeBg();" title="返回首页"></a></li>
+                    <li class="short"><a href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
                     <li><a href="#" title="天团排行榜"></a></li>
-                    <li><a href="#" title="天巡星导游"></a></li>
-                    <li class="short"><a href="#" title="活动规则"></a></li>
+                    <li><a href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
+                    <li class="short"><a href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
                     <li class="short"><a href="#" title="个人中心"></a></li>
                 </ul>
             </div>
