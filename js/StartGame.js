@@ -457,7 +457,7 @@ var GameOver2Layer  = cc.Layer.extend({
             this.scene.gameoverlayer.setVisible(false);
             this.scene.addChild(new ShareLayer(this.scene),10);
         }, this);
-        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn,res.selfOverBtn,function(){ window.location.href = "http://www.baidu.com";});
+        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn,res.selfOverBtn,function(){ window.location.href = "start";});
         var againBtn = cc.MenuItemImage.create(res.againBtn,res.againBtn,null,this.scene.againGame, this.scene);
         shareBtn.setPosition(winSize.width/2+250, winSize.height/2-40);
         selfOverBtn.setPosition(winSize.width/2-120, winSize.height/2-125);
@@ -611,10 +611,17 @@ var StartGame = cc.Scene.extend({
 
         if(state == 'start') {
             this.gameoverlayer = new GameOver2Layer(this);
+            //
+            var start_num = this.gamelayer.scoreNum.getString().replace(/Km/i,"");
+            document.cookie="start_num=" + start_num;
+
         } else {
             this.gameoverlayer = new GameOver1Layer(this);
         }
         var str = this.gamelayer.scoreNum.getString().replace(/Km/i,"   公里");
+
+
+
         this.gameoverlayer.scoreNum.setString(str);
         this.gamebgdlayer.setPosition(0,0);
         this.addChild(this.gameoverlayer,20,20);

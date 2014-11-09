@@ -107,6 +107,8 @@ class Welcome extends CI_Controller {
 
     //创建天团
     public function start(){
+        var_dump($_SESSION);
+        var_dump($_COOKIE);
         $this->load->view('start');
     }
 
