@@ -112,17 +112,12 @@ class Welcome extends CI_Controller {
             $start_num = 0;
         }
 
-
         //分值写入session
         $this -> session -> set_userdata('start_num', $start_num);
-
-        //删除
-        setcookie("start_num", "", time()-3600);
 
 
         echo '<pre>';
         var_dump($this->session->all_userdata());
-        var_dump($_COOKIE);
         echo '</pre>';
         $this->load->view('start');
     }
