@@ -120,7 +120,7 @@ class Welcome extends CI_Controller {
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
 
         echo '<pre>';
-        var_dum($friend_result);
+        var_dump($friend_result);
         echo '</pre>';
         $this->load->view('start');
     }
