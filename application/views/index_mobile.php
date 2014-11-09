@@ -42,10 +42,10 @@
                 <div class="clear"></div>
 
                 <li class="li3">
-                    <div class="divliimg"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/bg_nav3.png"/></a></div>
+                    <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/bg_nav3.png"/></a></div>
                     <div class="divinfo">
-                        <div class="adminimg"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/img_nav1.png"/></a></div>
-                        <div class="textimg"><a href="#">旅游卫视史林子<div>旅游卫视当家主持</div></a></div>
+                        <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/img_nav1.png"/></a></div>
+                        <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_show">旅游卫视史林子<div>旅游卫视当家主持</div></a></div>
                     </div>
                 </li>
                 <div class="clear"></div>
