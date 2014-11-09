@@ -106,7 +106,20 @@ class Welcome extends CI_Controller {
 
     //创建天团
     public function start(){
+        if(isset($_COOKIE['start_num'])){
+            $start_num = $_COOKIE['start_num'];
+            //删除
+            setcookie("start_num", "", time()-3600);
+        }else{
+            $start_num = 0;
+        }
+
+        //分值写入session
+        $this -> session -> set_userdata('start_num', $start_num);
+
+
         var_dump($this->session->all_userdata());
+        var_dump($_COOKIE);
         $this->load->view('start');
     }
 
