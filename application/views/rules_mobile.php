@@ -16,7 +16,7 @@
 <div class="contain">
     <div class="ny_top">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
-        <div class="ny_logo"><a href="#">&nbsp;</a></div>
+        <div class="ny_logo"><a href="http://www.tianxun.cn">&nbsp;</a></div>
     </div>
     <div class="hdgz">
         <div class="hdgz_con"><img src="<?=$this->config->base_url()?>static/mobile/images/hdgz1.jpg"/></div>
