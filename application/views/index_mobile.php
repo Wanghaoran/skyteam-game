@@ -56,8 +56,8 @@
             <div class="foot_nav">
                 <ul>
                     <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li class="short"><a href="#"></a></li>
+                    <li><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
+                    <li class="short"><a href="<?=$this->config->base_url()?>rules"></a></li>
                     <li class="short"><a href="#"></a></li>
                 </ul>
             </div>

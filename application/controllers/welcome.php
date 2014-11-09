@@ -88,12 +88,12 @@ class Welcome extends CI_Controller {
         $this->load->view('start');
     }
 
-    //PC 端 天团排行版
+    //天团排行版
     public function rank(){
         $this->load->view('rank');
     }
 
-    //PC 端 天巡星导游 - 美食团
+    //天巡星导游 - 美食团
     public function wizard_food(){
 
         $this -> load -> library('user_agent');
@@ -105,7 +105,7 @@ class Welcome extends CI_Controller {
         }
     }
 
-    //PC 端 天巡星导游 - 购物团
+    //天巡星导游 - 购物团
     public function wizard_buy(){
         $this -> load -> library('user_agent');
 
@@ -116,7 +116,7 @@ class Welcome extends CI_Controller {
         }
     }
 
-    //PC 端 天巡星导游 - 休闲团
+    //天巡星导游 - 休闲团
     public function wizard_show(){
         $this -> load -> library('user_agent');
 
@@ -127,8 +127,19 @@ class Welcome extends CI_Controller {
         }
     }
 
+    //活动规则
+    public function rules(){
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+            $this->load->view('rules');
+        }else{
+            $this->load->view('rules_mobile');
+        }
+    }
+
     public function tests(){
-        $this->load->view('wizard_show_mobile');
+        $this->load->view('rules_mobile');
 
     }
 
