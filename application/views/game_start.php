@@ -22,7 +22,7 @@
 
     </script>
 
-    <script src="<?=$this->config->base_url()?>js/cocos2d-js-v3.1-min.js"></script>
+    <script src="http://cnhtk.qiniudn.com/cocos2d-js-v3.1-min.js"></script>
     <style>
         body, canvas, div {
             -moz-user-select: none;
