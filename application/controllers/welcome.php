@@ -55,11 +55,11 @@ class Welcome extends CI_Controller {
 
         if (isset($token)) {
 
-            $_SESSION['token'] = $token;
+            $this -> session -> set_userdata('token', $token);
 
             setcookie('weibojs_'.$o->client_id, http_build_query($token));
 
-            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $_SESSION['token']['access_token']);
+            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $this->session->userdata('token')['access_token']);
 
             $uid_get = $c->get_uid();
 
@@ -97,7 +97,6 @@ class Welcome extends CI_Controller {
 
 
             var_dump($uid);
-            var_dump($_SESSION);
         }else{
             //开始游戏
             redirect(base_url("game_start"));
@@ -107,8 +106,7 @@ class Welcome extends CI_Controller {
 
     //创建天团
     public function start(){
-        var_dump($_SESSION);
-        var_dump($_COOKIE);
+        var_dump($this->session->all_userdata());
         $this->load->view('start');
     }
 
@@ -169,6 +167,7 @@ class Welcome extends CI_Controller {
         $this->load->view('game_start', $data);
 
     }
+
 
 
 }
