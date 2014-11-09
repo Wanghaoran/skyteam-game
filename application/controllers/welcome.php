@@ -106,6 +106,8 @@ class Welcome extends CI_Controller {
 
     //创建天团
     public function start(){
+
+
         if(isset($_COOKIE['start_num'])){
             $start_num = $_COOKIE['start_num'];
         }else{
@@ -115,14 +117,23 @@ class Welcome extends CI_Controller {
         //分值写入session
         $this -> session -> set_userdata('start_arr', array('start_num' => $start_num));
 
+        $data = array();
+
 
         //读取微博好友
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
+        $data['friend_result'] = $friend_result;
 
-        echo '<pre>';
-        var_dump($friend_result);
-        echo '</pre>';
-        $this->load->view('start');
+
+
+
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+            $this->load->view('start');
+        }else{
+            $this->load->view('start_mobile');
+        }
     }
 
     //天团排行版

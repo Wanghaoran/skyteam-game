@@ -208,14 +208,9 @@
 
             <div class="chkbox" id="chklist">
                 <ul>
-                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='1' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='2' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='3' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
-                    <li><input type="checkbox" value='4' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$this->config->base_url()?>static/pc/images/img_admin1.jpg"/></div><div class="divtext">美食天团</div></label></li>
+                    <?php foreach($friend_result['users'] as $key => $value):?>
+                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img src="<?=$value['profile_image_url']?>"/></div><div class="divtext"><?=$value['name']?></div></label></li>
+                    <?php endforeach;?>
                 </ul>
             </div>
         </div>
