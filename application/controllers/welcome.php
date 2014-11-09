@@ -118,8 +118,10 @@ class Welcome extends CI_Controller {
         $this -> session -> set_userdata('start_num', $start_num);
 
 
+        echo '<pre>';
         var_dump($this->session->all_userdata());
         var_dump($_COOKIE);
+        echo '</pre>';
         $this->load->view('start');
     }
 
