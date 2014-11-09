@@ -11,6 +11,17 @@
     <meta name="x5-fullscreen" content="true"/>
     <meta name="360-fullscreen" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script>
+
+        <?php if($state == 'start'):?>
+            var state = 'start';
+        <?php else:?>
+            var state = 'from';
+        <?php endif; ?>
+
+    </script>
+
     <script src="<?=$this->config->base_url()?>js/cocos2d-js-v3.1-min.js"></script>
     <style>
         body, canvas, div {

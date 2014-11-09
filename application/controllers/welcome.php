@@ -161,7 +161,10 @@ class Welcome extends CI_Controller {
     }
 
     public function game_start(){
-        $this->load->view('game_start');
+
+        $data = array();
+        $data['state'] = 'start';
+        $this->load->view('game_start', $data);
 
     }
 

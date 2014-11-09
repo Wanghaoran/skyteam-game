@@ -609,10 +609,10 @@ var StartGame = cc.Scene.extend({
         this.gameState = this.DEAD;
         this.gamelayer.plane.setVisible(false);
 
-        if(!window.FRIENDID) {
-            this.gameoverlayer = new GameOver1Layer(this);
-        } else {
+        if(state == 'start') {
             this.gameoverlayer = new GameOver2Layer(this);
+        } else {
+            this.gameoverlayer = new GameOver1Layer(this);
         }
         var str = this.gamelayer.scoreNum.getString().replace(/Km/i,"   公里");
         this.gameoverlayer.scoreNum.setString(str);
