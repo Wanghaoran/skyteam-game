@@ -118,11 +118,17 @@ class Welcome extends CI_Controller {
 
     //PC 端 天巡星导游 - 休闲团
     public function wizard_show(){
-        $this->load->view('wizard_show');
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+            $this->load->view('wizard_show');
+        }else{
+            $this->load->view('wizard_show_mobile');
+        }
     }
 
     public function tests(){
-        $this->load->view('wizard_buy_mobile');
+        $this->load->view('wizard_show_mobile');
 
     }
 
