@@ -102,6 +102,13 @@ class Welcome extends CI_Controller {
     //创建天团
     public function start(){
 
+        $this -> load -> model('user_model');
+        //如果微博ID存在，并且这个ID没有纪录过，才可以开始创建,否则跳转回首页
+        if(!$this->session->userdata('token')['uid'] || $this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            $this->load->helper('url');
+            redirect(base_url());
+        }
+
 
         if(isset($_COOKIE['start_num'])){
             $start_num = $_COOKIE['start_num'];
