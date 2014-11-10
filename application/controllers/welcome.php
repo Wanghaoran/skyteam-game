@@ -218,6 +218,23 @@ class Welcome extends CI_Controller {
     }
 
 
+    //自己玩加里程
+    public function game_goon_myself(){
+        $num = $this->input->post('num');
+        //更新个人成绩
+        $this -> load -> model('user_model');
+        $this -> user_model -> updatenum($this->session->userdata('token')['uid'], $num);
+
+        //获取个人信息和tid
+        $user_info = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
+
+        //更新总里程
+        $this -> load -> model('team_model');
+        $this -> team_model -> updatenum($user_info['tid'], $num);
+
+    }
+
+
     //建团
     public function bindteam(){
 

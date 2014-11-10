@@ -609,15 +609,23 @@ var StartGame = cc.Scene.extend({
         this.gameState = this.DEAD;
         this.gamelayer.plane.setVisible(false);
 
-        if(state == 'start') {
-            this.gameoverlayer = new GameOver2Layer(this);
-            //
-            var start_num = this.gamelayer.scoreNum.getString().replace(/Km/i,"");
-            document.cookie="start_num=" + start_num;
+        //AJAX
+        this.gameoverlayer = new GameOver2Layer(this);
+        var start_num = this.gamelayer.scoreNum.getString().replace(/Km/i,"");
 
-        } else {
-            this.gameoverlayer = new GameOver1Layer(this);
-        }
+        $.ajax({
+            type : 'POST',
+            url : 'http://skyteam.tianxun.cn/welcome/game_goon_myself',
+            data : '&num=' + start_num,
+            async : false,
+            dataType : 'json',
+            success : function(ress){
+
+            }
+        });
+
+
+
         var str = this.gamelayer.scoreNum.getString().replace(/Km/i,"   公里");
 
 

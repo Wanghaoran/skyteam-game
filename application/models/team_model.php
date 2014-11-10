@@ -35,6 +35,16 @@ class Team_model extends CI_Model {
     }
 
 
+    public function updatenum($id, $num){
+        $query = $this -> db -> get_where('team', array('id' => $id), 1);
+        $result = $query -> row_array();
+        $data = array(
+            'num' => $result['num'] + $num,
+        );
+        $this -> db -> where('id', $id);
+        return $this -> db -> update('team', $data);
+    }
+
     /*
     public function addnum($group, $step = 1){
 
