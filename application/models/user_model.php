@@ -9,7 +9,7 @@ class User_model extends CI_Model {
     }
 
 
-    public function insertUser($weiboid, $name, $profile_url, $avatar_large, $type, $num){
+    public function insertUser($weiboid, $name, $profile_url, $avatar_large, $type, $num, $tid){
 
         $data = array(
             'weiboid' => $weiboid,
@@ -18,6 +18,7 @@ class User_model extends CI_Model {
             'profile_url' => $profile_url,
             'avatar_large' => $avatar_large,
             'num' => $num,
+            'tid' => $tid,
 
         );
 

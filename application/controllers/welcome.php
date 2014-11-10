@@ -147,6 +147,10 @@ class Welcome extends CI_Controller {
             $this->load->helper('url');
             redirect(base_url());
         }
+
+        //读取
+
+
         $this->load->view('rank');
     }
 
@@ -271,15 +275,18 @@ class Welcome extends CI_Controller {
         $profile_url = $user_result['profile_url'];
         $avatar_large = $user_result['avatar_large'];
 
-        //纪录此用户为团长
-        $this -> load -> model('user_model');
-        $this -> user_model -> insertUser($weiboid, $user_name, $profile_url, $avatar_large, 1, $num);
 
         $this -> load -> model('team_model');
 
         $result = array();
 
-        if($this -> team_model -> insertTeam($weiboid, $name, $place, $num, $type)){
+        if($tid = $this -> team_model -> insertTeam($weiboid, $name, $place, $num, $type)){
+
+            //纪录此用户为团长
+            $this -> load -> model('user_model');
+            $this -> user_model -> insertUser($weiboid, $user_name, $profile_url, $avatar_large, 1, $num, $tid);
+
+
             $result['state'] = 'success';
         }else{
             $result['state'] = 'error';
