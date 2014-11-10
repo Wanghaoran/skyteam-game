@@ -222,6 +222,11 @@ class Welcome extends CI_Controller {
         }
     }
 
+    //天团排行榜_mobile
+    public function rank_mobile(){
+
+    }
+
 
     //创建开始游戏
     public function game_start(){

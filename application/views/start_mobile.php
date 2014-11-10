@@ -80,72 +80,205 @@
     .radioimg .hRadio_Checked div.x10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx20.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 </style>
 <script type="text/javascript" src="<?=$this->config->base_url()?>static/mobile/js/jquery.min.js"></script>
+
+
+
+
 <script type="text/javascript">
+
+
+    var result = [];
+    result['friend'] = [];
+
+
+
     //下一步
     function showNext(){
 
+        if(!$('#team_name').val()){
+            alert('团名不能为空！');
+            $('#team_name').focus();
+            return;
+        }
+
+        result['name'] = $('#team_name').val();
+
+        if(!$('input[name="team_type"]:checked').val()){
+            alert('天团类型不能为空！');
+            $('#team_name').focus();
+            return;
+        }
+
+        result['type'] = $('input[name="team_type"]:checked').val();
+
+
+        //下一步
+        //根据不同团的类型，加载不同地点
+        if(result['type'] == 1){
+            $.each($('#radiolist').children('label'), function(x,y){
+                $(y).children().removeClass().addClass('l' + (x+1));
+            });
+        }
+
+        if(result['type'] == 2){
+            $.each($('#radiolist').children('label'), function(x,y){
+                $(y).children().removeClass().addClass('m' + (x+1));
+            });
+        }
+
+        if(result['type'] == 3){
+            $.each($('#radiolist').children('label'), function(x,y){
+                $(y).children().removeClass().addClass('x' + (x+1));
+            });
+        }
+
         $("#popDiv1").hide();
         $("#popDiv2").show();
+
     }
+
+
+    ;(function($){
+        $.fn.hcheckbox=function(options){
+            $(':checkbox+label',this).each(function(){
+                $(this).addClass('checkbox');
+                if($(this).prev().is(':disabled')==false){
+                    if($(this).prev().is(':checked'))
+                        $(this).addClass("checked");
+                }else{
+                    $(this).addClass('disabled');
+                }
+            }).click(function(event){
+
+                    //选择
+                    if(!$(this).prev().is(':checked')){
+
+                        if(result['friend'].length >= 3){
+                            alert('最多邀请3位好友！');
+                            return;
+                        }else{
+                            result['friend'].push($(this).children('.divtext').html());
+                        }
+
+                        $(this).addClass("checked");
+                        $(this).prev()[0].checked = true;
+
+                    }
+                    else{
+
+                        var friend_name = $(this).children('.divtext').html();
+                        //取消选择
+                        $.each(result['friend'], function (k, v) {
+
+                            if(v == friend_name){
+                                result['friend'].splice(k, 1);
+                            }
+
+                        });
+
+
+                        $(this).removeClass('checked');
+                        $(this).prev()[0].checked = false;
+                    }
+                    event.stopPropagation();
+
+                }
+            ).prev().hide();
+        }
+
+        $.fn.hradio = function(options){
+            var self = this;
+            return $(':radio+label',this).each(function(){
+                $(this).addClass('hRadio');
+                if($(this).prev().is("checked"))
+                    $(this).addClass('hRadio_Checked');
+            }).click(function(event){
+                $(this).siblings().removeClass("hRadio_Checked");
+
+                result['place_id'] = $(this).attr('place_id');
+
+                if(!$(this).prev().is(':checked')){
+                    $(this).addClass("hRadio_Checked");
+                    $(this).prev()[0].checked = true;
+                }
+
+                event.stopPropagation();
+            })
+                .prev().hide();
+        }
+
+    })(jQuery)
+
+    $(function(){
+        $('#chklist').hcheckbox();
+        $('#radiolist').hradio();
+        $('#radiolist2').hradio();
+
+
+        $(".xinlang").click(function() {
+
+
+
+            if(!result['place_id']){
+                alert('请您先选择目的地！');
+                return;
+            }
+
+            var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+
+            //创建团
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/bindteam',
+                data : '&name=' + result['name'] + '&place_id=' + result['place_id'] + '&type=' + result['type'],
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+                    if(ress['state'] != 'success'){
+                        alert(ress.info);
+                        return;
+                    }
+
+
+                    $("#popDiv2").hide();
+                    $("#popDiv3").show();
+
+                    setTimeout(function(){
+
+                        var text_weibo = '起飞吧朋友－天巡接力拼里程';
+                        $.each(result['friend'], function(x,y){
+                            text_weibo += '@' + y;
+                        });
+
+                        w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=";
+                    },2000);
+
+                    setTimeout(function(){
+                        location.href="<?=$this->config->base_url()?>rank";
+                        $("#popDiv3").hide();
+                    },3000);
+
+
+                }
+            });
+
+
+
+        });
+    });
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
 
     // 分享代码
     var shareid = "fenxiang";
 
-    (function() {
-        var a = {
-            url:function() {
-                return encodeURIComponent(window.location.href)
-            },title:function() {
-                return encodeURIComponent(window.document.title)
-            },content:function(b) {
-                if (b) {
-                    return encodeURIComponent($("#" + b).html())
-                } else {
-                    return""
-                }
-            },setid:function() {
-                if (typeof(shareid) == "undefined") {
-                    return null
-                } else {
-                    return shareid
-                }
-            },renren:function() {
-                window.open("http://share.renren.com/share/buttonshare.do?link=" + this.url() + "&title=" + this.title())
-            },sinaminiblog:function() {
-                window.open("http://v.t.sina.com.cn/share/share.php?url=" + this.url() + "&title=" + this.title() + "&content=utf-8&source=&sourceUrl=&pic=")
-            },sinaweibo:function() {
-                $("#sinaweibo").attr("src","http://v.t.sina.com.cn/share/share.php?url=" + this.url() + "&title=" + this.title() + "&content=utf-8&source=&sourceUrl=&pic=")
 
-            },qqzone:function() {
-                window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodeURIComponent(location.href) + '&title=' + encodeURIComponent(document.title))}};
-        window.share = a
-    })();
-
-    $(function() {
-        $(".renren").click(function() {
-            share.renren();
-        });
-        $(".xinlang").click(function() {
-            $(".ny_title2").css({
-                display: "none"
-            });
-            $(".ny_title3").css({
-                display: "block"
-            });
-            $("#popDiv2").hide();
-            $("#popDiv3").show();
-            share.sinaweibo();
-        });
-        $(".sinaweibo").click(function() {
-            share.sinaweibo();
-        });
-        $(".qqzone").click(function() {
-            share.qqzone();
-        });
-
-        $(".tengxun").click(function() {
-            share.qqweibo();
-        });
 
     });
     function postToWb() {
