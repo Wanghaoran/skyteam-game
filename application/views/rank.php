@@ -154,10 +154,10 @@
                         <div class="tab_phblist_left">
                             <div class="tab_phbadmin">
                                 <a href="#">
-                                    <img src="<?=$value['leader']['avatar_large']?>"/>
-                                    <div><?=$value['leader']['uname']?></div>
+                                    <img src="<?=$value['leader'][0]['avatar_large']?>"/>
+                                    <div><?=$value['leader'][0]['name']?></div>
                                 </a>
-                                <a href="<?=$value['leader']['profile_url']?>" target="_blank" class="guanzhu"></a>
+                                <a href="<?=$value['leader'][0]['profile_url']?>" target="_blank" class="guanzhu"></a>
                             </div>
                             <div class="tab_phbinfo">
                                 <table>
