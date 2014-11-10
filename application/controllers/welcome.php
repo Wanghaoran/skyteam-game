@@ -140,6 +140,13 @@ class Welcome extends CI_Controller {
 
     //天团排行版
     public function rank(){
+
+        $this -> load -> model('user_model');
+        //如果微博ID存在，并且这个ID有纪录，才能访问排行榜页面
+        if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            $this->load->helper('url');
+            redirect(base_url());
+        }
         $this->load->view('rank');
     }
 
