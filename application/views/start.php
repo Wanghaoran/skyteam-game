@@ -134,9 +134,6 @@
 
             result['type'] = $('input[name="team_type"]:checked').val();
 
-            console.log(result);
-
-
 
             $("#popDiv1").hide();
             $("#popDiv2").show();
@@ -187,7 +184,6 @@
                         }
                         event.stopPropagation();
 
-                        console.log(result);
                     }
                 ).prev().hide();
             }
