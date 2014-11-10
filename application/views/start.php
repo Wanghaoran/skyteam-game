@@ -164,7 +164,7 @@
                                 alert('最多邀请3位好友！');
                                 return;
                             }else{
-                                result['friend']['' + $(this).children('.divtext').attr('weibo_id').toString() + ''] = $(this).children('.divtext').html();
+                                result['friend'][] = $(this).children('.divtext').html();
                             }
 
                             $(this).addClass("checked");
@@ -250,7 +250,7 @@
             <div class="chkbox" id="chklist">
                 <ul>
                     <?php foreach($friend_result['users'] as $key => $value):?>
-                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img width="100" src="<?=$value['avatar_large']?>"/></div><div weibo_id="<?=$value['id']?>" class="divtext"><?=$value['name']?></div></label></li>
+                        <li><input type="checkbox" value='<?=$value['name']?>' /><label><div class="divimg"><span>&nbsp;</span><img width="100" src="<?=$value['avatar_large']?>"/></div><div class="divtext"><?=$value['name']?></div></label></li>
                     <?php endforeach;?>
                 </ul>
             </div>
