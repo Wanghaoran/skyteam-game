@@ -12,15 +12,6 @@
     <meta name="360-fullscreen" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <script>
-
-        <?php if($state == 'start'):?>
-            var state = 'start';
-        <?php else:?>
-            var state = 'from';
-        <?php endif; ?>
-
-    </script>
 
     <script src="http://cnhtk.qiniudn.com/cocos2d-js-v3.1-min.js"></script>
     <style>
@@ -60,7 +51,7 @@
 <div id="bodyBgd" ontouchmove= "event.preventDefault()" style="display:none;"></div>
 <div id="shuShow" ontouchmove= "event.preventDefault()"></div>
 <script src="<?=$this->config->base_url()?>js/resource.js"></script>
-<script src="<?=$this->config->base_url()?>js/StartGame.js"></script>
+<script src="<?=$this->config->base_url()?>js/StartGame_goon.js"></script>
 <script src="<?=$this->config->base_url()?>js/main.js"></script>
 </body>
 </html>
