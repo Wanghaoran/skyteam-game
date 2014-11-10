@@ -241,13 +241,14 @@
 
             $(".xinlang").click(function() {
 
-                var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
 
                 if(!result['place_id']){
                     alert('请您先选择目的地！');
                     return;
                 }
+
+                var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
                 //创建团
                 $.ajax({
@@ -268,7 +269,12 @@
 
                         setTimeout(function(){
 
-                            w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
+                            var text_weibo = '起飞吧朋友－天巡接力拼里程';
+                            $.each(result['friend'], function(x,y){
+                                text_weibo += '@' + y;
+                            });
+
+                            w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=";
                         },2000);
 
                         setTimeout(function(){
