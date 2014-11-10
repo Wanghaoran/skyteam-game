@@ -116,9 +116,32 @@
         <div class="tab_phbtitle">
             <ul>
                 <li class="li1"></li>
-                <li class="li2"><a href="#"></a></li>
-                <li class="li3"><a href="#" class="now"></a></li>
-                <li class="li4"><a href="#"></a></li>
+
+                <?php if($user_result['type'] == 1):?>
+                    <!-- 美食团 -->
+                    <li class="li2"><a href="<?=$this->config->base_url()?>rank?type=1" class="now"></a></li>
+                    <!-- 购物团 -->
+                    <li class="li3"><a href="<?=$this->config->base_url()?>rank?type=2"></a></li>
+                    <!-- 休闲团 -->
+                    <li class="li4"><a href="<?=$this->config->base_url()?>rank?type=3"></a></li>
+                <?php elseif($user_result['type'] == 2):?>
+                    <!-- 美食团 -->
+                    <li class="li2"><a href="<?=$this->config->base_url()?>rank?type=1"></a></li>
+                    <!-- 购物团 -->
+                    <li class="li3"><a href="<?=$this->config->base_url()?>rank?type=2" class="now"></a></li>
+                    <!-- 休闲团 -->
+                    <li class="li4"><a href="<?=$this->config->base_url()?>rank?type=3"></a></li>
+
+                <?php elseif($user_result['type'] == 3):?>
+
+                    <!-- 美食团 -->
+                    <li class="li2"><a href="<?=$this->config->base_url()?>rank?type=1"></a></li>
+                    <!-- 购物团 -->
+                    <li class="li3"><a href="<?=$this->config->base_url()?>rank?type=2"></a></li>
+                    <!-- 休闲团 -->
+                    <li class="li4"><a href="<?=$this->config->base_url()?>rank?type=3" class="now"></a></li>
+                <?php endif; ?>
+
             </ul>
         </div>
         <div class="clear20"></div>

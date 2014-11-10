@@ -156,6 +156,15 @@ class Welcome extends CI_Controller {
         $data['user_result'] = $user_result;
 
 
+        //读取右侧排行榜
+        if($this->input->get('type')){
+            $data['type'] = $this->input->get('type');
+        }else{
+            $data['type'] = 1;
+        }
+
+
+
         $this->load->view('rank', $data);
     }
 
