@@ -17,7 +17,7 @@ class Team_model extends CI_Model {
 
         $data = array(
             'weiboid' => $weiboid,
-            'type' => $type,
+            'type' => 1,
             'name' => $name,
             'place' => $place,
             'num' => $num,
