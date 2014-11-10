@@ -204,12 +204,19 @@ class Welcome extends CI_Controller {
         }
     }
 
-    public function game_start(){
 
+    //创建开始游戏
+    public function game_start(){
         $data = array();
         $data['state'] = 'start';
         $this->load->view('game_start', $data);
+    }
 
+    //积攒里程开始游戏
+    public function game_goon(){
+        $data = array();
+        $data['state'] = 'goon';
+        $this->load->view('game_goon', $data);
     }
 
 

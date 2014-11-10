@@ -66,7 +66,7 @@
     </div>
     <div class="clear"></div>
     <div class="ny_leftbtn">
-        <a href="#" class="btn_go"></a>
+        <a href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_go"></a>
         <a href="#" class="btn_comeon"></a>
         <div class="clear"></div>
         <div class="ny_lefticon">
