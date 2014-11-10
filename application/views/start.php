@@ -154,7 +154,7 @@
                     }
                 }).click(function(event){
 
-                        console.log($(this).children('.divtext'));
+                        console.log($(this).children('.divtext').html());
                         if(!$(this).prev().is(':checked')){
                             $(this).addClass("checked");
                             $(this).prev()[0].checked = true;
