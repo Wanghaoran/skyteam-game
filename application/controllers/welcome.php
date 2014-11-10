@@ -150,7 +150,8 @@ class Welcome extends CI_Controller {
 
         //读取个人和所属团的信息
         $this -> load -> model('user_model');
-        $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
+        $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
+        var_dump($user_result);
 
 
         $this->load->view('rank');

@@ -37,7 +37,7 @@ class User_model extends CI_Model {
         $this->db->join('skyteam_team', 'skyteam_user.tid = skyteam_team.id');
         $this->db->where(array('skyteam_user.weiboid' => $weiboid));
         $query = $this->db->get();
-        var_dump($query -> result_array());
+        return $query -> result_array()[0];
 
     }
 
