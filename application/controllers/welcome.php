@@ -151,7 +151,6 @@ class Welcome extends CI_Controller {
         $data = array();
 
         //读取个人和所属团的信息
-        $this -> load -> model('user_model');
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
         $data['user_result'] = $user_result;
 
@@ -162,6 +161,12 @@ class Welcome extends CI_Controller {
         }else{
             $data['type'] = 1;
         }
+
+        $this -> load -> model('team_model');
+        $result_type = $this -> team_model -> teamorder($data['type']);
+        var_dump($result_type);
+
+
 
 
 
