@@ -52,7 +52,14 @@
         <div class="clear"></div>
         <ul class="ulinfo">
             <li><?=$user_result['tname']?></li>
-            <li>团长</li>
+            <li>
+                <?php if($user_result['utype'] == 1):?>
+                    团长
+                <?php else:?>
+                    团员
+                <?php endif; ?>
+
+            </li>
             <li><?=$user_result['unum']?> 里程</li>
             <li>已积攒 <?=$user_result['tnum']?> 里程</li>
         </ul>
