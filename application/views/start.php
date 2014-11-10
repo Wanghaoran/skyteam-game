@@ -110,6 +110,10 @@
     <script type="text/javascript">
 
 
+        var result = [];
+
+
+
         //下一步
         function showNext(){
 
@@ -119,11 +123,18 @@
                 return;
             }
 
+            result['name'] = $('#team_name').val();
+
             if(!$('input[name="team_type"]:checked').val()){
                 alert('天团类型不能为空！');
                 $('#team_name').focus();
                 return;
             }
+
+            result['type'] = $('input[name="team_type"]:checked').val();
+
+            console.log(result);
+
 
 
             $("#popDiv1").hide();
@@ -142,6 +153,8 @@
                         $(this).addClass('disabled');
                     }
                 }).click(function(event){
+
+                        alert(1);
                         if(!$(this).prev().is(':checked')){
                             $(this).addClass("checked");
                             $(this).prev()[0].checked = true;
