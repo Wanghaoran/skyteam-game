@@ -53,7 +53,7 @@ class Team_model extends CI_Model {
         $this->db->order_by("num", "DESC");
         $this->db->where(array('type' => $type));
         $query = $this->db->get();
-        return $query -> result_array()[0];
+        return $query -> result_array();
     }
 
     /*

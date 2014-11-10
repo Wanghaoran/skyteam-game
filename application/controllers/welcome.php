@@ -162,8 +162,15 @@ class Welcome extends CI_Controller {
             $data['type'] = 1;
         }
 
+        //读取团排行榜
         $this -> load -> model('team_model');
         $result_type = $this -> team_model -> teamorder($data['type']);
+
+        //循环结果数组，读取团长信息
+        foreach($result_type as $key => $value){
+            $result_type[$key]['leader'] = $this -> user_model -> getinfo($value['weiboid']);
+        }
+
         var_dump($result_type);
 
 
