@@ -245,7 +245,19 @@
                     alert('请您先选择目的地！');
                     return;
                 }
-                console.log(result);
+
+                //创建团
+                $.ajax({
+                    type : 'POST',
+                    url : '<?=$this -> config -> base_url()?>welcome/bindteam',
+                    data : '&name=' + result['name'] + '&place_id=' + result['place_id'] + '&type=' + result['type'],
+                    async : false,
+                    dataType : 'json',
+                    success : function(ress){
+                        console.log(ress);
+                    }
+                });
+
                 /*
 
                 var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');

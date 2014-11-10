@@ -195,6 +195,76 @@ class Welcome extends CI_Controller {
     }
 
 
+    //建团
+    public function bindteam(){
+
+        //地区名称对应数组
+        $map_arr = array(
+            1 => array(
+                1 => '巴塞罗那',
+                2 => '布鲁塞尔',
+                3 => '东京',
+                4 => '佛罗伦萨',
+                5 => '胡志明市',
+                6 => '曼谷',
+                7 => '慕尼黑',
+                8 => '台北',
+                9 => '悉尼',
+                10 => '新加坡',
+            ),
+            2 => array(
+                1 => '阿姆斯特丹',
+                2 => '巴黎',
+                3 => '大阪',
+                4 => '迪拜',
+                5 => '法兰克福',
+                6 => '伦敦',
+                7 => '纽约',
+                8 => '首尔',
+                9 => '香港',
+                10 => '伊斯坦布尔',
+            ),
+            3 => array(
+                1 => '爱丁堡',
+                2 => '布拉格',
+                3 => '皇后镇',
+                4 => '开罗',
+                5 => '坎昆',
+                6 => '科伦坡',
+                7 => '马尔代夫',
+                8 => '莫斯科',
+                9 => '日内瓦',
+                10 => '威尼斯',
+            ),
+        );
+
+        //团名
+        $name = $this->input->post('name');
+        //目的地ID
+        $place_id = $this->input->post('place_id');
+        //团类型
+        $type = $this->input->post('type');
+
+        //匹配出地名
+        $place = $map_arr[$type][$place_id];
+
+
+        //用户ID
+        $weiboid = $this->session->userdata('token')['uid'];
+
+        $this -> load -> model('team_model');
+
+        $result = array();
+
+        if($this -> team_model -> insertTeam($weiboid, $name, $place, 0)){
+            $result['state'] = 'success';
+        }else{
+            $result['state'] = 'error';
+            $result['info'] = '添加数据错误！';
+        }
+
+        echo json_decode($result);
+    }
 
     //微博API － 互粉列表
     public function _bilateral($asstoken, $uid){
@@ -203,6 +273,7 @@ class Welcome extends CI_Controller {
         $result = json_decode($json_result, true);
         return $result;
     }
+
 
 
 }
