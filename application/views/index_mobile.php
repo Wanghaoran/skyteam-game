@@ -20,7 +20,7 @@
     <div class="home">
         <div class="divbg"><img src="<?=$this->config->base_url()?>static/mobile/images/home.jpg"/></div>
         <div class="logo"><a href="http://www.tianxun.cn"><img src="<?=$this->config->base_url()?>static/mobile/images/logo.png"/></a></div>
-        <div class="btn_start"><a href="<?=$this->config->base_url()?>welcome/weibologin" title="开始"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_start.png"/></a></div>
+        <div class="btn_start"><a href="<?=$this->config->base_url()?>welcome/weibologin" title="微博登录，拼游戏，赢大奖"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_start.png"/></a></div>
         <div class="rightnav">
 
             <ul>

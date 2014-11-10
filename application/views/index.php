@@ -74,7 +74,7 @@
 
         </div>
         <div class="start">
-            <a href="<?=$this->config->base_url()?>welcome/weibologin" title="开始"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
+            <a href="<?=$this->config->base_url()?>welcome/weibologin" title="微博登录，拼游戏，赢大奖"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
         </div>
         <div class="bottom">
             <img src="<?=$this->config->base_url()?>static/pc/images/bottom.png"/>
