@@ -155,8 +155,6 @@
                     }
                 }).click(function(event){
 
-                        console.log($(this).children('.divtext').html());
-                        console.log($(this).children('.divtext').attr('weibo_id'));
                         //选择
                         if(!$(this).prev().is(':checked')){
 
@@ -170,14 +168,26 @@
                             $(this).addClass("checked");
                             $(this).prev()[0].checked = true;
 
-                            console.log(result);
-
                         }
                         else{
+
+                            var friend_name = $(this).children('.divtext').html();
+                            //取消选择
+                            $.each(result['friend'], function (k, v) {
+
+                                if(v == friend_name){
+                                    result['friend'].splice(k, 1);
+                                }
+
+                            });
+
+
                             $(this).removeClass('checked');
                             $(this).prev()[0].checked = false;
                         }
                         event.stopPropagation();
+
+                        console.log(result);
                     }
                 ).prev().hide();
             }
