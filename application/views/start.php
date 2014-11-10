@@ -112,6 +112,20 @@
 
         //下一步
         function showNext(){
+
+            if(!$('#team_name').val()){
+                alert('团名不能为空！');
+                $('#team_name').focus();
+                return;
+            }
+
+            if(!$('input[name="team_type"]:checked').val()){
+                alert('天团类型不能为空！');
+                $('#team_name').focus();
+                return;
+            }
+
+
             $("#popDiv1").hide();
             $("#popDiv2").show();
         }
@@ -197,11 +211,11 @@
 <!--pop start-->
 <div id="popDiv1" class="mydiv">
     <div class="popdiv1">
-        <input type="text" class="inputclass3"/>
+        <input type="text" class="inputclass3" id="team_name"/>
         <div id="radiolist2" class="radioimg2">
-            <input name='xh' type="radio" value='1' /><label><div>&nbsp;</div></label>
-            <input name='xh' type="radio" value='2' /><label><div>&nbsp;</div></label>
-            <input name='xh' type="radio" value='3' /><label><div>&nbsp;</div></label>
+            <input name='team_type' type="radio" value='1' /><label><div>&nbsp;</div></label>
+            <input name='team_type' type="radio" value='2' /><label><div>&nbsp;</div></label>
+            <input name='team_type' type="radio" value='3' /><label><div>&nbsp;</div></label>
         </div>
         <div class="clear"></div>
         <div class="chk">
