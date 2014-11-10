@@ -82,14 +82,14 @@ textarea{resize:none;overflow:auto;}
 	.home_foot .foot_nav ul{ width:100%}
 	.home_foot .foot_nav ul li{ float: left; width:25%; margin:0 2% 0 0}
 	.home_foot .foot_nav ul li.short{ width:21%}
-	.home_foot .foot_nav ul li a{ display:inline-block; width:100%; height:40px; cursor:pointer}
+	.home_foot .foot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
 	
 	.home_foot img{ width:100%; vertical-align:bottom}
 	.home_foot .bot_nav{width:90%; position:absolute; left:5%; top:0;}
 	.home_foot .bot_nav ul{ width:100%;position:absolute; left:0; top:0;}
 	.home_foot .bot_nav ul li{ float: left; width:20%; margin:0 2% 0 0}
 	.home_foot .bot_nav ul li.short{ width:16.6%}
-	.home_foot .bot_nav ul li a{ display:inline-block; width:100%; height:40px; cursor:pointer}
+	.home_foot .bot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
 	
 	.ny_top,.ny_foot{ width:100%; position:relative;}
 		.ny_top img,.ny_foot img{ width:100%; vertical-align:bottom;}
@@ -99,7 +99,7 @@ textarea{resize:none;overflow:auto;}
 			.ny_foot .bot_nav ul{ width:100%;position:absolute; left:0; top:0;}
 			.ny_foot .bot_nav ul li{ float: left; width:20%; margin:0 2% 0 0}
 			.ny_foot .bot_nav ul li.short{ width:16.6%}
-			.ny_foot .bot_nav ul li a{ display:inline-block; width:100%; height:40px; cursor:pointer}
+			.ny_foot .bot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
 	
 	.hdgz,.grzx{ width:100%;}
 		.hdgz_con{ position:relative}
