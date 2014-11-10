@@ -259,7 +259,7 @@ class Welcome extends CI_Controller {
 
         $result = array();
 
-        if($this -> team_model -> insertTeam($weiboid, $name, $place, 0)){
+        if($this -> team_model -> insertTeam($weiboid, $name, $place, $num)){
             $result['state'] = 'success';
         }else{
             $result['state'] = 'error';
