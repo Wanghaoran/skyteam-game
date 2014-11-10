@@ -214,7 +214,7 @@ class Welcome extends CI_Controller {
 
     //积攒里程开始游戏
     public function game_goon(){
-        $this->load->view('game_');
+        $this->load->view('game_goon');
     }
 
 
