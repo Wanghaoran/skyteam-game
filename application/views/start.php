@@ -254,6 +254,11 @@
                     async : false,
                     dataType : 'json',
                     success : function(ress){
+                        if(ress['state'] != 'success'){
+                            alert(ress.info);
+                            return;
+                        }
+
                         console.log(ress);
                     }
                 });

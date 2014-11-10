@@ -252,6 +252,9 @@ class Welcome extends CI_Controller {
         //用户ID
         $weiboid = $this->session->userdata('token')['uid'];
 
+        //用户已有分数
+        $num = $this->session->userdata('start_arr')['start_num'];
+
         $this -> load -> model('team_model');
 
         $result = array();
@@ -260,10 +263,10 @@ class Welcome extends CI_Controller {
             $result['state'] = 'success';
         }else{
             $result['state'] = 'error';
-            $result['info'] = '添加数据错误！';
+            $result['info'] = '添加数据错误，此用户已创建过天团！';
         }
 
-        echo json_decode($result);
+        echo json_encode($result);
     }
 
     //微博API － 互粉列表

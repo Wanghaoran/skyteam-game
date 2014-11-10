@@ -11,6 +11,10 @@ class Team_model extends CI_Model {
 
     public function insertTeam($weiboid, $name, $place, $num){
 
+        if($this -> getUser($weiboid)){
+            return false;
+        }
+
         $data = array(
             'weiboid' => $weiboid,
             'name' => $name,
@@ -21,6 +25,11 @@ class Team_model extends CI_Model {
         );
 
         return $this -> db -> insert('team', $data);
+    }
+
+    public function getUser($weiboid){
+        $query = $this -> db -> get_where('team', array('weiboid' => $weiboid), 1);
+        return $query -> result_array();
     }
 
 
