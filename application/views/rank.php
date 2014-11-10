@@ -46,15 +46,15 @@
 <div class="ny_conleft">
     <div class="ny_leftinfo">
         <div class="ny_admininfo">
-            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_info1.jpg"/></a>
-            <h2>叮当粥</h2>
+            <a href="#"><img src="<?=$user_result['avatar_large']?>"/></a>
+            <h2><?=$user_result['uname']?></h2>
         </div>
         <div class="clear"></div>
         <ul class="ulinfo">
-            <li>最初的梦想团</li>
+            <li><?=$user_result['tname']?></li>
             <li>团长</li>
-            <li>900里程</li>
-            <li>已积攒4000里程，距离第一名还有5000公里</li>
+            <li><?=$user_result['unum']?> 里程</li>
+            <li>已积攒 <?=$user_result['tnum']?> 里程</li>
         </ul>
     </div>
     <div class="clear"></div>

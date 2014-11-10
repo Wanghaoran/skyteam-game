@@ -148,13 +148,15 @@ class Welcome extends CI_Controller {
             redirect(base_url());
         }
 
+        $data = array();
+
         //读取个人和所属团的信息
         $this -> load -> model('user_model');
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
-        var_dump($user_result);
+        $data['user_result'] = $user_result;
 
 
-        $this->load->view('rank');
+        $this->load->view('rank', $data);
     }
 
     //天巡星导游 - 美食团
