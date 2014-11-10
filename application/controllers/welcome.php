@@ -171,6 +171,11 @@ class Welcome extends CI_Controller {
             $result_type[$key]['leader'] = $this -> user_model -> getUser($value['weiboid']);
         }
 
+        echo '<pre>';
+        var_dump($result_type);
+
+        echo '</pre>';
+
 
         $data['rank'] = $result_type;
 
