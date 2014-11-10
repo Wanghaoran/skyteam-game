@@ -168,15 +168,11 @@ class Welcome extends CI_Controller {
 
         //循环结果数组，读取团长信息
         foreach($result_type as $key => $value){
-            $result_type[$key]['leader'] = $this -> user_model -> getinfo($value['weiboid']);
+            $result_type[$key]['leader'] = $this -> user_model -> getUser($value['weiboid']);
         }
 
-        echo '<pre>';
-        var_dump($result_type);
 
-        echo '</pre>';
-
-
+        $data['rank'] = $result_type;
 
 
         $this->load->view('rank', $data);

@@ -146,150 +146,68 @@
         </div>
         <div class="clear20"></div>
         <div class="tab_phbcon">
-            <!--start-->
-            <div class="tab_phblist">
-                <div class="tab_phblist_title"><span>1</span>美丽随行团</div>
-                <div class="tab_phblist_con">
-                    <div class="tab_phblist_left">
-                        <div class="tab_phbadmin">
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/pc/images/img_info1.jpg"/>
-                                <div>爱旅游</div>
-                            </a>
-                            <a href="#" class="guanzhu"></a>
-                        </div>
-                        <div class="tab_phbinfo">
-                            <table>
-                                <tr>
-                                    <td width="100">目的地</td>
-                                    <td width="130">类别</td></td>
-                                    <td width="130">里程数</td>
-                                    <td width="150">天团成员</td>
-                                </tr>
-                                <tr>
-                                    <td width="100">巴黎</td>
-                                    <td width="130">购物</td></td>
-                                    <td width="130">9000里程</td>
-                                    <td width="150">4人</td>
-                                </tr>
-                            </table>
-                            <div class="cy">
-                                <ul>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy1.png"/><div>痞人日记</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy2.png"/><div>AYU</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy3.png"/><div>芬芳小猪</div></a></li>
-                                </ul>
-                                <div class="clear20"></div>
+            <?php foreach($rank as $key => $value):?>
+                <!--start-->
+                <div class="tab_phblist">
+                    <div class="tab_phblist_title"><span><?=($key+1)?></span><?=$value['name']?></div>
+                    <div class="tab_phblist_con">
+                        <div class="tab_phblist_left">
+                            <div class="tab_phbadmin">
+                                <a href="#">
+                                    <img src="<?=$value['leader']['avatar_large']?>"/>
+                                    <div><?=$value['leader']['uname']?></div>
+                                </a>
+                                <a href="<?=$value['leader']['profile_url']?>" target="_blank" class="guanzhu"></a>
+                            </div>
+                            <div class="tab_phbinfo">
+                                <table>
+                                    <tr>
+                                        <td width="100">目的地</td>
+                                        <td width="130">类别</td></td>
+                                        <td width="130">里程数</td>
+                                        <td width="150">天团成员</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100"><?=$value['place']?></td>
+                                        <?php if($value['type'] == 1):?>
+                                        <td width="130">美食</td></td>
+                                        <?php elseif($value['type'] == 2):?>
+                                        <td width="130">购物</td></td>
+                                        <?php elseif($value['type'] == 3):?>
+                                        <td width="130">休闲</td></td>
+                                        <?php endif; ?>
+                                        <td width="130"><?=$value['num']?> 里程</td>
+                                        <td width="150">1人</td>
+                                    </tr>
+                                </table>
+                                <div class="cy">
+                                    <!--
+                                    <ul>
+                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy1.png"/><div>痞人日记</div></a></li>
+                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy2.png"/><div>AYU</div></a></li>
+                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy3.png"/><div>芬芳小猪</div></a></li>
+                                    </ul>
+                                    -->
+                                    <div class="clear20"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab_phblist_right">
-                        <a href="#" class="btn_jiayou"></a>
-                        <a href="#" class="btn_fenxiang"></a>
-                        <a href="javascript:shareQQ();" class="icon_qq"></a>
-                        <a href="javascript:shareRenren();" class="icon_rr"></a>
-                        <a href="javascript:shareDouban();" class="icon_dd"></a>
+                        <div class="tab_phblist_right">
+                            <a href="#" class="btn_jiayou"></a>
+                            <a href="#" class="btn_fenxiang"></a>
+                            <a href="javascript:shareQQ();" class="icon_qq"></a>
+                            <a href="javascript:shareRenren();" class="icon_rr"></a>
+                            <a href="javascript:shareDouban();" class="icon_dd"></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="clear20"></div>
-            <!--end-->
-            <!--start-->
-            <div class="tab_phblist">
-                <div class="tab_phblist_title"><span>2</span>美丽随行团</div>
-                <div class="tab_phblist_con">
-                    <div class="tab_phblist_left">
-                        <div class="tab_phbadmin">
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/pc/images/img_info1.jpg"/>
-                                <div>爱旅游</div>
-                            </a>
-                            <a href="#" class="guanzhu"></a>
-                        </div>
-                        <div class="tab_phbinfo">
-                            <table>
-                                <tr>
-                                    <td width="100">目的地</td>
-                                    <td width="130">类别</td></td>
-                                    <td width="130">里程数</td>
-                                    <td width="150">天团成员</td>
-                                </tr>
-                                <tr>
-                                    <td width="100">巴黎</td>
-                                    <td width="130">购物</td></td>
-                                    <td width="130">9000里程</td>
-                                    <td width="150">4人</td>
-                                </tr>
-                            </table>
-                            <div class="cy">
-                                <ul>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy1.png"/><div>痞人日记</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy2.png"/><div>AYU</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy3.png"/><div>芬芳小猪</div></a></li>
-                                </ul>
-                                <div class="clear20"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab_phblist_right">
-                        <a href="#" class="btn_jiayou"></a>
-                        <a href="#" class="btn_fenxiang"></a>
-                        <a href="javascript:shareQQ();" class="icon_qq"></a>
-                        <a href="javascript:shareRenren();" class="icon_rr"></a>
-                        <a href="javascript:shareDouban();" class="icon_dd"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="clear20"></div>
-            <!--end-->
-            <!--start-->
-            <div class="tab_phblist">
-                <div class="tab_phblist_title"><span>3</span>美丽随行团</div>
-                <div class="tab_phblist_con">
-                    <div class="tab_phblist_left">
-                        <div class="tab_phbadmin">
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/pc/images/img_info1.jpg"/>
-                                <div>爱旅游</div>
-                            </a>
-                            <a href="#" class="guanzhu"></a>
-                        </div>
-                        <div class="tab_phbinfo">
-                            <table>
-                                <tr>
-                                    <td width="100">目的地</td>
-                                    <td width="130">类别</td></td>
-                                    <td width="130">里程数</td>
-                                    <td width="150">天团成员</td>
-                                </tr>
-                                <tr>
-                                    <td width="100">巴黎</td>
-                                    <td width="130">购物</td></td>
-                                    <td width="130">9000里程</td>
-                                    <td width="150">4人</td>
-                                </tr>
-                            </table>
-                            <div class="cy">
-                                <ul>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy1.png"/><div>痞人日记</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy2.png"/><div>AYU</div></a></li>
-                                    <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy3.png"/><div>芬芳小猪</div></a></li>
-                                </ul>
-                                <div class="clear20"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab_phblist_right">
-                        <a href="#" class="btn_jiayou"></a>
-                        <a href="#" class="btn_fenxiang"></a>
-                        <a href="javascript:shareQQ();" class="icon_qq"></a>
-                        <a href="javascript:shareRenren();" class="icon_rr"></a>
-                        <a href="javascript:shareDouban();" class="icon_dd"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="clear20"></div>
-            <!--end-->
+                <div class="clear20"></div>
+                <!--end-->
+
+            <?php endforeach;?>
+
+
+
         </div>
     </div>
 </div>
