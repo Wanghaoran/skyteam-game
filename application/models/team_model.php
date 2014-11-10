@@ -9,7 +9,7 @@ class Team_model extends CI_Model {
     }
 
 
-    public function insertTeam($weiboid, $name, $place, $num){
+    public function insertTeam($weiboid, $name, $place, $num, $type){
 
         if($this -> getUser($weiboid)){
             return false;
@@ -17,6 +17,7 @@ class Team_model extends CI_Model {
 
         $data = array(
             'weiboid' => $weiboid,
+            'type' => $type,
             'name' => $name,
             'place' => $place,
             'num' => $num,
