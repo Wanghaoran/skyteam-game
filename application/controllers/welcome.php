@@ -260,7 +260,7 @@ class Welcome extends CI_Controller {
         $user_result = $this -> _usershow($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
         $user_name = $user_result['screen_name'];
         $profile_url = $user_result['profile_url'];
-        $avatar_large = $user_result['avatar_large '];
+        $avatar_large = $user_result['avatar_large'];
 
         //纪录此用户为团长
         $this -> load -> model('user_model');
