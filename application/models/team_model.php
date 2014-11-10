@@ -25,7 +25,8 @@ class Team_model extends CI_Model {
 
         );
 
-        return $this -> db -> insert('team', $data);
+        $this -> db -> insert('team', $data);
+        return $this->db->insert_id();
     }
 
     public function getUser($weiboid){
