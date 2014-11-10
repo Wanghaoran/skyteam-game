@@ -70,9 +70,9 @@
         <a href="#" class="btn_comeon"></a>
         <div class="clear"></div>
         <div class="ny_lefticon">
-            <a href="#" class="icon_qq"></a>
-            <a href="#" class="icon_rr"></a>
-            <a href="#" class="icon_dd"></a>
+            <a href="javascript:shareQQ();" class="icon_qq"></a>
+            <a href="javascript:shareRenren();" class="icon_rr"></a>
+            <a href="javascript:shareDouban();" class="icon_dd"></a>
         </div>
         <div class="clear20"></div>
     </div>
