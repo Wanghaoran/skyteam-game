@@ -164,7 +164,7 @@
                                 alert('最多邀请3位好友！');
                                 return;
                             }else{
-                                result['friend'][] = $(this).children('.divtext').html();
+                                result['friend'].push($(this).children('.divtext').html());
                             }
 
                             $(this).addClass("checked");
