@@ -164,7 +164,7 @@
                                 alert('最多邀请3位好友！');
                                 return;
                             }else{
-                                result['friend']['' + $(this).children('.divtext').attr('weibo_id') + ''] = $(this).children('.divtext').html();
+                                result['friend']['' + $(this).children('.divtext').attr('weibo_id').toString() + ''] = $(this).children('.divtext').html();
                             }
 
                             $(this).addClass("checked");
