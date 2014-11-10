@@ -148,7 +148,9 @@ class Welcome extends CI_Controller {
             redirect(base_url());
         }
 
-        //读取
+        //读取个人和所属团的信息
+        $this -> load -> model('user_model');
+        $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
 
 
         $this->load->view('rank');
