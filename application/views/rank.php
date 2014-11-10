@@ -78,6 +78,8 @@
     </div>
     <div class="clear"></div>
     <div class="ny_leftqt">
+
+        <!--  其他参与本活动的好友
         <ul>
             <li>
                 <a href="#">
@@ -105,6 +107,7 @@
             </li>
             <div class="clear"></div>
         </ul>
+        -->
     </div>
     <div class="clear20"></div>
 </div>
