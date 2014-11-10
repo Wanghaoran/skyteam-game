@@ -255,6 +255,17 @@ class Welcome extends CI_Controller {
         //用户已有分数
         $num = $this->session->userdata('start_arr')['start_num'];
 
+
+        //读取个人信息
+        $user_result = $this -> _usershow($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
+        $user_name = $user_result['screen_name'];
+        $profile_url = $user_result['profile_url'];
+        $avatar_large = $user_result['avatar_large '];
+
+        //纪录此用户为团长
+        $this -> load -> model('user_model');
+        $this -> user_model -> insertUser($weiboid, $user_name, $profile_url, $avatar_large, 1, $num);
+
         $this -> load -> model('team_model');
 
         $result = array();
@@ -272,6 +283,13 @@ class Welcome extends CI_Controller {
     //微博API － 互粉列表
     public function _bilateral($asstoken, $uid){
         $url = 'https://api.weibo.com/2/friendships/friends/bilateral.json?access_token=' . $asstoken . '&uid=' . $uid;
+        $json_result = file_get_contents($url);
+        $result = json_decode($json_result, true);
+        return $result;
+    }
+
+    public function _usershow($asstoken, $uid){
+        $url = 'https://api.weibo.com/2/users/show.json?access_token=' . $asstoken . '&uid=' . $uid;
         $json_result = file_get_contents($url);
         $result = json_decode($json_result, true);
         return $result;
