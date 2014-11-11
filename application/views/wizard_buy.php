@@ -125,7 +125,7 @@
             <div class="clear20"></div>
 
             <div class="jianjie">
-
+                手边巴黎urruolan携手天巡为您推荐以下10大购物目的地
             </div>
 
             <div class="clear20"></div>

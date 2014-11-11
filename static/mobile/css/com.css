@@ -78,28 +78,28 @@ textarea{resize:none;overflow:auto;}
 	
 	.home_foot{ width:100%; position:absolute; bottom:0; left:0;}
 	.home_foot .foot_img img{ width:100%; vertical-align:bottom}
-	.home_foot .foot_nav{ width:80%; margin:3% auto 0; position:absolute; left:10%; top:10%;}
+	.home_foot .foot_nav{ width:84%; margin:3% auto 0; position:absolute; left:8%; top:10%;}
 	.home_foot .foot_nav ul{ width:100%}
 	.home_foot .foot_nav ul li{ float: left; width:25%; margin:0 2% 0 0}
-	.home_foot .foot_nav ul li.short{ width:21%}
-	.home_foot .foot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
+	.home_foot .foot_nav ul li.short{ width:23%; margin:0;}
+	.home_foot .foot_nav ul li a{ display:inline-block; width:100%; height:20px; cursor:pointer}
 	
 	.home_foot img{ width:100%; vertical-align:bottom}
-	.home_foot .bot_nav{width:90%; position:absolute; left:5%; top:5%;}
-	.home_foot .bot_nav ul{ width:100%;position:absolute; left:0; top:10%;}
+	.home_foot .bot_nav{width:94%; position:absolute; left:3%; top:25%;}
+	.home_foot .bot_nav ul{ width:100%;position:absolute;}
 	.home_foot .bot_nav ul li{ float: left; width:20%; margin:0 2% 0 0}
-	.home_foot .bot_nav ul li.short{ width:16.6%}
-	.home_foot .bot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
+	.home_foot .bot_nav ul li.short{ width:18.6%; margin:0;}
+	.home_foot .bot_nav ul li a{ display:inline-block; width:100%; height:20px; cursor:pointer}
 	
 	.ny_top,.ny_foot{ width:100%; position:relative;}
 		.ny_top img,.ny_foot img{ width:100%; vertical-align:bottom;}
 			.ny_top .ny_logo{ position:absolute; width:40%; right:2%; top:2%}
 			.ny_top .ny_logo a{ display:inline-block; width:100%; height:50px;}
-			.ny_foot .bot_nav{width:90%; position:absolute; left:5%; top:10%;}
+			.ny_foot .bot_nav{width:94%; position:absolute; left:3%; top:25%;}
 			.ny_foot .bot_nav ul{ width:100%;position:absolute; left:0; top:0;}
 			.ny_foot .bot_nav ul li{ float: left; width:20%; margin:0 2% 0 0}
-			.ny_foot .bot_nav ul li.short{ width:16.6%}
-			.ny_foot .bot_nav ul li a{ display:inline-block; width:100%; height:30px; cursor:pointer}
+			.ny_foot .bot_nav ul li.short{ width:18.6%; margin:0}
+			.ny_foot .bot_nav ul li a{ display:inline-block; width:100%; height:20px; cursor:pointer}
 	
 	.hdgz,.grzx{ width:100%;}
 		.hdgz_con{ position:relative}
@@ -221,11 +221,11 @@ textarea{resize:none;overflow:auto;}
 				.photo_lcon{  margin:10px 0 20px 0;}
 				.photo_lcon dl{ margin:0 0 10px 0;border-bottom:#e0e0e0 1px solid;}
 				.photo_lcon dl.dl_margin{border-bottom:none;}
-				.photo_lcon dl dt{ float:left; width:48%; margin:0 2% 0 0; position:relative;}
-				.photo_lcon dl dt a img{ width:100%; border:0;}
-				.photo_lcon dl dt div.left_title{ position:absolute; left:0; bottom:0; width:96%; padding:8px 0 0 4%; height:30px; line-height:30px; font-size:16px; color:#fff; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#44000000',endColorstr='#44000000');background:rgba(0,0,0,.5);}
+				.photo_lcon dl dt{width:90%; margin:0 0 0 0; position:relative; margin:0 auto;}
+				.photo_lcon dl dt a img{ width:100%; border:0; vertical-align:bottom}
+				.photo_lcon dl dt div.left_title{ position:absolute; left:0; bottom:0; width:96%; padding:4px 0 4px 4%; height:30px; line-height:30px; font-size:16px; color:#fff; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#44000000',endColorstr='#44000000');background:rgba(0,0,0,.5);}
 				
-				.photo_lcon dl dd{ float:left; width:50%; line-height:25px;}
+				.photo_lcon dl dd{width:90%; line-height:25px; margin:0 auto;}
 				.photo_lcon dl dd h2{ color:#545454; font-size:12px; font-weight:400;}
 				.photo_lcon dl dd p{ color:#919191; font-size:10px; font-weight:400; line-height:20px; }
 		
