@@ -293,10 +293,6 @@ class Welcome extends CI_Controller {
 
         $data['rank'] = $result_type;
 
-        echo '<pre>';
-        var_dump($result_type);
-        echo '</pre>';
-
         $this->load->view('rank', $data);
     }
 
