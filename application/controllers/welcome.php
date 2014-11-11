@@ -154,6 +154,8 @@ class Welcome extends CI_Controller {
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
         $data['user_result'] = $user_result;
 
+        $this -> load -> model('team_model');
+
 
         //读取此类别团下的第一名
         $frist_result = $this -> team_model -> getfirst($user_result['ttype']);
@@ -168,7 +170,6 @@ class Welcome extends CI_Controller {
             $data['type'] = 1;
         }
 
-        $this -> load -> model('team_model');
 
 
 
