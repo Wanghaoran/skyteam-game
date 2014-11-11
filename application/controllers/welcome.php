@@ -18,6 +18,13 @@ class Welcome extends CI_Controller {
         }
 	}
 
+
+    //加入天团
+    public function jointeam(){
+        $tid = $this->input->get('tid');
+        var_dump($tid);
+    }
+
     //weibo 登陆
     public function weibologin(){
         include_once('./Weibo.php');
