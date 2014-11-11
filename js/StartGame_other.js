@@ -414,7 +414,7 @@ var GameOver1Layer  = cc.Layer.extend({
             this.scene.addChild(new ShareLayer(this.scene),10);
         }, this);
         var againBtn = cc.MenuItemImage.create(res.againBtn,res.againBtn,null,this.scene.againGame, this.scene);
-        var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){ window.location.href = "http://www.baidu.com";});
+        var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){ window.location.href = "http://skyteam.tianxun.cn";});
         var joinBtn = cc.MenuItemImage.create(res.joinBtn,res.joinBtn,function(){ window.location.href = "http://www.baidu.com";});
         shareBtn.setPosition(winSize.width/2+250, winSize.height/2-40);
         againBtn.setPosition(winSize.width/2-220,143);
