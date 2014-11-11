@@ -176,7 +176,7 @@
                                         <?php elseif($value['type'] == 3):?>
                                         <td width="130">休闲</td></td>
                                         <?php endif; ?>
-                                        <td width="130"><?=$value['num']?> 里程</td>
+                                        <td width="130"><?=$value['num']?> 里程<?=$value['id'];?></td>
                                         <td width="150">1人</td>
                                     </tr>
                                 </table>
