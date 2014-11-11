@@ -168,7 +168,6 @@ class Welcome extends CI_Controller {
         $frist_result = $this -> team_model -> getfirst($data['type']);
         //计算和第一名相差的里程
         $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
-        var_dump($data['cha_km']);
 
 
         //读取团排行榜

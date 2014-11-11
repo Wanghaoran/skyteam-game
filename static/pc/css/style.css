@@ -259,7 +259,7 @@ body{ background:#fff;}
 .mydiv2 .popdiv2{ width:100%; margin:0 auto; position:relative;}
 .mydiv2 .popdiv2 .div_iframe{ position:absolute; left:5px; top:5px; right:0; height:90%; overflow:hidden;}
 .mydiv3 { width:1360px; height:1000px; z-index:99; left:50%; top:50%; margin-left:-720px!important; margin-top:-500px!important; position:absolute;/*FF IE7*/position:fixed!important;}
-.mydiv3 .popdiv3{ width:100%; height:50%; margin:25% 0 0 0}
+.mydiv3 .popdiv3{ width:100%; height:80%; margin:10% 0 0 0}
 .mydiv3 .popdiv3 .div_iframe2{width:100%; height:100%; overflow:hidden;}
 .mydiv2 .popdiv2 .fx_foot{ position:absolute; left:5px; bottom:5px; right:0; background:#e65948; height:10%;}
 .mydiv2 .popdiv2 .fx_foot a.icon_qq{ float:right; width:25px; margin:10px 25px 0 0; height:29px; background:url(../images/icon_qq.png) no-repeat}
