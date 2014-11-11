@@ -56,6 +56,17 @@ class Team_model extends CI_Model {
         return $query -> result_array();
     }
 
+    //读取第一名
+    public function getfirst($type){
+        $this->db->select('*');
+        $this->db->from('skyteam_team');
+        $this->db->limit(1);
+        $this->db->order_by("num", "DESC");
+        $this->db->where(array('type' => $type));
+        $query = $this->db->get();
+        return $query -> result_array()[0];
+    }
+
     /*
     public function addnum($group, $step = 1){
 

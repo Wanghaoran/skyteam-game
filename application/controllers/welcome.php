@@ -162,8 +162,14 @@ class Welcome extends CI_Controller {
             $data['type'] = 1;
         }
 
-        //读取团排行榜
         $this -> load -> model('team_model');
+
+        //读取此类别团下的第一名
+        $frist_result = $this -> team_model -> getfirst($data['type']);
+        var_dump($frist_result);
+
+
+        //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
 
         //循环结果数组，读取团长信息
