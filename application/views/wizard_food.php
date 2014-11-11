@@ -136,7 +136,7 @@
                 <div class="photo_lcon">
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/1.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/1.jpg" />
                         <div class="left_title">越南 胡志明市</div>
                         </dt>
                         <dd>
@@ -146,7 +146,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/2.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/2.jpg" />
                         <div class="left_title">新加坡</div>
                         </dt>
                         <dd>
@@ -159,7 +159,7 @@
                 <div class="photo_lcon">
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/3.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/3.jpg" />
                         <div class="left_title">泰国 曼谷</div>
                         </dt>
                         <dd>
@@ -169,7 +169,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/4.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/4.jpg" />
                         <div class="left_title">日本 东京</div>
                         </dt>
                         <dd>
@@ -182,7 +182,7 @@
                 <div class="photo_lcon">
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/5.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/5.jpg" />
                         <div class="left_title">台湾 台北</div>
                         </dt>
                         <dd>
@@ -192,7 +192,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/6.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/6.jpg" />
                         <div class="left_title">意大利 佛罗伦萨</div>
                         </dt>
                         <dd>
@@ -205,7 +205,7 @@
                 <div class="photo_lcon">
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/7.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/7.jpg" />
                         <div class="left_title">比利时 布鲁塞尔</div>
                         </dt>
                         <dd>
@@ -215,7 +215,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/8.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/8.jpg" />
                         <div class="left_title">德国 慕尼黑</div>
                         </dt>
                         <dd>
@@ -228,7 +228,7 @@
                 <div class="photo_lcon">
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/9.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/9.jpg" />
                         <div class="left_title">西班牙 巴塞罗那</div>
                         </dt>
                         <dd>
@@ -238,7 +238,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/10.jpg" /></a>
+                            <img src="<?=$this->config->base_url()?>static/pc/place/10.jpg" />
                         <div class="left_title">澳大利亚 悉尼</div>
                         </dt>
                         <dd>
