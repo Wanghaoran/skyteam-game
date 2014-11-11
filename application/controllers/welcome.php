@@ -235,8 +235,14 @@ class Welcome extends CI_Controller {
         $this->load->view('game_start', $data);
     }
 
-    //积攒里程开始游戏
+    //积攒里程开始游戏－自己玩
     public function game_goon(){
+        $this -> load -> model('user_model');
+        //如果微博ID存在，并且这个ID有纪录，才能访问排行榜页面
+        if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            $this->load->helper('url');
+            redirect(base_url());
+        }
         $this->load->view('game_goon');
     }
 
