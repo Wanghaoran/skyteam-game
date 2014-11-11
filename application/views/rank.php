@@ -233,6 +233,9 @@
 </div>
 </div>
 <div class="clear"></div>
-<div class="ny_footer"></div>
+<div class="ny_footer">
+    <div class="icon_logo"><a href="#" title="logo"></a></div>
+    <div class="text_corpright"></div>
+</div>
 </body>
 </html>

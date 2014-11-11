@@ -188,18 +188,18 @@ body{ background:#fff;}
 		.tab_kolcon{}
 			.tab_kolcon input.focus_text{color:#333;width:417px; height:20px; line-height:20px; background:url(../images/inputbg.jpg) no-repeat; border:none; padding:8px 2px 5px 2px;}
 			.tab_kolcon input.blur_text{color:#999;width:417px; height:20px; line-height:20px; background:url(../images/inputbg.jpg) no-repeat; border:none; padding:8px 2px 5px 2px;}
-			.tab_kol_left{ float:left; width:350px; margin:50px 20px 0 0;}
+			.tab_kol_left{ float:left; width:350px; margin:30px 20px 0 0;}
 			
 				.tab_kol_left div{ float:left; line-height:20px;}
 				.tab_kol_left div img{ border:#cacaca 1px solid; width:152px; height:152px; margin:0 10px 10px 0;}
-				.tab_kol_left div h2{color:#575757; font-size:20px; font-weight:400; text-align:left; margin:80px 0 0 0; width:150px;}
+				.tab_kol_left div h2{color:#575757; font-size:20px; font-weight:400; text-align:left; margin:40px 0 0 0; width:150px;}
 				.tab_kol_left div h3{color:#919191; font-size:14px; font-weight:400; text-align:left; width:150px; margin:5px 0 0 0;}
 				.tab_kol_left div p{ margin:0 0 0 28px;}
 				.tab_kol_left div a.btn_gz{ width:95px; height:40px; background:url(../images/btn_gz.png) no-repeat; display:inline-block;}
 			
 			.tab_kol_right{ float:left; width:941px;}
 				.tab_kol_right h2{ color:#919191; font-size:16px; font-weight:400; height:30px; line-height:30px;}
-							   .tab_kol_time{ width:919px; height:236px; padding:22px 0 0 22px; background:url(../images/kol_conbg.png) no-repeat}
+							   .tab_kol_time{ width:940px; height:220px; padding:0; background:url(../images/kol_conbg.png) no-repeat}
 							   	.time_left{ float:left; width:421px;}
 									.time_left h3{color:#fff;}
 									.time_left h4{ margin:30px 0 0 0;color:#fff;}
@@ -210,7 +210,7 @@ body{ background:#fff;}
 									.time_right h3{color:#fff;}
 									.time_right .divcheck{ margin:5px 0 0 0;color:#fff;}
 									.time_right .divcheck input{ vertical-align:middle}
-									.time_right a.btn_search{ display:inline-block; width:151px; height:42px; background:url(../images/btn_search.png) no-repeat; float:right; margin:90px 0 0 0;}
+									.time_right a.btn_search{ display:inline-block; width:151px; height:42px; background:url(../images/btn_search.png) no-repeat; float:right; margin:50px 0 0 0;}
 								    input.inputclass1{ width:417px; height:20px; line-height:20px; background:url(../images/inputbg.jpg) no-repeat; border:none; padding:8px 2px 5px 2px;}
 									input.inputclass2{ width:417px; height:20px; line-height:20px; background:url(../images/inputbg.jpg) no-repeat; border:none; padding:8px 2px 5px 2px;}
 							   
@@ -229,25 +229,28 @@ body{ background:#fff;}
 			
 
 .ny_footer{width:100%; height:110px; background:url(../images/ny_footbg.jpg) repeat-x;}
+	.text_corpright{ float:left; width:189px; padding:0 0 0 50px; height:110px; background:url(../images/text_corpright.png) right center  no-repeat;}
+	.icon_logo{ float:right; width:79px; padding:0 50px 0 0; height:110px; background:url(../images/icon_logo.png) left center no-repeat;}
+	.icon_logo a{ display:inline-block; width:79px; height:110px;}
 
 /*弹出层*/
 .mydiv { width:638px; height:397px; background:url(../images/pop1.png) no-repeat; z-index:99; left:50%; top:50%; bottom:14%; margin-left:-319px!important;margin-top:-218px!important; position:absolute;/*FF IE7*/position:fixed!important;}
 .mydiv .popdiv1{ width:638px;}
-.mydiv .popdiv1 input.inputclass3{ float:left; width:162px; height:28px; line-height:28px; padding:36px 0 2px 111px; border:none; background:none; font-size:16px;}
+.mydiv .popdiv1 input.inputclass3{ float:left; width:162px; height:28px; line-height:28px; padding:30px 0 2px 111px; border:none; background:none; font-size:16px;}
 .hidebg { width:100%; height:100%; background: #5be2ed;   filter:alpha(opacity=70);/*IE*/    opacity:0.7;/*FF*/    z-index:1;  position:absolute;/*IE6*/ position:fixed; left:0; top:0;}  
-.mydiv .popdiv1 .chk{ width:517px; height:148px; padding:34px 0 0 110px; }
-.mydiv .popdiv1 .chk .chkbox{width:513px; height:144px; padding:2px;background:url(../images/checkbox.png) center no-repeat;overflow-x:hidden; overflow-y:auto;}
+.mydiv .popdiv1 .chk{ width:428px; height:199px; padding:10px 0 0 105px; }
+.mydiv .popdiv1 .chk .chkbox{width:420px; height:190px; padding:6px 2px 7px 6px;background:url(../images/checkbox.png) center no-repeat;overflow-x:hidden; overflow-y:auto;}
 .mydiv .popdiv1 .chk .chkbox ul{ }
-.mydiv .popdiv1 .chk .chkbox ul li{ float: left; width:124px; height:144px;}
+.mydiv .popdiv1 .chk .chkbox ul li{ float:left; width:80px; height:96px; text-align:center}
 .mydiv .popdiv1 .chk .chkbox ul li:hover{ background:#ba311c;}
 /*.mydiv .popdiv1 .chk .chkbox ul li img{ width:80%; padding:10% 10% 5% 10%;}
 .mydiv .popdiv1 .chk .chkbox ul li div{ width:80%; padding:0 10% 5% 10%; color:#fff; text-align:center; font-size:16px; font-weight:400;}*/
 
 .mydiv .popdiv1 .chk .chkbox ul li label.checkbox {cursor:pointer;display:inline-block; width:100%;} 
-.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divimg{width:100px; padding:10px; position:relative;}
-.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divimg span{ position:absolute; width:24px; height:24px; right:10px; bottom:10px; display:inline-block; background:url(../images/icon_chk1.jpg) no-repeat; z-index:9999;}
+.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divimg{width:63px; padding:8px 8px 5px 8px; position:relative;}
+.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divimg span{ position:absolute; width:16px; height:17px; right:8px; bottom:5px; display:inline-block; background:url(../images/icon_chk1.jpg) no-repeat; z-index:9999;}
 .mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divimg img{}
-.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divtext{ width:120px; color:#fff; text-align:center; font-size:14px; height:20px; line-height:20px; font-weight:400;}
+.mydiv .popdiv1 .chk .chkbox ul li label.checkbox div.divtext{ width:80px; color:#fff; text-align:center; font-size:12px; height:20px; line-height:20px; font-weight:400;}
 .mydiv .popdiv1 .chk .chkbox ul li label.checked div.divimg span{ background:url(../images/icon_chk2.jpg) no-repeat} 
 .mydiv .popdiv1 .chk .chkbox ul li label.disabled div.divimg span{ background:url(../images/icon_chk2.jpg) no-repeat} 
 
@@ -329,7 +332,7 @@ input.jcDate{cursor:pointer; float:left;}
 .radioimg .hRadio div{ width:120px; height:100px; display:inline-block;}
 
 
-.radioimg2{ float:left; width:282px; height:32px; padding:32px 0 0 62px;}
+.radioimg2{ float:left; width:282px; height:32px; padding:26px 0 0 62px;}
 .radioimg2 .hRadio{display:inline-block;cursor:pointer;vertical-align:middle; width:94px; height:32px; float:left;}
 .radioimg2 .hRadio div{ width:100%; height:100%; display:block;}
 .radioimg2 .hRadio_Checked { background:url(../images/icon_gou.png) 20px center no-repeat;}

@@ -256,7 +256,10 @@
     </div>
 </div>
 <div class="clear"></div>
-<div class="ny_footer"></div>
+<div class="ny_footer">
+    <div class="icon_logo"><a href="#" title="logo"></a></div>
+    <div class="text_corpright"></div>
+</div>
 <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jQuery-jcDate.js"></script>
 <script type="text/javascript">
