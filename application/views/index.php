@@ -79,8 +79,8 @@
         <div class="bottom">
             <img src="<?=$this->config->base_url()?>static/pc/images/bottom.png"/>
             <div class="bottom_left">
-                <div class="app"><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/app.png"/></a></div>
-                <div class="weixin"><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/weixin.png"/></a></div>
+                <div class="app"><img src="<?=$this->config->base_url()?>static/pc/images/app.png"/></div>
+                <div class="weixin"><img src="<?=$this->config->base_url()?>static/pc/images/weixin.png"/></div>
             </div>
             <div class="bottom_right">
                 <div class="sina">
