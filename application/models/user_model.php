@@ -57,7 +57,7 @@ class User_model extends CI_Model {
         $this->db->select_sum('id');
         $this -> db -> where('tid', $tid);
         $query = $this->db->get('user');
-        return $query;
+        return $query -> result_array()[0];
     }
 
 
