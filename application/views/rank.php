@@ -72,7 +72,15 @@
             <li><?=$user_result['unum']?> 里程</li>
             <li>已积攒 <?=$user_result['tnum']?> 里程
                 <?php if($cha_km == 0):?>
-                    您已经是第一名啦
+                    您已经是
+                    <?php if($user_result['ttype'] == 1):?>
+                        美食
+                    <?php elseif($user_result['ttype'] == 2):?>
+                        购物
+                    <?php elseif($user_result['ttype'] == 3):?>
+                        休闲
+                    <?php endif; ?>
+                    团的第一名啦！
                 <?php else:?>
                     距离排名第一还有 <?=$cha_km?> 里程
                 <?php endif;?>
