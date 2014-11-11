@@ -127,7 +127,7 @@
             <div class="clear20"></div>
 
             <div class="jianjie">
-
+                王子强WANGZIQIANG携手天巡为您推荐以下10大美食目的地
             </div>
 
             <div class="clear20"></div>

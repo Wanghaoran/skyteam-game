@@ -117,7 +117,9 @@
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
-                <div class="tab_kol_tip"></div>
+                <div class="tab_kol_tip">
+                    王子强WANGZIQIANG携手天巡为您推荐以下10大美食目的地
+                </div>
                 <div class="imglist">
                     <!--话题列表 开始-->
                     <div class="photo_lcon">
