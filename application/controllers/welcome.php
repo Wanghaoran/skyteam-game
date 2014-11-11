@@ -155,6 +155,12 @@ class Welcome extends CI_Controller {
         $data['user_result'] = $user_result;
 
 
+        //读取此类别团下的第一名
+        $frist_result = $this -> team_model -> getfirst($user_result['ttype']);
+        //计算和第一名相差的里程
+        $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
+
+
         //读取右侧排行榜
         if($this->input->get('type')){
             $data['type'] = $this->input->get('type');
@@ -164,14 +170,13 @@ class Welcome extends CI_Controller {
 
         $this -> load -> model('team_model');
 
-        //读取此类别团下的第一名
-        $frist_result = $this -> team_model -> getfirst($data['type']);
-        //计算和第一名相差的里程
-        $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
+
 
 
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
+
+
 
         //循环结果数组，读取团长信息
         foreach($result_type as $key => $value){
