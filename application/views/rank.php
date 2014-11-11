@@ -188,13 +188,13 @@
                                     </tr>
                                 </table>
                                 <div class="cy">
-                                    <!--
                                     <ul>
-                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy1.png"/><div>痞人日记</div></a></li>
-                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy2.png"/><div>AYU</div></a></li>
-                                        <li><a href="#"><img src="<?=$this->config->base_url()?>static/pc/images/img_cy3.png"/><div>芬芳小猪</div></a></li>
+
+                                    <?php foreach($value['number'] as $key2 => $value2):?>
+                                        <li><a href="http://weibo.com/<?=$value2['profile_url']?>" target="_blank"><img src="<?=$value2['avatar_large']?>"/><div><?=$value2['name']?></div></a></li>
+                                    <?php endforeach;?>
                                     </ul>
-                                    -->
+
                                     <div class="clear20"></div>
                                 </div>
                             </div>
