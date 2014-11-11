@@ -60,6 +60,12 @@ class User_model extends CI_Model {
         return $query -> result_array()[0];
     }
 
+    //读取团员
+    public function getmember($tid){
+        $query = $this -> db -> get_where('user', array('tid' => $tid, 'type' => 2));
+        return $query -> result_array();
+    }
+
 
     /*
     public function addnum($group, $step = 1){
