@@ -176,7 +176,7 @@
                                         <?php elseif($value['type'] == 3):?>
                                         <td width="130">休闲</td></td>
                                         <?php endif; ?>
-                                        <td width="130"><?=$value['num']?> 里程<?=$user_result['tid']?></td>
+                                        <td width="130"><?=$value['num']?> 里程</td>
                                         <td width="150">1人</td>
                                     </tr>
                                 </table>
@@ -194,7 +194,7 @@
                         </div>
                         <div class="tab_phblist_right">
                             <?php if($value['id'] == $user_result['tid']):?>
-                                ziji
+                                <a href="<?=$this->config->base_url()?>welcome/game_goon" class="btn_jiayou2"></a>
                             <?php else: ?>
                                 <a href="#" class="btn_jiayou"></a>
                             <?php endif; ?>
