@@ -80,8 +80,17 @@ class Welcome extends CI_Controller {
         }
 
 
-        var_dump($uid);
-        var_dump($tid);
+        //如果这个UID已经存在，则不能加入其他天团
+        $this -> load -> model('user_model');
+        if($this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            echo '<script>alert("您已加入了其他天团，不能再加入别人的团啦！");location.href="http://skyteam.tianxun.cn/rank"</script>';
+        }else{
+            var_dump($uid);
+            var_dump($tid);
+        }
+
+
+
     }
 
     //weibo 登陆
