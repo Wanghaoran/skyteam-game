@@ -54,7 +54,7 @@ class User_model extends CI_Model {
     //天团下的人数
     public function teamnum($tid){
 
-        $this->db->select('COUNT(id)');
+        $this->db->select('COUNT(id) as count');
         $this -> db -> where('tid', $tid);
         $query = $this->db->get('user');
         return $query -> result_array()[0];
