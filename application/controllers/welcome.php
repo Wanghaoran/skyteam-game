@@ -267,7 +267,12 @@ class Welcome extends CI_Controller {
         //更新总里程
         $this -> load -> model('team_model');
         $this -> team_model -> updatenum($user_info['tid'], $num);
+    }
 
+    //别人外加里程
+    public function game_other(){
+        $tid = $this->input->get('tid');
+        var_dump($tid);
     }
 
 

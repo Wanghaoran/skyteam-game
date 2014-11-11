@@ -49,6 +49,7 @@ $route['rank'] = 'welcome/rank';
 $route['start'] = 'welcome/start';
 $route['rules'] = 'welcome/rules';
 $route['game_start'] = 'welcome/game_start';
+$route['game_other'] = 'welcome/game_other';
 
 
 /* End of file routes.php */
