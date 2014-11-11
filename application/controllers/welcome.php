@@ -22,6 +22,68 @@ class Welcome extends CI_Controller {
     //加入天团
     public function jointeam(){
         $tid = $this->input->get('tid');
+
+        include_once('./Weibo.php');
+        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+
+        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join/tid/' . $tid);
+
+        $this->load->helper('url');
+        redirect($code_url);
+    }
+
+    //加入微博回调验证
+    public function weibocheck_join(){
+        include_once('./Weibo.php');
+
+        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+
+        if (isset($_REQUEST['code'])) {
+            $keys = array();
+            $keys['code'] = $_REQUEST['code'];
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            try {
+                $token = $o->getAccessToken('code', $keys ) ;
+            } catch (OAuthException $e) {
+            }
+        }
+
+        if (isset($token)) {
+
+            $this -> session -> set_userdata('token', $token);
+
+            setcookie('weibojs_'.$o->client_id, http_build_query($token));
+
+            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $this->session->userdata('token')['access_token']);
+
+            $uid_get = $c->get_uid();
+
+            if(isset($uid_get['error']) && $uid_get['error_code'] == 21321){
+
+                header("Content-type:text/html;charset=utf-8");
+                echo '新浪微博登录功能正在等待微博方面审核，请稍后再试试';
+                return;
+
+            }else if(isset($uid_get['error']) && $uid_get['error_code'] != 21321){
+
+                header("Content-type:text/html;charset=utf-8");
+                echo $uid_get['error'];
+                return;
+
+            }else{
+
+                $uid = $uid_get['uid'];
+            }
+        }else{
+            header("Content-type:text/html;charset=utf-8");
+            echo '授权验证失败！';
+            return;
+        }
+
+        $tid = $this->input->get('tid');
+
+
+        var_dump($uid);
         var_dump($tid);
     }
 
