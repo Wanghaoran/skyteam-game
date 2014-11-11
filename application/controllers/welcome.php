@@ -86,8 +86,12 @@ class Welcome extends CI_Controller {
             header("Content-type:text/html;charset=utf-8");
             echo '<script>alert("您已加入了其他天团，不能再加入别人的团啦！");location.href="http://skyteam.tianxun.cn/rank"</script>';
         }else{
+
+            //查询天团人数
+            $num_arr = $this -> user_model -> teamnum($tid);
             var_dump($uid);
             var_dump($tid);
+            var_dump($num_arr);
         }
 
 

@@ -51,6 +51,15 @@ class User_model extends CI_Model {
         return $this -> db -> update('user', $data);
     }
 
+    //天团下的人数
+    public function teamnum($tid){
+
+        $this->db->select_sum('age');
+        $this -> db -> where('tid', $tid);
+        $query = $this->db->get('user');
+        return $query;
+    }
+
 
     /*
     public function addnum($group, $step = 1){
