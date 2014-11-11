@@ -176,7 +176,7 @@
                                         <?php elseif($value['type'] == 3):?>
                                         <td width="130">休闲</td></td>
                                         <?php endif; ?>
-                                        <td width="130"><?=$value['num']?> 里程<?=$value['id'];?></td>
+                                        <td width="130"><?=$value['num']?> 里程</td>
                                         <td width="150">1人</td>
                                     </tr>
                                 </table>
@@ -193,7 +193,11 @@
                             </div>
                         </div>
                         <div class="tab_phblist_right">
-                            <a href="#" class="btn_jiayou"></a>
+                            <?php if($value['id'] == $user_result['tid']):?>
+                                ziji
+                            <?php else: ?>
+                                <a href="#" class="btn_jiayou"></a>
+                            <?php endif; ?>
                             <a href="#" class="btn_fenxiang"></a>
                             <a href="javascript:shareQQ();" class="icon_qq"></a>
                             <a href="javascript:shareRenren();" class="icon_rr"></a>
