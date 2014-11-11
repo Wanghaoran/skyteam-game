@@ -13,6 +13,7 @@ var res = {
     startBtn:"res/startBtn.png",
     startTeam:"res/startTeam.png",
     selfOverBtn:"res/selfOverBtn.jpg",
+    selfOverBtn2:"res/selfOverBtn2.jpg",
     plane:"res/plane.png",
     pipe:"res/rect.jpg",
     scoreBgd:"res/scoreBgd.png",

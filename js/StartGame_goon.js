@@ -457,7 +457,7 @@ var GameOver2Layer  = cc.Layer.extend({
             this.scene.gameoverlayer.setVisible(false);
             this.scene.addChild(new ShareLayer(this.scene),10);
         }, this);
-        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn,res.selfOverBtn,function(){ window.location.href = "start";});
+        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn2,res.selfOverBtn2,function(){ window.location.href = "start";});
         var againBtn = cc.MenuItemImage.create(res.againBtn,res.againBtn,null,this.scene.againGame, this.scene);
         shareBtn.setPosition(winSize.width/2+250, winSize.height/2-40);
         selfOverBtn.setPosition(winSize.width/2-120, winSize.height/2-125);
