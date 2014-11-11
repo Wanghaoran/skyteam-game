@@ -127,7 +127,7 @@
             <div class="clear20"></div>
 
             <div class="jianjie">
-
+                旅游卫视史林子携手天巡为您推荐以下10大休闲目的地
             </div>
 
             <div class="clear20"></div>
