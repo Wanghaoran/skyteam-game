@@ -201,9 +201,9 @@
                         </div>
                         <div class="tab_phblist_right">
                             <?php if($value['id'] == $user_result['tid']):?>
-                                <a href="<?=$this->config->base_url()?>welcome/game_goon" class="btn_jiayou2"></a>
+                                <a href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_jiayou2"></a>
                             <?php else: ?>
-                                <a href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" class="btn_jiayou"></a>
+                                <a href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
                             <?php endif; ?>
                             <a href="#" class="btn_fenxiang"></a>
                             <a href="javascript:shareQQ();" class="icon_qq"></a>

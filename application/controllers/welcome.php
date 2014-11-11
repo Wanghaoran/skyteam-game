@@ -272,7 +272,9 @@ class Welcome extends CI_Controller {
     //别人外加里程
     public function game_other(){
         $tid = $this->input->get('tid');
-        var_dump($tid);
+        $data = array();
+        $data['tid'] = $tid;
+        $this->load->view('game_other', $data);
     }
 
 
