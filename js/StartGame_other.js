@@ -614,21 +614,17 @@ var StartGame = cc.Scene.extend({
 
         var start_num = this.gamelayer.scoreNum.getString().replace(/Km/i,"");
 
-        /*
+
         $.ajax({
             type : 'POST',
-            url : 'http://skyteam.tianxun.cn/welcome/game_goon_myself',
-            data : '&num=' + start_num,
+            url : 'http://skyteam.tianxun.cn/welcome/game_goon_other',
+            data : '&num=' + start_num + '&tid=' + tid,
             async : false,
             dataType : 'json',
             success : function(ress){
 
             }
         });
-        */
-
-        console.log(start_num);
-        console.log(tid);
 
 
 

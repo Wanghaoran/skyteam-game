@@ -269,7 +269,7 @@ class Welcome extends CI_Controller {
         $this -> team_model -> updatenum($user_info['tid'], $num);
     }
 
-    //别人外加里程
+    //积攒里程开始游戏－别人玩
     public function game_other(){
         $tid = $this->input->get('tid');
         $data = array();
@@ -277,8 +277,18 @@ class Welcome extends CI_Controller {
         $this->load->view('game_other', $data);
     }
 
+    //别人玩加里程
+    public function game_goon_other(){
+        $num = $this->input->post('num');
+        $tid = $this->input->post('tid');
 
-    //建团
+        //更新总里程
+        $this -> load -> model('team_model');
+        $this -> team_model -> updatenum($tid, $num);
+    }
+
+
+        //建团
     public function bindteam(){
 
         //地区名称对应数组
