@@ -61,7 +61,13 @@
 
             </li>
             <li><?=$user_result['unum']?> 里程</li>
-            <li>已积攒 <?=$user_result['tnum']?> 里程</li>
+            <li>已积攒 <?=$user_result['tnum']?> 里程
+                <?php if($cha_km == 0):?>
+                    您已经是第一名啦
+                <?php else:?>
+                    距离排名第一还有 <?=$cha_km?> 里程
+                <?php endif;?>
+            </li>
         </ul>
     </div>
     <div class="clear"></div>
@@ -177,11 +183,6 @@
                                         <td width="130">休闲</td></td>
                                         <?php endif; ?>
                                         <td width="130"><?=$value['num']?> 里程
-                                        <?php if($cha_km == 0):?>
-                                            您已经是第一名啦
-                                        <?php else:?>
-                                            距离排名第一还有 <?=$cha_km?> 里程
-                                        <?php endif;?>
                                         </td>
                                         <td width="150">1人</td>
                                     </tr>
