@@ -272,10 +272,6 @@ class Welcome extends CI_Controller {
             $data['type'] = 1;
         }
 
-
-
-
-
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
 

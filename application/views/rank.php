@@ -5,24 +5,33 @@
     <title>天团排行榜－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
 
+
+
     <script>
-        var shareWeibo = function(){
-            url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&content=utf-8&source=&sourceUrl=&pic=";
+        var shareWeibo = function(tid){
+
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
+            url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=";
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
-        var shareQQ = function(){
-            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程&pics=&summary=";
+        var shareQQ = function(tid){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
+            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=" + text + "&pics=&summary=";
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
-        var shareRenren = function(){
-            url = "http://share.renren.com/share/buttonshare.do?link=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程";
+        var shareRenren = function(tid){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
+
+            url = "http://share.renren.com/share/buttonshare.do?link=&title=" + text + "";
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
-        var shareDouban = function(){
-            url = "http://www.douban.com/recommend/?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=起飞吧朋友－天巡接力拼里程";
+        var shareDouban = function(tid){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
+
+            url = "http://www.douban.com/recommend/?url=&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
         }
@@ -73,12 +82,12 @@
     <div class="clear"></div>
     <div class="ny_leftbtn">
         <a href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_go"></a>
-        <a href="#" class="btn_comeon"></a>
+        <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="btn_comeon"></a>
         <div class="clear"></div>
         <div class="ny_lefticon">
-            <a href="javascript:shareQQ();" class="icon_qq"></a>
-            <a href="javascript:shareRenren();" class="icon_rr"></a>
-            <a href="javascript:shareDouban();" class="icon_dd"></a>
+            <a href="javascript:shareQQ(<?=$user_result['tid']?>);" class="icon_qq"></a>
+            <a href="javascript:shareRenren(<?=$user_result['tid']?>);" class="icon_rr"></a>
+            <a href="javascript:shareDouban(<?=$user_result['tid']?>);" class="icon_dd"></a>
         </div>
         <div class="clear20"></div>
     </div>
@@ -205,10 +214,10 @@
                             <?php else: ?>
                                 <a href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
                             <?php endif; ?>
-                            <a href="#" class="btn_fenxiang"></a>
-                            <a href="javascript:shareQQ();" class="icon_qq"></a>
-                            <a href="javascript:shareRenren();" class="icon_rr"></a>
-                            <a href="javascript:shareDouban();" class="icon_dd"></a>
+                            <a href="javascript:shareWeibo(<?=$value['id']?>);" class="btn_fenxiang"></a>
+                            <a href="javascript:shareQQ(<?=$value['id']?>);" class="icon_qq"></a>
+                            <a href="javascript:shareRenren(<?=$value['id']?>);" class="icon_rr"></a>
+                            <a href="javascript:shareDouban(<?=$value['id']?>);" class="icon_dd"></a>
                         </div>
                     </div>
                 </div>
