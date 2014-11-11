@@ -184,7 +184,7 @@
                                         <?php endif; ?>
                                         <td width="130"><?=$value['num']?> 里程
                                         </td>
-                                        <td width="150">1人</td>
+                                        <td width="150"><?=$value['nums']?> 人</td>
                                     </tr>
                                 </table>
                                 <div class="cy">

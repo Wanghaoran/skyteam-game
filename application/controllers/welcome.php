@@ -286,13 +286,10 @@ class Welcome extends CI_Controller {
             //读取团长信息
             $result_type[$key]['leader'] = $this -> user_model -> getUser($value['weiboid']);
             //读取团人数
-            $result_type[$key]['nums'] = $this -> user_model -> teamnum($value['id']);
+            $result_type[$key]['nums'] = $this -> user_model -> teamnum($value['id'])['count'];
         }
 
         $data['rank'] = $result_type;
-
-        var_dump($result_type);
-
 
         $this->load->view('rank', $data);
     }
