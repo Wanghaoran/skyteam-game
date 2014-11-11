@@ -13,7 +13,6 @@ class Welcome extends CI_Controller {
             $this->load->view('index');
 
         }else{
-
             $this -> load -> view('index_mobile');
         }
 	}
@@ -26,14 +25,14 @@ class Welcome extends CI_Controller {
         include_once('./Weibo.php');
         $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
 
-        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join/tid/' . $tid);
+        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join/' . $tid);
 
         $this->load->helper('url');
         redirect($code_url);
     }
 
     //加入微博回调验证
-    public function weibocheck_join(){
+    public function weibocheck_join($tid){
         include_once('./Weibo.php');
 
         $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
@@ -79,8 +78,6 @@ class Welcome extends CI_Controller {
             echo '授权验证失败！';
             return;
         }
-
-        $tid = $this->input->get('tid');
 
 
         var_dump($uid);
