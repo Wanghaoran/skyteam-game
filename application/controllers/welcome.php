@@ -527,6 +527,11 @@ class Welcome extends CI_Controller {
         echo '<script>alert("退出成功！");location.href="http://skyteam.tianxun.cn/"</script>';
     }
 
+    //团名检测是否重复
+    public function teamnamedetection(){
+        var_dump($_POST);
+    }
+
     //微博API － 互粉列表
     public function _bilateral($asstoken, $uid){
         $url = 'https://api.weibo.com/2/friendships/friends/bilateral.json?access_token=' . $asstoken . '&uid=' . $uid;

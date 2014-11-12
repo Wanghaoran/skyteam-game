@@ -123,8 +123,8 @@
         //下一步
         function showNext(){
 
-            if($('#team_name').val().length > 10){
-                alert('团名字数不能超过10！');
+            if(!$('#team_name').val()){
+                alert('团名不能为空！');
                 $('#team_name').focus();
                 return;
             }
@@ -135,11 +135,27 @@
                 return;
             }
 
-            if(!$('#team_name').val()){
-                alert('团名不能为空！');
+            if($('#team_name').val().length > 10){
+                alert('团名字数不能超过10！');
                 $('#team_name').focus();
                 return;
             }
+
+            //验证重复性
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/teamnamedetection',
+                data : '&name=' + $('#team_name').val(),
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+
+                }
+            });
+
+
+
+
 
             result['name'] = $('#team_name').val();
 
