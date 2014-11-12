@@ -73,6 +73,20 @@ class Team_model extends CI_Model {
         return $query -> result_array();
     }
 
+    //通过weiboID删除团和用户
+    public function deletefromweiboid($weiboid){
+        //删除团
+        $this->db->where('weiboid', $weiboid);
+        $this->db->delete('team');
+
+        //删除用户
+        $this->db->where('weiboid', $weiboid);
+        $this->db->delete('user');
+
+        return $this->db->affected_rows();
+
+    }
+
     /*
     public function addnum($group, $step = 1){
 

@@ -549,6 +549,22 @@ class Welcome extends CI_Controller {
         }
 
         echo json_encode($result);
+    }
+
+    //删除本团
+    public function deleteteam(){
+        //读取UID
+        $weiboid = $this->session->userdata('token')['uid'];
+
+        $this -> load -> model('team_model');
+        if($this -> team_model -> deletefromweiboid($weiboid)){
+            header("Content-type:text/html;charset=utf-8");
+            echo '<script>alert("删除成功！现在跳转至活动首页");location.href="http://skyteam.tianxun.cn/"</script>';
+        }else{
+            header("Content-type:text/html;charset=utf-8");
+            echo '<script>alert("删除失败！");location.href="http://skyteam.tianxun.cn/"</script>';
+        }
+
 
     }
 

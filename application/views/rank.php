@@ -37,6 +37,19 @@
         }
 
     </script>
+
+    <script>
+
+        var deleteteam = function(){
+            if(confirm('确定要删除该团吗？操作不可恢复，请谨慎操作！')){
+                location.htef="<?=$this->config->base_url()?>welcome/deleteteam";
+            }else{
+                return;
+            }
+        }
+
+
+    </script>
 </head>
 <body>
 <div class="ny_head">
@@ -55,11 +68,15 @@
 <div class="ny_conleft">
     <div class="ny_leftinfo">
 
-        <div class="ny_admintitle"><a href="#" title="删除本团"></a></div>
+        <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
+            <div class="ny_admintitle">
+                <a href="javascript:deleteteam();" title="删除本团"></a>
+            </div>
+        <?php endif; ?>
 
         <div class="ny_admininfo">
             <a href="#"><img src="<?=$user_result['avatar_large']?>"/></a>
-            <h2><?=$user_result['uname']?>-<?=$user_result['uweiboid']?>-<?=$user_result['tweiboid']?></h2>
+            <h2><?=$user_result['uname']?></h2>
         </div>
         <div class="clear"></div>
         <ul class="ulinfo">
