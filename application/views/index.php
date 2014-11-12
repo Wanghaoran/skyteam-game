@@ -93,6 +93,7 @@
         var execTrack_wizardfood = function(){
             _smq.push(['custom','CampaignHomepage','GoToFoodWizard']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToFoodWizard']);
+        }
     </script>
 
 </head>
