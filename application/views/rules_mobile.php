@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>活动规则－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包<</title>
+    <title>活动规则－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="max-age=3600">
     <meta name="MobileOptimized" content="240">

@@ -336,3 +336,6 @@ input.jcDate{cursor:pointer; float:left;}
 .radioimg2 .hRadio{display:inline-block;cursor:pointer;vertical-align:middle; width:94px; height:32px; float:left;}
 .radioimg2 .hRadio div{ width:100%; height:100%; display:block;}
 .radioimg2 .hRadio_Checked { background:url(../images/icon_gou.png) 20px center no-repeat;}
+
+.ny_content3{ width:1440px; margin:20px auto; background:#fff;}
+.ny_content3 img{ vertical-align:bottom;}

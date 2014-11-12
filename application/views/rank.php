@@ -43,7 +43,7 @@
     <div class="ny_nav">
         <ul>
             <li class="li1"><a href="<?=$this->config->base_url()?>"></a></li>
-            <li class="li2"><a href="#"></a></li>
+            <li class="li2"><a href="<?=$this->config->base_url()?>rules"></a></li>
             <li class="li3"><a class="cur" href="#"></a></li>
             <li class="li4"><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
