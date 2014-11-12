@@ -26,6 +26,34 @@
         <?php endif;?>
     </script>
 
+    <script>
+
+        var shareWeibo = function(){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=";
+            window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+        }
+
+        var shareQQ = function(){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "&pics=&summary=";
+            window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+        }
+
+        var shareRenren = function(){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            url = "http://share.renren.com/share/buttonshare.do?link=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "";
+            window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+        }
+
+        var shareDouban = function(){
+            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            url = "http://www.douban.com/recommend/?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "";
+            window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+        }
+
+    </script>
+
     <style>
         body, canvas, div {
             -moz-user-select: none;

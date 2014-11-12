@@ -83,7 +83,6 @@ var StartLayer = cc.Layer.extend({
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
             alert('您已经在天团中，不需要再开团啦！');
-//            window.location.href = "http://www.baidu.com";
         });
         startGameBtn.setPosition(winSize.width/2-130,150);
         startTeamBtn.setPosition(winSize.width/2+130,150);
@@ -492,19 +491,15 @@ var ShareLayer = cc.Layer.extend({
         this.addChild(this.desc1,2);
 
         var sinaBtn = cc.MenuItemImage.create(res.sinaIcon, res.sinaIcon, function(){
-//            window.location.href = "http://www.baidu.com";
             shareWeibo();
         });
         var qzoneBtn = cc.MenuItemImage.create(res.qzoneIcon, res.qzoneIcon, function(){
-//            window.location.href = "http://www.baidu.com";
             shareQQ();
         });
         var renrenBtn = cc.MenuItemImage.create(res.renrenIcon, res.renrenIcon, function(){
-//            window.location.href = "http://www.baidu.com";
             shareRenren();
         });
         var doubanBtn = cc.MenuItemImage.create(res.doubanIcon, res.doubanIcon, function(){
-//            window.location.href = "http://www.baidu.com";
             shareDouban();
         });
         var weixinBtn = cc.MenuItemImage.create(res.weixinIcon, res.weixinIcon, null, function(){
