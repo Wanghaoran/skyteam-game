@@ -160,8 +160,7 @@
             <div class="iconlink">
 
 
-                <?php if(!$this->session->userdata('token')['uid'] || $this -> user_model -> getUser($this->session->userdata('token')['uid'])):?>
-                <?php else:?>
+                <?php if($this->session->userdata('token')['uid']):?>
                     <a style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登陆</a>
                 <?php endif; ?>
 
