@@ -418,6 +418,16 @@ class Welcome extends CI_Controller {
         $tid = $this->input->get('tid');
         $data = array();
         $data['tid'] = $tid;
+
+
+        $this -> load -> model('user_model');
+        //判断是否是天团用户，天团用户不能再开团
+        if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            $data['tuan'] = 1;
+        }else{
+            $data['tuan'] = 2;
+        }
+
         $this->load->view('game_other', $data);
     }
 

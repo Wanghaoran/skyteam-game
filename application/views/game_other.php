@@ -18,6 +18,12 @@
 
     <script>
         var tid = '' + <?=$tid?> + '';
+
+        <?php if($tuan == 1):?>
+            var tuan = 1;
+        <?php else:?>
+            var tuan = 2;
+        <?php endif;?>
     </script>
 
     <style>
