@@ -135,21 +135,21 @@ body{ background:#fff;}
 		.ny_leftqt ul li a img{ width:50px; height:50px; border:none;}
 		.ny_leftqt ul li a div{ width:80px; height:30px; line-height:30px;color:#848484; font-size:14px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
 		
-	.tab_phb{ width:900px; margin:0 auto}
+	/*.tab_phb{ width:900px; margin:0 auto}*/
 	.ny_conright{ float:left; width:900px;}
-		.ny_conright .tab_phb{ width:900px; margin:0 auto}
-		.ny_conright .tab_phb .tab_phbtitle{ border-bottom:#bfcf3b 1px solid; height:68px;}
-		.ny_conright .tab_phb .tab_phbtitle ul li{ float:left; margin:20px 40px 0 0; width:93px; height:40px;}
-		.ny_conright .tab_phb .tab_phbtitle ul li a{ display:inline-block; width:93px; height:40px; cursor:pointer; background:url(../images/tab_phb.png) no-repeat;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li1{ width:112px;background-position:0 0;background:url(../images/tab_phb.png) no-repeat;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li2 a{ background-position:-163px 0;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li2 a.now,.ny_conright .tab_phb .tab_phbtitle ul li.li2 a:hover{background-position:-163px -40px;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li3 a{ background-position:-294px 0;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li3 a.now,.ny_conright .tab_phb .tab_phbtitle ul li.li3 a:hover{background-position:-294px -40px;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li4 a{ background-position:-427px 0;}
-		.ny_conright .tab_phb .tab_phbtitle ul li.li4 a.now,.ny_conright .tab_phb .tab_phbtitle ul li.li4 a:hover{background-position:-427px -40px;}
+		.tab_phb{ width:900px; margin:0 auto}
+		.tab_phb .tab_phbtitle{ border-bottom:#bfcf3b 1px solid; height:68px;}
+		.tab_phb .tab_phbtitle ul li{ float:left; margin:20px 40px 0 0; width:93px; height:40px;}
+		.tab_phb .tab_phbtitle ul li a{ display:inline-block; width:93px; height:40px; cursor:pointer; background:url(../images/tab_phb.png) no-repeat;}
+		.tab_phb .tab_phbtitle ul li.li1{ width:112px;background-position:0 0;background:url(../images/tab_phb.png) no-repeat;}
+		.tab_phb .tab_phbtitle ul li.li2 a{ background-position:-163px 0;}
+		.tab_phb .tab_phbtitle ul li.li2 a.now,.tab_phb .tab_phbtitle ul li.li2 a:hover{background-position:-163px -40px;}
+		.tab_phb .tab_phbtitle ul li.li3 a{ background-position:-294px 0;}
+		.tab_phb .tab_phbtitle ul li.li3 a.now,.tab_phb .tab_phbtitle ul li.li3 a:hover{background-position:-294px -40px;}
+		.tab_phb .tab_phbtitle ul li.li4 a{ background-position:-427px 0;}
+		.tab_phb .tab_phbtitle ul li.li4 a.now,.tab_phb .tab_phbtitle ul li.li4 a:hover{background-position:-427px -40px;}
 		
-		.ny_conright .tab_phb .tab_phbcon{ width:880px; margin:20px auto;}
+		.tab_phb .tab_phbcon{ width:880px; margin:20px auto;}
 							  .tab_phblist{ width:880px; height:290px; background:url(../images/phbbg.jpg) no-repeat;}
 							  .tab_phblist_title{ height:42px; line-height:42px; padding:0 0 0 10px; font-size:18px; font-weight:400; color:#e85742; text-align:left;}
 							  .tab_phblist_title span{ width:32px; height:32px; line-height:32px; display:inline-block; margin:5px 5px 0 0; text-align:center; background:url(../images/icon_yuan.png) no-repeat; color:#fff;}
