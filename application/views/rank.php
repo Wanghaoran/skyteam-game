@@ -95,7 +95,7 @@
                 <?php if($cha_km == 0):?>
                     您已经是<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团的第一名啦！
                 <?php else:?>
-                    距离排名第一还有 <?=$cha_km?> 里程
+                    距离<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团排名第一还差 <?=$cha_km?> 里程
                 <?php endif;?>
             </li>
         </ul>
