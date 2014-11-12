@@ -65,9 +65,17 @@
 </div>
 <div class="clear"></div>
 <div class="ny_content">
-<div class="ny_conleft">
-    <div class="ny_leftinfo">
-        <div class="ny_admintitle">
+        <div class="ny_conleft">
+
+    <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
+
+        <div class="ny_leftinfo">
+    <?php else:?>
+        <div class="ny_leftinfo" style='background:url("<?=$this->config->base_url()?>static/pc/images/ny_leftinfo2.png") no-repeat scroll center top rgba(0, 0, 0, 0);'>
+    <?php endif; ?>
+
+
+            <div class="ny_admintitle">
 
         <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a href="javascript:deleteteam();" title="删除本团"></a>
