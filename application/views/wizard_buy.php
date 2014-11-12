@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="tab_kol_right">
-                <h2>自己选择城市，看看什么时间的机票适合你,天巡为您呈现整月含税价格走势，寻找最划算机票，一目了然。</h2>
+                <h2>天巡为您呈现整月含税价格走势，寻找最划算机票，一目了然。</h2>
                 <div class="tab_kol_time">
 
                     <div id="snippet_searchpanel" style="width: auto; height:auto;"></div>
