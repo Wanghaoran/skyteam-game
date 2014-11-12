@@ -59,7 +59,7 @@
 
         <div class="ny_admininfo">
             <a href="#"><img src="<?=$user_result['avatar_large']?>"/></a>
-            <h2><?=$user_result['uname']?></h2>
+            <h2><?=$user_result['uname']?>-<?=$user_result['uweiboid']?>-<?=$user_result['tweiboid']?></h2>
         </div>
         <div class="clear"></div>
         <ul class="ulinfo">

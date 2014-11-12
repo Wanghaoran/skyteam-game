@@ -32,7 +32,7 @@ class User_model extends CI_Model {
     }
 
     public function getinfo($weiboid){
-        $this->db->select('skyteam_user.name as uname,skyteam_user.avatar_large as avatar_large,skyteam_user.type as utype,skyteam_user.num as unum,skyteam_team.type as ttype,skyteam_team.place as tplace,skyteam_team.num as tnum,skyteam_team.name as tname,skyteam_team.id as tid');
+        $this->db->select('skyteam_user.name as uname,skyteam_user.avatar_large as avatar_large,skyteam_user.type as utype,skyteam_user.num as unum,skyteam_user.weiboid as uweiboid,skyteam_team.type as ttype,skyteam_team.place as tplace,skyteam_team.num as tnum,skyteam_team.name as tname,skyteam_team.id as tid,skyteam_team.weiboid as tweiboid,');
         $this->db->from('skyteam_user');
         $this->db->join('skyteam_team', 'skyteam_user.tid = skyteam_team.id');
         $this->db->where(array('skyteam_user.weiboid' => $weiboid));
