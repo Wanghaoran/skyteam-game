@@ -11,7 +11,7 @@
         <ul>
             <li class="li1"><a href="<?=$this->config->base_url()?>"></a></li>
             <li class="li2"><a class="cur" href="<?=$this->config->base_url()?>rules"></a></li>
-            <li class="li3"><a href="#"></a></li>
+            <li class="li3"><a href="<?=$this->config->base_url()?>rank"></a></li>
             <li class="li4"><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
