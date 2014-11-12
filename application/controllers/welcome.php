@@ -522,7 +522,9 @@ class Welcome extends CI_Controller {
 
     //退出登陆
     public function logout(){
-
+        $this->session->sess_destroy();
+        header("Content-type:text/html;charset=utf-8");
+        echo '<script>alert("退出成功！");location.href="http://skyteam.tianxun.cn/"</script>';
     }
 
     //微博API － 互粉列表
