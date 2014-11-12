@@ -72,7 +72,7 @@
         <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a href="javascript:deleteteam();" title="删除本团"></a>
         <?php endif; ?>
-            <a href="javascript:deleteteam();" title="删除本团"></a>
+            <a href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登陆"></a>
         </div>
 
 
