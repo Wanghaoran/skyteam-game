@@ -67,12 +67,14 @@
 <div class="ny_content">
 <div class="ny_conleft">
     <div class="ny_leftinfo">
+        <div class="ny_admintitle">
 
         <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
-            <div class="ny_admintitle">
                 <a href="javascript:deleteteam();" title="删除本团"></a>
-            </div>
         <?php endif; ?>
+            <a href="javascript:deleteteam();" title="删除本团"></a>
+        </div>
+
 
         <div class="ny_admininfo">
             <a href="#"><img src="<?=$user_result['avatar_large']?>"/></a>
