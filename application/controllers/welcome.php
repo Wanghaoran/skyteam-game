@@ -295,6 +295,8 @@ class Welcome extends CI_Controller {
     //未登陆时的天团排行榜
     public function rank_loginout(){
 
+        $this -> load -> model('user_model');
+
         $this -> load -> model('team_model');
 
         //读取右侧排行榜
