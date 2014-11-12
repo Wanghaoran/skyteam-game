@@ -143,7 +143,7 @@
             </div>
             <div class="bottom_right">
                 <div class="sina">
-                    <wb:follow-button uid="3353187630" type="red_3" >关注按钮</wb:follow-button>
+                    <wb:follow-button uid="3353187630" type="red_3" width="300" height="24" >关注按钮</wb:follow-button>
                 </div>
                 <div class="linktext lt">
                     <a href="<?=$this->config->base_url()?>rank" class="phb" title="天团排行榜"><img src="<?=$this->config->base_url()?>static/pc/images/textphb.png"/></a>
