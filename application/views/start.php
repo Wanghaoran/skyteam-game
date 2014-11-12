@@ -149,8 +149,11 @@
                 async : false,
                 dataType : 'json',
                 success : function(ress){
-
-                    console.log(ress);
+                    if(ress.result == 'have'){
+                        alert('这个团名已经存在啦，试着换一个吧！');
+                        $('#team_name').focus();
+                        return;
+                    }
 
                 }
             });
