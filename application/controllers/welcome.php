@@ -520,6 +520,11 @@ class Welcome extends CI_Controller {
         echo json_encode($result);
     }
 
+    //退出登陆
+    public function logout(){
+
+    }
+
     //微博API － 互粉列表
     public function _bilateral($asstoken, $uid){
         $url = 'https://api.weibo.com/2/friendships/friends/bilateral.json?access_token=' . $asstoken . '&uid=' . $uid;

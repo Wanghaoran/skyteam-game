@@ -149,14 +149,30 @@
                     <a href="<?=$this->config->base_url()?>rank" class="phb" title="天团排行榜"><img src="<?=$this->config->base_url()?>static/pc/images/textphb.png"/></a>
                     <a href="<?=$this->config->base_url()?>wizard_food" class="txxdy" title="天巡星导游"><img src="<?=$this->config->base_url()?>static/pc/images/texttxdy.png"/></a>
                     <a href="<?=$this->config->base_url()?>rules" class="hdgz" title="活动规则"><img src="<?=$this->config->base_url()?>static/pc/images/texthdgz.png"/></a>
+
+
+
+
                 </div>
+
             </div>
+
             <div class="iconlink">
+
+
+                <?php if(!$this->session->userdata('token')['uid'] || $this -> user_model -> getUser($this->session->userdata('token')['uid'])):?>
+                <?php else:?>
+                    <a style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登陆</a>
+                <?php endif; ?>
+
+
+
                 <a href="javascript:shareQQ();" class="tengxun"><img src="<?=$this->config->base_url()?>static/pc/images/icon_tengxun.png"/></a>
                 <a class="sinaweibo" href="javascript:shareWeibo();"><img src="<?=$this->config->base_url()?>static/pc/images/icon_xinlang.png"/></a>
                 <a class="renren" href="javascript:shareRenren();"><img src="<?=$this->config->base_url()?>static/pc/images/icon_renren.png"/></a>
                 <a href="javascript:shareDouban();" class="douban"><img src="<?=$this->config->base_url()?>static/pc/images/icon_douban.png"/></a>
                 <div class="text1">
+
                     <img src="<?=$this->config->base_url()?>static/pc/images/text1.png"/>
                 </div>
             </div>
