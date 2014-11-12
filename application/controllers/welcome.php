@@ -229,8 +229,6 @@ class Welcome extends CI_Controller {
         $data['friend_result'] = $friend_result;
 
 
-
-
         $this -> load -> library('user_agent');
 
         if(!$this -> agent -> is_mobile()){

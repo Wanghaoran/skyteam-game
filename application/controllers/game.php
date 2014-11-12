@@ -5,7 +5,14 @@ class Game extends CI_Controller {
     //游戏端试玩地址
     public function qyer()
     {
-        echo 'Game Testting';
+        $data = array();
+        $data['state'] = 'start';
+        $this->load->view('game_qyer', $data);
+    }
+
+    public function waiting(){
+        $this->load->view('game_waiting');
+
     }
 
 
