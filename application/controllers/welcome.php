@@ -6,6 +6,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 
+        $this -> load -> model('user_model');
         $this -> load -> library('user_agent');
 
         if(!$this -> agent -> is_mobile()){
