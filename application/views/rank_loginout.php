@@ -45,7 +45,8 @@
             <li class="li4"><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
-    <div class="ny_logo"></div>
+    <a href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
+
 </div>
 <div class="clear"></div>
 <div class="ny_content">

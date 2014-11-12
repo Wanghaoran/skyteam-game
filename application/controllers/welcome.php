@@ -299,12 +299,15 @@ class Welcome extends CI_Controller {
 
         $this -> load -> model('team_model');
 
+        $data = array();
+
         //读取右侧排行榜
         if($this->input->get('type')){
             $data['type'] = $this->input->get('type');
         }else{
             $data['type'] = 1;
         }
+
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
 
@@ -321,6 +324,8 @@ class Welcome extends CI_Controller {
 
         $data['rank'] = $result_type;
 
+
+        var_dump($data);
 
         $this->load->view('rank_loginout', $data);
     }
