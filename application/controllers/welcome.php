@@ -325,8 +325,6 @@ class Welcome extends CI_Controller {
         $data['rank'] = $result_type;
 
 
-        var_dump($data);
-
         $this->load->view('rank_loginout', $data);
     }
 
