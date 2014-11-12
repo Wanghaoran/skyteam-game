@@ -114,9 +114,9 @@ body{ background:#fff;}
 		.ny_leftinfo{ width:384px; height:518px; padding:0 0 0 0; margin:28px; background:url(../images/ny_leftinfo.png) top center no-repeat;}
 			.ny_leftinfo .ny_admintitle{ width:384px; height:20px;}
 			.ny_leftinfo .ny_admintitle a{ float:right; width:65px; height:20px; display:inline-block;}
-			.ny_leftinfo .ny_admininfo{ height:180px; width:384px; padding:30px 0 27px;}
-			.ny_leftinfo .ny_admininfo img{ float:left; width:180px; height:180px; border:#fafafa 2px solid; margin:0 22px 0 0;}
-			.ny_leftinfo .ny_admininfo h2{ float:left; font-size:18px; color:#848484; font-weight:400;}
+			.ny_leftinfo .ny_admininfo{ height:236px; width:384px; padding:0 0 0 0;}
+			.ny_leftinfo .ny_admininfo img{ float:left; width:180px; height:180px; border:#fafafa 2px solid; margin:30px 22px 0 0;}
+			.ny_leftinfo .ny_admininfo h2{ float:left; font-size:18px; color:#848484; font-weight:400; margin:30px 0 0 0;}
 			.ny_leftinfo ul.ulinfo{ padding:0 0 0 90px;}
 			.ny_leftinfo ul.ulinfo li{ height:50px; line-height:25px; color:#848484; font-size:16px; font-weight:400;}
 			
