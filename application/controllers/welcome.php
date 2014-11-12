@@ -308,7 +308,6 @@ class Welcome extends CI_Controller {
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
 
-        $data['rank'] = $result_type;
 
         //循环结果数组，
         foreach($result_type as $key => $value){
@@ -319,6 +318,9 @@ class Welcome extends CI_Controller {
             //读取团员
             $result_type[$key]['number'] = $this -> user_model -> getmember($value['id']);
         }
+
+        $data['rank'] = $result_type;
+
 
         $this->load->view('rank_loginout', $data);
     }
