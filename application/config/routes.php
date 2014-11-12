@@ -50,6 +50,7 @@ $route['start'] = 'welcome/start';
 $route['rules'] = 'welcome/rules';
 $route['game_start'] = 'welcome/game_start';
 $route['game_other'] = 'welcome/game_other';
+$route['rank_loginout'] = 'welcome/rank_loginout';
 
 
 /* End of file routes.php */
