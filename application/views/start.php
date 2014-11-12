@@ -123,7 +123,7 @@
         //下一步
         function showNext(){
 
-            console.log($('#team_name').length);
+            console.log($('#team_name').val().length);
 
             if(!$('#team_name').val()){
                 alert('团名不能为空！');
