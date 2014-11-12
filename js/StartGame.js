@@ -82,7 +82,7 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
-            window.location.href = "http://www.baidu.com";
+            window.location.href = "http://skyteam.tianxun.cn/start";
         });
         startGameBtn.setPosition(winSize.width/2-130,150);
         startTeamBtn.setPosition(winSize.width/2+130,150);
