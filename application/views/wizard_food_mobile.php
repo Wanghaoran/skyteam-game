@@ -111,7 +111,7 @@
                 </div>
                     <div class="divright">
                         <h2>王子强WANGZIQIANG</h2>
-                        <h3>著名美食旅游家、摄影师，新锐主持人，王子强工作室创始人。</h3>
+                        <h3>著名美食旅游家、新锐主持人，知名汽车评论员，人气网络媒体人。</h3>
                         <p><a href="http://weibo.com/222020" class="btn_gz"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_gz.png"/></a></p>
                     </div>
                     <div class="clear"></div>
