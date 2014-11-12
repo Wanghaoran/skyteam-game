@@ -123,7 +123,11 @@
         //下一步
         function showNext(){
 
-            console.log($('#team_name').val().length);
+            if($('#team_name').val().length > 10){
+                alert('团名字数不能超过10！');
+                $('#team_name').focus();
+                return;
+            }
 
             if(!$('#team_name').val()){
                 alert('团名不能为空！');
