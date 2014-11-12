@@ -129,6 +129,10 @@
                 return;
             }
 
+            if($('#team_name').val().test(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')){
+                console.log('123123');
+            }
+
             if(!$('#team_name').val()){
                 alert('团名不能为空！');
                 $('#team_name').focus();
