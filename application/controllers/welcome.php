@@ -208,7 +208,7 @@ class Welcome extends CI_Controller {
         //如果微博ID存在，并且这个ID没有纪录过，才可以开始创建,否则跳转回首页
         if(!$this->session->userdata('token')['uid'] || $this -> user_model -> getUser($this->session->userdata('token')['uid'])){
             $this->load->helper('url');
-            redirect(base_url());
+            redirect(base_url('rank'));
         }
 
 
