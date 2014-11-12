@@ -247,7 +247,7 @@ class Welcome extends CI_Controller {
         //如果微博ID存在，并且这个ID有纪录，才能访问排行榜页面
         if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
             $this->load->helper('url');
-            redirect(base_url());
+            redirect(base_url('rank_loginout'));
         }
 
         $data = array();
@@ -290,6 +290,35 @@ class Welcome extends CI_Controller {
         $data['rank'] = $result_type;
 
         $this->load->view('rank', $data);
+    }
+
+    //未登陆时的天团排行榜
+    public function rank_loginout(){
+
+        $this -> load -> model('team_model');
+
+        //读取右侧排行榜
+        if($this->input->get('type')){
+            $data['type'] = $this->input->get('type');
+        }else{
+            $data['type'] = 1;
+        }
+        //读取团排行榜
+        $result_type = $this -> team_model -> teamorder($data['type']);
+
+        $data['rank'] = $result_type;
+
+        //循环结果数组，
+        foreach($result_type as $key => $value){
+            //读取团长信息
+            $result_type[$key]['leader'] = $this -> user_model -> getUser($value['weiboid']);
+            //读取团人数
+            $result_type[$key]['nums'] = $this -> user_model -> teamnum($value['id'])['count'];
+            //读取团员
+            $result_type[$key]['number'] = $this -> user_model -> getmember($value['id']);
+        }
+
+        $this->load->view('rank_loginout', $data);
     }
 
     //天巡星导游 - 美食团
