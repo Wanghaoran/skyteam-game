@@ -150,6 +150,8 @@
                 dataType : 'json',
                 success : function(ress){
 
+                    console.log(ress);
+
                 }
             });
 

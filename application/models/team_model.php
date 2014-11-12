@@ -67,6 +67,12 @@ class Team_model extends CI_Model {
         return $query -> result_array()[0];
     }
 
+    //通过团名读取团信息
+    public function getinfofromname($name){
+        $query = $this -> db -> get_where('team', array('name' => $name), 1);
+        return $query -> result_array();
+    }
+
     /*
     public function addnum($group, $step = 1){
 

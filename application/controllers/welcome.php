@@ -529,7 +529,17 @@ class Welcome extends CI_Controller {
 
     //团名检测是否重复
     public function teamnamedetection(){
-        var_dump($_POST);
+        $name = $this->input->post('name');
+        $this -> load -> model('team_model');
+        $result = array();
+        if($this -> team_model -> getinfofromname($name)){
+            $result['result'] = 'have';
+        }else{
+            $result['result'] = 'no';
+        }
+
+        echo json_encode($result);
+
     }
 
     //微博API － 互粉列表
