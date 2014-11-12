@@ -129,7 +129,7 @@
                 return;
             }
 
-            if($('#team_name').val().test(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g)){
+            if($('#team_name').val().match(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g)){
                 console.log('123123');
             }
 
