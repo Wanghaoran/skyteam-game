@@ -111,8 +111,10 @@ body{ background:#fff;}
 		.ny_nav ul li.li4 a.cur,.ny_nav ul li.li4 a:hover{ background-position:-372px -23px;}
 .ny_content{width:1360px; margin:0 auto}	
 	.ny_conleft{ float:left; width:440px; height:1020px; background:#f1f1f1; margin:0 20px 0 0;}
-		.ny_leftinfo{ width:384px; height:440px; padding:40px 0 0 0; margin:28px; background:url(../images/ny_leftinfo.png) top center no-repeat;}
-			.ny_leftinfo .ny_admininfo{ height:180px; margin:22px 0; width:384px;}
+		.ny_leftinfo{ width:384px; height:518px; padding:0 0 0 0; margin:28px; background:url(../images/ny_leftinfo.png) top center no-repeat;}
+			.ny_leftinfo .ny_admintitle{ width:384px; height:20px;}
+			.ny_leftinfo .ny_admintitle a{ float:right; width:65px; height:20px; display:inline-block;}
+			.ny_leftinfo .ny_admininfo{ height:180px; width:384px; padding:30px 0 27px;}
 			.ny_leftinfo .ny_admininfo img{ float:left; width:180px; height:180px; border:#fafafa 2px solid; margin:0 22px 0 0;}
 			.ny_leftinfo .ny_admininfo h2{ float:left; font-size:18px; color:#848484; font-weight:400;}
 			.ny_leftinfo ul.ulinfo{ padding:0 0 0 90px;}
@@ -132,8 +134,10 @@ body{ background:#fff;}
 		.ny_leftqt ul li a{ display:inline-block; text-decoration:none; text-align:center; }
 		.ny_leftqt ul li a img{ width:50px; height:50px; border:none;}
 		.ny_leftqt ul li a div{ width:80px; height:30px; line-height:30px;color:#848484; font-size:14px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+		
+	.tab_phb{ width:900px; margin:0 auto}
 	.ny_conright{ float:left; width:900px;}
-		.ny_conright .tab_phb{}
+		.ny_conright .tab_phb{ width:900px; margin:0 auto}
 		.ny_conright .tab_phb .tab_phbtitle{ border-bottom:#bfcf3b 1px solid; height:68px;}
 		.ny_conright .tab_phb .tab_phbtitle ul li{ float:left; margin:20px 40px 0 0; width:93px; height:40px;}
 		.ny_conright .tab_phb .tab_phbtitle ul li a{ display:inline-block; width:93px; height:40px; cursor:pointer; background:url(../images/tab_phb.png) no-repeat;}

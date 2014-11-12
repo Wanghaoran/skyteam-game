@@ -54,6 +54,9 @@
 <div class="ny_content">
 <div class="ny_conleft">
     <div class="ny_leftinfo">
+
+        <div class="ny_admintitle"><a href="#" title="删除本团"></a></div>
+
         <div class="ny_admininfo">
             <a href="#"><img src="<?=$user_result['avatar_large']?>"/></a>
             <h2><?=$user_result['uname']?></h2>
@@ -61,6 +64,7 @@
         <div class="clear"></div>
         <ul class="ulinfo">
             <li><?=$user_result['tname']?></li>
+            <li><?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团</li>
             <li>
                 <?php if($user_result['utype'] == 1):?>
                     团长
