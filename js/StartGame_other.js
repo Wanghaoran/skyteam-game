@@ -84,7 +84,7 @@ var StartLayer = cc.Layer.extend({
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
 
             if(tuan == 1){
-                window.location.href = "http://skyteam.tianxun.cn/start";
+                window.location.href = "http://skyteam.tianxun.cn/welcome/weibologin";
             }else{
                 alert('您已经在天团中，不需要再开团啦！');
             }
