@@ -123,6 +123,8 @@
         //下一步
         function showNext(){
 
+            console.log($('#team_name').length);
+
             if(!$('#team_name').val()){
                 alert('团名不能为空！');
                 $('#team_name').focus();
