@@ -123,6 +123,8 @@
         //下一步
         function showNext(){
 
+            var detection = false;
+
             if(!$('#team_name').val()){
                 alert('团名不能为空！');
                 $('#team_name').focus();
@@ -152,12 +154,16 @@
                     if(ress.result == 'have'){
                         alert('这个团名已经存在啦，试着换一个吧！');
                         $('#team_name').focus();
+                        detection = true;
                         return;
                     }
 
                 }
             });
 
+            if(detection){
+                return;
+            }
 
 
 
