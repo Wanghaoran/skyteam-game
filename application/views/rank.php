@@ -42,6 +42,7 @@
 
         var deleteteam = function(){
             if(confirm('确定要删除该团吗？操作不可恢复，请谨慎操作！')){
+                console.log('123');
                 location.htef="<?=$this->config->base_url()?>welcome/deleteteam";
             }else{
                 return;
