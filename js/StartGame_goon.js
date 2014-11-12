@@ -492,16 +492,20 @@ var ShareLayer = cc.Layer.extend({
         this.addChild(this.desc1,2);
 
         var sinaBtn = cc.MenuItemImage.create(res.sinaIcon, res.sinaIcon, function(){
-            window.location.href = "http://www.baidu.com";
+//            window.location.href = "http://www.baidu.com";
+            shareWeibo();
         });
         var qzoneBtn = cc.MenuItemImage.create(res.qzoneIcon, res.qzoneIcon, function(){
-            window.location.href = "http://www.baidu.com";
+//            window.location.href = "http://www.baidu.com";
+            shareQQ();
         });
         var renrenBtn = cc.MenuItemImage.create(res.renrenIcon, res.renrenIcon, function(){
-            window.location.href = "http://www.baidu.com";
+//            window.location.href = "http://www.baidu.com";
+            shareRenren();
         });
         var doubanBtn = cc.MenuItemImage.create(res.doubanIcon, res.doubanIcon, function(){
-            window.location.href = "http://www.baidu.com";
+//            window.location.href = "http://www.baidu.com";
+            shareDouban();
         });
         var weixinBtn = cc.MenuItemImage.create(res.weixinIcon, res.weixinIcon, null, function(){
             this.shareImg.setVisible(true);
