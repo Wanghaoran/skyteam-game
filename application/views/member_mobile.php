@@ -76,6 +76,12 @@
     </script>
 </head>
 <body>
+<!--遮罩层  start-->
+<div id="popDiv" class="mydiv10" style="display:none;">
+    <div class="divimg10"><img src="<?=$this->config->base_url()?>static/mobile/images/sharebg.png"/> </div>
+</div>
+<div id="hidebg" class="hidebg10" style="display:none"></div>
+<!--遮罩层  end-->
 <div class="contain">
     <div class="ny_top">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
@@ -115,7 +121,8 @@
             <div class="py">
                 <img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/>
                 <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="weibo"></a>
-                <a class="weixin" id="weixin"></a></div>
+                <a class="weixin" id="weixin"></a>
+            </div>
         </div>
 
         <div class="grzx_qt">
