@@ -297,6 +297,8 @@ class Welcome extends CI_Controller {
 
     //Mobile端个人中心
     public function member_mobile(){
+        $this -> load -> model('user_model');
+
         //未登陆跳转至登陆页
         if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
             $this->load->helper('url');
