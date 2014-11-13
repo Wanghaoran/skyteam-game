@@ -111,7 +111,10 @@
 
         <div class="grzx_btn">
             <div class="div_go"><a href="<?=$this->config->base_url()?>welcome/game_goon"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_go.png"/></a></div>
-            <div class="py"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/><a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="weibo"></a><a class="weixin" id="weixin"/></div>
+            <div class="py">
+                <img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/>
+                <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="weibo"></a>
+                <a class="weixin" id="weixin"></a></div>
         </div>
 
         <div class="grzx_qt">
