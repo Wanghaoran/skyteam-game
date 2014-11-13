@@ -91,5 +91,35 @@
 <script src="<?=$this->config->base_url()?>js/resource.js"></script>
 <script src="<?=$this->config->base_url()?>js/StartGame_qyer.js"></script>
 <script src="<?=$this->config->base_url()?>js/main.js"></script>
+
+<script type="text/javascript">
+    var shareData = {
+        "img_url": "http://skyteam.tianxun.cn/static/share_icon,jpg",
+        "img_width": "200",
+        "img_height": "200",
+        "link": "http://skyteam.tianxun.cn/",
+        "desc":  "",
+        "title": "起飞吧朋友"
+    };
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+
+        WeixinJSBridge.on('menu:share:timeline', function () {
+            shareData.title = "起飞吧朋友";
+            WeixinJSBridge.invoke('shareTimeline',shareData, function (res) {
+                _report('send_msg', res.err_msg);
+            });
+        });
+
+        //发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function () {
+            shareData.title = "起飞吧朋友";
+            WeixinJSBridge.invoke('sendAppMessage', shareData, function (res) {
+                _report('send_msg', res.err_msg);
+            })
+        });
+    }, false);
+</script>
+
 </body>
 </html>
