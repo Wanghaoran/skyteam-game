@@ -602,7 +602,7 @@ class Welcome extends CI_Controller {
                 //团人数
                 $num = $this -> user_model -> teamnum($tid)['count'];
                 //生成个性化图片
-                $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num);
+                $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num, $user_result['avatar_large']);
 
             }else{
                 //否则就生成大众化链接
@@ -634,7 +634,7 @@ class Welcome extends CI_Controller {
     }
 
     //生成个性化海报
-    public function creatleaders($type, $place, $tname, $uname, $num){
+    public function creatleaders($type, $place, $tname, $uname, $num, $avatar_large){
         //地区名称对应数组
         $map_arr = array(
             1 => array(
@@ -691,6 +691,14 @@ class Welcome extends CI_Controller {
         imagettftext($im,18,0,455,908,$white,$font,$uname);
         imagettftext($im,18,0,455,945,$white,$font,$num . "人");
         imagettftext($im,18,0,455,982,$white,$font,$place);
+
+
+        //读取微博头像
+        $weibo_img = imagecreatefromjpeg($avatar_large);
+
+        imagecopy($im, $weibo_img, 0, 0, 0, 0, 487, 300);
+
+
 
         imagejpeg($im, './temp/123.jpg');
         imagedestroy($im);
