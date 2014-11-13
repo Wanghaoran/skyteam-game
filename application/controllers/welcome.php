@@ -293,9 +293,17 @@ class Welcome extends CI_Controller {
         //读取微博好友
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
 
+        //查找参与活动的好友
+        $friend_where = array()
         foreach($friend_result['users'] as $key => $value){
-            var_dump($value['id']);
+            $friend_where[] = $value['id'];
         }
+
+
+        $friend_result = $this -> user_model -> getfriend($friend_where);
+
+        var_dump($friend_result);
+
 
 
         //循环结果数组，

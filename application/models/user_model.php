@@ -73,6 +73,13 @@ class User_model extends CI_Model {
         return $query -> result_array()[0];
     }
 
+    //通过好友数组查找好友
+    public function getfriend($where){
+        $this->db->where_in('weiboid', $where);
+        $query = $this->db->get('user');
+        return $query -> result_array();
+    }
+
 
     /*
     public function addnum($group, $step = 1){
