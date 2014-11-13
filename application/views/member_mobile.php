@@ -11,6 +11,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
+    <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
+
 
     <script>
 
