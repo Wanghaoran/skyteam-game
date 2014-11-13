@@ -679,9 +679,9 @@ class Welcome extends CI_Controller {
         $pic_path = './static/posters/' . $type . '/' . array_search($place, $map_arr[$type]) . '.jpg';
 
 
-        Header("Content-type: image/jpeg");							//输出一个JPG图片文件
+        header("Content-type: image/jpeg");							//输出一个JPG图片文件
 
-        $im     = imagecreatefrompng($pic_path);
+        $im     = imagecreatefromjpeg($pic_path);
         $white=imagecolorallocate($im, 255,255,255);					//定义白色
         $color=$white;											//定义$color变量为白色
         putenv('GDFONTPATH=' . realpath('.'));
@@ -692,7 +692,7 @@ class Welcome extends CI_Controller {
         imagettftext($im,22,0,450,988,$white,$font,"200人");
         imagettftext($im,22,0,450,1036,$white,$font,"火星");
 
-        Imagejpeg($im, './temp/123.jpg');
+        imagejpeg($im, './temp/123.jpg');
         imagedestroy($im);
 
 
