@@ -58,7 +58,7 @@
                     <li><a href="#"></a></li>
                     <li><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>rules"></a></li>
-                    <li class="short"><a href="#"></a></li>
+                    <li class="short"><a href="<?=$this->config->base_url()?>member_mobile"></a></li>
                 </ul>
             </div>
         </div>

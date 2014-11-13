@@ -194,7 +194,11 @@ class Welcome extends CI_Controller {
 
         if($this -> user_model -> getUser($uid)){
             //根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
-            redirect(base_url("rank"));
+            if($client == 'pc'){
+                redirect(base_url("rank"));
+            }else{
+                redirect(base_url("member_mobile"));
+            }
         }else{
             //开始游戏
             redirect(base_url("game_start"));
@@ -288,6 +292,17 @@ class Welcome extends CI_Controller {
         $data['rank'] = $result_type;
 
         $this->load->view('rank', $data);
+    }
+
+
+    //Mobile端个人中心
+    public function member_mobile(){
+        //未登陆跳转至首页
+        if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            $this->load->helper('url');
+            redirect(base_url());
+        }
+        echo 'test';
     }
 
     //未登陆时的天团排行榜
