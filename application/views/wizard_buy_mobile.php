@@ -98,8 +98,8 @@
             <div class="tab_koltitle">
                 <ul>
 
-                    <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_mston.png"/></a></li>
-                    <li><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_gwt.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_mst.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_gwton.png"/></a></li>
                     <li class="last"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_xxt.png"/></a></li>
 
                 </ul>
