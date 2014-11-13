@@ -689,8 +689,8 @@ class Welcome extends CI_Controller {
 
         imagettftext($im,18,0,454,872,$white,$font,$tname);
         imagettftext($im,18,0,454,908,$white,$font,$uname);
-        imagettftext($im,18,0,454,946,$white,$font,$num . "人");
-        imagettftext($im,18,0,454,979,$white,$font,$place);
+        imagettftext($im,18,0,454,945,$white,$font,$num . "人");
+        imagettftext($im,18,0,454,982,$white,$font,$place);
 
         imagejpeg($im, './temp/123.jpg');
         imagedestroy($im);
