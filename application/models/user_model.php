@@ -77,6 +77,7 @@ class User_model extends CI_Model {
     public function getfriend($where){
         $this->db->where_in('weiboid', $where);
         $query = $this->db->get('user');
+        var_dump($this->db->last_query());
         return $query -> result_array();
     }
 
