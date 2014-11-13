@@ -285,6 +285,11 @@ class Welcome extends CI_Controller {
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type']);
 
+        //读取总人数
+        $user_total = $this -> user_model -> gettotal();
+
+        var_dump($user_total);
+
 
 
         //循环结果数组，
