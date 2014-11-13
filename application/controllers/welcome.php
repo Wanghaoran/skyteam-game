@@ -693,10 +693,14 @@ class Welcome extends CI_Controller {
         imagettftext($im,18,0,455,982,$white,$font,$place);
 
 
-        //读取微博头像
+        //读取微博头像125*125
         $weibo_img = imagecreatefromjpeg($avatar_large);
 
-        imagecopy($im, $weibo_img, 0, 0, 0, 0, 487, 300);
+        //将头像尺寸调整至125*125
+        $image_suo=imagecreatetruecolor(125, 125);
+        imagecopyresampled($image_suo, $weibo_img, 0, 0, 0, 0, 125, 125, 180, 180);
+
+        imagecopy($im, $image_suo, 0, 0, 0, 0, 487, 300);
 
 
 
