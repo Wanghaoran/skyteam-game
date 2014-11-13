@@ -687,10 +687,10 @@ class Welcome extends CI_Controller {
         putenv('GDFONTPATH=' . realpath('.'));
         $font="./static/test.TTF"; //方正舒体
 
-        imagettftext($im,22,0,450,892,$white,$font,"测试12");
-        imagettftext($im,22,0,450,940,$white,$font,"2341as啊还是大");
-        imagettftext($im,22,0,450,988,$white,$font,"200人");
-        imagettftext($im,22,0,450,1036,$white,$font,"火星");
+        imagettftext($im,20,0,450,872,$white,$font,$tname);
+        imagettftext($im,20,0,450,920,$white,$font,$uname);
+        imagettftext($im,20,0,450,968,$white,$font,$num . "人");
+        imagettftext($im,20,0,450,1016,$white,$font,$place);
 
         imagejpeg($im, './temp/123.jpg');
         imagedestroy($im);
