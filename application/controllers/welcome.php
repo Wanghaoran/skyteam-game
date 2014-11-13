@@ -602,7 +602,9 @@ class Welcome extends CI_Controller {
                 //团人数
                 $num = $this -> user_model -> teamnum($tid)['count'];
                 //生成个性化图片
-                $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num, $user_result['avatar_large']);
+                $file_name = $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num, $user_result['avatar_large']);
+
+                $this -> qiniu_upload($file_name);
 
             }else{
                 //否则就生成大众化链接
@@ -703,20 +705,20 @@ class Welcome extends CI_Controller {
         imagecopy($im, $image_suo, 185, 855, 0, 0, 125, 125);
 
 
+        $file_name = md5(time() . microtime());
 
-        imagejpeg($im, './temp/' . md5(time() . microtime()) . '.jpg');
+        imagejpeg($im, './temp/' . $file_name . '.jpg');
         imagedestroy($im);
 
+        return $file_name;
 
-
-//        var_dump($pic_path);
-//        var_dump($tname);
-//        var_dump($uname);
-//        var_dump($num);
     }
 
     //qiqiu - 上传图片到服务器
-    public function qiniu_upload(){
+    public function qiniu_upload($file_name){
+
+        $file_path = './temp/' . $file_name . '.jpg';
+
         require_once("qiniu/http.php");
         require_once("qiniu/io.php");
         require_once("qiniu/rs.php");
@@ -733,7 +735,7 @@ class Welcome extends CI_Controller {
         $upToken = $putPolicy->Token(null);
         $putExtra = new Qiniu_PutExtra();
         $putExtra->Crc32 = 1;
-        list($ret, $err) = Qiniu_PutFile($upToken, $key1, __file__, $putExtra);
+        list($ret, $err) = Qiniu_PutFile($upToken, $key1, $file_path, $putExtra);
         echo "====> Qiniu_PutFile result: \n";
         if ($err !== null) {
             var_dump($err);
