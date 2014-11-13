@@ -334,7 +334,11 @@ class Welcome extends CI_Controller {
             $this->load->helper('url');
             redirect(base_url('welcome/weibologin'));
         }
-        echo 'test';
+
+        $data = array();
+
+        $this->load->view('rank', $data);
+
     }
 
     //未登陆时的天团排行榜
