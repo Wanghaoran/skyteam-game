@@ -205,6 +205,7 @@
                 <?php endif; ?>
 
             </ul>
+            <span>asdasdasd</span>
         </div>
         <div class="clear20"></div>
         <div class="tab_phbcon">
