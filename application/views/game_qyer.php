@@ -94,7 +94,7 @@
 
 <script type="text/javascript">
     var shareData = {
-        "img_url": "http://skyteam.tianxun.cn/static/share_icon,jpg",
+        "img_url": "http://skyteam.tianxun.cn/static/share_icon.jpg",
         "img_width": "200",
         "img_height": "200",
         "link": "http://skyteam.tianxun.cn/",
