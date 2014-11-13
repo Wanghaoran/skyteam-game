@@ -205,7 +205,7 @@
                 <?php endif; ?>
 
             </ul>
-            <span>asdasdasd</span>
+            <div style="color:red;float:right;font-size:20px;margin-top:25px;">目前已有 <strong>XXX</strong> 人参与本活动</div>
         </div>
         <div class="clear20"></div>
         <div class="tab_phbcon">
