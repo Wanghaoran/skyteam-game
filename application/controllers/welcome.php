@@ -591,11 +591,11 @@ class Welcome extends CI_Controller {
         if($this->session->userdata('token')['uid']){
             //查询UID是否为本团
             $uid = $this->session->userdata('token')['uid'];
-            $result['pic'] = $this->config->base_url() . 'static/pc/images/base_posters.jpg';
+            $result['pic'] = urldecode($this->config->base_url() . 'static/pc/images/base_posters.jpg');
 
         }else{
             //没登录的直接是大众版海报
-            $result['pic'] = $this->config->base_url() . 'static/pc/images/base_posters.jpg';
+            $result['pic'] = urldecode($this->config->base_url() . 'static/pc/images/base_posters.jpg');
         }
 
         echo json_encode($result);
