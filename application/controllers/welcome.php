@@ -337,6 +337,11 @@ class Welcome extends CI_Controller {
 
         $data = array();
 
+        //读取个人和所属团的信息
+        $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
+        $data['user_result'] = $user_result;
+
+        var_dump($user_result);
         $this->load->view('member_mobile', $data);
 
     }
