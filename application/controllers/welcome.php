@@ -704,7 +704,7 @@ class Welcome extends CI_Controller {
 
 
 
-        imagejpeg($im, './temp/123.jpg');
+        imagejpeg($im, './temp/' . md5(time() . microtime()) . '.jpg');
         imagedestroy($im);
 
 
