@@ -299,8 +299,6 @@ class Welcome extends CI_Controller {
             $friend_where[] = $value['id'];
         }
 
-        var_dump($friend_where);
-
         if($friend_where){
             $friend_results = $this -> user_model -> getfriend($friend_where);
         }else{
@@ -308,8 +306,7 @@ class Welcome extends CI_Controller {
         }
 
 
-        var_dump($friend_results);
-
+        $data['friend_results'] = $friend_results;
 
 
         //循环结果数组，

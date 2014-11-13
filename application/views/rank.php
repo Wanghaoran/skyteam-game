@@ -141,35 +141,19 @@
     <div class="clear"></div>
     <div class="ny_leftqt">
 
-        <!--  其他参与本活动的好友
         <ul>
-            <li>
-                <a href="#">
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_qt1.png"/>
-                    <div>耗这口</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_qt2.png"/>
-                    <div>护城河的水流</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_qt3.png"/>
-                    <div>一只蘑菇</div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="<?=$this->config->base_url()?>static/pc/images/img_qt4.png"/>
-                    <div>爱闲逛</div>
-                </a>
-            </li>
+            <?php foreach($friend_results as $key => $value):?>
+                <li>
+                    <a href="<?=$value['profile_url']?>" target="_blank">
+                        <img src="<?=$value['avatar_large']?>"/>
+                        <div><?=$value['name']?></div>
+                    </a>
+                </li>
+            <?php endforeach;?>
+
+
             <div class="clear"></div>
         </ul>
-        -->
     </div>
     <div class="clear20"></div>
 </div>
