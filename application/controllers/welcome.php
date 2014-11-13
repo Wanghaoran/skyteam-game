@@ -604,7 +604,11 @@ class Welcome extends CI_Controller {
                 //生成个性化图片
                 $file_name = $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num, $user_result['avatar_large']);
 
-                $this -> qiniu_upload($file_name);
+                //上传至qiniu
+                $upload_result = $this -> qiniu_upload($file_name);
+
+                $file_key = $upload_result['key'];
+                $result['pic'] = urlencode('http://skyteam.qiniudn.com/' . $file_key);
 
             }else{
                 //否则就生成大众化链接
@@ -736,11 +740,10 @@ class Welcome extends CI_Controller {
         $putExtra = new Qiniu_PutExtra();
         $putExtra->Crc32 = 1;
         list($ret, $err) = Qiniu_PutFile($upToken, $key1, $file_path, $putExtra);
-        echo "====> Qiniu_PutFile result: \n";
         if ($err !== null) {
-            var_dump($err);
+            return $err;
         } else {
-            var_dump($ret);
+            return $ret;
         }
     }
 
