@@ -586,7 +586,19 @@ class Welcome extends CI_Controller {
     //获取团队分享的图片
     public function getteampic(){
         $tid = $this -> input -> post('tid');
-        var_dump($tid);
+        $result = array();
+        //如果当前的用户已经登录
+        if($this->session->userdata('token')['uid']){
+            //查询UID是否为本团
+            $uid = $this->session->userdata('token')['uid'];
+            $result['pic'] = $this->config->base_url() . 'static/pc/images/base_posters.jpg';
+
+        }else{
+            //没登录的直接是大众版海报
+            $result['pic'] = $this->config->base_url() . 'static/pc/images/base_posters.jpg';
+        }
+
+        echo json_encode($result);
     }
 
     //微博API － 互粉列表
