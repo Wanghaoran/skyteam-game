@@ -75,12 +75,18 @@ class Team_model extends CI_Model {
 
     //通过weiboID删除团和用户
     public function deletefromweiboid($weiboid){
+
+        //查询该团的tid
+        $result = $this -> getUser($weiboid);
+
+        $tid = $result[0]['id'];
+
         //删除团
         $this->db->where('weiboid', $weiboid);
         $this->db->delete('team');
 
         //删除用户
-        $this->db->where('weiboid', $weiboid);
+        $this->db->where('tid', $tid);
         $this->db->delete('user');
 
         return $this->db->affected_rows();
