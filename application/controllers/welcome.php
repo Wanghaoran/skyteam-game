@@ -700,7 +700,7 @@ class Welcome extends CI_Controller {
         $image_suo=imagecreatetruecolor(125, 125);
         imagecopyresampled($image_suo, $weibo_img, 0, 0, 0, 0, 125, 125, 180, 180);
 
-        imagecopy($im, $image_suo, 183, 850, 0, 0, 125, 125);
+        imagecopy($im, $image_suo, 184, 852, 0, 0, 125, 125);
 
 
 
