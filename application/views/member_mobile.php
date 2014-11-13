@@ -14,6 +14,42 @@
     <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 
 
+    <script type="text/javascript">
+        $(function () {
+            $('.weixin').click(function (event) {
+                //取消事件冒泡
+                event.stopPropagation();
+                $("#hidebg").css({
+                    display: "block"
+                });
+                $("#popDiv").show();
+            });
+            //点击空白处或者自身隐藏弹出层，下面分别为滑动和淡出效果。
+            $(document).click(function (event) {
+                $("#hidebg").css({
+                    display: "none"
+                });
+                $("#popDiv").hide();
+            });
+
+            $("#popDiv").bind('mouseover', function(){
+                //alert("鼠标移上");
+                $(document).unbind("click");
+            });
+            $("#popDiv").bind('mouseout', function(event){
+                // alert("鼠标移除");
+                $(document).bind("click", function(event){
+                    $("#hidebg").css({
+                        display: "none"
+                    });
+                    $("#popDiv").hide();
+                });
+            });
+
+        })
+
+    </script>
+
     <script>
 
 
@@ -72,11 +108,12 @@
                 </li>
             </ul>
         </div>
+
         <div class="grzx_btn">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/grzx_btn.jpg"/>
-            <a href="<?=$this->config->base_url()?>welcome/game_goon" class="go"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_go.png"/></a>
-            <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="comeon"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/></a>
+            <div class="div_go"><a href="<?=$this->config->base_url()?>welcome/game_goon"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_go.png"/></a></div>
+            <div class="py"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/><a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="weibo"></a><a class="weixin" id="weixin"/></div>
         </div>
+
         <div class="grzx_qt">
             <ul>
                 <?php foreach($friend_results as $key => $value):?>

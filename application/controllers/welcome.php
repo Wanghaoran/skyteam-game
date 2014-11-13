@@ -704,8 +704,6 @@ class Welcome extends CI_Controller {
     //生成个性化海报
     public function creatleaders($type, $place, $tname, $uname, $num, $avatar_large){
 
-        var_dump($type);
-        var_dump($place);
 
         //地区名称对应数组
         $map_arr = array(
