@@ -267,7 +267,7 @@ class Welcome extends CI_Controller {
 
 
         //右侧显示和本团一样的美食团排名
-        if($user_result['ttype'] != $data['type']){
+        if(!$this->input->get('type') && $user_result['ttype'] != $data['type']){
             redirect(base_url('rank?type=' . $user_result['ttype']));
         }
 
