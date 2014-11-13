@@ -294,7 +294,7 @@ class Welcome extends CI_Controller {
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
 
         //查找参与活动的好友
-        $friend_where = array()
+        $friend_where = array();
         foreach($friend_result['users'] as $key => $value){
             $friend_where[] = $value['id'];
         }
