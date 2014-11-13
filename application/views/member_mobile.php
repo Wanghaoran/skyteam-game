@@ -21,16 +21,29 @@
     </div>
     <div class="grzx">
         <div class="grzx_admin">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/img_big1.png"/>
-            <h2>叮当粥</h2>
+            <img src="<?=$user_result['avatar_large']?>"/>
+            <h2><?=$user_result['uname']?></h2>
         </div>
         <div class="grzx_info">
             <img src="<?=$this->config->base_url()?>static/mobile/images/grzx_info.jpg"/>
             <ul class="ulinfo">
-                <li>最初的梦想团</li>
-                <li>团长</li>
-                <li>900里程</li>
-                <li>已积攒4000里程，距离第一名还有5000公里</li>
+                <li><?=$user_result['tname']?></li>
+                <li>
+                    <?php if($user_result['utype'] == 1):?>
+                        团长
+                    <?php else:?>
+                        团员
+                    <?php endif; ?>
+                </li>
+                <li><?=$user_result['unum']?> 里程</li>
+                <li>
+                    已积攒 <?=$user_result['tnum']?> 里程
+                    <?php if($cha_km == 0):?>
+                        您已经是<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团的第一名啦！
+                    <?php else:?>
+                        距离<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团排名第一还差 <?=$cha_km?> 里程
+                    <?php endif;?>
+                </li>
             </ul>
         </div>
         <div class="grzx_btn">

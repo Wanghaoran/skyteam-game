@@ -328,6 +328,7 @@ class Welcome extends CI_Controller {
     //Mobile端个人中心
     public function member_mobile(){
         $this -> load -> model('user_model');
+        $this -> load -> model('team_model');
 
         //未登陆跳转至登陆页
         if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
@@ -341,7 +342,11 @@ class Welcome extends CI_Controller {
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
         $data['user_result'] = $user_result;
 
-        var_dump($user_result);
+        //读取此类别团下的第一名
+        $frist_result = $this -> team_model -> getfirst($user_result['ttype']);
+        //计算和第一名相差的里程
+        $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
+
         $this->load->view('member_mobile', $data);
 
     }
