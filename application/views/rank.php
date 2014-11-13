@@ -144,7 +144,7 @@
         <ul>
             <?php foreach($friend_results as $key => $value):?>
                 <li>
-                    <a href="<?=$value['profile_url']?>" target="_blank">
+                    <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank">
                         <img src="<?=$value['avatar_large']?>"/>
                         <div><?=$value['name']?></div>
                     </a>
