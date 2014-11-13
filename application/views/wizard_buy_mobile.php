@@ -97,15 +97,18 @@
         <div class="tab_kol">
             <div class="tab_koltitle">
                 <ul>
-                    <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/text_tab1.png"/></a></li>
-                    <li class="on"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/text_tab2.png"/></a></li>
-                    <li class="last"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/text_tab3.png"/></a></li>
+
+                    <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_mston.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_gwt.png"/></a></li>
+                    <li class="last"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_xxt.png"/></a></li>
+
                 </ul>
                 <div class="clear"></div>
             </div>
             <div class="clear20"></div>
             <div class="tab_kolcon">
                 <div class="tab_kol_info">
+                    <img src="<?=$this->config->base_url()?>static/mobile/images/tab_infobg.png"/>
                     <div class="divleft">
                         <img src="http://tp1.sinaimg.cn/1670879140/180/5700522773/0"/>
                 </div>

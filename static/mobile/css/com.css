@@ -198,23 +198,20 @@ textarea{resize:none;overflow:auto;}
 		.tab_kol_tishi{ width:100%;}
 		.tab_kol_tishi img{ width:100%;}
 		.tab_koltitle{ border-bottom:#d9d9d9 1px solid;}
-		.tab_koltitle ul li{ float:left; width:32%; height:44px; line-height:44px; margin:0 2% 0 0; text-align:center; /*圆角*/
-	   -webkit-border-radius: 6px 6px 0 0; -moz-border-radius: 6px 6px 0 0;border-radius: 6px 6px 0 0; background:#ececec; behavior: url(../css/PIE.htc);/*IE6、7、8下支持一些 CSS3 html5 属性*/}
+		.tab_koltitle ul li{ float:left; width:32%; margin:0 2% 0 0;}
 	   .tab_koltitle ul li.last{ margin:0;}
-		.tab_koltitle ul li.on,.tab_koltitle ul li:hover{ background:#5ae5ec;}
-		.tab_koltitle ul li a{ display:inline-block; width:100%; height:44px; text-align:center}
-		.tab_koltitle ul li a img{ margin:14px 0 0 0; border:0;}
-		.tab_koltitle ul li.on a img,.tab_koltitle ul li:hover a img{ margin:11px 0 0 0;}
+		.tab_koltitle ul li a{ display:inline-block; }
+		.tab_koltitle ul li a img{ margin:14px 0 0 0; border:0; width:100%; vertical-align:bottom}
 		
-		.tab_kol_info{ width:auto; margin:0 auto; background:#f8f8f8; padding:15px 10px;}
-			
-				.tab_kol_info div.divleft{ float:left; width:30%; margin:0 20px 0 0;}
+		.tab_kol_info{ width:100%; margin:0 auto; position:relative;}
+				.tab_kol_info img{ border:0; vertical-align:bottom; width:100%;}
+				.tab_kol_info div.divleft{ width:25%; position:absolute; left:5%; top:10%;}
 				.tab_kol_info div.divleft img{ border:#cacaca 1px solid; width:100%;}
-				.tab_kol_info div.divright{ float:left; width:50%;}
+				.tab_kol_info div.divright{ width:50%; position:absolute; top:20%; left:35%;}
 				.tab_kol_info div.divright h2{color:#575757; font-size:16px; font-weight:400; text-align:left; margin:0 0 0 0; line-height:24px;}
 				.tab_kol_info div.divright h3{color:#919191; font-size:12px; font-weight:400; text-align:left; line-height:16px;}
 				.tab_kol_info div.divright p{ text-align:left; margin:5px 0 0 0;}
-				.tab_kol_info div.divright a.btn_gz{ width:50%; display:inline-block;}
+				.tab_kol_info div.divright a.btn_gz{ width:40%; display:inline-block;}
 				.tab_kol_info div.divright a.btn_gz img{ border:0; width:100%;}
 		.tab_kol_tip{ background:#5ae5ec; padding:10px; line-height:20px; color:#363636; font-size:14px; text-align:left; margin:10px auto; -webkit-border-radius: 6px ; -moz-border-radius: 6px;border-radius: 6px; behavior: url(../css/PIE.htc);/*IE6、7、8下支持一些 CSS3 html5 属性*/}		
 		.imglist{ background:#f5f5f5; padding:15px;}
