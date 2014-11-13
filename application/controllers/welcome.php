@@ -290,6 +290,13 @@ class Welcome extends CI_Controller {
 
         $data['total_user'] = $user_total['count'];
 
+        //读取微博好友
+        $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
+
+        foreach($friend_result['users'] as $key => $value){
+            var_dump($value['weiboid']);
+        }
+
 
         //循环结果数组，
         foreach($result_type as $key => $value){
