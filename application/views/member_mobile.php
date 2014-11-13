@@ -17,6 +17,7 @@
     <script type="text/javascript">
         $(function () {
             $('.weixin').click(function (event) {
+                alert(111);
                 //取消事件冒泡
                 event.stopPropagation();
                 $("#hidebg").css({
