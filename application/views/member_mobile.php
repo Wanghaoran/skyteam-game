@@ -11,12 +11,36 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
+
+    <script>
+
+
+        var shareWeibo = function(tid){
+
+            var pic = '';
+            //获取PIC
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/getteampic',
+                data : '&tid=' + tid,
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+                    pic = ress.pic;
+                }
+            });
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
+            url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
+            window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+        }
+    </script>
 </head>
 <body>
 <div class="contain">
     <div class="ny_top">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
-        <div class="ny_logo"><a href="#">&nbsp;</a></div>
+        <div class="ny_logo"><a href="http://www.tianxun.cn">&nbsp;</a></div>
         <img src="<?=$this->config->base_url()?>static/mobile/images/grzx.jpg"/>
     </div>
     <div class="grzx">
@@ -48,34 +72,20 @@
         </div>
         <div class="grzx_btn">
             <img src="<?=$this->config->base_url()?>static/mobile/images/grzx_btn.jpg"/>
-            <a href="#" class="go"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_go.png"/></a><a href="#" class="comeon"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/></a>
+            <a href="<?=$this->config->base_url()?>welcome/game_goon" class="go"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_go.png"/></a>
+            <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="comeon"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_comeon.png"/></a>
         </div>
         <div class="grzx_qt">
             <ul>
-                <li>
-                    <a href="#">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
-                        <div>耗这口</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
-                        <div>护城河的水流</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
-                        <div>一只蘑菇</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
-                        <div>爱闲逛</div>
-                    </a>
-                </li>
+                <?php foreach($friend_results as $key => $value):?>
+                    <li>
+                        <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank">
+                            <img src="<?=$value['avatar_large']?>"/>
+                            <div><?=$value['name']?></div>
+                        </a>
+                    </li>
+                <?php endforeach;?>
+
                 <div class="clear"></div>
             </ul>
         </div>

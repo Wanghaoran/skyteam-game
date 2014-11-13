@@ -347,6 +347,24 @@ class Welcome extends CI_Controller {
         //计算和第一名相差的里程
         $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
 
+        //读取微博好友
+        $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
+
+        //查找参与活动的好友
+        $friend_where = array();
+        foreach($friend_result['users'] as $key => $value){
+            $friend_where[] = $value['id'];
+        }
+
+        if($friend_where){
+            $friend_results = $this -> user_model -> getfriend($friend_where);
+        }else{
+            $friend_results =  array();
+        }
+
+
+        $data['friend_results'] = $friend_results;
+
         $this->load->view('member_mobile', $data);
 
     }
