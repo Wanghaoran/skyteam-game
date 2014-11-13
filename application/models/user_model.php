@@ -76,6 +76,7 @@ class User_model extends CI_Model {
     //通过好友数组查找好友
     public function getfriend($where){
         $this->db->where_in('weiboid', $where);
+        $this->db->limit(4);
         $query = $this->db->get('user');
         return $query -> result_array();
     }
