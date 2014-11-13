@@ -14,7 +14,7 @@
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
 </head>
 <body>
-<h1 style="font-size: 20px;">敬请期待11月19日，天巡起飞吧朋友活动</h1>
+<h1 style="font-size: 20px;">接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！</h1>
 
 </body>
 </html>

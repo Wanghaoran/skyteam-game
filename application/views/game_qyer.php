@@ -25,25 +25,25 @@
     <script>
 
         var shareWeibo = function(){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→http://985.so/dJjg  接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！')
             url = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=";
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareQQ = function(){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→http://985.so/dJjg  接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！')
             url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "&pics=&summary=";
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareRenren = function(){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→http://985.so/dJjg  接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！')
             url = "http://share.renren.com/share/buttonshare.do?link=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "";
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareDouban = function(){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程')
+            var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→http://985.so/dJjg  接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！')
             url = "http://www.douban.com/recommend/?url=http%3A%2F%2F182.92.64.207%2Fskyteam-game&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
