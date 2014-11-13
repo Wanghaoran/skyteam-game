@@ -31,8 +31,21 @@
         }
 
         var shareQQ = function(tid){
+            var pic = '';
+            //获取PIC
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/getteampic',
+                data : '&tid=' + tid,
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+                    pic = ress.pic;
+                }
+            });
+
             var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
-            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=" + text + "&pics=&summary=";
+            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=" + text + "&pics=" + pic + "&summary=";
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
