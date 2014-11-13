@@ -583,6 +583,12 @@ class Welcome extends CI_Controller {
 
     }
 
+    //获取团队分享的图片
+    public function getteampic(){
+        $tid = $this -> input -> post('tid');
+        var_dump($tid);
+    }
+
     //微博API － 互粉列表
     public function _bilateral($asstoken, $uid){
         $url = 'https://api.weibo.com/2/friendships/friends/bilateral.json?access_token=' . $asstoken . '&uid=' . $uid;

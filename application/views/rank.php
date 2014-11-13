@@ -10,6 +10,18 @@
     <script>
         var shareWeibo = function(tid){
 
+            //获取PIC
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/getteampic',
+                data : '&tid=' + tid,
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+
+                }
+            });
+
             var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
             url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=";
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
