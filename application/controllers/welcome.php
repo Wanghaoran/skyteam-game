@@ -337,7 +337,7 @@ class Welcome extends CI_Controller {
 
         $data = array();
 
-        $this->load->view('rank', $data);
+        $this->load->view('member_mobile', $data);
 
     }
 
