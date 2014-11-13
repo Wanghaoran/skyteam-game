@@ -594,14 +594,21 @@ class Welcome extends CI_Controller {
 
             $this -> load -> model('user_model');
 
-            $user_result = $this -> user_model -> getUser($uid);
+            $user_result = $this -> user_model -> getinfo($uid);
 
-            var_dump($user_result);
+            //如果是本团的团员，则生成个性化海报
+            if($user_result['tid'] == $tid){
 
+                //团人数
+                $num = $this -> user_model -> teamnum($tid)['count'];
+                //生成个性化图片
+                $this -> creatleaders($user_result['ttype'], $user_result['tplace'], $user_result['tname'], $user_result['uname'], $num);
 
+            }else{
+                //否则就生成大众化链接
+                $result['pic'] = urlencode('http://cnhtk.qiniudn.com/base_posters.jpg');
+            }
 
-
-            $result['pic'] = urlencode('http://cnhtk.qiniudn.com/base_posters.jpg');
 
         }else{
             //没登录的直接是大众版海报
@@ -627,7 +634,7 @@ class Welcome extends CI_Controller {
     }
 
     //生成个性化海报
-    public function creatleaders($type, $place){
+    public function creatleaders($type, $place, $tname, $uname, $num){
         //地区名称对应数组
         $map_arr = array(
             1 => array(
@@ -669,7 +676,10 @@ class Welcome extends CI_Controller {
         );
 
         $pic_path = './static/posters/' . $type . '/' . array_search($place, $map_arr[$type]) . '.jpg';
-        return $pic_path;
+        var_dump($pic_path);
+        var_dump($tname);
+        var_dump($uname);
+        var_dump($num);
     }
 
     //qiqiu - 上传图片到服务器
