@@ -591,6 +591,16 @@ class Welcome extends CI_Controller {
         if($this->session->userdata('token')['uid']){
             //查询UID是否为本团
             $uid = $this->session->userdata('token')['uid'];
+
+            $this -> load -> model('user_model');
+
+            $user_result = $this -> user_model -> getUser($uid);
+
+            var_dump($user_result);
+
+
+
+
             $result['pic'] = urlencode('http://cnhtk.qiniudn.com/base_posters.jpg');
 
         }else{
@@ -614,6 +624,79 @@ class Welcome extends CI_Controller {
         $json_result = file_get_contents($url);
         $result = json_decode($json_result, true);
         return $result;
+    }
+
+    //生成个性化海报
+    public function creatleaders($type, $place){
+        //地区名称对应数组
+        $map_arr = array(
+            1 => array(
+                1 => '巴塞罗那',
+                2 => '布鲁塞尔',
+                3 => '东京',
+                4 => '佛罗伦萨',
+                5 => '胡志明市',
+                6 => '曼谷',
+                7 => '慕尼黑',
+                8 => '台北',
+                9 => '悉尼',
+                10 => '新加坡',
+            ),
+            2 => array(
+                1 => '阿姆斯特丹',
+                2 => '巴黎',
+                3 => '大阪',
+                4 => '迪拜',
+                5 => '法兰克福',
+                6 => '伦敦',
+                7 => '纽约',
+                8 => '首尔',
+                9 => '香港',
+                10 => '伊斯坦布尔',
+            ),
+            3 => array(
+                1 => '爱丁堡',
+                2 => '布拉格',
+                3 => '皇后镇',
+                4 => '开罗',
+                5 => '坎昆',
+                6 => '科伦坡',
+                7 => '马尔代夫',
+                8 => '莫斯科',
+                9 => '日内瓦',
+                10 => '威尼斯',
+            ),
+        );
+
+        $pic_path = './static/posters/' . $type . '/' . array_search($place, $map_arr[$type]) . '.jpg';
+        return $pic_path;
+    }
+
+    //qiqiu - 上传图片到服务器
+    public function qiniu_upload(){
+        require_once("qiniu/http.php");
+        require_once("qiniu/io.php");
+        require_once("qiniu/rs.php");
+
+
+
+        $bucket = "skyteam";
+        $key1 = "file_name1";
+        $accessKey = 'GooHyqNrIQuYES1f3aziOUlHMq5pb6IEY8DFKpHY';
+        $secretKey = 'cybdpT7ucr0ZPLFMovltzi4XEXTRCEyyC2MIj9AJ';
+
+        Qiniu_SetKeys($accessKey, $secretKey);
+        $putPolicy = new Qiniu_RS_PutPolicy($bucket);
+        $upToken = $putPolicy->Token(null);
+        $putExtra = new Qiniu_PutExtra();
+        $putExtra->Crc32 = 1;
+        list($ret, $err) = Qiniu_PutFile($upToken, $key1, __file__, $putExtra);
+        echo "====> Qiniu_PutFile result: \n";
+        if ($err !== null) {
+            var_dump($err);
+        } else {
+            var_dump($ret);
+        }
     }
 
 
