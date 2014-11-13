@@ -165,7 +165,7 @@
 
 
                 <?php if($this->session->userdata('token')['uid']):?>
-                    <a style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登陆</a>
+                    <a style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登录</a>
                 <?php endif; ?>
 
 
