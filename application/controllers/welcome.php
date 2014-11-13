@@ -294,7 +294,7 @@ class Welcome extends CI_Controller {
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
 
         foreach($friend_result['users'] as $key => $value){
-            var_dump($value['weiboid']);
+            var_dump($value['id']);
         }
 
 
