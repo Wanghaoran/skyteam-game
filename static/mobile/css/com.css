@@ -113,11 +113,16 @@ textarea{resize:none;overflow:auto;}
 	.grzx .grzx_info img{ width:100%; margin:2% 0 0 0;}
 	.grzx .grzx_info ul.ulinfo{ position:absolute; left:28%; top:0; width:60%}
 	.grzx .grzx_info ul.ulinfo li{line-height:25px; color:#848484; font-size:12px; font-weight:400; margin:0 0 5% 0}
-	.grzx .grzx_btn{ position:relative; width:100%}
-	.grzx .grzx_btn img{ width:100%;}
-	.grzx .grzx_btn a{ position:absolute; top:10%;}
-	.grzx .grzx_btn a.go{ left:5%; width:44%}
-	.grzx .grzx_btn a.comeon{ right:5%; width:44%;}
+	.grzx .grzx_btn{ width:80%; margin:10px auto;}
+	.grzx .grzx_btn .div_go{ float:left; width:50%;}
+	.grzx .grzx_btn a img{ border:0; width:100%; vertical-align:bottom;}
+	.grzx .grzx_btn .py{ float:left; width:50%; position:relative}
+	.grzx .grzx_btn .py img{ width:100%; vertical-align:bottom;}
+	.grzx .grzx_btn .py a.weibo{ position:absolute; width:25.7%; height:100%; display:inline-block; top:0; left:45.3%;}
+	.grzx .grzx_btn .py a.weixin{ position:absolute; width:25.7%; height:100%; display:inline-block; top:0; left:74%;}
+
+	.grzx .grzx_title{ width:100%;}
+	.grzx .grzx_title img{ width:100%; vertical-align:bottom;}
 	.grzx .grzx_qt{ width:320px; margin:0 auto;}
 		.grzx .grzx_qt ul li{ float:left; width:80px; margin:10px 0 0 0;}
 		.grzx .grzx_qt ul li a{ display:inline-block; text-decoration:none; text-align:center; }
@@ -141,6 +146,12 @@ textarea{resize:none;overflow:auto;}
 				 .phbright ul.sxt li a div{ width:100%; color:#848484; font-size:12px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
 		.phbcon_right{ position:absolute; left:80%; top:5%; width:20%; text-align:center}
 		.phbcon_right a img{ width:60%; margin:2% 0; border:0;}
+		.phbcon_right .fx{ width:70%; margin:10px auto; position:relative}
+		.phbcon_right .fx img{ width:100%; vertical-align: bottom;}
+		.phbcon_right .fx a{position:absolute; width:45%; height:70%; display:inline-block;top:30%; z-index:999}
+		.phbcon_right .fx a img{ border:0;width:100%; vertical-align: bottom;}
+		.phbcon_right .fx a.weibo{left:0; }
+		.phbcon_right .fx a.weixin{right:0;}
 
 /*弹出层*/
 .mydiv { width:93.75%; z-index:99; margin:0 auto; position:absolute; left:50%; top:20%; margin-left:-46.87%;}
@@ -207,7 +218,7 @@ textarea{resize:none;overflow:auto;}
 				.tab_kol_info img{ border:0; vertical-align:bottom; width:100%;}
 				.tab_kol_info div.divleft{ width:25%; position:absolute; left:5%; top:10%;}
 				.tab_kol_info div.divleft img{ border:#cacaca 1px solid; width:100%;}
-				.tab_kol_info div.divright{ width:50%; position:absolute; top:20%; left:35%;}
+				.tab_kol_info div.divright{ width:65%; position:absolute; top:10%; left:35%;}
 				.tab_kol_info div.divright h2{color:#575757; font-size:16px; font-weight:400; text-align:left; margin:0 0 0 0; line-height:24px;}
 				.tab_kol_info div.divright h3{color:#919191; font-size:12px; font-weight:400; text-align:left; line-height:16px;}
 				.tab_kol_info div.divright p{ text-align:left; margin:5px 0 0 0;}
