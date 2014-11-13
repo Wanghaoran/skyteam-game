@@ -299,6 +299,8 @@ class Welcome extends CI_Controller {
             $friend_where[] = $value['id'];
         }
 
+        var_dump($friend_where);
+
         if($friend_where){
             $friend_results = $this -> user_model -> getfriend($friend_where);
         }else{
