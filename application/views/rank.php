@@ -205,7 +205,7 @@
                 <?php endif; ?>
 
             </ul>
-            <div style="color:red;float:right;font-size:20px;margin-top:25px;margin-right:10px;">目前已有 XXX 人参与本活动</div>
+            <div style="color:red;float:right;font-size:20px;margin-top:25px;margin-right:10px;">目前已有 <?=$total_user?> 人参与本活动</div>
         </div>
         <div class="clear20"></div>
         <div class="tab_phbcon">
