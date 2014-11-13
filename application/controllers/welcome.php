@@ -726,7 +726,7 @@ class Welcome extends CI_Controller {
 
 
         $bucket = "skyteam";
-        $key1 = "file_name1";
+        $key1 = $file_name . '.jpg';
         $accessKey = 'GooHyqNrIQuYES1f3aziOUlHMq5pb6IEY8DFKpHY';
         $secretKey = 'cybdpT7ucr0ZPLFMovltzi4XEXTRCEyyC2MIj9AJ';
 
