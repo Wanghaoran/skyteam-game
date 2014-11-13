@@ -245,10 +245,10 @@ class Welcome extends CI_Controller {
     //天团排行版
     public function rank(){
 
+        $this->load->helper('url');
         $this -> load -> model('user_model');
         //如果微博ID存在，并且这个ID有纪录，才能访问排行榜页面
         if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
-            $this->load->helper('url');
             redirect(base_url('rank_loginout'));
         }
 
@@ -266,6 +266,11 @@ class Welcome extends CI_Controller {
         $data['user_result'] = $user_result;
 
         var_dump($user_result);
+
+        //右侧显示和本团一样的美食团排名
+        if($user_result['ttype'] != $data['type']){
+            redirect(base_url('rank?type=' . $user_result['ttype']));
+        }
 
         $this -> load -> model('team_model');
 
