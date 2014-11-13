@@ -675,11 +675,32 @@ class Welcome extends CI_Controller {
             ),
         );
 
+        //源图片地址
         $pic_path = './static/posters/' . $type . '/' . array_search($place, $map_arr[$type]) . '.jpg';
-        var_dump($pic_path);
-        var_dump($tname);
-        var_dump($uname);
-        var_dump($num);
+
+
+        Header("Content-type: image/jpeg");							//输出一个JPG图片文件
+
+        $im     = imagecreatefrompng($pic_path);
+        $white=imagecolorallocate($im, 255,255,255);					//定义白色
+        $color=$white;											//定义$color变量为白色
+        putenv('GDFONTPATH=' . realpath('.'));
+        $font="./static/test.TTF"; //方正舒体
+
+        imagettftext($im,22,0,450,892,$white,$font,"测试12");
+        imagettftext($im,22,0,450,940,$white,$font,"2341as啊还是大");
+        imagettftext($im,22,0,450,988,$white,$font,"200人");
+        imagettftext($im,22,0,450,1036,$white,$font,"火星");
+
+        Imagejpeg($im, './temp/123.jpg');
+        imagedestroy($im);
+
+
+
+//        var_dump($pic_path);
+//        var_dump($tname);
+//        var_dump($uname);
+//        var_dump($num);
     }
 
     //qiqiu - 上传图片到服务器
