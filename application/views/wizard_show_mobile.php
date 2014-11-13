@@ -116,7 +116,7 @@
                 </div>
                     <div class="divright">
                         <h2>旅游卫视史林子</h2>
-                        <h3>旅游卫视当家主持，现主持《有多远走多远》《网聚来了》等节目；重度旅行爱好者。</h3>
+                        <h3>旅游卫视当家主持，主持《有多远走多远》《网聚来了》等节目；旅行爱好者。</h3>
                         <p><a href="http://weibo.com/shilinzi" class="btn_gz"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_gz.png"/></a></p>
                     </div>
                     <div class="clear"></div>
