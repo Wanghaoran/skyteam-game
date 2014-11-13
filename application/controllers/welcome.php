@@ -265,7 +265,6 @@ class Welcome extends CI_Controller {
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
         $data['user_result'] = $user_result;
 
-        var_dump($user_result);
 
         //右侧显示和本团一样的美食团排名
         if($user_result['ttype'] != $data['type']){
