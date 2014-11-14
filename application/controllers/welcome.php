@@ -339,6 +339,9 @@ class Welcome extends CI_Controller {
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = 200;
         $config['per_page'] = 20;
+        $config['next_link'] = '下一页';
+        $config['prev_link'] = '上一页';
+        $config['first_link'] = false;
 
         $this->pagination->initialize($config);
 
