@@ -98,7 +98,7 @@
 
 <script type="text/javascript">
     var shareData = {
-        "img_url": "http://skyteam.tianxun.cn/static/share_icon.jpg",
+        "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
         "img_width": "200",
         "img_height": "200",
         "link": "http://skyteam.tianxun.cn/game/qyer?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+qyer",
