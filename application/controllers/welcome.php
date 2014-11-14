@@ -432,7 +432,7 @@ class Welcome extends CI_Controller {
         }
 
         //读取团排行榜
-        $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 3);
+        $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 1);
 
 
         //读取总人数
@@ -461,7 +461,7 @@ class Welcome extends CI_Controller {
         $config['base_url'] = $current_url . '?type=' . $data['type'];
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = $this -> team_model -> gettypetotal($data['type']);
-        $config['per_page'] = 3;
+        $config['per_page'] = 1;
         $config['next_link'] = '下一页';
         $config['prev_link'] = '上一页';
         $config['first_link'] = false;
