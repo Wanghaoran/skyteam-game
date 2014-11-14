@@ -334,7 +334,7 @@
                                 text_weibo += '@' + y;
                             });
 
-                            w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
+                            w.location = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
 
 
                         setTimeout(function(){
