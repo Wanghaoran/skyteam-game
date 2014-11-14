@@ -73,6 +73,19 @@
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
     </script>
+
+    <script>
+
+        var deleteteam = function(){
+            if(confirm('确定要删除该团吗？操作不可恢复，请谨慎操作！')){
+                location.href="<?=$this->config->base_url()?>welcome/deleteteam";
+            }else{
+                return;
+            }
+        }
+
+
+    </script>
 </head>
 <body>
 <!--遮罩层  start-->
@@ -86,7 +99,12 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
         <div class="ny_logo"><a href="http://www.tianxun.cn">&nbsp;</a></div>
         <img src="<?=$this->config->base_url()?>static/mobile/images/grzx.jpg"/>
-        <div class="btn_grzx"><a href="#" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/shanchu.png"/></a><a href="#" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a></div>
+        <div class="btn_grzx">
+            <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
+                <a href="javascript:deleteteam();" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/shanchu.png"/></a>
+            <?php endif; ?>
+            <a href="#" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
+        </div>
     </div>
     <div class="grzx">
         <div class="grzx_admin">
