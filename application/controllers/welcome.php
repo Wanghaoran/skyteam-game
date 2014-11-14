@@ -288,9 +288,11 @@ class Welcome extends CI_Controller {
 
 
 
+        //分页
+        $per_page = $_GET['per_page'] ? $_GET['per_page'] : 0;
 
         //读取团排行榜
-        $result_type = $this -> team_model -> teamorder($data['type']);
+        $result_type = $this -> team_model -> teamorder($data['type'], $per_page);
 
         //读取总人数
         $user_total = $this -> user_model -> gettotal();

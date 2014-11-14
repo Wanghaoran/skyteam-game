@@ -62,7 +62,7 @@ class Team_model extends CI_Model {
         $query = $this->db->get('team');
         $this->db->where(array('type' => $type));
 
-        return $query -> result_array()[0];
+        return $query -> result_array()[0]['count'];
     }
 
     //读取第一名
