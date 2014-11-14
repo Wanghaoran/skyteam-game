@@ -334,7 +334,7 @@ class Welcome extends CI_Controller {
 
         $this->load->library('pagination');
 
-        $config['base_url'] = $current_url;
+        $config['base_url'] = $current_url . '?type=' . $data['type'];
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = 200;
         $config['per_page'] = 20;
