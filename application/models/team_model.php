@@ -49,11 +49,20 @@ class Team_model extends CI_Model {
     public function teamorder($type, $page){
         $this->db->select('*');
         $this->db->from('skyteam_team');
-        $this->db->limit(3);
+        $this->db->limit(3, $page);
         $this->db->order_by("num", "DESC");
         $this->db->where(array('type' => $type));
         $query = $this->db->get();
         return $query -> result_array();
+    }
+
+    //获取该类别团总数
+    public function gettypetotal($type){
+        $this->db->select('COUNT(id) as count');
+        $query = $this->db->get('team');
+        $this->db->where(array('type' => $type));
+
+        return $query -> result_array()[0];
     }
 
     //读取第一名

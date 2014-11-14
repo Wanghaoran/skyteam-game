@@ -337,7 +337,7 @@ class Welcome extends CI_Controller {
         $this->load->library('pagination');
         $config['base_url'] = $current_url . '?type=' . $data['type'];
         $config['page_query_string'] = TRUE;
-        $config['total_rows'] = 200;
+        $config['total_rows'] = $this -> team_model -> gettypetotal($data['type']);
         $config['per_page'] = 3;
         $config['next_link'] = '下一页';
         $config['prev_link'] = '上一页';
@@ -345,6 +345,8 @@ class Welcome extends CI_Controller {
         $config['last_link'] = false;
         $config['cur_tag_open'] = '<b>';
         $config['cur_tag_close'] = '</b>';
+
+        var_dump($config);
 
         $this->pagination->initialize($config);
 
