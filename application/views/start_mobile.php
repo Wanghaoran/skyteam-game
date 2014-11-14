@@ -95,9 +95,45 @@
     //下一步
     function showNext(){
 
+        var detection = false;
+
         if(!$('#team_name').val()){
             alert('团名不能为空！');
             $('#team_name').focus();
+            return;
+        }
+
+        if($('#team_name').val().match(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g)){
+            alert('团名仅限中文、英文及数字！');
+            $('#team_name').focus();
+            return;
+        }
+
+        if($('#team_name').val().length > 10){
+            alert('团名字数不能超过10！');
+            $('#team_name').focus();
+            return;
+        }
+
+        //验证重复性
+        $.ajax({
+            type : 'POST',
+            url : '<?=$this -> config -> base_url()?>welcome/teamnamedetection',
+            data : '&name=' + $('#team_name').val(),
+            async : false,
+            dataType : 'json',
+            success : function(ress){
+                if(ress.result == 'have'){
+                    alert('这个团名已经存在啦，试着换一个吧！');
+                    $('#team_name').focus();
+                    detection = true;
+                    return;
+                }
+
+            }
+        });
+
+        if(detection){
             return;
         }
 
@@ -352,14 +388,14 @@
                 <div class="popcon">
                     <div class="img_cjtm">
                         <img src="<?=$this->config->base_url()?>static/mobile/images/img_cjtm.png"/>
-                        <input type="text" class="inputclass3"/>
+                        <input type="text" id="team_name" class="inputclass3"/>
                     </div>
                     <div class="img_xh">
                         <img src="<?=$this->config->base_url()?>static/mobile/images/img_xh.png"/>
                         <div id="radiolist2" class="radioimg2">
-                            <input name='xh' type="radio" value='1' /><label><div>&nbsp;</div></label>
-                            <input name='xh' type="radio" value='2' /><label><div>&nbsp;</div></label>
-                            <input name='xh' type="radio" value='3' /><label><div>&nbsp;</div></label>
+                            <input name='team_type' type="radio" value='1' /><label><div>&nbsp;</div></label>
+                            <input name='team_type' type="radio" value='2' /><label><div>&nbsp;</div></label>
+                            <input name='team_type' type="radio" value='3' /><label><div>&nbsp;</div></label>
                         </div>
                     </div>
                     <div class="img_yqhy">

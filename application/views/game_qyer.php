@@ -63,6 +63,7 @@
             -ms-user-select: none;
             -khtml-user-select: none;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
             overflow: hidden;
         }
         #shuShow {
