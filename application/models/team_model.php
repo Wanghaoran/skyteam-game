@@ -46,7 +46,7 @@ class Team_model extends CI_Model {
     }
 
     //获取该类别下前三名
-    public function teamorder($type){
+    public function teamorder($type, $page){
         $this->db->select('*');
         $this->db->from('skyteam_team');
         $this->db->limit(3);

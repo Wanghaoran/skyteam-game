@@ -338,7 +338,7 @@ class Welcome extends CI_Controller {
         $config['base_url'] = $current_url . '?type=' . $data['type'];
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = 200;
-        $config['per_page'] = 20;
+        $config['per_page'] = 3;
         $config['next_link'] = '下一页';
         $config['prev_link'] = '上一页';
         $config['first_link'] = false;
