@@ -370,7 +370,7 @@ class Welcome extends CI_Controller {
     }
 
     public function rank_mobile(){
-        
+
     }
 
     //未登陆时的天团排行榜
@@ -452,11 +452,6 @@ class Welcome extends CI_Controller {
         }else{
             $this->load->view('rules_mobile');
         }
-    }
-
-    //天团排行榜_mobile
-    public function rank_mobile(){
-
     }
 
 
