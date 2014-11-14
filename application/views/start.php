@@ -313,7 +313,6 @@
                         $("#popDiv2").hide();
                         $("#popDiv3").show();
 
-                        setTimeout(function(){
 
                             var pic = '';
                             //获取PIC
@@ -330,15 +329,13 @@
 
 
 
-                            var text_weibo = '起飞吧朋友－天巡接力拼里程';
+                            var text_weibo = '约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '得分第一名就一起飞！';
                             $.each(result['friend'], function(x,y){
                                 text_weibo += '@' + y;
                             });
 
                             w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
 
-
-                        },2000);
 
                         setTimeout(function(){
                             location.href="<?=$this->config->base_url()?>rank";
