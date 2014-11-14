@@ -146,6 +146,15 @@
             <?php endforeach;?>
 
         </div>
+
+        <!--分页  start-->
+        <div class="page">
+            <?=$page;?>
+        </div>
+        <!--分页  end-->
+
+        <div class="clear"></div>
+
     </div>
 </div>
 <div class="clear"></div>
