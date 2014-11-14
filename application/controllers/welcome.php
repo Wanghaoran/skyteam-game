@@ -425,8 +425,14 @@ class Welcome extends CI_Controller {
             $data['type'] = 1;
         }
 
+        if(!empty($_GET['per_page'])){
+            $per_page = $_GET['per_page'];
+        }else{
+            $per_page = 0;
+        }
+
         //读取团排行榜
-        $result_type = $this -> team_model -> teamorder($data['type']);
+        $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 3);
 
 
         //循环结果数组，
@@ -440,6 +446,27 @@ class Welcome extends CI_Controller {
         }
 
         $data['rank'] = $result_type;
+
+        //生成当前URL
+        $this->load->helper('url');
+        $current_url  = current_url();
+
+        //加载分页类
+        $this->load->library('pagination');
+        $config['base_url'] = $current_url . '?type=' . $data['type'];
+        $config['page_query_string'] = TRUE;
+        $config['total_rows'] = $this -> team_model -> gettypetotal($data['type']);
+        $config['per_page'] = 3;
+        $config['next_link'] = '下一页';
+        $config['prev_link'] = '上一页';
+        $config['first_link'] = false;
+        $config['last_link'] = false;
+        $config['cur_tag_open'] = '<b>';
+        $config['cur_tag_close'] = '</b>';
+
+        $this->pagination->initialize($config);
+
+        $data['page'] = $this->pagination->create_links();
 
 
         $this->load->view('rank_loginout', $data);
