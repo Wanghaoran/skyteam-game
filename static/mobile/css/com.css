@@ -1,4 +1,4 @@
-*{-webkit-appearance: none;font-size:12px;list-style:none;}
+*{-webkit-appearance: none;list-style:none;}
 a:visited,
 a{text-decoration:none;cursor:pointer;color:#575757;}
 a.a,.a{color:#2876D6;}
@@ -112,7 +112,7 @@ textarea{resize:none;overflow:auto;}
 	.grzx .grzx_info{ position:relative;}
 	.grzx .grzx_info img{ width:100%; margin:2% 0 0 0;}
 	.grzx .grzx_info ul.ulinfo{ position:absolute; left:28%; top:0; width:60%}
-	.grzx .grzx_info ul.ulinfo li{line-height:25px; color:#848484; font-size:12px; font-weight:400; margin:0 0 5% 0}
+	.grzx .grzx_info ul.ulinfo li{line-height:25px; color:#848484; font-size:12px; font-weight:400;  margin:1% 0 6% 0}
 	.grzx .grzx_btn{ width:80%; margin:10px auto;}
 	.grzx .grzx_btn .div_go{ float:left; width:50%;}
 	.grzx .grzx_btn a img{ border:0; width:100%; vertical-align:bottom;}
@@ -298,6 +298,24 @@ input.jcDate{cursor:pointer;}
 .hidebg10{ width:100%; height:100%; background: #000; filter:alpha(opacity=80);/*IE*/ opacity:0.8;/*FF*/ z-index:1; position:absolute;/*IE6*/ position:fixed; left:0; top:0;} 
 .divimg10{ clear:both; width:80%; margin:0 auto; text-align:center;}
 .divimg10 img{ width:100%; border:0; vertical-align:middle;}
+
+.home .tuichu{ position:absolute; right:0; bottom:13%; width:18.75%;}
+	.home .tuichu a img{ width:100%; border:0;}
+.ny_top .btn_grzx a{ width:14.37%; position:absolute; top:70%;}
+.ny_top .btn_grzx a.scbt{ left:60%;}
+.ny_top .btn_grzx a.tcbt{ left:80%;}
+.ny_top .btn_grzx a img{ width:100%; border:0; width:100%;}
+
+.ny_top .nav_phb{ width:96%; position:absolute; top:79.5%; left:2%;}
+.ny_top .nav_phb ul li{ float:left; width:32%; margin:0 1% 0 0;}
+.ny_top .nav_phb ul li a{ display:inline-block}
+.ny_top .nav_phb ul li a img{ border:0; vertical-align:bottom; width:100%;}
+
+.page{ width:320px; margin:20px auto; height:20px; line-height:20px; font-size:20px;}
+.page a,.page b,.page span{ float:left; margin:0 30px 0 0; text-decoration:none;color:#414141;}
+.page b,.page a:hover{ border-bottom:#e85742 1px solid; color:#e85742;}
+.page a.icon_pre{ height:20px; width:13px; background:url(../images/icon_pre.png) center no-repeat; display:inline-block;}
+.page a.icon_next{ height:20px; width:13px; background:url(../images/icon_next.png) center no-repeat; display:inline-block;}
 
 
 		

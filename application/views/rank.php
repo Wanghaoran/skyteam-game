@@ -262,7 +262,7 @@
 
         <!--分页  start-->
         <div class="page">
-            <a href="" title="上一页" class="icon_pre"></a><a href="">1</a><b>2</b><a href="">3</a><a href="">4</a><a href="">5</a><span>...</span><a href="">15</a><a href="" title="下一页" class="icon_next"></a>
+            <?=$page;?>
         </div>
         <!--分页  end-->
         <div class="clear"></div>

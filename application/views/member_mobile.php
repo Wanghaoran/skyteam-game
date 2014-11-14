@@ -86,6 +86,7 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
         <div class="ny_logo"><a href="http://www.tianxun.cn">&nbsp;</a></div>
         <img src="<?=$this->config->base_url()?>static/mobile/images/grzx.jpg"/>
+        <div class="btn_grzx"><a href="#" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/shanchu.png"/></a><a href="#" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a></div>
     </div>
     <div class="grzx">
         <div class="grzx_admin">

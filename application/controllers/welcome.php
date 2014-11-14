@@ -329,11 +329,12 @@ class Welcome extends CI_Controller {
         $data['rank'] = $result_type;
 
 
+        //生成当前URL
         $this->load->helper('url');
         $current_url  = current_url();
 
+        //加载分页类
         $this->load->library('pagination');
-
         $config['base_url'] = $current_url . '?type=' . $data['type'];
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = 200;
@@ -341,7 +342,7 @@ class Welcome extends CI_Controller {
 
         $this->pagination->initialize($config);
 
-        echo $this->pagination->create_links();
+        $data['page'] = $this->pagination->create_links();
 
 
         $this->load->view('rank', $data);
@@ -393,7 +394,7 @@ class Welcome extends CI_Controller {
     }
 
     public function rank_mobile(){
-
+        $this->load->view('rank_mobile');
     }
 
     //未登陆时的天团排行榜
