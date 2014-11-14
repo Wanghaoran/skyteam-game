@@ -265,7 +265,7 @@
                 return;
             }
 
-            var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+//            var w = window.open('', '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
             //创建团
             $.ajax({
@@ -284,6 +284,7 @@
                     $("#popDiv2").hide();
                     $("#popDiv3").show();
 
+                    /*
                     setTimeout(function(){
 
                         var text_weibo = '起飞吧朋友－天巡接力拼里程';
@@ -293,6 +294,8 @@
 
                         w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=";
                     },2000);
+
+                    */
 
                     setTimeout(function(){
                         location.href="<?=$this->config->base_url()?>rank";
