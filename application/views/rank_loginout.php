@@ -79,6 +79,8 @@
                     <li class="li4"><a href="<?=$this->config->base_url()?>rank_loginout?type=3" class="now"></a></li>
                 <?php endif; ?>
             </ul>
+            <div style="color:red;float:right;font-size:20px;margin-top:25px;margin-right:10px;">目前已有 <?=$total_user?> 人参与本活动</div>
+
         </div>
         <div class="clear20"></div>
         <div class="tab_phbcon">
