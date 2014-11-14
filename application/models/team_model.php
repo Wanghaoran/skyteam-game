@@ -59,8 +59,8 @@ class Team_model extends CI_Model {
     //获取该类别团总数
     public function gettypetotal($type){
         $this->db->select('COUNT(id) as count');
-        $query = $this->db->get('team');
         $this->db->where(array('type' => $type));
+        $query = $this->db->get('team');
 
         return $query -> result_array()[0]['count'];
     }

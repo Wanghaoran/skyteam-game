@@ -288,8 +288,12 @@ class Welcome extends CI_Controller {
 
 
 
+        if($_GET['per_page']){
+            $per_page = $_GET['per_page'];
+        }else{
+            $per_page = 0;
+        }
         //分页
-        $per_page = $_GET['per_page'] ? $_GET['per_page'] : 0;
 
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type'], $per_page);
