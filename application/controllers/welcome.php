@@ -369,6 +369,10 @@ class Welcome extends CI_Controller {
 
     }
 
+    public function rank_mobile(){
+        
+    }
+
     //未登陆时的天团排行榜
     public function rank_loginout(){
 
