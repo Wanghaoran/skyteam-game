@@ -343,6 +343,8 @@ class Welcome extends CI_Controller {
         $config['prev_link'] = '上一页';
         $config['first_link'] = false;
         $config['last_link'] = false;
+        $config['cur_tag_open'] = '<b>第 ';
+        $config['cur_tag_close'] = ' 页</b>';
 
         $this->pagination->initialize($config);
 
