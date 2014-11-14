@@ -328,6 +328,17 @@ class Welcome extends CI_Controller {
 
         $data['rank'] = $result_type;
 
+        $this->load->library('pagination');
+
+        $config['base_url'] = 'http://example.com/index.php/test/page/';
+        $config['total_rows'] = 200;
+        $config['per_page'] = 20;
+
+        $this->pagination->initialize($config);
+
+        echo $this->pagination->create_links();
+
+
         $this->load->view('rank', $data);
     }
 
