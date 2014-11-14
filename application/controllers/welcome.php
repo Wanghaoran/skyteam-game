@@ -288,7 +288,7 @@ class Welcome extends CI_Controller {
 
 
 
-        if($_GET['per_page']){
+        if(!empty($_GET['per_page'])){
             $per_page = $_GET['per_page'];
         }else{
             $per_page = 0;
@@ -352,11 +352,11 @@ class Welcome extends CI_Controller {
         $config['cur_tag_open'] = '<b>';
         $config['cur_tag_close'] = '</b>';
 
-        var_dump($config);
-
         $this->pagination->initialize($config);
 
         $data['page'] = $this->pagination->create_links();
+
+        var_dump($data['page']);
 
 
         $this->load->view('rank', $data);
