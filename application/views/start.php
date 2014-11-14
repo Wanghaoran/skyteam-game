@@ -171,7 +171,7 @@
             result['name'] = $('#team_name').val();
 
             if(!$('input[name="team_type"]:checked').val()){
-                alert('天团类型不能为空！');
+                alert('喜好不能为空！');
                 $('#team_name').focus();
                 return;
             }
@@ -304,6 +304,9 @@
                         if(ress['state'] != 'success'){
                             alert(ress.info);
                             return;
+                        }else{
+
+                            var tid = ress.tid;
                         }
 
 
@@ -312,12 +315,29 @@
 
                         setTimeout(function(){
 
+                            var pic = '';
+                            //获取PIC
+                            $.ajax({
+                                type : 'POST',
+                                url : '<?=$this -> config -> base_url()?>welcome/getteampic',
+                                data : '&tid=' + tid,
+                                async : false,
+                                dataType : 'json',
+                                success : function(ress){
+                                    pic = ress.pic;
+                                }
+                            });
+
+
+
                             var text_weibo = '起飞吧朋友－天巡接力拼里程';
                             $.each(result['friend'], function(x,y){
                                 text_weibo += '@' + y;
                             });
 
-                            w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=";
+                            w.location = "http://v.t.sina.com.cn/share/share.php?url=http%3A%2F%2skyteam.tianxun.cn&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
+
+
                         },2000);
 
                         setTimeout(function(){

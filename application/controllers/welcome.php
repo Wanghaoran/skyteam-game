@@ -666,6 +666,7 @@ class Welcome extends CI_Controller {
 
 
             $result['state'] = 'success';
+            $result['tid'] = $tid;
         }else{
             $result['state'] = 'error';
             $result['info'] = '添加数据错误，此用户已创建过天团！';
