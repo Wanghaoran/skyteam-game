@@ -11,74 +11,79 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
+
+
+
 <style>
     .radioimg .hRadio_Checked {opacity:1;filter:alpha(opacity=100);}
-    .radioimg .hRadio div.l1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw1.png) no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.l10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l1{ background:url(<?=$this->config->base_url()?>static/place/1/1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l2{ background:url(<?=$this->config->base_url()?>static/place/1/2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l3{ background:url(<?=$this->config->base_url()?>static/place/1/3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l4{ background:url(<?=$this->config->base_url()?>static/place/1/4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l5{ background:url(<?=$this->config->base_url()?>static/place/1/5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l6{ background:url(<?=$this->config->base_url()?>static/place/1/6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l7{ background:url(<?=$this->config->base_url()?>static/place/1/7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l8{ background:url(<?=$this->config->base_url()?>static/place/1/8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l9{ background:url(<?=$this->config->base_url()?>static/place/1/9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.l10{ background:url(<?=$this->config->base_url()?>static/place/1/10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 
-    .radioimg .hRadio_Checked div.l1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw11.png) no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw12.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw13.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw14.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw15.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw16.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw17.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw18.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw19.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.l10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_gw20.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l1{ background:url(<?=$this->config->base_url()?>static/place/1/1-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l2{ background:url(<?=$this->config->base_url()?>static/place/1/2-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l3{ background:url(<?=$this->config->base_url()?>static/place/1/3-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l4{ background:url(<?=$this->config->base_url()?>static/place/1/4-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l5{ background:url(<?=$this->config->base_url()?>static/place/1/5-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l6{ background:url(<?=$this->config->base_url()?>static/place/1/6-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l7{ background:url(<?=$this->config->base_url()?>static/place/1/7-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l8{ background:url(<?=$this->config->base_url()?>static/place/1/8-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l9{ background:url(<?=$this->config->base_url()?>static/place/1/9-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.l10{ background:url(<?=$this->config->base_url()?>static/place/1/10-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 
-    .radioimg .hRadio div.m1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.m10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m1{ background:url(<?=$this->config->base_url()?>static/place/2/1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m2{ background:url(<?=$this->config->base_url()?>static/place/2/2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m3{ background:url(<?=$this->config->base_url()?>static/place/2/3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m4{ background:url(<?=$this->config->base_url()?>static/place/2/4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m5{ background:url(<?=$this->config->base_url()?>static/place/2/5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m6{ background:url(<?=$this->config->base_url()?>static/place/2/6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m7{ background:url(<?=$this->config->base_url()?>static/place/2/7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m8{ background:url(<?=$this->config->base_url()?>static/place/2/8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m9{ background:url(<?=$this->config->base_url()?>static/place/2/9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.m10{ background:url(<?=$this->config->base_url()?>static/place/2/10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 
-    .radioimg .hRadio_Checked div.m1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms11.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms12.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms13.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms14.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms15.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms16.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms17.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms18.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms19.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.m10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_ms20.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m1{ background:url(<?=$this->config->base_url()?>static/place/2/1-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m2{ background:url(<?=$this->config->base_url()?>static/place/2/2-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m3{ background:url(<?=$this->config->base_url()?>static/place/2/3-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m4{ background:url(<?=$this->config->base_url()?>static/place/2/4-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m5{ background:url(<?=$this->config->base_url()?>static/place/2/5-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m6{ background:url(<?=$this->config->base_url()?>static/place/2/6-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m7{ background:url(<?=$this->config->base_url()?>static/place/2/7-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m8{ background:url(<?=$this->config->base_url()?>static/place/2/8-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m9{ background:url(<?=$this->config->base_url()?>static/place/2/9-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.m10{ background:url(<?=$this->config->base_url()?>static/place/2/10-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 
-    .radioimg .hRadio div.x1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio div.x10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x1{ background:url(<?=$this->config->base_url()?>static/place/3/1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x2{ background:url(<?=$this->config->base_url()?>static/place/3/2.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x3{ background:url(<?=$this->config->base_url()?>static/place/3/3.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x4{ background:url(<?=$this->config->base_url()?>static/place/3/4.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x5{ background:url(<?=$this->config->base_url()?>static/place/3/5.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x6{ background:url(<?=$this->config->base_url()?>static/place/3/6.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x7{ background:url(<?=$this->config->base_url()?>static/place/3/7.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x8{ background:url(<?=$this->config->base_url()?>static/place/3/8.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x9{ background:url(<?=$this->config->base_url()?>static/place/3/9.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio div.x10{ background:url(<?=$this->config->base_url()?>static/place/3/10.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
 
-    .radioimg .hRadio_Checked div.x1{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx11.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x2{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx12.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x3{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx13.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x4{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx14.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x5{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx15.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x6{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx16.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x7{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx17.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x8{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx18.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x9{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx19.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
-    .radioimg .hRadio_Checked div.x10{ background:url(<?=$this->config->base_url()?>static/mobile/img/img_xx20.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x1{ background:url(<?=$this->config->base_url()?>static/place/3/1-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x2{ background:url(<?=$this->config->base_url()?>static/place/3/2-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x3{ background:url(<?=$this->config->base_url()?>static/place/3/3-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x4{ background:url(<?=$this->config->base_url()?>static/place/3/4-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x5{ background:url(<?=$this->config->base_url()?>static/place/3/5-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x6{ background:url(<?=$this->config->base_url()?>static/place/3/6-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x7{ background:url(<?=$this->config->base_url()?>static/place/3/7-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x8{ background:url(<?=$this->config->base_url()?>static/place/3/8-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x9{ background:url(<?=$this->config->base_url()?>static/place/3/9-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+    .radioimg .hRadio_Checked div.x10{ background:url(<?=$this->config->base_url()?>static/place/3/10-1.png) center no-repeat;background-size:70px 60px;-moz-background-size:70px 60px;}
+
 </style>
+
 <script type="text/javascript" src="<?=$this->config->base_url()?>static/mobile/js/jquery.min.js"></script>
 
 
