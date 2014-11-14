@@ -103,7 +103,7 @@
         "img_height": "200",
         "link": "http://skyteam.tianxun.cn/game/qyer?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+qyer",
         "desc":  "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！",
-        "title": "起飞吧朋友"
+        "title": "起飞吧朋友！接力拼里程，赢整团机票！19日正式上线，记得来玩儿！"
     };
     document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         WeixinJSBridge.call('hideToolbar');
