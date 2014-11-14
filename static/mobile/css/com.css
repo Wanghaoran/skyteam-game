@@ -132,15 +132,15 @@ textarea{resize:none;overflow:auto;}
 	.phb{ background:#f1f1f1; width:100%}
 	.phb img{ width:100%;}
 		.phbtitle{ position:relative}
-		.phbtitle h2{ position:absolute; left:14%; top:5%; width:5.5%; color:#fff; font-size:14px; font-weight:400; height:100%; line-height:100%; text-align:center;}
+		.phbtitle h2{ position:absolute; left:14%; top:8%; width:5.5%; color:#fff; font-size:12px; font-weight:400; height:80%; text-align:center;}
 		.phbcon{ width:100%; position:relative}
 		.phbcon_left{ position:absolute; left:5%; top:5%; width:80%;}
 			.phbleft{ float:left; width:30%}
 			.phbleft h2{ color:#e85742; font-size:12px; font-weight:400;}
 			.phbleft img{ width:80%; margin:5%;}
 			.phbright{ float:left; width:70%}
-				.phbright p{ line-height:18px; color:#848484; font-size:12px;}
-				 .phbright ul.sxt li{ float:left; width:20%; margin:5% 2% 0 0;}
+				.phbright p{ line-height:14px; color:#848484; font-size:12px;}
+				 .phbright ul.sxt li{ float:left; width:20%; margin:2% 2% 0 0;}
 				 .phbright ul.sxt li a{ display:inline-block; text-decoration:none; text-align:center; width:100%;}
 				 .phbright ul.sxt li a img{ width:80%; text-align:center; border:none;}
 				 .phbright ul.sxt li a div{ width:100%; color:#848484; font-size:12px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
@@ -311,11 +311,11 @@ input.jcDate{cursor:pointer;}
 .ny_top .nav_phb ul li a{ display:inline-block}
 .ny_top .nav_phb ul li a img{ border:0; vertical-align:bottom; width:100%;}
 
-.page{ width:320px; margin:20px auto; height:20px; line-height:20px; font-size:20px;}
+.page{ width:284px; margin:20px auto; height:20px; line-height:20px; font-size:20px;}
 .page a,.page b,.page span{ float:left; margin:0 30px 0 0; text-decoration:none;color:#414141;}
 .page b,.page a:hover{ border-bottom:#e85742 1px solid; color:#e85742;}
 .page a.icon_pre{ height:20px; width:13px; background:url(../images/icon_pre.png) center no-repeat; display:inline-block;}
-.page a.icon_next{ height:20px; width:13px; background:url(../images/icon_next.png) center no-repeat; display:inline-block;}
+.page a.icon_next{ height:20px; width:13px; background:url(../images/icon_next.png) center no-repeat; display:inline-block; margin:0}
 
 
 		
