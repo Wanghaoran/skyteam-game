@@ -103,12 +103,7 @@
                                 <div>一只蘑菇</div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
-                                <div>爱闲逛</div>
-                            </a>
-                        </li>
+
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -155,12 +150,7 @@
                                 <div>一只蘑菇</div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
-                                <div>爱闲逛</div>
-                            </a>
-                        </li>
+
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -207,12 +197,7 @@
                                 <div>一只蘑菇</div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
-                                <div>爱闲逛</div>
-                            </a>
-                        </li>
+
                         <div class="clear"></div>
                     </ul>
                 </div>
