@@ -291,7 +291,7 @@ class Welcome extends CI_Controller {
         if(!empty($_GET['per_page'])){
             $per_page = $_GET['per_page'];
         }else{
-            $per_page = 1;
+            $per_page = 0;
         }
         //分页
 

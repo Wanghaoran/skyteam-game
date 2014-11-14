@@ -49,7 +49,7 @@ class Team_model extends CI_Model {
     public function teamorder($type, $page){
         $this->db->select('*');
         $this->db->from('skyteam_team');
-        $this->db->limit(3, $page);
+        $this->db->limit(1, $page);
         $this->db->order_by("num", "DESC");
         $this->db->where(array('type' => $type));
         $query = $this->db->get();
