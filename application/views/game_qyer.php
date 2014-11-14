@@ -26,29 +26,29 @@
 
         var shareWeibo = function(){
             var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→  http://t.cn/R7kY2cj接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！');
-            var pic = encodeURIComponent('http://skyteam.tianxun.cn/static/pc/images/base_posters.jpg');
-            url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
+            var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
+            var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareQQ = function(){
             var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→  http://t.cn/R7kY2cj接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！');
 
-            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=" + text + "&pics=&summary=";
+            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=' + text;
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareRenren = function(){
             var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→  http://t.cn/R7kY2cj接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！');
 
-            url = "http://share.renren.com/share/buttonshare.do?link=&title=" + text + "";
+            var url = "http://share.renren.com/share/buttonshare.do?link=&title=" + text + "";
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareDouban = function(){
             var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→  http://t.cn/R7kY2cj接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！');
-
-            url = "http://www.douban.com/recommend/?url=&title=" + text + "";
+            var urls = encodeURIComponent('http://t.cn/R7kY2cj');
+            var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
@@ -110,7 +110,7 @@
         WeixinJSBridge.call('hideToolbar');
 
         WeixinJSBridge.on('menu:share:timeline', function () {
-            shareData.title = "起飞吧朋友";
+            shareData.title = "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！";
             WeixinJSBridge.invoke('shareTimeline',shareData, function (res) {
                 _report('send_msg', res.err_msg);
             });
@@ -118,7 +118,7 @@
 
         //发送给好友
         WeixinJSBridge.on('menu:share:appmessage', function () {
-            shareData.title = "起飞吧朋友";
+            shareData.title = "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！";
             WeixinJSBridge.invoke('sendAppMessage', shareData, function (res) {
                 _report('send_msg', res.err_msg);
             })

@@ -124,6 +124,8 @@
             </div>
         </div>
 
+        <div class="grzx_title"><img src="<?=$this->config->base_url()?>static/mobile/images/title_qt.jpg"/></div>
+
         <div class="grzx_qt">
             <ul>
                 <?php foreach($friend_results as $key => $value):?>
