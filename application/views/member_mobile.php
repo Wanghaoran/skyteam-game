@@ -103,7 +103,7 @@
             <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a href="javascript:deleteteam();" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/shanchu.png"/></a>
             <?php endif; ?>
-            <a href="#" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
+            <a href="<?=$this->config->base_url()?>welcome/logout" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
         </div>
     </div>
     <div class="grzx">
