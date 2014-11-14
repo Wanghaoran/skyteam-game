@@ -342,6 +342,7 @@ class Welcome extends CI_Controller {
         $config['next_link'] = '下一页';
         $config['prev_link'] = '上一页';
         $config['first_link'] = false;
+        $config['last_link'] = false;
 
         $this->pagination->initialize($config);
 
