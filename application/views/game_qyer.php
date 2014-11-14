@@ -34,7 +34,9 @@
         var shareQQ = function(){
             var text = encodeURIComponent('我太幸运了，提前参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动的预热游戏！是朋友的都一块玩起来→  http://t.cn/R7kY2cj接力拼里程！赢整团机票！一起中奖一起飞！19日正式上线，记得来玩儿！');
 
-            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=' + text;
+            var urls = encodeURIComponent('http://t.cn/R7kY2cj');
+
+            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + urls + '&title=' + text + '&pics=&summary=';
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
