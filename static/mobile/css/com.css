@@ -168,15 +168,18 @@ textarea{resize:none;overflow:auto;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkimg img{ width:100%;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox{ width:100%; height:100%; position:absolute; left:0; top:0;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul{ width:100%; height:96%; overflow-x:hidden; overflow-y:auto;}
-.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li{ float: left; width:33%;}
-.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li:hover{}
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li{ float: left; width:33%; margin:2% 0 0 0}
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li:hover{ background:#e85742;-webkit-border-radius: 6px ; -moz-border-radius: 6px;border-radius: 6px; behavior: url(../css/PIE.htc);}
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li:hover label.checkbox div.divtext{ color:#fff;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox {cursor:pointer;display:inline-block; width:100%;} 
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox div.divimg{width:80%; padding:10% 10% 5% 10%; position:relative;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox div.divimg span{ position:absolute; width:27px; height:26px; right:10%; bottom:10%; display:inline-block; background:url(../images/chkon.png) no-repeat; z-index:9999;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox div.divimg img{ width:100%;}
-.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox div.divtext{ width:80%; padding:0 10% 5% 10%; color:#fff; text-align:center; font-size:12px; font-weight:400;}
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checkbox div.divtext{ width:80%; padding:0 10% 5% 10%; color:#262626; text-align:center; font-size:12px; font-weight:400;}
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checked div.divimg span{ background:url(../images/chk.png) no-repeat} 
 .mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.disabled div.divimg span{ background:url(../images/chkon.png) no-repeat} 
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checked{background:#e85742;-webkit-border-radius: 6px ; -moz-border-radius: 6px;border-radius: 6px; behavior: url(../css/PIE.htc);}
+.mydiv .popdiv1 .popcon .img_yqhy .chk .chkbox ul li label.checked div.divtext{ color:#fff;}
 
 .mydiv .popdiv1 .popcon .img_tishi{ width:100%;}
 .mydiv .popdiv1 .popcon .img_tishi img{ width:100%; vertical-align:top;}

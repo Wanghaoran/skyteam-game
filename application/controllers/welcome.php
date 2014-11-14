@@ -23,7 +23,7 @@ class Welcome extends CI_Controller {
         $tid = $this->input->get('tid');
 
         include_once('./Weibo.php');
-        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
 
         $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join/' . $tid);
 
@@ -35,7 +35,7 @@ class Welcome extends CI_Controller {
     public function weibocheck_join($tid){
         include_once('./Weibo.php');
 
-        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
 
         if (isset($_REQUEST['code'])) {
             $keys = array();
@@ -53,7 +53,7 @@ class Welcome extends CI_Controller {
 
             setcookie('weibojs_'.$o->client_id, http_build_query($token));
 
-            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $this->session->userdata('token')['access_token']);
+            $c = new SaeTClientV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa', $this->session->userdata('token')['access_token']);
 
             $uid_get = $c->get_uid();
 
@@ -123,7 +123,7 @@ class Welcome extends CI_Controller {
     //weibo 登陆
     public function weibologin(){
         include_once('./Weibo.php');
-        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
 
         $this -> load -> library('user_agent');
 
@@ -143,7 +143,7 @@ class Welcome extends CI_Controller {
 
         include_once('./Weibo.php');
 
-        $o = new SaeTOAuthV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1');
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
 
         if (isset($_REQUEST['code'])) {
             $keys = array();
@@ -161,7 +161,7 @@ class Welcome extends CI_Controller {
 
             setcookie('weibojs_'.$o->client_id, http_build_query($token));
 
-            $c = new SaeTClientV2('2025482371', 'a99686a67eec2e39a540eb0c03d402c1', $this->session->userdata('token')['access_token']);
+            $c = new SaeTClientV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa', $this->session->userdata('token')['access_token']);
 
             $uid_get = $c->get_uid();
 
