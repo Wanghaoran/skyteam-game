@@ -252,6 +252,13 @@ class Welcome extends CI_Controller {
             redirect(base_url('rank_loginout'));
         }
 
+
+        //手机浏览跳转至手机页面
+        $this -> load -> library('user_agent');
+        if($this -> agent -> is_mobile()){
+            redirect(base_url('member_mobile'));
+        }
+
         $data = array();
 
         //读取右侧排行榜

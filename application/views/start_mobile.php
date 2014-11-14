@@ -430,16 +430,16 @@
                     <img src="<?=$this->config->base_url()?>static/mobile/images/text_mst.png"/>
                 </div>
                 <div id="radiolist" class="radioimg">
-                    <input name='r' type="radio" value='1' /><label><div class="l1"></div></label>
-                    <input name='r' type="radio" value='2' /><label><div class="l2"></div></label>
-                    <input name='r' type="radio" value='3' /><label><div class="l3"></div></label>
-                    <input name='r' type="radio" value='4' /><label><div class="l4"></div></label>
-                    <input name='r' type="radio" value='5' /><label><div class="l5"></div></label>
-                    <input name='r' type="radio" value='6' /><label><div class="l6"></div></label>
-                    <input name='r' type="radio" value='7' /><label><div class="l7"></div></label>
-                    <input name='r' type="radio" value='8' /><label><div class="l8"></div></label>
-                    <input name='r' type="radio" value='9' /><label><div class="l9"></div></label>
-                    <input name='r' type="radio" value='10' /><label><div class="l10"></div></label>
+                    <input name='r' type="radio" value='1' /><label place_id="1"><div class="l1"></div></label>
+                    <input name='r' type="radio" value='2' /><label place_id="2"><div class="l2"></div></label>
+                    <input name='r' type="radio" value='3' /><label place_id="3"><div class="l3"></div></label>
+                    <input name='r' type="radio" value='4' /><label place_id="4"><div class="l4"></div></label>
+                    <input name='r' type="radio" value='5' /><label place_id="5"><div class="l5"></div></label>
+                    <input name='r' type="radio" value='6' /><label place_id="6"><div class="l6"></div></label>
+                    <input name='r' type="radio" value='7' /><label place_id="7"><div class="l7"></div></label>
+                    <input name='r' type="radio" value='8' /><label place_id="8"><div class="l8"></div></label>
+                    <input name='r' type="radio" value='9' /><label place_id="9"><div class="l9"></div></label>
+                    <input name='r' type="radio" value='10' /><label place_id="10"><div class="l10"></div></label>
                 </div>
                 <div class="btn_next"><a  href="javascript:void(0);" class="xinlang"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_zskt.png"/></a></div>
             </div>
@@ -462,7 +462,7 @@
 
                 <ul>
                     <li class="short"><a href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
-                    <li><a href="#" title="天团排行榜"></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile" title="天团排行榜"></a></li>
                     <li><a href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>member_mobile" title="个人中心"></a></li>
