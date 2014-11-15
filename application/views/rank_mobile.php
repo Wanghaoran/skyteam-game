@@ -128,7 +128,8 @@
                 </div>
             </div>
             <div class="phbcon_right">
-                <div><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
+                <div><a href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
+
                 <div class="fx"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_fenxiang.png"/><a href="#" class="weibo"></a><a class="weixin"></a></div>
             </div>
             <div class="clear"></div>
