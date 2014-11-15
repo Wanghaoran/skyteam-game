@@ -141,7 +141,8 @@ textarea{resize:none;overflow:auto;}
 			.phbleft h2{ color:#e85742; font-size:12px; font-weight:400; text-align:center}
 			.phbleft img{ width:90%; margin:10% 5%;}
 			.phbright{ float:left; width:60%}
-				.phbright p{ line-height:16px; color:#848484; font-size:12px;}
+				.phbright p{ line-height:22px; color:#848484; font-size:12px;}
+				.phbright ul.sxt{ padding:10px 0 0 0 } 
 				 .phbright ul.sxt li{ float:left; width:20%; margin:2% 2% 0 0;}
 				 .phbright ul.sxt li a{ display:inline-block; text-decoration:none; text-align:center; width:100%;}
 				 .phbright ul.sxt li a img{ width:80%; text-align:center; border:none;}
@@ -314,7 +315,7 @@ input.jcDate{cursor:pointer;}
 .ny_top .nav_phb ul li a img{ border:0; vertical-align:bottom; width:100%;}
 
 .page{ margin:20px auto; height:20px; line-height:20px; font-size:20px; text-align:center;}
-.page a,.page b,.page span{ margin:0 30px 0 0; text-decoration:none;color:#414141;}
+.page a,.page b,.page span{  margin:0 30px 0 0; text-decoration:none;color:#414141;}
 .page b,.page a:hover{ border-bottom:#414141 1px solid; color:#414141;}
 .page a.icon_pre{ height:20px; width:13px; background:url(../images/icon_pre.png) center no-repeat; display:inline-block; }
 .page a.icon_next{ height:20px; width:13px; background:url(../images/icon_next.png) center no-repeat; display:inline-block; margin:0}
