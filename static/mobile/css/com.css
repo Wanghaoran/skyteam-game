@@ -134,16 +134,16 @@ textarea{resize:none;overflow:auto;}
 	.phb{ background:#f1f1f1; width:100%}
 	.phb img{ width:100%;}
 		.phbtitle{ position:relative}
-		.phbtitle h2{ position:absolute; left:14%; top:5%; width:5.5%; color:#fff; font-size:12px; font-weight:400; height:80%; text-align:center;}
+		.phbtitle h2{ position:absolute; left:14.2%; top:5%; width:5.5%; color:#fff; font-size:12px; font-weight:400; height:80%; text-align:center;}
 		.phbcon{ width:100%; position:relative}
 		.phbcon_left{ position:absolute; left:2%; top:5%; width:80%;}
 			.phbleft{ float:left; width:35%; margin:0 5% 0 0;}
 			.phbleft h2{ color:#e85742; font-size:12px; font-weight:400; text-align:center}
 			.phbleft img{ width:90%; margin:10% 5%;}
 			.phbright{ float:left; width:60%}
-				.phbright p{ line-height:22px; color:#848484; font-size:12px;}
-				.phbright ul.sxt{ padding:10px 0 0 0 } 
-				 .phbright ul.sxt li{ float:left; width:20%; margin:2% 2% 0 0;}
+				.phbright p{ line-height:20px; color:#848484; font-size:12px;}
+				.phbright ul.sxt{ padding:5px 0 0 0 } 
+				 .phbright ul.sxt li{ float:left; width:20%; margin:0 2% 0 0;}
 				 .phbright ul.sxt li a{ display:inline-block; text-decoration:none; text-align:center; width:100%;}
 				 .phbright ul.sxt li a img{ width:80%; text-align:center; border:none;}
 				 .phbright ul.sxt li a div{ width:100%; color:#848484; font-size:12px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
