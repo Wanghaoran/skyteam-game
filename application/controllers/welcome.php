@@ -408,6 +408,8 @@ class Welcome extends CI_Controller {
     public function rank_mobile(){
 
         $this -> load -> model('team_model');
+        $this -> load -> model('user_model');
+
 
         $data = array();
 
@@ -429,9 +431,21 @@ class Welcome extends CI_Controller {
 
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 3);
-        $data['result_type'] = $result_type;
+        //循环结果数组，
+        foreach($result_type as $key => $value){
+            //读取团长信息
+            $result_type[$key]['leader'] = $this -> user_model -> getUser($value['weiboid']);
+            //读取团人数
+            $result_type[$key]['nums'] = $this -> user_model -> teamnum($value['id'])['count'];
+            //读取团员
+            $result_type[$key]['number'] = $this -> user_model -> getmember($value['id']);
+        }
 
+        $data['rank'] = $result_type;
+
+        echo '<pre>';
         var_dump($data);
+        echo '</pre>';
 
 
 
