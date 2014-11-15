@@ -631,6 +631,9 @@ class Welcome extends CI_Controller {
             $data['tuan'] = 2;
         }
 
+
+        var_dump($data);
+
         $this->load->view('game_other', $data);
     }
 
