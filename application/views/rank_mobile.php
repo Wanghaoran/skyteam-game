@@ -144,7 +144,7 @@
         </div>
         <!--一行结束-->
 
-        <? endforeach;?>
+        <?php endforeach;?>
 
     </div>
     <!--分页  start-->
