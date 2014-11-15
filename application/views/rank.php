@@ -96,7 +96,7 @@
         <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a href="javascript:deleteteam();" title="删除本团"></a>
         <?php endif; ?>
-            <a href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登陆"></a>
+            <a href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
         </div>
 
 
@@ -200,7 +200,7 @@
                     <div class="tab_phblist_con">
                         <div class="tab_phblist_left">
                             <div class="tab_phbadmin">
-                                <a href="#">
+                                <a href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>">
                                     <img src="<?=$value['leader'][0]['avatar_large']?>"/>
                                     <div><?=$value['leader'][0]['name']?></div>
                                 </a>
