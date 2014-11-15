@@ -407,6 +407,8 @@ class Welcome extends CI_Controller {
 
     public function rank_mobile(){
 
+        $this -> load -> model('team_model');
+
         $data = array();
 
         //读取右侧排行榜
@@ -418,7 +420,19 @@ class Welcome extends CI_Controller {
 
 
 
+        if(!empty($_GET['per_page'])){
+            $per_page = $_GET['per_page'];
+        }else{
+            $per_page = 0;
+        }
+        //分页
+
+        //读取团排行榜
+        $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 3);
+        $data['result_type'] = $result_type;
+
         var_dump($data);
+
 
 
         $this->load->view('rank_mobile', $data);
