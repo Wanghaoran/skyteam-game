@@ -106,9 +106,9 @@ textarea{resize:none;overflow:auto;}
 		.hdgz_con input{ position:absolute; left:6%; top:5px; z-index:9999}
 		.hdgz_con img{ vertical-align:bottom; width:100%;}
 	.grzx{ background:#f1f1f1;}	
-	.grzx .grzx_admin{ height:180px; margin:0 auto; width:139px; padding:22px 0 0 0;}
+	.grzx .grzx_admin{ height:180px; margin:0 auto; width:320px; padding:22px 0 0 0; text-align:center;}
 	.grzx .grzx_admin img{ width:139px; height:139px; margin:0 auto;}
-	.grzx .grzx_admin h2{ font-size:18px; color:#848484; font-weight:400; text-align:center}
+	.grzx .grzx_admin h2{ font-size:14px; color:#848484; font-weight:400; }
 	.grzx .grzx_info{ position:relative;}
 	.grzx .grzx_info img{ width:100%; margin:2% 0 0 0;}
 	.grzx .grzx_info ul.ulinfo{ width:80%; margin:0 auto;}
