@@ -53,7 +53,7 @@
                     display: "block"
                 });
 
-                shareData.link = 'ttp://skyteam.tianxun.cn/game_other?tid='. $(this).attr('tid');
+                shareData.link = 'http://skyteam.tianxun.cn/game_other?tid=' + $(this).attr('tid');
                 $("#popDiv").show();
             });
             //点击空白处或者自身隐藏弹出层，下面分别为滑动和淡出效果。
