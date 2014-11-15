@@ -111,27 +111,28 @@
             <img src="<?=$user_result['avatar_large']?>"/>
             <h2><?=$user_result['uname']?></h2>
         </div>
+
         <div class="grzx_info">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/grzx_info.jpg"/>
+
             <ul class="ulinfo">
-                <li><?=$user_result['tname']?></li>
-                <li><?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团</li>
-                <li>
-                    <?php if($user_result['utype'] == 1):?>
-                        团长
-                    <?php else:?>
-                        团员
-                    <?php endif; ?>
-                </li>
-                <li><?=$user_result['unum']?> 里程</li>
-                <li>
-                    已积攒 <?=$user_result['tnum']?> 里程
-                    <?php if($cha_km == 0):?>
-                        您已经是<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团的第一名啦！
-                    <?php else:?>
-                        距离<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团排名第一还差 <?=$cha_km?> 里程
-                    <?php endif;?>
-                </li>
+                <li><div class="divleft">所属天团：</div><div class="divright"><?=$user_result['tname']?></div><div class="clear"></div></li>
+                <li><div class="divleft">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</div><div class="divright"><?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团</div><div class="clear"></div></li>
+                <li><div class="divleft">身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份：</div><div class="divright">
+                        <?php if($user_result['utype'] == 1):?>
+                            团长
+                        <?php else:?>
+                            团员
+                        <?php endif; ?>
+                </div><div class="clear"></div></li>
+                <li><div class="divleft">我的贡献：</div><div class="divright"><?=$user_result['unum']?> 里程</div><div class="clear"></div></li>
+                <li><div class="divleft">里&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;程：</div><div class="divright">
+                        已积攒 <?=$user_result['tnum']?> 里程
+                        <?php if($cha_km == 0):?>
+                            您已经是<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团的第一名啦！
+                        <?php else:?>
+                            距离<?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团排名第一还差 <?=$cha_km?> 里程
+                        <?php endif;?>
+                </div><div class="clear"></div></li>
             </ul>
         </div>
 
