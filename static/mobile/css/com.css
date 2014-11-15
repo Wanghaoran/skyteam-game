@@ -111,9 +111,9 @@ textarea{resize:none;overflow:auto;}
 	.grzx .grzx_admin h2{ font-size:18px; color:#848484; font-weight:400; text-align:center}
 	.grzx .grzx_info{ position:relative;}
 	.grzx .grzx_info img{ width:100%; margin:2% 0 0 0;}
-	.grzx .grzx_info ul.ulinfo{ position:absolute; left:28%; top:0; width:60%}
-	.grzx .grzx_info ul.ulinfo li{line-height:25px; color:#848484; font-size:12px; font-weight:400;  margin:1% 0 6% 0}
-	.grzx .grzx_btn{ width:80%; margin:10px auto;}
+	.grzx .grzx_info ul.ulinfo{ position:absolute; left:28%; top:3%; width:60%}
+	.grzx .grzx_info ul.ulinfo li{line-height:20px; color:#848484; font-size:12px; font-weight:400;  margin:2% 0 4% 0}
+	.grzx .grzx_btn{ width:80%; margin:5px auto 0;}
 	.grzx .grzx_btn .div_go{ float:left; width:50%;}
 	.grzx .grzx_btn a img{ border:0; width:100%; vertical-align:bottom;}
 	.grzx .grzx_btn .py{ float:left; width:50%; position:relative}
@@ -122,7 +122,7 @@ textarea{resize:none;overflow:auto;}
 	.grzx .grzx_btn .py a.weixin{ position:absolute; width:25.7%; height:100%; display:inline-block; top:0; left:74%;}
 
 	.grzx .grzx_title{ width:100%;}
-	.grzx .grzx_title img{ width:100%; vertical-align:bottom;}
+	.grzx .grzx_title img{ width:100%; vertical-align:bottom; margin:3px 0 0 0;}
 	.grzx .grzx_qt{ width:320px; margin:0 auto;}
 		.grzx .grzx_qt ul li{ float:left; width:80px; margin:10px 0 0 0;}
 		.grzx .grzx_qt ul li a{ display:inline-block; text-decoration:none; text-align:center; }

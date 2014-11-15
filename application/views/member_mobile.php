@@ -115,6 +115,7 @@
             <img src="<?=$this->config->base_url()?>static/mobile/images/grzx_info.jpg"/>
             <ul class="ulinfo">
                 <li><?=$user_result['tname']?></li>
+                <li><?php if($user_result['ttype'] == 1):?>美食<?php elseif($user_result['ttype'] == 2):?>购物<?php elseif($user_result['ttype'] == 3):?>休闲<?php endif; ?>团</li>
                 <li>
                     <?php if($user_result['utype'] == 1):?>
                         团长
