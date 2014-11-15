@@ -113,24 +113,15 @@
                     <p>里程数：<?=$value['num']?> </P>
                     <p>天团成员：</P>
                     <ul class="sxt">
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
-                                <div>耗这口</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
-                                <div>护城河的水流</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
-                                <div>一只蘑菇</div>
-                            </a>
-                        </li>
+
+                        <?php foreach($value['number'] as $key2 => $value2):?>
+                            <li>
+                                <a href="http://weibo.com/<?=$value2['profile_url']?>" target="_blank">
+                                    <img src="<?=$value2['avatar_large']?>"/>
+                                    <div><?=$value2['name']?></div>
+                                </a>
+                            </li>
+                        <?php endforeach;?>
 
                         <div class="clear"></div>
                     </ul>
