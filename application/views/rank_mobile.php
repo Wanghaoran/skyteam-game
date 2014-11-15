@@ -12,6 +12,38 @@
     <meta name="description" content="">
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
     <script type="text/javascript" src="<?=$this->config->base_url()?>static/mobile/js/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        var shareData = {
+            "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
+            "img_width": "200",
+            "img_height": "200",
+            "link": "http://skyteam.tianxun.cn/game/qyer?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+qyer",
+            "desc":  "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！",
+            "title": "起飞吧朋友！接力拼里程，赢整团机票！19日正式上线，记得来玩儿！"
+        };
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+
+            WeixinJSBridge.on('menu:share:timeline', function () {
+                shareData.title = "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！";
+                WeixinJSBridge.invoke('shareTimeline',shareData, function (res) {
+                    _report('send_msg', res.err_msg);
+                });
+            });
+
+            //发送给好友
+            WeixinJSBridge.on('menu:share:appmessage', function () {
+                shareData.title = "我太幸运了，提前参加了@Skyscanner天巡 #起飞吧 朋友# 抢12万元旅行红包活动的预热游戏！";
+                WeixinJSBridge.invoke('sendAppMessage', shareData, function (res) {
+                    _report('send_msg', res.err_msg);
+                })
+            });
+        }, false);
+    </script>
+
+
+
     <script type="text/javascript">
         $(function () {
             $('.weixin').click(function (event) {
@@ -20,6 +52,8 @@
                 $("#hidebg").css({
                     display: "block"
                 });
+
+                shareData.link = 'ttp://skyteam.tianxun.cn/game_other?tid='. $(this).attr('tid');
                 $("#popDiv").show();
             });
             //点击空白处或者自身隐藏弹出层，下面分别为滑动和淡出效果。
@@ -147,7 +181,7 @@
                 <div class="fx">
                     <img src="<?=$this->config->base_url()?>static/mobile/images/btn_fenxiang.png"/>
                     <a href="javascript:shareWeibo();" class="weibo"></a>
-                    <a class="weixin"></a>
+                    <a class="weixin" tid="<?=$value['id']?>"></a>
                 </div>
             </div>
             <div class="clear"></div>
@@ -176,6 +210,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 </body>
 </html>
