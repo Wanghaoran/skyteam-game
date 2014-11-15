@@ -406,7 +406,22 @@ class Welcome extends CI_Controller {
     }
 
     public function rank_mobile(){
-        $this->load->view('rank_mobile');
+
+        $data = array();
+
+        //读取右侧排行榜
+        if($this->input->get('type')){
+            $data['type'] = $this->input->get('type');
+        }else{
+            $data['type'] = 1;
+        }
+
+
+
+        var_dump($data);
+
+
+        $this->load->view('rank_mobile', $data);
     }
 
     //未登陆时的天团排行榜

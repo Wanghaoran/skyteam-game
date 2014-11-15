@@ -61,9 +61,23 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ttphb.jpg"/>
         <div class="nav_phb">
             <ul>
-                <li><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_mston.png"/></a></li>
-                <li><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_gwt.png"/></a></li>
-                <li><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_xxt.png"/></a></li>
+                <?php if($type == 1):?>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=1"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_mston.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=2"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_gwt.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=3"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_xxt.png"/></a></li>
+                <?php elseif($type == 2):?>
+
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=1"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_mst.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=2"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_gwton.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=3"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_xxt.png"/></a></li>
+
+                <?php elseif($type == 3):?>
+
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=1"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_mst.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=2"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_gwt.png"/></a></li>
+                    <li><a href="<?=$this->config->base_url()?>rank_mobile?type=3"><img src="<?=$this->config->base_url()?>static/mobile/images/nav_xxton.png"/></a></li>
+                <?php endif; ?>
+
             </ul>
         </div>
     </div>
