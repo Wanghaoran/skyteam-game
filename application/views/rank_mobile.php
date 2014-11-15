@@ -110,7 +110,7 @@
             <div class="phbcon_left">
                 <div class="phbleft">
                     <h2><?=$value['name']?></h2>
-                    <img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/>
+                    <img src="<?=$value['leader'][0]['avatar_large']?>"/>
                 </div>
                 <div class="phbright">
                     <p>目的地：
