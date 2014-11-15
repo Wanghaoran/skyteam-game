@@ -81,22 +81,36 @@
             </ul>
         </div>
     </div>
+
     <div class="phb">
+
+        <?php foreach($rank as $key => $value):?>
+
+
         <div class="phbtitle">
             <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
-            <h2>1</h2>
+            <h2><?=($key+1)?></h2>
         </div>
         <div class="phbcon">
             <img src="<?=$this->config->base_url()?>static/mobile/images/phbli.jpg"/>
             <div class="phbcon_left">
                 <div class="phbleft">
-                    <h2>美丽随行团</h2>
+                    <h2><?=$value['name']?></h2>
                     <img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/>
                 </div>
                 <div class="phbright">
-                    <p>目的地：</P>
-                    <p>类别：</P>
-                    <p>里程数：</P>
+                    <p>目的地：
+                        <?=$value['place']?></P>
+                    <p>类别：
+                        <?php if($value['type'] == 1):?>
+                    <td width="130">美食</td></td>
+                    <?php elseif($value['type'] == 2):?>
+                        <td width="130">购物</td></td>
+                    <?php elseif($value['type'] == 3):?>
+                        <td width="130">休闲</td></td>
+                    <?php endif; ?>
+                    </P>
+                    <p>里程数：<?=$value['num']?> </P>
                     <p>天团成员：</P>
                     <ul class="sxt">
                         <li>
@@ -129,100 +143,9 @@
             <div class="clear"></div>
         </div>
         <!--一行结束-->
-        <div class="phbtitle">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
-            <h2>1</h2>
-        </div>
-        <div class="phbcon">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/phbli.jpg"/>
-            <div class="phbcon_left">
-                <div class="phbleft">
-                    <h2>美丽随行团</h2>
-                    <img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/>
-                </div>
-                <div class="phbright">
-                    <p>目的地：</P>
-                    <p>类别：</P>
-                    <p>里程数：</P>
-                    <p>天团成员：</P>
-                    <ul class="sxt">
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
-                                <div>耗这口</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
-                                <div>护城河的水流</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
-                                <div>一只蘑菇</div>
-                            </a>
-                        </li>
 
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-            <div class="phbcon_right">
-                <div><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
-                <div class="fx"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_fenxiang.png"/><a href="#" class="weibo"></a><a class="weixin"></a></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <!--一行结束-->
-        <div class="phbtitle">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
-            <h2>1</h2>
-        </div>
-        <div class="phbcon">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/phbli.jpg"/>
-            <div class="phbcon_left">
-                <div class="phbleft">
-                    <h2>美丽随行团</h2>
-                    <img src="<?=$this->config->base_url()?>static/mobile/images/img_admin1.jpg"/>
-                </div>
-                <div class="phbright">
-                    <p>目的地：</P>
-                    <p>类别：</P>
-                    <p>里程数：</P>
-                    <p>天团成员：</P>
-                    <ul class="sxt">
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
-                                <div>耗这口</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
-                                <div>护城河的水流</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
-                                <div>一只蘑菇</div>
-                            </a>
-                        </li>
+        <? endforeach;?>
 
-                        <div class="clear"></div>
-                    </ul>
-                </div>
-            </div>
-            <div class="phbcon_right">
-                <div><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
-                <div class="fx"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_fenxiang.png"/><a href="#" class="weibo"></a><a class="weixin"></a></div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <!--一行结束-->
     </div>
     <!--分页  start-->
     <div class="page">

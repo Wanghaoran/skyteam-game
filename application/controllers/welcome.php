@@ -464,11 +464,6 @@ class Welcome extends CI_Controller {
 
         $data['page'] = $this->pagination->create_links();
 
-        echo '<pre>';
-        var_dump($data);
-        echo '</pre>';
-
-
 
         $this->load->view('rank_mobile', $data);
     }
