@@ -426,7 +426,6 @@ var GameOver1Layer  = cc.Layer.extend({
                 window.location.href = "http://skyteam.tianxun.cn";
             }else{
                 alert('您已经在天团中，不需要再开团啦！');
-                location.href='http://skyteam.tianxun.cn/rank';
             }
 
         });
