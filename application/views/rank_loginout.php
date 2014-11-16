@@ -4,10 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>天团排行榜－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
+
+
+
     <script>
         var shareWeibo = function(tid){
 
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid);
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
             url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
@@ -15,27 +18,38 @@
         }
 
         var shareQQ = function(tid){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
-            url = "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=&title=" + text + "&pics=&summary=";
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
+            var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
+
+
+            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + urls + '&title=' + text + '&pics=' + pic + '&summary=';
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareRenren = function(tid){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
 
-            url = "http://share.renren.com/share/buttonshare.do?link=&title=" + text + "";
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
+            var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
+
+            var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "&pic=" + pic;
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
+
         }
 
         var shareDouban = function(tid){
-            var text = encodeURIComponent('起飞吧朋友－天巡接力拼里程，快来帮我玩游戏！http://skyteam.tianxun.cn/game_other?tid=' + tid)
 
-            url = "http://www.douban.com/recommend/?url=&title=" + text + "";
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
+            var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
         }
 
     </script>
+
 </head>
 <body>
 <div class="ny_head">
