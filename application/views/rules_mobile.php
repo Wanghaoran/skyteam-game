@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>活动规则－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
+    <title>活动规则－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="max-age=3600">
     <meta name="MobileOptimized" content="240">
@@ -11,6 +11,36 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link type="text/css" rel="stylesheet" href="<?=$this->config->base_url()?>static/mobile/css/com.css"/>
+
+    <script type="text/javascript">
+        var shareData = {
+            "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
+            "img_width": "200",
+            "img_height": "200",
+            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
+            "desc":  "起飞吧朋友，接力拼里程，共赢12万旅行红包",
+            "title": "起飞吧朋友，接力拼里程，共赢12万旅行红包"
+        };
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+
+            WeixinJSBridge.on('menu:share:timeline', function () {
+                shareData.title = "起飞吧朋友，接力拼里程，共赢12万旅行红包";
+                WeixinJSBridge.invoke('shareTimeline',shareData, function (res) {
+                    _report('send_msg', res.err_msg);
+                });
+            });
+
+            //发送给好友
+            WeixinJSBridge.on('menu:share:appmessage', function () {
+                shareData.title = "起飞吧朋友，接力拼里程，共赢12万旅行红包";
+                WeixinJSBridge.invoke('sendAppMessage', shareData, function (res) {
+                    _report('send_msg', res.err_msg);
+                })
+            });
+        }, false);
+    </script>
+
 </head>
 <body>
 <div class="contain">

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>天团排行榜－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
+    <title>天团排行榜－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
     <script>
         var shareWeibo = function(tid){

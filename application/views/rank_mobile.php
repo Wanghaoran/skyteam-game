@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>天团排行榜－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
+    <title>天团排行榜－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="max-age=3600">
     <meta name="MobileOptimized" content="240">
@@ -18,7 +18,7 @@
             "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
             "img_width": "200",
             "img_height": "200",
-            "link": "http://skyteam.tianxun.cn/game/qyer?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+qyer",
+            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
             "desc":  "起飞吧朋友，接力拼里程，共赢12万旅行红包",
             "title": "起飞吧朋友，接力拼里程，共赢12万旅行红包"
         };

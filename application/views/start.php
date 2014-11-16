@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>创建天团－起飞吧，朋友-接力拼里程，共赢12万旅行天团红包</title>
+    <title>创建天团－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
 
     <!-- weibo followbutton -->
