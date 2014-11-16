@@ -599,7 +599,8 @@ class Welcome extends CI_Controller {
         }
         //获取这个用户的TID
         $result = $this -> user_model -> getUser($this->session->userdata('token')['uid']);
-        var_dump($result);
+        $tid = $result[0]['tid'];
+        var_dump($tid);
         $this->load->view('game_goon');
     }
 
