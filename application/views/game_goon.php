@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>起飞吧朋友</title>
+    <title><?=$tid?>起飞吧朋友</title>
     <base href="<?=$this->config->base_url()?>games" />
     <link rel="icon" type="image/GIF" href="<?=$this->config->base_url()?>res/favicon.ico"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
