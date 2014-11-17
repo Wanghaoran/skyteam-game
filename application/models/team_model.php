@@ -82,6 +82,12 @@ class Team_model extends CI_Model {
         return $query -> result_array();
     }
 
+    //通过团ID读取团信息
+    public function getinfofromid($id){
+        $query = $this -> db -> get_where('team', array('id' => $id), 1);
+        return $query -> result_array();
+    }
+
     //通过weiboID删除团和用户
     public function deletefromweiboid($weiboid){
 

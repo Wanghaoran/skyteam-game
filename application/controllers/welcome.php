@@ -87,8 +87,17 @@ class Welcome extends CI_Controller {
             echo '<script>alert("您已加入了其他天团，不能再加入别人的团啦！");location.href="http://skyteam.tianxun.cn/rank"</script>';
         }else{
 
+            //验证天团是否存在
+            $this -> load -> model('team_model');
+
+            if(!$this -> team_model -> getinfofromid($tid)){
+                header("Content-type:text/html;charset=utf-8");
+                echo '<script>alert("您选择加入的天团不存在！");location.href="http://skyteam.tianxun.cn/"</script>';
+            }
+
             //查询天团人数
             $num_arr = $this -> user_model -> teamnum($tid);
+
             if($num_arr['count'] >= 4){
                 header("Content-type:text/html;charset=utf-8");
                 echo '<script>alert("此天团人数已满，试着创建自己的天团吧！");location.href="http://skyteam.tianxun.cn/"</script>';
