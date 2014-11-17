@@ -73,6 +73,9 @@ var GameBgdLayer = cc.Layer.extend({
 });
 var StartLayer = cc.Layer.extend({
     ctor:function(scene){
+
+        alert(123);
+
         this._super();
         this.scene = scene;
         var winSize = cc.director.getWinSize();

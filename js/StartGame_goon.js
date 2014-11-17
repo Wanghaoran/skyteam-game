@@ -82,7 +82,8 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
-            alert('您已经在天团中，不需要再开团啦！');
+            window.location.href = "http://skyteam.tianxun.cn/rank";
+
         });
         startGameBtn.setPosition(winSize.width/2-130,150);
         startTeamBtn.setPosition(winSize.width/2+130,150);

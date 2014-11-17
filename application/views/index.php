@@ -15,6 +15,7 @@
     <script>
 
         var shareWeibo = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareWeibo']);
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
             var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
@@ -22,6 +23,7 @@
         }
 
         var shareQQ = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareQQ']);
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
             var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
@@ -32,6 +34,7 @@
         }
 
         var shareRenren = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareRenren']);
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
             var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
@@ -41,6 +44,7 @@
         }
 
         var shareDouban = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareDouban']);
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动hhttp://t.cn/R7euH2D得分第一名就一起飞！')
             var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
@@ -107,6 +111,30 @@
             _smq.push(['custom','CampaignHomepage','GoToFoodWizard']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToFoodWizard']);
         }
+
+        var execTrack_wizardbuy = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToBuyWizard']);
+        }
+
+        var execTrack_wizardshow = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToShowWizard']);
+        }
+
+        var execTrack_TeamRank = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToTeamRank']);
+        }
+
+        var execTrack_CampaignHomepage = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToKOL']);
+        }
+
+        var execTrack_GoToCampaignRules = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToCampaignRules']);
+        }
+
+        var execTrack_GoToGameStart = function(){
+            _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToGameStart']);
+        }
     </script>
 
 </head>
@@ -127,17 +155,17 @@
                     </div>
                 </li>
                 <li>
-                    <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
+                    <div class="divliimg"><a onclick="execTrack_wizardbuy();" href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
                     <div class="divinfo">
-                        <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg2.png"/></a></div>
-                        <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_buy"><h2>天巡星导游之购物团</h2><h3>手边巴黎urruolan</h3><h4>专栏作家，环球旅行家</h4></a></div>
+                        <div class="adminimg"><a onclick="execTrack_wizardbuy();" href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg2.png"/></a></div>
+                        <div class="textimg"><a onclick="execTrack_wizardbuy();" href="<?=$this->config->base_url()?>wizard_buy"><h2>天巡星导游之购物团</h2><h3>手边巴黎urruolan</h3><h4>专栏作家，环球旅行家</h4></a></div>
                     </div>
                 </li>
                 <li>
-                    <div class="divliimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
+                    <div class="divliimg"><a onclick="execTrack_wizardshow();" href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/rightbtn.png"/></a></div>
                     <div class="divinfo">
-                        <div class="adminimg"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg1.png"/></a></div>
-                        <div class="textimg"><a href="<?=$this->config->base_url()?>wizard_show"><h2>天巡星导游之休闲团</h2><h3>旅游卫视史林子</h3><h4>旅游卫视当家主持</h4></a></div>
+                        <div class="adminimg"><a onclick="execTrack_wizardshow();" href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/pc/images/adminimg1.png"/></a></div>
+                        <div class="textimg"><a onclick="execTrack_wizardshow();" href="<?=$this->config->base_url()?>wizard_show"><h2>天巡星导游之休闲团</h2><h3>旅游卫视史林子</h3><h4>旅游卫视当家主持</h4></a></div>
                     </div>
                 </li>
 
@@ -146,7 +174,7 @@
 
         </div>
         <div class="start">
-            <a href="<?=$this->config->base_url()?>welcome/weibologin" title="微博登录，拼游戏，赢大奖"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
+            <a onclick="execTrack_GoToGameStart();" href="<?=$this->config->base_url()?>welcome/weibologin" title="微博登录，拼游戏，赢大奖"><img src="<?=$this->config->base_url()?>static/pc/images/start.png"/></a>
         </div>
         <div class="bottom">
             <img src="<?=$this->config->base_url()?>static/pc/images/bottom.png"/>
@@ -159,9 +187,9 @@
                     <wb:follow-button uid="3353187630" type="red_3" width="300" height="24" >关注按钮</wb:follow-button>
                 </div>
                 <div class="linktext lt">
-                    <a href="<?=$this->config->base_url()?>rank" class="phb" title="天团排行榜"><img src="<?=$this->config->base_url()?>static/pc/images/textphb.png"/></a>
-                    <a href="<?=$this->config->base_url()?>wizard_food" class="txxdy" title="天巡星导游"><img src="<?=$this->config->base_url()?>static/pc/images/texttxdy.png"/></a>
-                    <a href="<?=$this->config->base_url()?>rules" class="hdgz" title="活动规则"><img src="<?=$this->config->base_url()?>static/pc/images/texthdgz.png"/></a>
+                    <a onclick="execTrack_TeamRank();" href="<?=$this->config->base_url()?>rank" class="phb" title="天团排行榜"><img src="<?=$this->config->base_url()?>static/pc/images/textphb.png"/></a>
+                    <a onclick="execTrack_CampaignHomepage();" href="<?=$this->config->base_url()?>wizard_food" class="txxdy" title="天巡星导游"><img src="<?=$this->config->base_url()?>static/pc/images/texttxdy.png"/></a>
+                    <a onclick="execTrack_GoToCampaignRules();" href="<?=$this->config->base_url()?>rules" class="hdgz" title="活动规则"><img src="<?=$this->config->base_url()?>static/pc/images/texthdgz.png"/></a>
 
 
 

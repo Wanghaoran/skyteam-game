@@ -26,14 +26,16 @@ class Welcome extends CI_Controller {
         include_once('./Weibo.php');
         $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
 
-        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join/' . $tid);
+        $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck_join?tid=' . $tid);
 
         $this->load->helper('url');
         redirect($code_url);
     }
 
     //加入微博回调验证
-    public function weibocheck_join($tid){
+    public function weibocheck_join(){
+
+        $tid = $_GET['tid'];
         include_once('./Weibo.php');
 
         $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
@@ -41,17 +43,12 @@ class Welcome extends CI_Controller {
         if (isset($_REQUEST['code'])) {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
-            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck_join/' . $tid;
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck_join';
             try {
                 $token = $o->getAccessToken('code', $keys ) ;
             } catch (OAuthException $e) {
             }
         }
-
-        echo '<pre>';
-        var_dump($keys);
-        var_dump($token);
-        echo '</pre>';
 
         if (isset($token)) {
 
@@ -170,12 +167,6 @@ class Welcome extends CI_Controller {
             }
         }
 
-
-        echo '<pre>';
-        var_dump($keys);
-        var_dump($token);
-        echo '</pre>';
-
         if (isset($token)) {
 
             $this -> session -> set_userdata('token', $token);
@@ -235,10 +226,10 @@ class Welcome extends CI_Controller {
         $this -> load -> library('user_agent');
 
         if(!$this -> agent -> is_mobile()){
-            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check/pc');
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check?type=pc');
 
         }else{
-            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check/mobile');
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check?type=mobile');
         }
 
         $this->load->helper('url');
@@ -246,7 +237,7 @@ class Welcome extends CI_Controller {
     }
 
     //直接开团回调
-    public function weibologin_go_check($client){
+    public function weibologin_go_check(){
         include_once('./Weibo.php');
 
         $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
@@ -254,7 +245,7 @@ class Welcome extends CI_Controller {
         if (isset($_REQUEST['code'])) {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
-            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibologin_go_check/' . $client;
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibologin_go_check' ;
             try {
                 $token = $o->getAccessToken('code', $keys ) ;
             } catch (OAuthException $e) {
@@ -300,7 +291,7 @@ class Welcome extends CI_Controller {
 
         if($this -> user_model -> getUser($uid)){
             //根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
-            if($client == 'pc'){
+            if($_GET['type'] == 'pc'){
                 redirect(base_url("rank"));
             }else{
                 redirect(base_url("member_mobile"));
