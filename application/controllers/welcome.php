@@ -249,7 +249,12 @@ class Welcome extends CI_Controller {
             }
         }
 
-//        if (isset($token)) {
+        echo '<pre>';
+        var_dump($keys);
+        var_dump($token);
+        echo '</pre>';
+
+        if (isset($token)) {
 
             $this -> session -> set_userdata('token', $token);
 
@@ -275,11 +280,11 @@ class Welcome extends CI_Controller {
 
                 $uid = $uid_get['uid'];
             }
-//        }else{
-//            header("Content-type:text/html;charset=utf-8");
-//            echo '授权验证失败！';
-//            return;
-//        }
+        }else{
+            header("Content-type:text/html;charset=utf-8");
+            echo '授权验证失败！';
+            return;
+        }
 
 
         $this->load->helper('url');
