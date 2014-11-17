@@ -170,6 +170,11 @@ class Welcome extends CI_Controller {
             }
         }
 
+        echo '<pre>';
+        var_dump($keys);
+        var_dump($token);
+        echo '</pre>';
+
         if (isset($token)) {
 
             $this -> session -> set_userdata('token', $token);
