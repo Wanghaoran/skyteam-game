@@ -86,7 +86,8 @@ var StartLayer = cc.Layer.extend({
             if(tuan == 1){
                 window.location.href = "http://skyteam.tianxun.cn/welcome/weibologin";
             }else{
-                alert('您已经在天团中，不需要再开团啦！');
+                window.location.href = "http://skyteam.tianxun.cn/rank";
+//                alert('您已经在天团中，不需要再开团啦！');
             }
         });
         startGameBtn.setPosition(winSize.width/2-130,150);
