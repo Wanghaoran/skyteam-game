@@ -334,7 +334,7 @@
                                 text_weibo += '@' + y;
                             });
 
-                            w.location = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text_weibo + "&content=utf-8&source=&sourceUrl=&pic=" + pic;
+                            w.location = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text_weibo + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
 
 
                         setTimeout(function(){
