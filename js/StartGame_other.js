@@ -422,13 +422,23 @@ var GameOver1Layer  = cc.Layer.extend({
         var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){
 
             if(tuan == 1){
-                window.location.href = "http://skyteam.tianxun.cn";
+                window.location.href = "http://skyteam.tianxun.cn/welcome/jointeam";
             }else{
-                alert('您已经在天团中，不需要再开团啦！');
+                window.location.href = "http://skyteam.tianxun.cn/rank";
             }
 
         });
-        var joinBtn = cc.MenuItemImage.create(res.joinBtn,res.joinBtn,function(){ window.location.href = "http://skyteam.tianxun.cn/welcome/jointeam?tid=" + tid;});
+        var joinBtn = cc.MenuItemImage.create(res.joinBtn,res.joinBtn,function(){
+
+
+            if(tuan == 1){
+                window.location.href = "http://skyteam.tianxun.cn/welcome/jointeam?tid=" + tid;
+            }else{
+                window.location.href = "http://skyteam.tianxun.cn/rank";
+            }
+
+
+        });
         shareBtn.setPosition(winSize.width/2+250, winSize.height/2-40);
         againBtn.setPosition(winSize.width/2-220,143);
         createBtn.setPosition(winSize.width/2,143);

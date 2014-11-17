@@ -632,8 +632,10 @@ class Welcome extends CI_Controller {
         $this -> load -> model('user_model');
         //判断是否是天团用户，天团用户不能再开团
         if(!$this->session->userdata('token')['uid'] || !$this -> user_model -> getUser($this->session->userdata('token')['uid'])){
+            //可以建团
             $data['tuan'] = 1;
         }else{
+            //不可建团
             $data['tuan'] = 2;
         }
 
