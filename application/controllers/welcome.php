@@ -214,6 +214,91 @@ class Welcome extends CI_Controller {
         }
     }
 
+    //微博登录，直接开团
+    public function weibologin_go(){
+
+        include_once('./Weibo.php');
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
+
+        $this -> load -> library('user_agent');
+
+        if(!$this -> agent -> is_mobile()){
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check/pc');
+
+        }else{
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibologin_go_check/mobile');
+        }
+
+        $this->load->helper('url');
+        redirect($code_url);
+    }
+
+    //直接开团回调
+    public function weibologin_go_check($client){
+        include_once('./Weibo.php');
+
+        $o = new SaeTOAuthV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa');
+
+        if (isset($_REQUEST['code'])) {
+            $keys = array();
+            $keys['code'] = $_REQUEST['code'];
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            try {
+                $token = $o->getAccessToken('code', $keys ) ;
+            } catch (OAuthException $e) {
+            }
+        }
+
+        if (isset($token)) {
+
+            $this -> session -> set_userdata('token', $token);
+
+            setcookie('weibojs_'.$o->client_id, http_build_query($token));
+
+            $c = new SaeTClientV2('198618609', '1231a5cb513e887a00e5e6f5e274fbfa', $this->session->userdata('token')['access_token']);
+
+            $uid_get = $c->get_uid();
+
+            if(isset($uid_get['error']) && $uid_get['error_code'] == 21321){
+
+                header("Content-type:text/html;charset=utf-8");
+                echo '新浪微博登录功能正在等待微博方面审核，请稍后再试试';
+                return;
+
+            }else if(isset($uid_get['error']) && $uid_get['error_code'] != 21321){
+
+                header("Content-type:text/html;charset=utf-8");
+                echo $uid_get['error'];
+                return;
+
+            }else{
+
+                $uid = $uid_get['uid'];
+            }
+        }else{
+            header("Content-type:text/html;charset=utf-8");
+            echo '授权验证失败！';
+            return;
+        }
+
+
+        $this->load->helper('url');
+
+        $this -> load -> model('user_model');
+
+        if($this -> user_model -> getUser($uid)){
+            //根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
+            if($client == 'pc'){
+                redirect(base_url("rank"));
+            }else{
+                redirect(base_url("member_mobile"));
+            }
+        }else{
+            //创建天团
+            redirect(base_url("start"));
+        }
+    }
+
     //创建天团
     public function start(){
 

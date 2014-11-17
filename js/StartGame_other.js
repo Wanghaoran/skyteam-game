@@ -422,7 +422,7 @@ var GameOver1Layer  = cc.Layer.extend({
         var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){
 
             if(tuan == 1){
-                window.location.href = "http://skyteam.tianxun.cn/start";
+                window.location.href = "http://skyteam.tianxun.cn/weibologin_go";
             }else{
                 window.location.href = "http://skyteam.tianxun.cn/rank";
             }
