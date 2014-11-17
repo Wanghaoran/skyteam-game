@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 
     //加入天团
     public function jointeam(){
+
         $tid = $this->input->get('tid');
 
         include_once('./Weibo.php');
@@ -46,6 +47,11 @@ class Welcome extends CI_Controller {
             } catch (OAuthException $e) {
             }
         }
+
+        echo '<pre>';
+        var_dump($keys);
+        var_dump($token);
+        echo '</pre>';
 
         if (isset($token)) {
 
