@@ -321,10 +321,9 @@ class Welcome extends CI_Controller {
 
         $data['friend_results'] = $friend_results;
 
-        echo '<pre>';
-        var_dump($friend_result);
-        echo '</pre>';
-
+        foreach($friend_results['users'] as $value){
+            echo $value['name'] . '<br/>';
+        }
 
         //循环结果数组，
         foreach($result_type as $key => $value){
