@@ -164,10 +164,9 @@ class Welcome extends CI_Controller {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
             $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck/' . $client;
-            try {
+
                 $token = $o->getAccessToken('code', $keys ) ;
-            } catch (OAuthException $e) {
-            }
+
         }
 
 
