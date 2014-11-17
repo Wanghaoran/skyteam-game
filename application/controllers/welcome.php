@@ -224,6 +224,10 @@ class Welcome extends CI_Controller {
             redirect(base_url('rank'));
         }
 
+        echo '<pre>';
+        var_dump($this->session->all_userdata());
+        echo '</pre>';
+
 
         if(isset($_COOKIE['start_num'])){
             $start_num = $_COOKIE['start_num'];
