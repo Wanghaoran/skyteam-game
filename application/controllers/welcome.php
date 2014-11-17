@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
         if (isset($_REQUEST['code'])) {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
-            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck_join/' . $tid;
             try {
                 $token = $o->getAccessToken('code', $keys ) ;
             } catch (OAuthException $e) {
@@ -242,7 +242,7 @@ class Welcome extends CI_Controller {
         if (isset($_REQUEST['code'])) {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
-            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibologin_go_check/' . $client;
             try {
                 $token = $o->getAccessToken('code', $keys ) ;
             } catch (OAuthException $e) {
