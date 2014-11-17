@@ -87,7 +87,7 @@
             <div class="foot_img"><img src="<?=$this->config->base_url()?>static/mobile/images/home_foot.jpg"/></div>
             <div class="foot_nav">
                 <ul>
-                    <li><a href="<?=$this->config->base_url()?>rank_mobile"></a></li>
+                    <li><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" href="<?=$this->config->base_url()?>rank_mobile"></a></li>
                     <li><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>rules"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>member_mobile"></a></li>

@@ -10,6 +10,9 @@
     <script>
         var shareWeibo = function(tid){
 
+            _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareWeiboTeamA']);
+
+
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
@@ -18,6 +21,9 @@
         }
 
         var shareQQ = function(tid){
+
+            _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareQQTeamA']);
+
 
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
@@ -30,6 +36,9 @@
 
         var shareRenren = function(tid){
 
+            _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareRenrenTeamA']);
+
+
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
@@ -41,6 +50,9 @@
 
         var shareDouban = function(tid){
 
+            _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareDoubanTeamA']);
+
+
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '');
             var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
@@ -50,18 +62,54 @@
 
     </script>
 
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-246109-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <script type="text/javascript">
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-246109-81', 'auto', {'allowLinker': true});
+
+        // load the cross-domain linker plugin
+        ga('require', 'linker');
+
+        // define Skyscanner domains
+        var ga_skyscannerDomains = ["skyscanner.net","skyscanneraffiliate.net","hotels.skyscanner.com","redirect.datahc.com","www.goeverywhere.sg","bus.skyscanner.co.in","tianxun.hotelscombined.cn","hotels.skyscanner.co.kr","gr.skyscanner.com","www.skyscanner.at","www.skyscanner.ca","www.skyscanner.ch","www.skyscanner.co.id","www.skyscanner.co.in","www.skyscanner.co.kr","www.skyscanner.co.nz","www.skyscanner.co.th","www.skyscanner.com","www.skyscanner.com.au","www.skyscanner.com.br","www.skyscanner.com.hk","www.skyscanner.com.my","www.skyscanner.com.ph","www.skyscanner.com.sg","www.skyscanner.com.tr","www.skyscanner.com.tw","www.skyscanner.com.ua","www.skyscanner.com.vn","www.skyscanner.cz","www.skyscanner.de","www.skyscanner.dk","www.skyscanner.es","www.skyscanner.fi","www.skyscanner.fr","www.skyscanner.gg","www.skyscanner.hu","www.skyscanner.ie","www.skyscanner.it","www.skyscanner.jp","www.skyscanner.net","www.skyscanner.nl","www.skyscanner.no","www.skyscanner.pl","www.skyscanner.pt","www.skyscanner.ro","www.skyscanner.ru","www.skyscanner.se","www.tianxun.cn","skyteam.tianxun.cn"];
+
+        // set the domains to autoLink
+        ga('linker:autoLink', ga_skyscannerDomains);
+        ga('send', 'pageview');
+
+    </script>
+
 </head>
 <body>
 <div class="ny_head">
     <div class="ny_nav">
         <ul>
-            <li class="li1"><a href="<?=$this->config->base_url()?>"></a></li>
-            <li class="li2"><a href="<?=$this->config->base_url()?>rules"></a></li>
-            <li class="li3"><a class="cur" href="#"></a></li>
-            <li class="li4"><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
+            <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="<?=$this->config->base_url()?>"></a></li>
+            <li class="li2"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
+            <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" class="cur" href="#"></a></li>
+            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
-    <a href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
+    <a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
+
 
 </div>
 <div class="clear"></div>
@@ -111,7 +159,7 @@
                                     <img src="<?=$value['leader'][0]['avatar_large']?>"/>
                                     <div><?=$value['leader'][0]['name']?></div>
                                 </a>
-                                <a href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>" target="_blank" class="guanzhu"></a>
+                                <a onClick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'FollowTeamA']);" href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>" target="_blank" class="guanzhu"></a>
                             </div>
                             <div class="tab_phbinfo">
                                 <table>
@@ -148,7 +196,7 @@
                             </div>
                         </div>
                         <div class="tab_phblist_right">
-                            <a href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
+                            <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LikeTeamA']);" href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
                             <a href="javascript:shareWeibo(<?=$value['id']?>);" class="btn_fenxiang"></a>
                             <a href="javascript:shareQQ(<?=$value['id']?>);" class="icon_qq"></a>
                             <a href="javascript:shareRenren(<?=$value['id']?>);" class="icon_rr"></a>

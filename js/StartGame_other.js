@@ -83,6 +83,9 @@ var StartLayer = cc.Layer.extend({
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
 
+            _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'CreateTeam']);
+
+
             if(tuan == 1){
                 window.location.href = "http://skyteam.tianxun.cn/welcome/weibologin";
             }else{
@@ -422,6 +425,9 @@ var GameOver1Layer  = cc.Layer.extend({
         var againBtn = cc.MenuItemImage.create(res.againBtn,res.againBtn,null,this.scene.againGame, this.scene);
         var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){
 
+            _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'CreateTeam']);
+
+
             if(tuan == 1){
                 window.location.href = "http://skyteam.tianxun.cn/welcome/weibologin_go";
             }else{
@@ -430,6 +436,8 @@ var GameOver1Layer  = cc.Layer.extend({
 
         });
         var joinBtn = cc.MenuItemImage.create(res.joinBtn,res.joinBtn,function(){
+
+            _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'JoinTeam']);
 
 
             if(tuan == 1){
@@ -503,6 +511,9 @@ var GameOver2Layer  = cc.Layer.extend({
 
 var ShareLayer = cc.Layer.extend({
     ctor:function(scene,isPc){
+
+        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'ShareGame']);
+
         this._super();
         this.scene = scene;
         var winSize = cc.director.getWinSize();
@@ -620,6 +631,7 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.startlayer);
     },
     startGame:function(){
+        _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'StartGame']);
         this.startlayer.removeFromParent(true);
         this.startlayer = null;
         this.gameState = this.START;
@@ -661,6 +673,8 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.gameoverlayer,20,20);
     },
     againGame:function(){
+        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
+
         this.initStart();
         if(this.gameoverlayer) {
             this.gameoverlayer.removeFromParent(true);

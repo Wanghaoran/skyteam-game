@@ -74,8 +74,6 @@ var GameBgdLayer = cc.Layer.extend({
 var StartLayer = cc.Layer.extend({
     ctor:function(scene){
 
-        alert(123);
-
         this._super();
         this.scene = scene;
         var winSize = cc.director.getWinSize();
@@ -85,6 +83,8 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
+            _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'CreateTeam']);
+
             window.location.href = "http://skyteam.tianxun.cn/start";
         });
         startGameBtn.setPosition(winSize.width/2-130,150);
@@ -460,7 +460,11 @@ var GameOver2Layer  = cc.Layer.extend({
             this.scene.gameoverlayer.setVisible(false);
             this.scene.addChild(new ShareLayer(this.scene),10);
         }, this);
-        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn,res.selfOverBtn,function(){ window.location.href = "start";});
+        var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn,res.selfOverBtn,function(){
+            _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'CreateTeam']);
+
+            window.location.href = "start";
+        });
         var againBtn = cc.MenuItemImage.create(res.againBtn,res.againBtn,null,this.scene.againGame, this.scene);
         shareBtn.setPosition(winSize.width/2+250, winSize.height/2-40);
         selfOverBtn.setPosition(winSize.width/2-120, winSize.height/2-125);
@@ -482,6 +486,10 @@ var GameOver2Layer  = cc.Layer.extend({
 
 var ShareLayer = cc.Layer.extend({
     ctor:function(scene,isPc){
+
+        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'ShareGame']);
+
+
         this._super();
         this.scene = scene;
         var winSize = cc.director.getWinSize();
@@ -599,10 +607,14 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.startlayer);
     },
     startGame:function(){
+
         this.startlayer.removeFromParent(true);
         this.startlayer = null;
         this.gameState = this.START;
         this.scheduleUpdate();
+
+        _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'StartGame']);
+
     },
     /*planeDead: function(){
         this.gameState = this.DEAD;
@@ -630,6 +642,8 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.gameoverlayer,20,20);
     },
     againGame:function(){
+        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
+
         this.initStart();
         if(this.gameoverlayer) {
             this.gameoverlayer.removeFromParent(true);
