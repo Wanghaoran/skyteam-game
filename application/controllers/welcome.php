@@ -143,10 +143,10 @@ class Welcome extends CI_Controller {
         $this -> load -> library('user_agent');
 
         if(!$this -> agent -> is_mobile()){
-            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck/pc');
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck?type=pc');
 
         }else{
-            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck/mobile');
+            $code_url = $o->getAuthorizeURL('http://skyteam.tianxun.cn/welcome/weibocheck?type=mobile');
         }
 
         $this->load->helper('url');
@@ -154,7 +154,7 @@ class Welcome extends CI_Controller {
     }
 
     //weibo 登陆回调验证
-    public function weibocheck($client){
+    public function weibocheck(){
 
         include_once('./Weibo.php');
 
@@ -163,10 +163,11 @@ class Welcome extends CI_Controller {
         if (isset($_REQUEST['code'])) {
             $keys = array();
             $keys['code'] = $_REQUEST['code'];
-            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck/' . $client;
-
+            $keys['redirect_uri'] = 'http://skyteam.tianxun.cn/welcome/weibocheck';
+            try {
                 $token = $o->getAccessToken('code', $keys ) ;
-
+            } catch (OAuthException $e) {
+            }
         }
 
 
@@ -214,7 +215,7 @@ class Welcome extends CI_Controller {
 
         if($this -> user_model -> getUser($uid)){
             //根据微博UID判断是否已经开团，如果开团了酒直接跳转到天团排行榜页面，没开则进入创建天团页面；
-            if($client == 'pc'){
+            if($_GET['type'] == 'pc'){
                 redirect(base_url("rank"));
             }else{
                 redirect(base_url("member_mobile"));
