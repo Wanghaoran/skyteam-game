@@ -322,7 +322,7 @@ class Welcome extends CI_Controller {
         $data['friend_results'] = $friend_results;
 
         foreach($friend_result['users'] as $value){
-            echo $value['name'] . '<br/>';
+            echo $value['name'] . '－' . $value['id'] . '<br/>';
         }
 
 
