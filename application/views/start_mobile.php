@@ -474,7 +474,7 @@
                     <input name='r' type="radio" value='6' /><label place_id="6"><div class="l6"></div></label>
                     <input name='r' type="radio" value='7' /><label place_id="7"><div class="l7"></div></label>
                     <input name='r' type="radio" value='8' /><label place_id="8"><div class="l8"></div></label>
-                    <input name='r' type="radio" value='9' /><label place_id="9"><div class="l9"></div></label>
+                    <input name='r' type="radio" value='9' /><label place_id="9" style="margin:0 0 0 25%"><div class="l9"></div></label>
                     <input name='r' type="radio" value='10' /><label place_id="10"><div class="l10"></div></label>
                 </div>
                 <div class="btn_next"><a  href="javascript:void(0);" class="xinlang"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_zskt.png"/></a></div>

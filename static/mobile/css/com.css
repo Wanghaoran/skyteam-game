@@ -162,7 +162,7 @@ textarea{resize:none;overflow:auto;}
 .mydiv .popdiv1 img{ width:100%;}
 .mydiv .popdiv1 .popcon{ width:92.5%; position:absolute; top:3%; left:3.8%;}
 .mydiv .popdiv1 .popcon .img_cjtm{ width:100%;}
-.mydiv .popdiv1 .popcon .img_cjtm input.inputclass3{ position:absolute; left:24%; top:1.5%; width:56%; height:6%; line-height:6%; border:none; font-size:16px;}
+.mydiv .popdiv1 .popcon .img_cjtm input.inputclass3{ position:absolute; left:24%; top:1.5%; width:56%; height:6%; line-height:100%; border:none; font-size:12px;}
 .hidebg { width:100%; height:100%; background: #5be2ed;   filter:alpha(opacity=70);/*IE*/    opacity:0.7;/*FF*/    z-index:1;  position:absolute;/*IE6*/ position:fixed; left:0; top:0;}  
 .mydiv .popdiv1 .popcon .img_xh{ width:100%; margin:1% 0;}
 
@@ -206,9 +206,9 @@ textarea{resize:none;overflow:auto;}
 .radioimg .hRadio div{width:70px; height:58.33px;display:inline-block; }
 
 .radioimg2{ position:absolute; top:10.5%; left:21.5%; width:78%; height:10%}
-.radioimg2 .hRadio{display:inline-block;cursor:pointer;vertical-align:middle; width:22.5%; height:100%; margin:0 3% 3% 0;}
-.radioimg2 .hRadio div{ width:100%; height:100%; display:block;}
-.radioimg2 .hRadio_Checked { background:url(../images/icon_gou.png) 10% center no-repeat;}
+.radioimg2 .hRadio{display:inline-block;cursor:pointer;vertical-align:middle; width:26.64%; height:100%; margin:0.8% 0 2.2% 0;}
+.radioimg2 .hRadio div{ width:35%; height:100%; float:left; display:block;}
+.radioimg2 .hRadio_Checked div { background:url(../images/icon_gou.png) center no-repeat;}
 
 .kol{ width:100%;}
 .tab_kol{ width:93.75%; margin:10px auto;}
