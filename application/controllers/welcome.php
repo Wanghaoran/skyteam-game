@@ -78,7 +78,7 @@ class Welcome extends CI_Controller {
             }
         }else{
             header("Content-type:text/html;charset=utf-8");
-            echo '授权验证失败！';
+            echo '授权验证失败！请您重新打开链接再试一次！';
             return;
         }
 
@@ -217,7 +217,7 @@ class Welcome extends CI_Controller {
             }
         }else{
             header("Content-type:text/html;charset=utf-8");
-            echo '授权验证失败！';
+            echo '授权验证失败！请您重新打开链接再试一次！';
             return;
         }
 
@@ -302,7 +302,7 @@ class Welcome extends CI_Controller {
             }
         }else{
             header("Content-type:text/html;charset=utf-8");
-            echo '授权验证失败！';
+            echo '授权验证失败！请您重新打开链接再试一次！';
             return;
         }
 

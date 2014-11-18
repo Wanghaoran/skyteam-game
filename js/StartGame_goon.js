@@ -82,6 +82,7 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
+            _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'CreateTeam']);
             window.location.href = "http://skyteam.tianxun.cn/rank";
 
         });
@@ -607,6 +608,9 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.startlayer);
     },
     startGame:function(){
+
+        _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'StartGame']);
+
         this.startlayer.removeFromParent(true);
         this.startlayer = null;
         this.gameState = this.START;
