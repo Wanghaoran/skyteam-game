@@ -17,7 +17,7 @@
             "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
             "img_width": "200",
             "img_height": "200",
-            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
+            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WCH_00349_00001&utm_source=wechat&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
             "desc":  "起飞吧朋友，接力拼里程，共赢12万旅行红包",
             "title": "起飞吧朋友，接力拼里程，共赢12万旅行红包"
         };

@@ -19,7 +19,7 @@
             "img_url": "http://skyteam.tianxun.cn/static/share_icon.png",
             "img_width": "200",
             "img_height": "200",
-            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
+            "link": "http://skyteam.tianxun.cn/?associateid=SOC_WCH_00349_00001&utm_source=wechat&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share",
             "desc":  "起飞吧朋友，接力拼里程，共赢12万旅行红包",
             "title": "起飞吧朋友，接力拼里程，共赢12万旅行红包"
         };
@@ -57,7 +57,7 @@
                     display: "block"
                 });
 
-                shareData.link = 'http://skyteam.tianxun.cn/game_other?tid=<?=$user_result['tid']?>';
+                shareData.link = 'http://skyteam.tianxun.cn/game_other?tid=<?=$user_result['tid']?>&associateid=SOC_WCH_00349_00001&utm_source=wechat&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game';
 
                 $("#popDiv").show();
             });
@@ -108,7 +108,7 @@
                 }
             });
 
-            var text = encodeURIComponent('是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + ' 得分第一名就一起飞！')
+            var text = encodeURIComponent('是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game 得分第一名就一起飞！')
             url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
