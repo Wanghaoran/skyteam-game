@@ -647,7 +647,6 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.gameoverlayer,20,20);
     },
     againGame:function(){
-        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
 
         $.ajax({
             type : 'POST',
@@ -659,6 +658,10 @@ var StartGame = cc.Scene.extend({
                 token = ress;
             }
         });
+
+        _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
+
+
 
         this.initStart();
         if(this.gameoverlayer) {

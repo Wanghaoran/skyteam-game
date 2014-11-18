@@ -747,6 +747,7 @@ class Welcome extends CI_Controller {
             //删除token
             $this -> token_model -> delToken($token);
         }else{
+            echo 'bad';
             return;
         }
 
