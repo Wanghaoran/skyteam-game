@@ -83,6 +83,18 @@ class Welcome extends CI_Controller {
         }
 
 
+        //调试信息 Start
+        $this -> load -> model('user_model');
+        //查询天团人数
+        $num_arr = $this -> user_model -> teamnum($tid);
+
+        var_dump($num_arr);
+
+        //调试信息 End
+
+
+        /*
+
         //如果这个UID已经存在，则不能加入其他天团
         $this -> load -> model('user_model');
         if($this -> user_model -> getUser($this->session->userdata('token')['uid'])){
@@ -127,6 +139,8 @@ class Welcome extends CI_Controller {
             }
 
         }
+
+        */
 
 
 
