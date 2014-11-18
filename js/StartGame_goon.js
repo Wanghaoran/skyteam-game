@@ -652,8 +652,6 @@ var StartGame = cc.Scene.extend({
             type : 'POST',
             url : 'http://skyteam.tianxun.cn/welcome/getToken',
             data : '',
-            async : false,
-            dataType : 'json',
             success : function(ress){
                 token = ress;
             }
