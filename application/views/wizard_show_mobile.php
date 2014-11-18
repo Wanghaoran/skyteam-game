@@ -172,18 +172,18 @@
 
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/21.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/veni/cheap-flights-to-venice.html"><img src="<?=$this->config->base_url()?>static/pc/place/21.jpg" /></a>
                             <div class="left_title">意大利 威尼斯</div>
                             </dt>
                             <dd>
-                                <h2>意大利 威尼斯</h2>
+                                <h2>威尼斯：梦想之地</h2>
                                 <P>乘坐美丽的贡多拉，穿行在大运河，岸上的建筑慢悠悠向身后退去，一切都仿佛只有在梦里才能实现，也可以无所事事地在大桥小桥之间穿梭、游走，听听教堂的钟声，喂喂广场的鸽子，每一分钟就多一分不舍</P>
                             </dd>
                             <div class="clear10"></div>
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/22.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/mv/cheap-flights-to-maldives.html"><img src="<?=$this->config->base_url()?>static/pc/place/22.jpg" /></a>
                             <div class="left_title">马尔代夫</div>
                             </dt>
                             <dd>
@@ -194,7 +194,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/23.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/cmba/cheap-flights.html"><img src="<?=$this->config->base_url()?>static/pc/place/23.jpg" /></a>
                             <div class="left_title">斯里兰卡 科伦坡</div>
                             </dt>
                             <dd>
@@ -205,7 +205,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/24.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/prg/cheap-flights-to-prague-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/24.jpg" /></a>
                             <div class="left_title">捷克 布拉格</div>
                             </dt>
                             <dd>
@@ -216,7 +216,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/25.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/cai/cheap-flights-to-cairo-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/25.jpg" /></a>
                             <div class="left_title">埃及 开罗</div>
                             </dt>
                             <dd>
@@ -227,7 +227,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/26.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/gva/cheap-flights-to-geneva-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/26.jpg" /></a>
                             <div class="left_title">瑞士 日内瓦</div>
                             </dt>
                             <dd>
@@ -238,7 +238,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/27.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/zqn/cheap-flights-to-queenstown-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/27.jpg" /></a>
                             <div class="left_title">新西兰 皇后镇</div>
                             </dt>
                             <dd>
@@ -249,7 +249,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/28.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/mosc/cheap-flights-to-moscow.html"><img src="<?=$this->config->base_url()?>static/pc/place/28.jpg" /></a>
                             <div class="left_title">俄罗斯 莫斯科</div>
                             </dt>
                             <dd>
@@ -260,7 +260,7 @@
                         </dl>
                     <dl>
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/29.jpg" /></a>
+                            <a href="http://www.tianxun.cn/flights-to/edi/cheap-flights-to-edinburgh-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/29.jpg" /></a>
                         <div class="left_title">英国 爱丁堡</div>
                         </dt>
                         <dd>
@@ -271,7 +271,7 @@
                     </dl>
                     <dl class="dl_margin">
                         <dt>
-                            <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/30.jpg" /></a>
+                            <a href="http://www.tianxun.cn/flights-to/cun/cheap-flights-to-cancun-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/30.jpg" /></a>
                         <div class="left_title">墨西哥 坎昆</div>
                         </dt>
                         <dd>

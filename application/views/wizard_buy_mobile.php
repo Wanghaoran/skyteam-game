@@ -169,7 +169,7 @@
 
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/11.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/osaa/cheap-flights-to-osaka.html"><img src="<?=$this->config->base_url()?>static/pc/place/11.jpg" /></a>
                             <div class="left_title">日本 大阪</div>
                             </dt>
                             <dd>
@@ -180,7 +180,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/12.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/sela/cheap-flights-to-seoul.html"><img src="<?=$this->config->base_url()?>static/pc/place/12.jpg" /></a>
                             <div class="left_title">韩国 首尔</div>
                             </dt>
                             <dd>
@@ -191,7 +191,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/13.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/hkg/cheap-flights-to-hong-kong-international-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/13.jpg" /></a>
                             <div class="left_title">香港</div>
                             </dt>
                             <dd>
@@ -202,7 +202,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/14.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/ista/cheap-flights-to-istanbul.html"><img src="<?=$this->config->base_url()?>static/pc/place/14.jpg" /></a>
                             <div class="left_title">土耳其 伊斯坦布尔</div>
                             </dt>
                             <dd>
@@ -213,7 +213,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/15.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/dxba/cheap-flights-to-dubai.html"><img src="<?=$this->config->base_url()?>static/pc/place/15.jpg" /></a>
                             <div class="left_title">阿联酋 迪拜</div>
                             </dt>
                             <dd>
@@ -224,7 +224,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/16.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/lond/cheap-flights-to-london.html"><img src="<?=$this->config->base_url()?>static/pc/place/16.jpg" /></a>
                             <div class="left_title">英国 伦敦</div>
                             </dt>
                             <dd>
@@ -235,7 +235,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/17.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/ams/cheap-flights-to-amsterdam-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/17.jpg" /></a>
                             <div class="left_title">荷兰 阿姆斯特丹</div>
                             </dt>
                             <dd>
@@ -246,7 +246,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/18.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/fran/cheap-flights-to-frankfurt.html"><img src="<?=$this->config->base_url()?>static/pc/place/18.jpg" /></a>
                             <div class="left_title">德国 法兰克福</div>
                             </dt>
                             <dd>
@@ -257,7 +257,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/19.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/pari/cheap-flights-to-paris.html"><img src="<?=$this->config->base_url()?>static/pc/place/19.jpg" /></a>
                             <div class="left_title">法国 巴黎</div>
                             </dt>
                             <dd>
@@ -268,7 +268,7 @@
                         </dl>
                         <dl class="dl_margin">
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/20.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/nyca/cheap-flights-to-new-york.html"><img src="<?=$this->config->base_url()?>static/pc/place/20.jpg" /></a>
                             <div class="left_title">美国 纽约</div>
                             </dt>
                             <dd>

@@ -171,7 +171,7 @@
 
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/1.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/sgn/cheap-flights-to-ho-chi-minh-city-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/1.jpg" /></a>
                             <div class="left_title">越南 胡志明市</div>
                             </dt>
                             <dd>
@@ -183,11 +183,11 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/2.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/sin/cheap-flights-to-singapore-changi-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/2.jpg" /></a>
                             <div class="left_title">新加坡</div>
                             </dt>
                             <dd>
-                                <h2>新加坡</h2>
+                                <h2>新加坡： 吃遍东南亚</h2>
                                 <P>在这个多种族的地方，吃的喝的都得是包罗万象才成，是名副其实的美食乐园，除了土生土长的“娘惹”，还可以尝遍亚洲美食，胡椒蟹必须吃吧？海南鸡饭必须吃吧？咖喱鱼头要吃吧？肉骨茶要喝吧？等不及了，这就出发！</P>
                             </dd>
                             <div class="clear10"></div>
@@ -196,7 +196,7 @@
 
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/3.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/bkkt/cheap-flights-to-bangkok.html"><img src="<?=$this->config->base_url()?>static/pc/place/3.jpg" /></a>
                             <div class="left_title">泰国 曼谷</div>
                             </dt>
                             <dd>
@@ -208,7 +208,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/4.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/tyoa/cheap-flights-to-tokyo.html"><img src="<?=$this->config->base_url()?>static/pc/place/4.jpg" /></a>
                             <div class="left_title">日本 东京</div>
                             </dt>
                             <dd>
@@ -220,7 +220,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/5.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/tpet/cheap-flights-to-taipei.html"><img src="<?=$this->config->base_url()?>static/pc/place/5.jpg" /></a>
                             <div class="left_title">台湾 台北</div>
                             </dt>
                             <dd>
@@ -232,29 +232,29 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/6.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/flr/cheap-flights-to-florence-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/6.jpg" /></a>
                             <div class="left_title">意大利 佛罗伦萨</div>
                             </dt>
                             <dd>
-                                <h2>意大利 佛罗伦萨</h2>
+                                <h2>佛罗伦萨：那一块牛排的事</h2>
                                 <P>血淋淋的T骨牛排，1公斤起买，不吃撑着了就对不起自己，冲着这一块牛排来佛罗伦萨的大有人在，当然还得再来点儿方菌菇意面，或者番茄海鲜鱼汤，想吃得特别“意大利”别忘了佐以红酒~</P>
                             </dd>
                             <div class="clear10"></div>
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/7.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/brus/cheap-flights-to-brussels.html"><img src="<?=$this->config->base_url()?>static/pc/place/7.jpg" /></a>
                             <div class="left_title">比利时 布鲁塞尔</div>
                             </dt>
                             <dd>
-                                <h2>比利时 布鲁塞尔</h2>
+                                <h2>布鲁塞尔： 巧克力大咖</h2>
                                 <P>辣椒味的巧克力、房子一样大的巧克力、巧克力壁画、巧克力火锅，在他们面前，朴素的德芙好时麦丽素应该无处遁形了吧，比利时人把每块巧克力都当做艺术品，来布鲁塞尔亲手制作一块属于你自己的巧克力吧</P>
                             </dd>
                             <div class="clear10"></div>
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/8.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/muc/cheap-flights-to-munich-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/8.jpg" /></a>
                             <div class="left_title">德国 慕尼黑</div>
                             </dt>
                             <dd>
@@ -265,7 +265,7 @@
                         </dl>
                         <dl>
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/9.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/bcn/cheap-flights-to-barcelona-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/9.jpg" /></a>
                             <div class="left_title">西班牙 巴塞罗那</div>
                             </dt>
                             <dd>
@@ -276,7 +276,7 @@
                         </dl>
                         <dl class="dl_margin">
                             <dt>
-                                <a href="#"><img src="<?=$this->config->base_url()?>static/pc/place/10.jpg" /></a>
+                                <a href="http://www.tianxun.cn/flights-to/syd/cheap-flights-to-sydney-kingsford-smith-airport.html"><img src="<?=$this->config->base_url()?>static/pc/place/10.jpg" /></a>
                             <div class="left_title">澳大利亚 悉尼</div>
                             </dt>
                             <dd>

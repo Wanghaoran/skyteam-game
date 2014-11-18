@@ -50,13 +50,13 @@
                 }
             });
 
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
+            var text = encodeURIComponent('约吗？我组团参加了@Skyscanner天巡 #起飞吧朋友#抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '中了就一起飞！')
+
             var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareQQ = function(){
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
 
             var url2 = '';
@@ -70,13 +70,14 @@
                     url2 = ress;
                 }
             });
+
+            var text = encodeURIComponent('约吗？我组团参加了@Skyscanner天巡 #起飞吧朋友#抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '中了就一起飞！')
 
             var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + url2 + '&title=' + text + '&pics=&summary=';
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareRenren = function(){
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！');
 
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
             var url2 = '';
@@ -90,13 +91,15 @@
                     url2 = ress;
                 }
             });
+
+            var text = encodeURIComponent('约吗？我组团参加了@Skyscanner天巡 #起飞吧朋友#抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '中了就一起飞！')
+
 
             var url = "http://share.renren.com/share/buttonshare.do?link=" + url2 + "&title=" + text + "";
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareDouban = function(){
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
 
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
             var url2 = '';
@@ -110,6 +113,9 @@
                     url2 = ress;
                 }
             });
+
+            var text = encodeURIComponent('约吗？我组团参加了@Skyscanner天巡 #起飞吧朋友#抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '中了就一起飞！')
+
 
             var url = "http://www.douban.com/recommend/?url=" + url2 + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
