@@ -88,7 +88,7 @@ class Welcome extends CI_Controller {
         //查询天团人数
         $num_arr = $this -> user_model -> teamnum($tid);
 
-        var_dump($num_arr);
+        var_dump($num_arr['count']);
 
         //调试信息 End
 
