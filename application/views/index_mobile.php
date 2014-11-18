@@ -40,6 +40,19 @@
             });
         }, false);
     </script>
+
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
+    </script>
+
 </head>
 <body>
 <!--pop start-->
@@ -87,9 +100,9 @@
             <div class="foot_img"><img src="<?=$this->config->base_url()?>static/mobile/images/home_foot.jpg"/></div>
             <div class="foot_nav">
                 <ul>
-                    <li><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" href="<?=$this->config->base_url()?>rank_mobile"></a></li>
-                    <li><a href="<?=$this->config->base_url()?>wizard_food"></a></li>
-                    <li class="short"><a href="<?=$this->config->base_url()?>rules"></a></li>
+                    <li><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);_smq.push(['custom','GoToTeamRank','LinkClick']);" href="<?=$this->config->base_url()?>rank_mobile"></a></li>
+                    <li><a onclick="_smq.push(['custom','GoToKOL','LinkClick']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
+                    <li class="short"><a onclick="" href="<?=$this->config->base_url()?>rules"></a></li>
                     <li class="short"><a href="<?=$this->config->base_url()?>member_mobile"></a></li>
                 </ul>
             </div>

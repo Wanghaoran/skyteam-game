@@ -16,7 +16,7 @@
 
         var shareWeibo = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareWeibo']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
             var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
@@ -24,8 +24,8 @@
 
         var shareQQ = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareQQ']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
 
@@ -35,8 +35,8 @@
 
         var shareRenren = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareRenren']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
             var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "&pic=" + pic;
@@ -45,8 +45,8 @@
 
         var shareDouban = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareDouban']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/R7euH2D');
             var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
@@ -86,6 +86,18 @@
         ga('linker:autoLink', ga_skyscannerDomains);
         ga('send', 'pageview');
 
+    </script>
+
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
     </script>
 
     <style>
@@ -169,6 +181,7 @@
         function showNext(){
 
             _gaq.push(['_trackEvent', 'TeamCreation', 'ButtonClick', 'CreateTeam']);
+            _smq.push(['custom','CreateTeam','ButtonClick']);
 
             var detection = false;
 
@@ -333,6 +346,7 @@
 
 
                 _gaq.push(['_trackEvent', 'TeamCreation', 'ButtonClick', 'SelectDestinationSydney']);
+                _smq.push(['custom','SelectDestination','ButtonClick']);
 
                 if(!result['place_id']){
                     alert('请您先选择目的地！');

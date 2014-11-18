@@ -36,8 +36,22 @@
                 }
             });
 
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
+            var url2 = '';
+            var b_url = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + b_url,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
+            var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
@@ -45,7 +59,19 @@
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
 
-            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + urls + '&title=' + text + '&pics=&summary=';
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + url2 + '&title=' + text + '&pics=&summary=';
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
@@ -53,8 +79,19 @@
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！');
 
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
 
-            var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "";
+            var url = "http://share.renren.com/share/buttonshare.do?link=" + url2 + "&title=" + text + "";
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
@@ -62,7 +99,19 @@
             var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
 
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=<?=$tid?>&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
-            var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var url = "http://www.douban.com/recommend/?url=" + url2 + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
@@ -80,6 +129,18 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
+    </script>
+
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
     </script>
 
     <script type="text/javascript">

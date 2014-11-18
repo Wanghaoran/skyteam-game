@@ -13,6 +13,8 @@
         var shareWeibo = function(tid){
 
             _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareWeiboTeamA']);
+            _smq.push(['custom','Share','ButtonClick']);
+            _smq.push(['custom','Invite','ButtonClick']);
 
             var pic = '';
             //获取PIC
@@ -49,25 +51,56 @@
         var shareQQ = function(tid){
 
             _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareQQTeamA']);
+            _smq.push(['custom','Share','ButtonClick']);
+            _smq.push(['custom','Invite','ButtonClick']);
 
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
+
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
 
-            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + urls + '&title=' + text + '&pics=' + pic + '&summary=';
+            var url = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + url2 + '&title=' + text + '&pics=' + pic + '&summary=';
             window.open (url, '分享到QQ空间', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareRenren = function(tid){
 
             _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareRenrenTeamA']);
+            _smq.push(['custom','Share','ButtonClick']);
+            _smq.push(['custom','Invite','ButtonClick']);
 
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
+
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
-            var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "&pic=" + pic;
+            var url = "http://share.renren.com/share/buttonshare.do?link=" + url2 + "&title=" + text + "&pic=" + pic;
             window.open (url, '分享到人人网', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
         }
@@ -75,10 +108,25 @@
         var shareDouban = function(tid){
 
             _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareDoubanTeamA']);
+            _smq.push(['custom','Share','ButtonClick']);
+            _smq.push(['custom','Invite','ButtonClick']);
 
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game 得分第一名就一起飞！')
             var urls = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
-            var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
+            var url2 = '';
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + urls,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
+
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 ＃起飞吧朋友＃ 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
+
+            var url = "http://www.douban.com/recommend/?url=" + url2 + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
 
         }
@@ -133,19 +181,31 @@
 
     </script>
 
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
+    </script>
+
 
 </head>
 <body>
 <div class="ny_head">
     <div class="ny_nav">
         <ul>
-            <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="<?=$this->config->base_url()?>"></a></li>
-            <li class="li2"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
-            <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" class="cur" href="#"></a></li>
-            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
+            <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="<?=$this->config->base_url()?>"></a></li>
+            <li class="li2"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);_smq.push(['custom','GoToCampaignRules','LinkClick']);" href="<?=$this->config->base_url()?>rules"></a></li>
+            <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);_smq.push(['custom','GoToTeamRank','LinkClick']);" class="cur" href="#"></a></li>
+            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);_smq.push(['custom','GoToKOL','LinkClick']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
-    <a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
+    <a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
 </div>
 <div class="clear"></div>
 <div class="ny_content">
@@ -162,9 +222,9 @@
             <div class="ny_admintitle">
 
         <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
-                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'DeleteTeam']);" href="javascript:deleteteam();" title="删除本团"></a>
+                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'DeleteTeam']);_smq.push(['custom','DeleteTeam','ButtonClick']);" href="javascript:deleteteam();" title="删除本团"></a>
         <?php endif; ?>
-            <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
+            <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
         </div>
 
 
@@ -196,7 +256,7 @@
     </div>
     <div class="clear"></div>
     <div class="ny_leftbtn">
-        <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'GoToGameGoOn']);" href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_go"></a>
+        <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'GoToGameGoOn']);_smq.push(['custom','GoTo','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_go"></a>
         <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="btn_comeon"></a>
         <div class="clear"></div>
         <div class="ny_lefticon">
@@ -272,7 +332,7 @@
                                     <img src="<?=$value['leader'][0]['avatar_large']?>"/>
                                     <div><?=$value['leader'][0]['name']?></div>
                                 </a>
-                                <a onClick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'FollowTeamA']);" href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>" target="_blank" class="guanzhu"></a>
+                                <a onClick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'FollowTeamA']);_smq.push(['custom','Follow','ButtonClick']);" href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>" target="_blank" class="guanzhu"></a>
                             </div>
                             <div class="tab_phbinfo">
                                 <table>
@@ -310,9 +370,9 @@
                         </div>
                         <div class="tab_phblist_right">
                             <?php if($value['id'] == $user_result['tid']):?>
-                                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'GoToGameGoOn']);" href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_jiayou2"></a>
+                                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'GoToGameGoOn']);_smq.push(['custom','GoTo','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/game_goon" target="_blank" class="btn_jiayou2"></a>
                             <?php else: ?>
-                                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LikeTeamA']);" href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
+                                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LikeTeamA']);_smq.push(['custom','Like','ButtonClick']);" href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank" class="btn_jiayou"></a>
                             <?php endif; ?>
                             <a href="javascript:shareWeibo(<?=$value['id']?>);" class="btn_fenxiang"></a>
                             <a href="javascript:shareQQ(<?=$value['id']?>);" class="icon_qq"></a>

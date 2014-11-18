@@ -16,7 +16,8 @@
 
         var shareWeibo = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareWeibo']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share得分第一名就一起飞！')
+            _smq.push(['custom','Share','LogoClick']);
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/R7euH2D得分第一名就一起飞！')
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
             var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
@@ -24,8 +25,9 @@
 
         var shareQQ = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareQQ']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            _smq.push(['custom','Share','LogoClick']);
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/RzzMpVT得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/RzzMpVT');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
 
@@ -35,8 +37,9 @@
 
         var shareRenren = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareRenren']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            _smq.push(['custom','Share','LogoClick']);
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/RzzMpVT得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/RzzMpVT');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
             var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "&pic=" + pic;
@@ -45,8 +48,9 @@
 
         var shareDouban = function(){
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'ShareDouban']);
-            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game得分第一名就一起飞！')
-            var urls = encodeURIComponent('http://skyteam.tianxun.cn/?associateid=&utm_source=other&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+            _smq.push(['custom','Share','LogoClick']);
+            var text = encodeURIComponent('约吗？我已经组团参加了@Skyscanner天巡 #起飞吧朋友# 抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://t.cn/RzzMpVT得分第一名就一起飞！')
+            var urls = encodeURIComponent('http://t.cn/RzzMpVT');
             var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
             window.open (url, '分享到豆瓣', 'height=500, width=550, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
@@ -103,36 +107,42 @@
 
     <script>
         var execTrack_tianxun = function(){
-            _smq.push(['custom','CampaignHomepage','GoToTianxun']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LogoClick', 'GoToTianxun']);
+            _smq.push(['custom','GoToTianxun','LogoClick']);
         }
 
         var execTrack_wizardfood = function(){
-            _smq.push(['custom','CampaignHomepage','GoToFoodWizard']);
+            _smq.push(['custom','GoToFoodWizard','ButtonClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToFoodWizard']);
         }
 
         var execTrack_wizardbuy = function(){
+            _smq.push(['custom','GoToBuyWizard','ButtonClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToBuyWizard']);
         }
 
         var execTrack_wizardshow = function(){
+            _smq.push(['custom','GoToShowWizard','ButtonClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToShowWizard']);
         }
 
         var execTrack_TeamRank = function(){
+            _smq.push(['custom','GoToTeamRank','LinkClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToTeamRank']);
         }
 
         var execTrack_CampaignHomepage = function(){
+            _smq.push(['custom','GoToKOL','LinkClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToKOL']);
         }
 
         var execTrack_GoToCampaignRules = function(){
+            _smq.push(['custom','GoToCampaignRules','LinkClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'LinkClick', 'GoToCampaignRules']);
         }
 
         var execTrack_GoToGameStart = function(){
+            _smq.push(['custom','GoToGameStart','ButtonClick']);
             _gaq.push(['_trackEvent', 'CampaignHomepage', 'ButtonClick', 'GoToGameStart']);
         }
     </script>
@@ -202,7 +212,7 @@
 
 
                 <?php if($this->session->userdata('token')['uid']):?>
-                    <a style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登录</a>
+                    <a onclick="_smq.push(['custom','Logout','ButtonClick']);" style="display: block;margin-top:12px;margin-left: -70px;width: 60px;font-size: 14px;color: #ffffff;" href="<?=$this->config->base_url()?>welcome/logout">退出登录</a>
                 <?php endif; ?>
 
 

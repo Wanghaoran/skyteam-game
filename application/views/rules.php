@@ -39,17 +39,29 @@
     ga('send', 'pageview');
 
 </script>
+
+<script type="text/javascript">
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '13b9a96', new Date()]);
+    _smq.push(['pageview']);
+
+    (function() {
+        var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+        sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+    })();
+</script>
 <body>
 <div class="ny_head">
     <div class="ny_nav">
         <ul>
-            <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="<?=$this->config->base_url()?>"></a></li>
-            <li class="li2"><a class="cur" onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
-            <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" href="<?=$this->config->base_url()?>rank"></a></li>
-            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
+            <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="<?=$this->config->base_url()?>"></a></li>
+            <li class="li2"><a class="cur" onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);_smq.push(['custom','GoToCampaignRules','LinkClick']);" href="<?=$this->config->base_url()?>rules"></a></li>
+            <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);_smq.push(['custom','GoToTeamRank','LinkClick']);" href="<?=$this->config->base_url()?>rank"></a></li>
+            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);_smq.push(['custom','GoToKOL','LinkClick']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
-    <a href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
+    <a onclick="_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
 </div>
 <div class="clear"></div>
 <div class="ny_content3">

@@ -92,10 +92,23 @@
 
             _gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'ShareWeiboTeamA']);
 
+            var url2 = '';
+            var b_url = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+
+            //获取url
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                data : '&url=' + b_url,
+                async : false,
+                success : function(ress){
+                    url2 = ress;
+                }
+            });
 
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
 
-            var text = encodeURIComponent('是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game 得分第一名就一起飞！')
+            var text = encodeURIComponent('是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！')
             url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
@@ -134,6 +147,18 @@
         ga('linker:autoLink', ga_skyscannerDomains);
         ga('send', 'pageview');
 
+    </script>
+
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
     </script>
 
 </head>
@@ -218,7 +243,7 @@
                 </div>
             </div>
             <div class="phbcon_right">
-                <div><a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LikeTeamA']);" href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
+                <div><a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LikeTeamA']);_smq.push(['custom','GoTo','ButtonClick']);" href="<?=$this->config->base_url()?>game_other?tid=<?=$value['id']?>" target="_blank"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_jiayou.png"/></a></div>
 
                 <div class="fx">
                     <img src="<?=$this->config->base_url()?>static/mobile/images/btn_fenxiang.png"/>
@@ -243,10 +268,10 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_foot2.jpg"/>
         <div class="bot_nav">
             <ul>
-                <li class="short"><a href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
-                <li><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" href="<?=$this->config->base_url()?>rank_mobile" title="天团排行榜"></a></li>
-                <li><a href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
-                <li class="short"><a href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
+                <li class="short"><a onclick="_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
+                <li><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);_smq.push(['custom','GoToTeamRank','LinkClick']);" href="<?=$this->config->base_url()?>rank_mobile" title="天团排行榜"></a></li>
+                <li><a onclick="_smq.push(['custom','GoToKOL','LinkClick']);" href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
+                <li class="short"><a onclick="_smq.push(['custom','GoToCampaignRules','LinkClick']);" href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
                 <li class="short"><a href="<?=$this->config->base_url()?>member_mobile" title="个人中心"></a></li>
             </ul>
         </div>

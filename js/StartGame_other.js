@@ -82,7 +82,7 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
-
+            _smq.push(['custom','CreateTeam','ButtonClick']);
             _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'CreateTeam']);
 
 
@@ -426,6 +426,7 @@ var GameOver1Layer  = cc.Layer.extend({
         var createBtn = cc.MenuItemImage.create(res.createBtn,res.createBtn,function(){
 
             _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'CreateTeam']);
+            _smq.push(['custom','CreateTeam','ButtonClick']);
 
 
             if(tuan == 1){
@@ -439,6 +440,7 @@ var GameOver1Layer  = cc.Layer.extend({
 
             _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'JoinTeam']);
 
+            _smq.push(['custom','JoinTeam','ButtonClick']);
 
             if(tuan == 1){
                 window.location.href = "http://skyteam.tianxun.cn/welcome/jointeam?tid=" + tid;
@@ -512,6 +514,7 @@ var GameOver2Layer  = cc.Layer.extend({
 var ShareLayer = cc.Layer.extend({
     ctor:function(scene,isPc){
 
+        _smq.push(['custom','ShareGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'ShareGame']);
 
         this._super();
@@ -631,6 +634,7 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.startlayer);
     },
     startGame:function(){
+        _smq.push(['custom','StartGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'StartGame']);
         this.startlayer.removeFromParent(true);
         this.startlayer = null;
@@ -673,6 +677,7 @@ var StartGame = cc.Scene.extend({
         this.addChild(this.gameoverlayer,20,20);
     },
     againGame:function(){
+        _smq.push(['custom','StartGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
 
         this.initStart();

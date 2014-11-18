@@ -115,6 +115,17 @@
         }, false);
     </script>
 
+    <script type="text/javascript">
+        var _smq = _smq || [];
+        _smq.push(['_setAccount', '13b9a96', new Date()]);
+        _smq.push(['pageview']);
+
+        (function() {
+            var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+            sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+        })();
+    </script>
 </head>
 <body>
 <div class="contain">
@@ -127,9 +138,9 @@
             <div class="tab_koltitle">
                 <ul>
 
-                    <li><a href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_mst.png"/></a></li>
-                    <li><a href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_gwton.png"/></a></li>
-                    <li class="last"><a href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_xxt.png"/></a></li>
+                    <li><a onclick="_smq.push(['custom','GoToFoodWizard','TabClick']);" href="<?=$this->config->base_url()?>wizard_food"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_mst.png"/></a></li>
+                    <li><a onclick="_smq.push(['custom','GoToBuyWizard','TabClick']);" href="<?=$this->config->base_url()?>wizard_buy"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_gwton.png"/></a></li>
+                    <li class="last"><a onclick="_smq.push(['custom','GoToShowWizard','TabClick']);" href="<?=$this->config->base_url()?>wizard_show"><img src="<?=$this->config->base_url()?>static/mobile/images/tab_xxt.png"/></a></li>
 
                 </ul>
                 <div class="clear"></div>
@@ -289,10 +300,10 @@
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_foot5.jpg"/>
         <div class="bot_nav">
             <ul>
-                <li class="short"><a href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
-                <li><a href="<?=$this->config->base_url()?>rank_mobile" title="天团排行榜"></a></li>
-                <li><a href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
-                <li class="short"><a href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
+                <li class="short"><a onclick="_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="<?=$this->config->base_url()?>" title="返回首页"></a></li>
+                <li><a onclick="_smq.push(['custom','GoToTeamRank','LinkClick']);" href="<?=$this->config->base_url()?>rank_mobile" title="天团排行榜"></a></li>
+                <li><a onclick="_smq.push(['custom','GoToKOL','LinkClick']);" href="<?=$this->config->base_url()?>wizard_food" title="天巡星导游"></a></li>
+                <li class="short"><a onclick="_smq.push(['custom','GoToCampaignRules','LinkClick']);" href="<?=$this->config->base_url()?>rules" title="活动规则"></a></li>
                 <li class="short"><a href="<?=$this->config->base_url()?>member_mobile" title="个人中心"></a></li>
             </ul>
         </div>

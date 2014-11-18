@@ -82,6 +82,7 @@ var StartLayer = cc.Layer.extend({
 
         var startGameBtn = cc.MenuItemImage.create(res.startBtn,res.startBtn,null,this.scene.startGame,this.scene);
         var startTeamBtn = cc.MenuItemImage.create(res.startTeam,res.startTeam,function(){
+            _smq.push(['custom','CreateTeam','ButtonClick']);
             _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'CreateTeam']);
             window.location.href = "http://skyteam.tianxun.cn/rank";
 
@@ -464,6 +465,7 @@ var GameOver2Layer  = cc.Layer.extend({
         }, this);
         var selfOverBtn = cc.MenuItemImage.create(res.selfOverBtn2,res.selfOverBtn2,function(){
             _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'CreateTeam']);
+            _smq.push(['custom','CreateTeam','ButtonClick']);
 
             window.location.href = "rank";
         });
@@ -489,6 +491,7 @@ var GameOver2Layer  = cc.Layer.extend({
 var ShareLayer = cc.Layer.extend({
     ctor:function(scene,isPc){
 
+        _smq.push(['custom','ShareGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'ShareGame']);
 
         this._super();
@@ -609,6 +612,7 @@ var StartGame = cc.Scene.extend({
     },
     startGame:function(){
 
+        _smq.push(['custom','StartGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameStart', 'ButtonClick', 'StartGame']);
 
         this.startlayer.removeFromParent(true);
@@ -657,6 +661,7 @@ var StartGame = cc.Scene.extend({
             }
         });
 
+        _smq.push(['custom','CreateTeam','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
 
 

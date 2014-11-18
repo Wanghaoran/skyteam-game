@@ -41,6 +41,17 @@
     }, false);
 </script>
 
+<script type="text/javascript">
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '13b9a96', new Date()]);
+    _smq.push(['pageview']);
+
+    (function() {
+        var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+        sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+    })();
+</script>
 
 
 <style>
