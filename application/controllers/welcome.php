@@ -739,6 +739,18 @@ class Welcome extends CI_Controller {
     //自己玩加里程
     public function game_goon_myself(){
         $num = $this->input->post('num');
+        $token = $this->input->post('token');
+
+        //验证token
+        $this -> load -> model('token_model');
+        if($this -> token_model -> checkToken($token)){
+            //删除token
+            $this -> token_model -> delToken($token);
+        }else{
+            return;
+        }
+
+
         //更新个人成绩
         $this -> load -> model('user_model');
         $this -> user_model -> updatenum($this->session->userdata('token')['uid'], $num);
