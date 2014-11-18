@@ -649,6 +649,17 @@ var StartGame = cc.Scene.extend({
     againGame:function(){
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
 
+        $.ajax({
+            type : 'POST',
+            url : 'http://skyteam.tianxun.cn/welcome/getToken',
+            data : '',
+            async : false,
+            dataType : 'json',
+            success : function(ress){
+                token = ress;
+            }
+        });
+
         this.initStart();
         if(this.gameoverlayer) {
             this.gameoverlayer.removeFromParent(true);

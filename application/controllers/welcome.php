@@ -750,7 +750,6 @@ class Welcome extends CI_Controller {
             return;
         }
 
-
         //更新个人成绩
         $this -> load -> model('user_model');
         $this -> user_model -> updatenum($this->session->userdata('token')['uid'], $num);
@@ -761,6 +760,16 @@ class Welcome extends CI_Controller {
         //更新总里程
         $this -> load -> model('team_model');
         $this -> team_model -> updatenum($user_info['tid'], $num);
+    }
+
+    //生成Token
+    public function getToken(){
+        //生成64位token
+        $token = md5(time()) . md5(microtime());
+        //纪录token
+        $this -> load -> model('token_model');
+        $this -> token_model -> insertToken($token);
+        echo $token;
     }
 
     //积攒里程开始游戏－别人玩
