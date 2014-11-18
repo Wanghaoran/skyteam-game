@@ -44,7 +44,7 @@
     <div class="ny_nav">
         <ul>
             <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="<?=$this->config->base_url()?>"></a></li>
-            <li class="li2"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
+            <li class="li2"><a class="cur" onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
             <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" class="cur" href="<?=$this->config->base_url()?>rank"></a></li>
             <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>

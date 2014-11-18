@@ -121,7 +121,7 @@
             <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="<?=$this->config->base_url()?>"></a></li>
             <li class="li2"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignRules']);" href="<?=$this->config->base_url()?>rules"></a></li>
             <li class="li3"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToTeamRank']);" class="cur" href="<?=$this->config->base_url()?>rank"></a></li>
-            <li class="li4"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
+            <li class="li4"><a class="cur" onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToKOL']);" href="<?=$this->config->base_url()?>wizard_food"></a></li>
         </ul>
     </div>
     <a href="http://www.tianxun.cn" target="_blank"><div class="ny_logo"></div></a>
