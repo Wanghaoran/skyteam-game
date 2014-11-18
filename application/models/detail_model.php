@@ -13,7 +13,7 @@ class Detail_model extends CI_Model {
 
         $data = array(
             'tid' => $tid,
-            'time' => time(),
+            'time' => date('Y-m-d H:i:s'),
             'num' => $num,
             'ip' => $ip,
             'user_agent' => $agent,
