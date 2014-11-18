@@ -389,9 +389,23 @@
                                 }
                             });
 
+                        var url2 = '';
+                        var b_url = encodeURIComponent('http://skyteam.tianxun.cn/game_other?tid=' + tid + '&associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share+game');
+
+                        //获取url
+                        $.ajax({
+                            type : 'POST',
+                            url : '<?=$this -> config -> base_url()?>welcome/shorten',
+                            data : '&url=' + b_url,
+                            async : false,
+                            success : function(ress){
+                                url2 = ress;
+                            }
+                        });
 
 
-                            var text_weibo = '约吗？我已经组团参加了@Skyscanner天巡＃起飞吧朋友＃抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动http://skyteam.tianxun.cn/game_other?tid=' + tid + '得分第一名就一起飞！';
+
+                            var text_weibo = '约吗？我已经组团参加了@Skyscanner天巡＃起飞吧朋友＃抢12万元旅行红包活动！是朋友就快来加入贡献里程给我！去度假、去逛吃、去扫货，一起赢！整！团！机！票！臭宝贝们证明友情的时候到了！跟别的团死磕去→猛戳参与活动' + url2 + '得分第一名就一起飞！';
                             $.each(result['friend'], function(x,y){
                                 text_weibo += '@' + y;
                             });
