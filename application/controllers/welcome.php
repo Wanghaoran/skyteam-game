@@ -795,6 +795,14 @@ class Welcome extends CI_Controller {
             $data['tuan'] = 2;
         }
 
+        //生成64位token
+        $token = md5(time()) . md5(microtime());
+        //纪录token
+        $this -> load -> model('token_model');
+        $this -> token_model -> insertToken($token);
+
+        $data['token'] = $token;
+
         $this->load->view('game_other', $data);
     }
 
@@ -802,6 +810,23 @@ class Welcome extends CI_Controller {
     public function game_goon_other(){
         $num = $this->input->post('num');
         $tid = $this->input->post('tid');
+
+        $token = $this->input->post('token');
+
+        //验证token
+        $this -> load -> model('token_model');
+        if($this -> token_model -> checkToken($token)){
+            //删除token
+            $this -> token_model -> delToken($token);
+
+        }else{
+            echo 'bad';
+            return;
+        }
+
+        //纪录每次里程
+        $this -> load -> model('detail_model');
+        $this -> detail_model -> insertDetail($tid, $num, $this->input->ip_address(), $_SERVER['HTTP_USER_AGENT']);
 
         //更新总里程
         $this -> load -> model('team_model');
