@@ -1002,7 +1002,8 @@ class Welcome extends CI_Controller {
 
         $result = json_decode($json_result, true);
 
-        var_dump($result);
+        echo $result['urls'][0]['url_short'];
+        return;
 
     }
 
