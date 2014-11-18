@@ -17,6 +17,10 @@
     <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 
     <script>
+        var token = '<?=$token?>';
+    </script>
+
+    <script>
 
         var shareWeibo = function(){
             var pic = '';

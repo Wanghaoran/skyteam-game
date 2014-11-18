@@ -623,15 +623,12 @@ var StartGame = cc.Scene.extend({
     gameOver:function(){
         this.gameState = this.DEAD;
         this.gamelayer.plane.setVisible(false);
-
-        //AJAX
         this.gameoverlayer = new GameOver2Layer(this);
         var start_num = this.gamelayer.scoreNum.getString().replace(/Km/i,"");
-
         $.ajax({
             type : 'POST',
             url : 'http://skyteam.tianxun.cn/welcome/game_goon_myself',
-            data : '&num=' + start_num,
+            data : '&num=' + start_num + '&token=' + token,
             async : false,
             dataType : 'json',
             success : function(ress){
