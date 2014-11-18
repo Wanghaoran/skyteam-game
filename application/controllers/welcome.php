@@ -746,6 +746,7 @@ class Welcome extends CI_Controller {
         if($this -> token_model -> checkToken($token)){
             //删除token
             $this -> token_model -> delToken($token);
+
         }else{
             echo 'bad';
             return;
@@ -757,6 +758,10 @@ class Welcome extends CI_Controller {
 
         //获取个人信息和tid
         $user_info = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
+
+        //纪录每次里程
+        $this -> load -> model('detail_model');
+        $this -> user_model -> insertDetail($user_info['tid'], $num, $this->input->ip_address(), $_SERVER['HTTP_USER_AGENT']);
 
         //更新总里程
         $this -> load -> model('team_model');
