@@ -83,6 +83,7 @@ class Welcome extends CI_Controller {
         }
 
 
+        /*
         //调试信息 Start
         $this -> load -> model('user_model');
         //查询天团人数
@@ -92,14 +93,16 @@ class Welcome extends CI_Controller {
 
         //调试信息 End
 
+        */
 
-        /*
+
 
         //如果这个UID已经存在，则不能加入其他天团
         $this -> load -> model('user_model');
         if($this -> user_model -> getUser($this->session->userdata('token')['uid'])){
             header("Content-type:text/html;charset=utf-8");
             echo '<script>alert("您已加入了其他天团，不能再加入别人的团啦！");location.href="http://skyteam.tianxun.cn/rank"</script>';
+            return;
         }else{
 
             //验证天团是否存在
@@ -108,14 +111,17 @@ class Welcome extends CI_Controller {
             if(!$this -> team_model -> getinfofromid($tid)){
                 header("Content-type:text/html;charset=utf-8");
                 echo '<script>alert("您选择加入的天团不存在！");location.href="http://skyteam.tianxun.cn/"</script>';
+                return;
             }
 
             //查询天团人数
             $num_arr = $this -> user_model -> teamnum($tid);
 
-            if($num_arr['count'] >= 4){
+            if($num_arr['count'] >= 1){
                 header("Content-type:text/html;charset=utf-8");
                 echo '<script>alert("此天团人数已满，试着创建自己的天团吧！");location.href="http://skyteam.tianxun.cn/"</script>';
+                return;
+
             }
 
             //都没有的话则加入当前天团
@@ -136,11 +142,13 @@ class Welcome extends CI_Controller {
             }else{
                 header("Content-type:text/html;charset=utf-8");
                 echo '<script>alert("加入天团失败，请稍后再试！");location.href="http://skyteam.tianxun.cn/"</script>';
+                return;
+
             }
 
         }
 
-        */
+
 
 
 
