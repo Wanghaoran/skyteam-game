@@ -105,7 +105,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @ignore
 	 */
-	public $debug = FALSE;
+	public $debug = TRUE;
 
 	/**
 	 * boundary of multipart
