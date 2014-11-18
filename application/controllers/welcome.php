@@ -722,6 +722,12 @@ class Welcome extends CI_Controller {
         //获取这个用户的TID
         $result = $this -> user_model -> getUser($this->session->userdata('token')['uid']);
         $data['tid'] = $result[0]['tid'];
+
+
+        //生成64位token
+        $token = md5(time()) . md5(microtime());
+        echo strlen($token);
+
         $this->load->view('game_goon', $data);
     }
 
