@@ -1147,7 +1147,7 @@ class Welcome extends CI_Controller {
 
 
     //测试链接
-    public function testsss($tid){
+    public function testsss(){
         $this->load->view('rules_mobile');
 
     }
