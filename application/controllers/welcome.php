@@ -1148,12 +1148,7 @@ class Welcome extends CI_Controller {
 
     //测试链接
     public function testsss($tid){
-        $this -> load -> model('user_model');
-
-        //查询天团人数
-        $num_arr = $this -> user_model -> teamnum($tid);
-
-        var_dump($num_arr);
+        $this->load->view('rules_mobile');
 
     }
 
