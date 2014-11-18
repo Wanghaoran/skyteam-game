@@ -761,7 +761,7 @@ class Welcome extends CI_Controller {
 
         //纪录每次里程
         $this -> load -> model('detail_model');
-        $this -> user_model -> insertDetail($user_info['tid'], $num, $this->input->ip_address(), $_SERVER['HTTP_USER_AGENT']);
+        $this -> detail_model -> insertDetail($user_info['tid'], $num, $this->input->ip_address(), $_SERVER['HTTP_USER_AGENT']);
 
         //更新总里程
         $this -> load -> model('team_model');
