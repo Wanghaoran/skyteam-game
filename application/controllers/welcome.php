@@ -726,7 +726,11 @@ class Welcome extends CI_Controller {
 
         //生成64位token
         $token = md5(time()) . md5(microtime());
-        echo $token;
+        //纪录token
+        $this -> load -> model('token_model');
+        $this -> token_model -> insertToken($token);
+
+        $data['token'] = $token;
 
         $this->load->view('game_goon', $data);
     }
