@@ -992,6 +992,20 @@ class Welcome extends CI_Controller {
         return $result;
     }
 
+    //生成短链
+    public function shorten(){
+        $url = urldecode($this -> input -> post('url'));
+
+        $urls = 'https://api.weibo.com/2/short_url/shorten.json?source=198618609&url_long=' . urlencode($url);
+
+        $json_result = file_get_contents($urls);
+
+        $result = json_decode($json_result, true);
+
+        var_dump($result);
+
+    }
+
     //生成个性化海报
     public function creatleaders($type, $place, $tname, $uname, $num, $avatar_large){
 
@@ -1101,6 +1115,8 @@ class Welcome extends CI_Controller {
             return $ret;
         }
     }
+
+
 
 
 
