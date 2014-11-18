@@ -6,7 +6,7 @@ class Game extends CI_Controller {
     public function qyer()
     {
         $this->load->helper('url');
-        redirect('http://skyteam.tianxun.cn/?associateid=SOC_WBO_00349_00001&utm_source=weibo&utm_medium=social&utm_campaign=cn-flights-skyteam&utm_content=share');
+        redirect('http://skyteam.tianxun.cn/');
 //        $data = array();
 //        $data['state'] = 'start';
 //        $this->load->view('game_qyer', $data);
