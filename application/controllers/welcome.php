@@ -117,7 +117,7 @@ class Welcome extends CI_Controller {
             //查询天团人数
             $num_arr = $this -> user_model -> teamnum($tid);
 
-            if($num_arr['count'] >= 1){
+            if($num_arr['count'] >= 4){
                 header("Content-type:text/html;charset=utf-8");
                 echo '<script>alert("此天团人数已满，试着创建自己的天团吧！");location.href="http://skyteam.tianxun.cn/"</script>';
                 return;
