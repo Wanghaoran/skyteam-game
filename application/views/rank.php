@@ -271,34 +271,15 @@
 
             <div class="ny_leftbtqt">
                 <ul>
+                    <?php foreach($league as $key => $value):?>
                     <li>
-                        <a href="#" class="top">
-                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt1.png"/>
-                            <div>耗这口</div>
+                        <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank" class="top">
+                            <img src="<?=$value['avatar_large']?>"/>
+                            <div><?=$value['name']?></div>
                         </a>
                         <div class="btn_delete"><a href="#" title="删除"></a></div>
                     </li>
-                    <li>
-                        <a href="#" class="top">
-                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt2.png"/>
-                            <div>护城河的水流</div>
-                        </a>
-                        <div class="btn_delete"><a href="#" title="删除"></a></div>
-                    </li>
-                    <li>
-                        <a href="#" class="top">
-                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt3.png"/>
-                            <div>一只蘑菇</div>
-                        </a>
-                        <div class="btn_delete"><a href="#" title="删除"></a></div>
-                    </li>
-                    <li>
-                        <a href="#" class="top">
-                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt4.png"/>
-                            <div>爱闲逛</div>
-                        </a>
-                        <div class="btn_delete"><a href="#" title="删除"></a></div>
-                    </li>
+                    <?php endforeach;?>
                     <div class="clear"></div>
                 </ul>
             </div>

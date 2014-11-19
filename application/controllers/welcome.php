@@ -428,7 +428,6 @@ class Welcome extends CI_Controller {
         //读取团员
         $league = $this -> user_model -> getmemberall($user_result['tid']);
         $data['league'] = $league;
-        var_dump($league);
 
         //读取微博好友
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
