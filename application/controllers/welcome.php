@@ -412,6 +412,9 @@ class Welcome extends CI_Controller {
         }else{
             $per_page = 0;
         }
+
+        $data['per_page'] = $per_page;
+
         //分页
 
         //读取团排行榜

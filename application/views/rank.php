@@ -325,7 +325,7 @@
             <?php foreach($rank as $key => $value):?>
                 <!--start-->
                 <div class="tab_phblist">
-                    <div class="tab_phblist_title"><span><?=($key+1)?></span><?=$value['name']?></div>
+                    <div class="tab_phblist_title"><span><?=($key+1+$per_page)?></span><?=$value['name']?></div>
                     <div class="tab_phblist_con">
                         <div class="tab_phblist_left">
                             <div class="tab_phbadmin">
