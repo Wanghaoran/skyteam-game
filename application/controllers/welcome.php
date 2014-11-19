@@ -550,7 +550,6 @@ class Welcome extends CI_Controller {
             $per_page = 0;
         }
 
-        $data['per_page'] = $per_page;
 
         //分页
 
@@ -614,6 +613,9 @@ class Welcome extends CI_Controller {
         }else{
             $per_page = 0;
         }
+
+        $data['per_page'] = $per_page;
+
 
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 3);
