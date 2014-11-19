@@ -205,8 +205,13 @@
         <div class="btn_grzx">
             <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a href="javascript:deleteteam();" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/shanchu.png"/></a>
+                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);" href="<?=$this->config->base_url()?>welcome/logout" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
+
+            <?php else: ?>
+                <a href="javascript:exitteam();" class="scbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tuichubt.png"/></a>
+                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);" href="<?=$this->config->base_url()?>welcome/logout" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
+
             <?php endif; ?>
-            <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);" href="<?=$this->config->base_url()?>welcome/logout" class="tcbt"><img src="<?=$this->config->base_url()?>static/mobile/images/tcbt.png"/></a>
         </div>
     </div>
     <div class="grzx">
@@ -246,6 +251,41 @@
                 <a href="javascript:shareWeibo(<?=$user_result['tid']?>);" class="weibo"></a>
                 <a class="weixin" id="weixin"></a>
             </div>
+        </div>
+
+        <div class="grzx_title"><img src="<?=$this->config->base_url()?>static/mobile/images/title_btqt.jpg"/></div>
+        <div class="grzx_btqt">
+            <ul>
+                <li>
+                    <a href="#" class="top">
+                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
+                        <div>耗这口</div>
+                    </a>
+                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
+                </li>
+                <li>
+                    <a href="#" class="top">
+                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
+                        <div>护城河的水流</div>
+                    </a>
+                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
+                </li>
+                <li>
+                    <a href="#" class="top">
+                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
+                        <div>一只蘑菇</div>
+                    </a>
+                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
+                </li>
+                <li>
+                    <a href="#" class="top">
+                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
+                        <div>爱闲逛</div>
+                    </a>
+                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
+                </li>
+                <div class="clear"></div>
+            </ul>
         </div>
 
         <div class="grzx_title"><img src="<?=$this->config->base_url()?>static/mobile/images/title_qt.jpg"/></div>
