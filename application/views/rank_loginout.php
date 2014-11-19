@@ -223,7 +223,7 @@
                     <div class="tab_phblist_con">
                         <div class="tab_phblist_left">
                             <div class="tab_phbadmin">
-                                <a href="#">
+                                <a href="http://weibo.com/<?=$value['leader'][0]['profile_url']?>">
                                     <img src="<?=$value['leader'][0]['avatar_large']?>"/>
                                     <div><?=$value['leader'][0]['name']?></div>
                                 </a>
