@@ -12,16 +12,6 @@
         body{
             font-size:20px;
         }
-        .h2{
-            font-size:100%;
-        }
-        .h3{
-            font-size:60%;
-        }
-        .h4{
-            font-size:60%;
-        }
-
     </style>
 
 

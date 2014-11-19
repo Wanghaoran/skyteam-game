@@ -48,9 +48,9 @@ body{ background:#fff;font-size:1em;font-weight:150%;}
 	.home .right ul li .divinfo .adminimg{ float:left; width:30.09%;}
 	.home .right ul li .divinfo .textimg{ float:left; width:69%; margin:2% 0 0 0;}
 	.home .right ul li .divinfo .textimg a{ text-decoration:none;}
-	.home .right ul li .divinfo .textimg h2{  color:#fff; font-weight:800;}
-	.home .right ul li .divinfo .textimg h3{  color:#fff; font-weight:400;}
-	.home .right ul li .divinfo .textimg h4{  color:#fff; font-weight:400;}
+	.home .right ul li .divinfo .textimg h2{ font-size:100%; color:#fff; font-weight:800;}
+	.home .right ul li .divinfo .textimg h3{ font-size:80%; color:#fff; font-weight:400;}
+	.home .right ul li .divinfo .textimg h4{ font-size:80%; color:#fff; font-weight:400;}
 	
 	.home .start{ width:10.88%; position:absolute; top:69%; left:53.75%; z-index:999;}
 	.home .start a img{ width:100%; border:0;}
