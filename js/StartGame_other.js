@@ -678,7 +678,6 @@ var StartGame = cc.Scene.extend({
     },
     againGame:function(){
 
-        /*
         $.ajax({
             type : 'POST',
             url : 'http://skyteam.tianxun.cn/welcome/getToken',
@@ -687,7 +686,6 @@ var StartGame = cc.Scene.extend({
                 token = ress;
             }
         });
-        */
 
         _smq.push(['custom','StartGame','ButtonClick']);
         _gaq.push(['_trackEvent', 'GameEndInvitedUser', 'ButtonClick', 'StartGame']);
