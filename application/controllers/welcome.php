@@ -777,6 +777,7 @@ class Welcome extends CI_Controller {
         $this -> team_model -> updatenum($user_info['tid'], $num);
     }
 
+    /*
     //生成Token
     public function getToken(){
         //生成64位token
@@ -786,6 +787,8 @@ class Welcome extends CI_Controller {
         $this -> token_model -> insertToken($token);
         echo $token;
     }
+
+    */
 
     //积攒里程开始游戏－别人玩
     public function game_other(){
