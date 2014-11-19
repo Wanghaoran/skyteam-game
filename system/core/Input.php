@@ -728,6 +728,9 @@ class CI_Input {
 	{
 		if ( ! preg_match("/^[a-z0-9:_\/-]+$/i", $str))
 		{
+            echo '<pre>';
+            var_dump($_COOKIE);
+            echo '</pre>';
 			exit('Disallowed Key Characters.');
 		}
 
