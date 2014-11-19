@@ -995,6 +995,10 @@ class Welcome extends CI_Controller {
             $result['state'] = 'error';
         }
 
+        var_dump($result_team2['type']);
+        var_dump($result_team['tid']);
+        var_dump($result_team2['tid']);
+
         echo json_encode($result);
 
     }
