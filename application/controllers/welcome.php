@@ -987,8 +987,15 @@ class Welcome extends CI_Controller {
         $result_team = $this -> user_model -> getUser($weiboID);
         $result_team2 = $this -> user_model -> getUser($weiboid);
 
-        var_dump($result_team);
-        var_dump($result_team2);
+        $result = array();
+
+        if($result_team2['type'] == 1 && $result_team['tid'] == $result_team2['tid']){
+            $result['state'] = 'success';
+        }else{
+            $result['state'] = 'error';
+        }
+
+        echo json_encode($result);
 
     }
 
