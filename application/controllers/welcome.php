@@ -973,8 +973,21 @@ class Welcome extends CI_Controller {
             header("Content-type:text/html;charset=utf-8");
             echo '<script>alert("删除失败！");location.href="http://skyteam.tianxun.cn/"</script>';
         }
+    }
 
-
+    //退出本团
+    public function exitteam(){
+        //读取UID
+        $weiboid = $this->session->userdata('token')['uid'];
+        //删除UID
+        $this -> load -> model('user_model');
+        if($this -> user_model -> deluser($weiboid)){
+            header("Content-type:text/html;charset=utf-8");
+            echo '<script>alert("退出成功！现在跳转至活动首页");location.href="http://skyteam.tianxun.cn/"</script>';
+        }else{
+            header("Content-type:text/html;charset=utf-8");
+            echo '<script>alert("删除失败！");location.href="http://skyteam.tianxun.cn/"</script>';
+        }
     }
 
     //删除团员

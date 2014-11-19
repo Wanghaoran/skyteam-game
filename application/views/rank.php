@@ -220,7 +220,12 @@
         }
 
         var exitteam = function(){
-            alert(123);
+            if(confirm('确定要退出本团吗？操作不可恢复，请谨慎操作！')){
+                location.href="<?=$this->config->base_url()?>welcome/exitteam";
+            }else{
+                return;
+            }
+        }
         }
     </script>
 
