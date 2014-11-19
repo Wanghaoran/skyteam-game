@@ -63,14 +63,14 @@
     <script>
 
         var shareWeibo = function(){
-            var text = encodeURIComponent('#起飞吧朋友#天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/R7euH2D 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
+            var text = encodeURIComponent('＃起飞吧朋友＃天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/R7euH2D 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
             var pic = encodeURIComponent('http://cnhtk.qiniudn.com/base_posters.jpg');
             var url = "http://v.t.sina.com.cn/share/share.php?url=&title=" + text + "&content=utf-8&appkey=198618609&source=&sourceUrl=&pic=" + pic;
             window.open (url, '分享到新浪微博', 'height=200, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=n o, status=no');
         }
 
         var shareQQ = function(){
-            var text = encodeURIComponent('#起飞吧朋友#天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
+            var text = encodeURIComponent('＃起飞吧朋友＃天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
 
             var urls = encodeURIComponent('http://t.cn/RzzMpVT');
 
@@ -79,7 +79,7 @@
         }
 
         var shareRenren = function(){
-            var text = encodeURIComponent('#起飞吧朋友#天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
+            var text = encodeURIComponent('＃起飞吧朋友＃天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
             var urls = encodeURIComponent('http://t.cn/RzzMpVT');
 
             var url = "http://share.renren.com/share/buttonshare.do?link=" + urls + "&title=" + text + "";
@@ -87,7 +87,7 @@
         }
 
         var shareDouban = function(){
-            var text = encodeURIComponent('#起飞吧朋友#天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
+            var text = encodeURIComponent('＃起飞吧朋友＃天巡免费机票来了！11月19-30日期间，@Skyscanner天巡 放出12万元旅行红包，赶快拉上闺蜜好友来“组团”接力拼里程，小伙伴一起赢！整！团！机！票！猛戳参与→http://t.cn/RzzMpVT 去度假、去逛吃、去扫货，机会平等，努力必有收获，证明友情的时候到了！');
 
             var urls = encodeURIComponent('http://t.cn/RzzMpVT');
             var url = "http://www.douban.com/recommend/?url=" + urls + "&title=" + text + "";
