@@ -125,6 +125,15 @@ textarea{resize:none;overflow:auto;}
 
 	.grzx .grzx_title{ width:100%;}
 	.grzx .grzx_title img{ width:100%; vertical-align:bottom; margin:6px 0 0 0;}
+	
+	.grzx .grzx_btqt{ width:320px; margin:0 auto;}
+		.grzx .grzx_btqt ul li{ float:left; width:80px; margin:10px 0 0 0;}
+		.grzx .grzx_btqt ul li a.top{ display:inline-block; text-decoration:none; text-align:center; }
+		.grzx .grzx_btqt ul li a.top img{ width:50px; height:50px; border:none;}
+		.grzx .grzx_btqt ul li a.top div{ width:80px; height:30px; line-height:30px;color:#848484; font-size:14px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+		.grzx .grzx_btqt ul li div.btn_delete{ width:70%; margin:0 auto;}
+		.grzx .grzx_btqt ul li div.btn_delete a img{ width:100%; border:0;}
+		
 	.grzx .grzx_qt{ width:320px; margin:0 auto;}
 		.grzx .grzx_qt ul li{ float:left; width:80px; margin:10px 0 0 0;}
 		.grzx .grzx_qt ul li a{ display:inline-block; text-decoration:none; text-align:center; }
@@ -302,6 +311,9 @@ input.jcDate{cursor:pointer;}
 .divimg10{ clear:both; width:80%; margin:0 auto; text-align:center;}
 .divimg10 img{ width:100%; border:0; vertical-align:middle;}
 
+.home .sinashare{ position:absolute; left:5%; bottom:24%; width:7.5%;}
+	.home .sinashare a img{ width:100%; border:0;}
+	
 .home .tuichu{ position:absolute; right:0; bottom:13%; width:18.75%;}
 	.home .tuichu a img{ width:100%; border:0;}
 .ny_top .btn_grzx a{ width:14.37%; position:absolute; top:70%;}

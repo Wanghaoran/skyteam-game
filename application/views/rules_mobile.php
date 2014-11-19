@@ -60,11 +60,8 @@
         <div class="ny_logo"><a href="http://www.tianxun.cn">&nbsp;</a></div>
     </div>
     <div class="hdgz">
-        <div class="hdgz_con"><img src="<?=$this->config->base_url()?>static/mobile/images/hdgz1.jpg"/></div>
-        <div class="hdgz_con">
-            <img src="<?=$this->config->base_url()?>static/mobile/images/hdgz3.jpg"/>
-        </div>
-        <div class="hdgz_con"><img src="<?=$this->config->base_url()?>static/mobile/images/hdgz2.jpg"/></div>
+        <div class="hdgz_con"><img src="<?=$this->config->base_url()?>static/mobile/images/hdgz.jpg"/></div>
+
     </div>
     <div class="ny_foot">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_foot3.jpg"/>
