@@ -272,13 +272,18 @@
             <div class="ny_leftbtqt">
                 <ul>
                     <?php foreach($league as $key => $value):?>
-                    <li>
-                        <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank" class="top">
-                            <img src="<?=$value['avatar_large']?>"/>
-                            <div><?=$value['name']?></div>
-                        </a>
-                        <div class="btn_delete"><a href="#" title="删除"></a></div>
-                    </li>
+                        <?php if($this->session->userdata('token')['uid'] == $value['id']):?>
+                            <?php continue; ?>
+                        <?php else:?>
+                            <li>
+                                <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank" class="top">
+                                    <img src="<?=$value['avatar_large']?>"/>
+                                    <div><?=$value['name']?></div>
+                                </a>
+                                <div class="btn_delete"><a href="#" title="删除"></a></div>
+                            </li>
+                        <?php endif;?>
+
                     <?php endforeach;?>
                     <div class="clear"></div>
                 </ul>
