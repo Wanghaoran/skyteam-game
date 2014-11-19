@@ -7,18 +7,22 @@
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 
-    <script src="<?=$this->config->base_url()?>static/pc/js/jQuery.fontFlex.js"></script>
-    <script>
+    <script src="<?=$this->config->base_url()?>static/pc/js/zoomFontSize.js"></script>
+    <style>
+        body{
+            font-size:20px;
+        }
+        .h2{
+            font-size:100%;
+        }
+        .h3{
+            font-size:60%;
+        }
+        .h4{
+            font-size:60%;
+        }
 
-        $(function() {
-
-            $('h2').fontFlex(12, 16, 20);
-            $('h3').fontFlex(10, 12, 16);
-            $('h4').fontFlex(10, 12, 16);
-
-        });
-
-    </script>
+    </style>
 
 
 
@@ -162,7 +166,7 @@
     </script>
 
 </head>
-<body>
+<body class="chang_fontSize">
 <div class="contain">
     <div class="home">
         <div class="divbg"><img src="<?=$this->config->base_url()?>static/pc/images/home.jpg"/></div>
