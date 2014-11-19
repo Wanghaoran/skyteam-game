@@ -268,6 +268,40 @@
         <div class="clear20"></div>
     </div>
     <div class="clear"></div>
+
+            <div class="ny_leftbtqt">
+                <ul>
+                    <li>
+                        <a href="#" class="top">
+                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt1.png"/>
+                            <div>耗这口</div>
+                        </a>
+                        <div class="btn_delete"><a href="#" title="删除"></a></div>
+                    </li>
+                    <li>
+                        <a href="#" class="top">
+                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt2.png"/>
+                            <div>护城河的水流</div>
+                        </a>
+                        <div class="btn_delete"><a href="#" title="删除"></a></div>
+                    </li>
+                    <li>
+                        <a href="#" class="top">
+                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt3.png"/>
+                            <div>一只蘑菇</div>
+                        </a>
+                        <div class="btn_delete"><a href="#" title="删除"></a></div>
+                    </li>
+                    <li>
+                        <a href="#" class="top">
+                            <img src="<?=$this->config->base_url()?>static/pc/images/img_qt4.png"/>
+                            <div>爱闲逛</div>
+                        </a>
+                        <div class="btn_delete"><a href="#" title="删除"></a></div>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
     <div class="ny_leftqt">
 
         <ul>
