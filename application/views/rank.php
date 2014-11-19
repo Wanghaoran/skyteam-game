@@ -196,7 +196,16 @@
 
     <script>
         var deleteleague = function(weiboID){
-            alert(weiboID);
+            $.ajax({
+                type : 'POST',
+                url : '<?=$this -> config -> base_url()?>welcome/deleteleague',
+                data : '&weiboid=' + weiboID,
+                async : false,
+                dataType : 'json',
+                success : function(ress){
+                    console.log(ress);
+                }
+            });
         }
     </script>
 

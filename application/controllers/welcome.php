@@ -977,6 +977,12 @@ class Welcome extends CI_Controller {
 
     }
 
+    //删除团员
+    public function deleteleague(){
+        $weiboID = $this->input->post('weiboid');
+        var_dump($weiboID);
+    }
+
     //获取团队分享的图片
     public function getteampic(){
         $tid = $this -> input -> post('tid');
