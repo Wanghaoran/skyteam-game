@@ -989,15 +989,11 @@ class Welcome extends CI_Controller {
 
         $result = array();
 
-        if($result_team2['type'] == 1 && $result_team['tid'] == $result_team2['tid']){
+        if($result_team2[0]['type'] == 1 && $result_team[0]['tid'] == $result_team2[0]['tid']){
             $result['state'] = 'success';
         }else{
             $result['state'] = 'error';
         }
-
-        var_dump($result_team2['type']);
-        var_dump($result_team['tid']);
-        var_dump($result_team2['tid']);
 
         echo json_encode($result);
 
