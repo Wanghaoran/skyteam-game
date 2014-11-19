@@ -280,7 +280,9 @@
                                     <img src="<?=$value['avatar_large']?>"/>
                                     <div><?=$value['name']?></div>
                                 </a>
+                            <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                                 <div class="btn_delete"><a href="#" title="删除"></a></div>
+                            <?php endif; ?>
                             </li>
                         <?php endif;?>
 
