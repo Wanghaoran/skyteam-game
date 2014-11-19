@@ -980,7 +980,16 @@ class Welcome extends CI_Controller {
     //删除团员
     public function deleteleague(){
         $weiboID = $this->input->post('weiboid');
-        var_dump($weiboID);
+        //验证此ID是否是在此用户的团中
+        $weiboid = $this->session->userdata('token')['uid'];
+
+        $this -> load -> model('user_model');
+        $result_team = $this -> user_model -> getUser($weiboID);
+        $result_team2 = $this -> user_model -> getUser($weiboid);
+
+        var_dump($result_team);
+        var_dump($result_team2);
+
     }
 
     //获取团队分享的图片
