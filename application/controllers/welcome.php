@@ -550,6 +550,7 @@ class Welcome extends CI_Controller {
             $per_page = 0;
         }
 
+        $data['per_page'] = $per_page;
 
         //分页
 

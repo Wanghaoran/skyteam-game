@@ -206,7 +206,7 @@
 
         <div class="phbtitle">
             <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
-            <h2><?=($key+1)?></h2>
+            <h2><?=($key+1+$per_page)?></h2>
         </div>
         <div class="phbcon">
             <img src="<?=$this->config->base_url()?>static/mobile/images/phbli.jpg"/>
