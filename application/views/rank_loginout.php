@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>天团排行榜－起飞吧朋友-接力拼里程，共赢12万旅行天团红包</title>
     <link href="<?=$this->config->base_url()?>static/pc/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<?=$this->config->base_url()?>static/pc/js/jquery.js"></script>
 
 
 
