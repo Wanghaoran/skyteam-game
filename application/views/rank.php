@@ -196,16 +196,29 @@
 
     <script>
         var deleteleague = function(weiboID){
-            $.ajax({
-                type : 'POST',
-                url : '<?=$this -> config -> base_url()?>welcome/deleteleague',
-                data : '&weiboid=' + weiboID,
-                async : false,
-                dataType : 'json',
-                success : function(ress){
-                    console.log(ress);
-                }
-            });
+
+            if(confirm('确定要删除该团员吗？操作不可恢复，请谨慎操作！')){
+                $.ajax({
+                    type : 'POST',
+                    url : '<?=$this -> config -> base_url()?>welcome/deleteleague',
+                    data : '&weiboid=' + weiboID,
+                    async : false,
+                    dataType : 'json',
+                    success : function(ress){
+                        if(ress.state == 'success'){
+                            alert('删除成功！');
+                            location.reload();
+                        }else{
+                            alert('删除失败！');
+                            return;
+                        }
+                    }
+                });
+            }else{
+                return;
+            }
+
+
         }
     </script>
 

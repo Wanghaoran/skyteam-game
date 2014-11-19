@@ -990,7 +990,11 @@ class Welcome extends CI_Controller {
         $result = array();
 
         if($result_team2[0]['type'] == 1 && $result_team[0]['tid'] == $result_team2[0]['tid']){
-            $result['state'] = 'success';
+            if($this -> user_model -> deluser($weiboID)){
+                $result['state'] = 'success';
+            }else{
+                $result['state'] = 'error';
+            }
         }else{
             $result['state'] = 'error';
         }
