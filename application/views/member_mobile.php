@@ -189,6 +189,41 @@
         })();
     </script>
 
+    <script>
+        var deleteleague = function(weiboID){
+
+            if(confirm('确定要删除该团员吗？操作不可恢复，请谨慎操作！')){
+                $.ajax({
+                    type : 'POST',
+                    url : '<?=$this -> config -> base_url()?>welcome/deleteleague',
+                    data : '&weiboid=' + weiboID,
+                    async : false,
+                    dataType : 'json',
+                    success : function(ress){
+                        if(ress.state == 'success'){
+                            alert('删除成功！');
+                            location.reload();
+                        }else{
+                            alert('删除失败！');
+                            return;
+                        }
+                    }
+                });
+            }else{
+                return;
+            }
+        }
+
+        var exitteam = function(){
+            if(confirm('确定要退出本团吗？操作不可恢复，请谨慎操作！')){
+                location.href="<?=$this->config->base_url()?>welcome/exitteam";
+            }else{
+                return;
+            }
+        }
+
+    </script>
+
 </head>
 <body>
 <!--遮罩层  start-->
@@ -256,34 +291,22 @@
         <div class="grzx_title"><img src="<?=$this->config->base_url()?>static/mobile/images/title_btqt.jpg"/></div>
         <div class="grzx_btqt">
             <ul>
-                <li>
-                    <a href="#" class="top">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt1.png"/>
-                        <div>耗这口</div>
-                    </a>
-                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
-                </li>
-                <li>
-                    <a href="#" class="top">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt2.png"/>
-                        <div>护城河的水流</div>
-                    </a>
-                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
-                </li>
-                <li>
-                    <a href="#" class="top">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt3.png"/>
-                        <div>一只蘑菇</div>
-                    </a>
-                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
-                </li>
-                <li>
-                    <a href="#" class="top">
-                        <img src="<?=$this->config->base_url()?>static/mobile/images/img_qt4.png"/>
-                        <div>爱闲逛</div>
-                    </a>
-                    <div class="btn_delete"><a href="#"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
-                </li>
+                <?php foreach($league as $key => $value):?>
+                    <?php if($this->session->userdata('token')['uid'] == $value['weiboid']):?>
+                        <?php continue; ?>
+                    <?php else:?>
+                        <li>
+                            <a href="http://weibo.com/<?=$value['profile_url']?>" target="_blank" class="top">
+                                <img src="<?=$value['avatar_large']?>"/>
+                                <div><?=$value['name']?></div>
+                            </a>
+                            <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
+                                <div class="btn_delete"><a href="javascript:deleteleague(<?=$value['weiboid']?>);" title="删除"></a></div>
+                            <?php endif; ?>
+                        </li>
+                    <?php endif;?>
+
+                <?php endforeach;?>
                 <div class="clear"></div>
             </ul>
         </div>

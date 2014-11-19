@@ -509,8 +509,14 @@ class Welcome extends CI_Controller {
         //计算和第一名相差的里程
         $data['cha_km'] = $frist_result['num'] - $user_result['tnum'];
 
+        //读取团员
+        $league = $this -> user_model -> getmemberall($user_result['tid']);
+        $data['league'] = $league;
+
         //读取微博好友
         $friend_result = $this -> _bilateral($this->session->userdata('token')['access_token'], $this->session->userdata('token')['uid']);
+
+
 
         //查找参与活动的好友
         $friend_where = array();
@@ -557,6 +563,8 @@ class Welcome extends CI_Controller {
         $data['per_page'] = $per_page;
 
         //分页
+
+
 
         //读取团排行榜
         $result_type = $this -> team_model -> teamorder($data['type'], $per_page, 10);
