@@ -272,7 +272,7 @@
             <div class="ny_leftbtqt">
                 <ul>
                     <?php foreach($league as $key => $value):?>
-                        <?php if($this->session->userdata('token')['uid'] == $value['id']):?>
+                        <?php if($this->session->userdata('token')['uid'] == $value['weiboid']):?>
                             <?php continue; ?>
                         <?php else:?>
                             <li>
