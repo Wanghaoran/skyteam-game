@@ -426,7 +426,7 @@ class Welcome extends CI_Controller {
         $data['total_user'] = $user_total['count'];
 
         //读取团员
-        $league = $this -> user_model -> getmember($user_result['tid']);
+        $league = $this -> user_model -> getmemberall($user_result['tid']);
         $data['league'] = $league;
         var_dump($league);
 

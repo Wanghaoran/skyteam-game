@@ -66,6 +66,12 @@ class User_model extends CI_Model {
         return $query -> result_array();
     }
 
+    //读取所有团员
+    public function getmemberall($tid){
+        $query = $this -> db -> get_where('user', array('tid' => $tid));
+        return $query -> result_array();
+    }
+
     //总人数
     public function gettotal(){
         $this->db->select('COUNT(id) as count');
