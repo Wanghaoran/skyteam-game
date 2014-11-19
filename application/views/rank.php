@@ -217,8 +217,10 @@
             }else{
                 return;
             }
+        }
 
-
+        var exitteam = function(){
+            alert(123);
         }
     </script>
 
@@ -250,9 +252,12 @@
 
             <div class="ny_admintitle">
 
-                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
                 <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
-                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'DeleteTeam']);_smq.push(['custom','DeleteTeam','ButtonClick']);" href="javascript:deleteteam();" title="删除本团"></a>
+                    <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
+                    <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'DeleteTeam']);_smq.push(['custom','DeleteTeam','ButtonClick']);" href="javascript:deleteteam();" title="删除本团"></a>
+                <?php else:?>
+                    <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
+                    <a href="javascript:exitteam();" title="退出本团"></a>
         <?php endif; ?>
         </div>
 
