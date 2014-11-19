@@ -110,7 +110,7 @@ body{ background:#fff;}
 		.ny_nav ul li.li4 a{ width:106px;}
 		.ny_nav ul li.li4 a.cur,.ny_nav ul li.li4 a:hover{ background-position:-372px -23px;}
 .ny_content{width:1360px; margin:0 auto}	
-	.ny_conleft{ float:left; width:440px; height:1020px; background:#f1f1f1; margin:0 20px 0 0;}
+	.ny_conleft{ float:left; width:440px; height:1120px; background:#f1f1f1; margin:0 20px 0 0;}
 		.ny_leftinfo{ width:384px; height:518px; padding:0 0 0 0; margin:28px; background:url(../images/ny_leftinfo.png) top center no-repeat;}
 			.ny_leftinfo .ny_admintitle{ width:384px; height:20px;}
 			.ny_leftinfo .ny_admintitle a{ float:right; width:65px; height:20px; display:inline-block;}
@@ -129,7 +129,16 @@ body{ background:#fff;}
 		.ny_leftbtn .ny_lefticon a.icon_rr{ float:left; width:34px; margin:0 33px 0 0; height:34px; background:url(../images/icon_rr.png) no-repeat}
 		.ny_leftbtn .ny_lefticon a.icon_dd{ float:left; width:34px; height:34px; background:url(../images/icon_dd.png) no-repeat}
 		
-		.ny_leftqt{ width:384px; margin:0 auto; background:url(../images/title_qt.png) left top no-repeat; padding:30px 0 0 0;}
+		.ny_leftbtqt{ width:384px; margin:0 auto; background:url(../images/title_btqt.png) left top no-repeat; padding:30px 0 0 0;}
+		.ny_leftbtqt ul li{ float:left; width:80px; margin:10px 15px 0 0;}
+		.ny_leftbtqt ul li a.top{ display:inline-block; text-decoration:none; text-align:center; }
+		.ny_leftbtqt ul li a.top img{ width:50px; height:50px; border:none;}
+		.ny_leftbtqt ul li a.top div{ width:80px; height:30px; line-height:30px;color:#848484; font-size:14px; font-weight:400; white-space: nowrap;text-overflow:ellipsis; overflow:hidden;}
+		.ny_leftbtqt ul li .btn_delete{ width:66px; height:28px; margin:0 auto;}
+		.ny_leftbtqt ul li .btn_delete a{ display:inline-block; width:66px; height:28px; background:url(../images/btn_delete.png) center no-repeat;}
+		.ny_leftbtqt ul li .btn_delete a:hover{opacity:0.7;filter:alpha(opacity=70);}
+		
+		.ny_leftqt{ width:384px; margin:40px auto; background:url(../images/title_qt.png) left top no-repeat; padding:30px 0 0 0;}
 		.ny_leftqt ul li{ float:left; width:80px; margin:10px 15px 0 0;}
 		.ny_leftqt ul li a{ display:inline-block; text-decoration:none; text-align:center; }
 		.ny_leftqt ul li a img{ width:50px; height:50px; border:none;}

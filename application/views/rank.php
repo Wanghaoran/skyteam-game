@@ -222,10 +222,10 @@
 
             <div class="ny_admintitle">
 
-        <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
+                <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
+                <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
                 <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'DeleteTeam']);_smq.push(['custom','DeleteTeam','ButtonClick']);" href="javascript:deleteteam();" title="删除本团"></a>
         <?php endif; ?>
-            <a onclick="_gaq.push(['_trackEvent', 'TeamRank', 'ButtonClick', 'LogOut']);_smq.push(['custom','LogOut','ButtonClick']);" href="<?=$this->config->base_url()?>welcome/logout" style="margin-right: 7px;" title="退出登录"></a>
         </div>
 
 
