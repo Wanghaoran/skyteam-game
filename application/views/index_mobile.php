@@ -93,6 +93,7 @@
                 <div class="clear"></div>
             </ul>
         </div>
+        <div class="sinashare"><a href="#" title="分享至"><img src="<?=$this->config->base_url()?>static/mobile/images/sinashare.png"/></a></div>
         <?php if($this->session->userdata('token')['uid']):?>
             <div class="tuichu"><a href="<?=$this->config->base_url()?>welcome/logout"><img src="<?=$this->config->base_url()?>static/mobile/images/tuichu.png"/></a></div>
         <?php endif; ?>
