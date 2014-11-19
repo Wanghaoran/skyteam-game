@@ -390,7 +390,7 @@
         </div>
 
         <!--分页  start-->
-        <div class="page">
+        <div class="page" style="width: 300px;">
             <?=$page;?>
         </div>
         <!--分页  end-->
