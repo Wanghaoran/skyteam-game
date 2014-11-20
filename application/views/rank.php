@@ -351,7 +351,7 @@
 </div>
 <div class="ny_conright">
 
-    <img src="<?=$this->config->base_url()?>static/pc/banner.jpg" />
+    <img src="<?=$this->config->base_url()?>static/pc/images/banner.jpg" />
     <div class="tab_phb">
         <div class="tab_phbtitle">
             <ul>
