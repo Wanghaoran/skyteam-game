@@ -504,6 +504,10 @@ class Welcome extends CI_Controller {
         $user_result = $this -> user_model -> getinfo($this->session->userdata('token')['uid']);
         $data['user_result'] = $user_result;
 
+        echo '<pre>';
+        var_dump($user_result);
+        echo '</pre>';
+
         //读取此类别团下的第一名
         $frist_result = $this -> team_model -> getfirst($user_result['ttype']);
         //计算和第一名相差的里程
