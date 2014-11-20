@@ -236,6 +236,7 @@
     <div class="ny_top">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
         <div class="ny_logo"><a onclick="_smq.push(['custom','TeamRank1','LinkClick']);" href="http://www.tianxun.cn">&nbsp;</a></div>
+        <img src="<?=$this->config->base_url()?>static/mobile/images/banner.jpg"/>
         <img src="<?=$this->config->base_url()?>static/mobile/images/grzx.jpg"/>
         <div class="btn_grzx">
             <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
