@@ -233,6 +233,9 @@
 </head>
 <body>
 <div class="ny_head">
+
+
+
     <div class="ny_nav">
         <ul>
             <li class="li1"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);_smq.push(['custom','GoToCampaignHomepage','LinkClick']);" href="<?=$this->config->base_url()?>"></a></li>
@@ -347,6 +350,8 @@
     <div class="clear20"></div>
 </div>
 <div class="ny_conright">
+
+    <img src="<?=$this->config->base_url()?>static/pc/banner.jpg" />
     <div class="tab_phb">
         <div class="tab_phbtitle">
             <ul>
