@@ -301,7 +301,7 @@
                                 <div><?=$value['name']?></div>
                             </a>
                             <?php if($user_result['uweiboid'] == $user_result['tweiboid']):?>
-                                <div class="btn_delete"><a href="javascript:deleteleague(<?=$value['weiboid']?>);" title="删除"></a></div>
+                                <div class="btn_delete"><a href="javascript:deleteleague(<?=$value['weiboid']?>);" title="删除"><img src="<?=$this->config->base_url()?>static/mobile/images/btn_delete.png"/></a></div>
                             <?php endif; ?>
                         </li>
                     <?php endif;?>
