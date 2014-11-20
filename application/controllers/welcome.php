@@ -1176,7 +1176,7 @@ class Welcome extends CI_Controller {
 
     }
 
-    //qiqiu - 上传图片到服务器
+    //qiqiu
     public function qiniu_upload($file_name){
 
         $file_path = './temp/' . $file_name . '.jpg';
