@@ -219,6 +219,9 @@
         <div class="clear20"></div>
         <div class="tab_phbcon">
             <?php foreach($rank as $key => $value):?>
+                <?php if($value['id'] == 105):?>
+                    <?php continue;?>
+                <?php endif;?>
                 <!--start-->
                 <div class="tab_phblist">
                     <div class="tab_phblist_title"><span><?=($key+1+$per_page)?></span><?=$value['name']?></div>

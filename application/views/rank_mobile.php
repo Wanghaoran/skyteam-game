@@ -205,6 +205,9 @@
 
         <?php foreach($rank as $key => $value):?>
 
+            <?php if($value['id'] == 105):?>
+                <?php continue;?>
+            <?php endif;?>
 
         <div class="phbtitle">
             <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
