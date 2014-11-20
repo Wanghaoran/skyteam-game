@@ -184,6 +184,7 @@
 <div class="clear"></div>
 <div class="ny_content">
     <div class="tab_phb">
+        <img src="<?=$this->config->base_url()?>static/pc/images/banner.jpg" style="margin-top: 20px;" />
         <div class="tab_phbtitle">
             <ul>
                 <li class="li1"></li>
