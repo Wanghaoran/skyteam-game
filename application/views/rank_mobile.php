@@ -173,12 +173,10 @@
 <!--遮罩层  end-->
 <div class="contain">
 
-    <img src="<?=$this->config->base_url()?>static/mobile/images/banner.jpg" style="margin-top: 20px;" />
-
-
     <div class="ny_top">
         <img src="<?=$this->config->base_url()?>static/mobile/images/ny_top.jpg"/>
         <div class="ny_logo"><a onclick="_gaq.push(['_trackEvent', 'Header', 'LinkClick', 'GoToCampaignHomepage']);" href="http://www.tianxun.cn">&nbsp;</a></div>
+        <img src="<?=$this->config->base_url()?>static/mobile/images/banner.jpg"/>
         <img src="<?=$this->config->base_url()?>static/mobile/images/ttphb.jpg"/>
         <div class="nav_phb">
             <ul>
