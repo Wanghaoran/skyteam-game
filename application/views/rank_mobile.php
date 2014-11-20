@@ -212,7 +212,7 @@
         <div class="phbtitle">
             <img src="<?=$this->config->base_url()?>static/mobile/images/titlebg.jpg"/>
             <?php if($type == 1):?>
-                <h2><?=($key+1+$per_page+1)?></h2>
+                <h2><?=($key+1+$per_page-1)?></h2>
             <?php else:?>
                 <h2><?=($key+1+$per_page)?></h2>
 

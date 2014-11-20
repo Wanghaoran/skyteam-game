@@ -224,7 +224,13 @@
                 <?php endif;?>
                 <!--start-->
                 <div class="tab_phblist">
-                    <div class="tab_phblist_title"><span><?=($key+1+$per_page)?></span><?=$value['name']?></div>
+                    <div class="tab_phblist_title">
+                        <?php if($type == 1):?>
+                            <span><?=($key+1+$per_page)?></span>
+                        <?php else:?>
+                            <span><?=($key+1+$per_page)?></span>
+                        <?php endif;?>
+                        <?=$value['name']?></div>
                     <div class="tab_phblist_con">
                         <div class="tab_phblist_left">
                             <div class="tab_phbadmin">
