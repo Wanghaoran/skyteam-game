@@ -396,7 +396,7 @@
                 <div class="tab_phblist">
                     <div class="tab_phblist_title">
                         <?php if($type == 1):?>
-                            <span><?=($key+1+$per_page)?></span>
+                            <span><?=($key+1+$per_page-1)?></span>
                         <?php else:?>
                             <span><?=($key+1+$per_page)?></span>
                         <?php endif;?>
